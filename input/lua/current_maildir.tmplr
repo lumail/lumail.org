@@ -1,0 +1,13 @@
+title: current_maildir()
+brief: Retrieve the currently selected folder.
+----
+
+
+<p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
+<p>This function will retrieve the full path to the currently highlighted folder.</p>
+<p>For example: </p>
+<pre>
+-- Show folder:
+msg( current_maildir() );
+</pre>
+<p class="seealso">See also <a href="selected_folders.html">selected_folders()</a>.</p>

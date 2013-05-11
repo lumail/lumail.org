@@ -1,0 +1,21 @@
+title: index_format()
+brief: Control how message-lists are displayed.
+----
+
+<p>A simple format-string is used to control how message-lists are displayed, this format string is fetched/updated via the <tt>index_format()</tt> function.</p>
+<p>The value can be set or retrieved like so:</P>
+<pre>
+-- Set the string
+index_format( "[$FLAGS] - $SUBJECT" );
+
+-- Get the setting, and display it
+msg( index_format() );
+</pre>
+<p>The format string clearly makes use of variables like "<tt>$SUBJECT</tt>" to display particular pieces of information about the message.  The following  table lists possible values:</p>
+<table>
+<tr><td>$DATE</tt></td><td>The date the message was received.</td></tr>
+<tr><td>$FLAGS</tt></td><td>The Maildir flags the given message possesses.</td></tr>
+<tr><td>$FROM</tt></td><td>The sender of the message message.</td></tr>
+<tr><td>$SUBJECT</tt></td><td>The subject of the given message.</td></tr>
+<tr><td>$TO</tt></td><td>The recipient of the message.</td></tr>
+</table>

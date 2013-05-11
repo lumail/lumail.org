@@ -1,0 +1,33 @@
+Title: Frequently Asked Questions
+faq_page: 1
+----
+
+<blockquote>
+  <dl>
+    <dt>1.  Why no IMAP/POP3?</dt>
+    <dd>
+      <p>I login to my mailserver and read mail directly as it is delivered via procmail, so I have no need for it.</p>
+      <p>Avoiding the use of POP3 or IMAP coding also greatly simplifies the client.</p>
+      <p>If you have to use IMAP/POP3 to fetch your mail I'd suggest the use of <tt>imapsync</tt>, <tt>fetchmail</tt>, or similar.  These can be executed via <a href="/lua/on_idle.html">on_idle()</a>.</p>
+    </dd>
+    <dt>2.  What license is the code released under?</dt>
+    <dd>
+      <p>The code is released under the GNU General Public License, version 2 or later.</p>
+    </dd>
+    <dt>3.  How does this client differ from more established clients?</dt>
+    <dd>
+      <p>At the moment the client isn't complete enough to be used, however many decisions have been taken already which differentiate this client from others:</p>
+      <ul>
+        <li><tt>lumail</tt> is a modal client.  That is almost unique.</li>
+        <li><tt>lumail</tt> has a real embedded language for scripting, lua.</li>
+        <li><tt>lumail</tt> allows you to open <i>multiple</i> folders.</li>
+      </ul>
+      <p>Other differences are, sadly, negative:</p>
+      <ul>
+        <li>You'll only ever operate on a single message.</li>
+        <li>There is no IMAP/POP3 support.</li>
+        <li>There is no support for MH-H/Mail folders.  Just Maildirs.</li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>

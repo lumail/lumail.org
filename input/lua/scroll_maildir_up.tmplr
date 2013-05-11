@@ -1,0 +1,15 @@
+title: scroll_maildir_up()
+brief: Scroll the list of folders up.
+----
+
+<p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
+<p>The <tt>scroll_maildir_up()</tt> function allows the list of folders to be scrolled up by the specified amount.</p>
+<p>For example:</p>
+<pre>
+-- Scroll up one folder
+scroll_maildir_up(1);
+
+-- Scroll up the full height of the screen
+scroll_maildir_up( screen_height() - 2 );
+</pre>
+<p class="seealso">See also <a href="scroll_maildir_down.html">scroll_maildir_down</a>, <a href="scroll_maildir_to.html">scroll_maildir_to</a></p>

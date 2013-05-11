@@ -1,0 +1,6 @@
+title: compose()
+brief: Begin composing a new email.
+----
+
+<p>This function will open your configured editor to compose a new email.</p>
+<p>The email should be sent when the editor exits, but this is not yet implemented.</p>

@@ -1,0 +1,25 @@
+title: selected_folders()
+brief: Get all selected folders.
+----
+
+<p><tt>luamil</tt> allows you to select multiple folders to open at the same time.</p>
+<p>The <tt>selected_folders()</tt> function allows you to determine which folders are currently selected - this might be an empty set.</p>
+<p>For example:</p>
+<pre>
+--
+-- Append the list of currently selected folders to a log-file
+--
+function debugy()
+   sels = selected_folders();
+
+   ff = io.open( "/tmp/log.lua", "a");
+
+   for i,v in ipairs( sels ) do
+      ff:write( "Selected folder " .. i .. " is " .. v .. "\n" );
+   end
+   ff:close();
+end
+
+keymap['maildir']['D'] = 'debugy()';
+</pre>
+<p class="seealso">See also <a href="add_selected_folder.html">add_selected_folder()</a>, <a href="clear_selected_folders.html">clear_selected_folders()</a>, <a href="toggle_selected_folder.html">toggle_selected_folder()</a>, <a href="set_selected_folder.html">set_selected_folder()</a>.

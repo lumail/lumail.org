@@ -1,0 +1,15 @@
+title: scroll_index_up()
+brief: Scroll the list of messages up.
+----
+
+<p>When in index-mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of messages.</p>
+<p>The <tt>scroll_index_up()</tt> function allows the list of messages to be scrolled iup by the specified amount.</p>
+<p>For example:</p>
+<pre>
+-- Scroll up one message
+scroll_index_up(1);
+
+-- Scroll up the full height of the screen
+scroll_index_up( screen_height() - 2 );
+</pre>
+<p class="seealso">See also <a href="scroll_index_to.html">scroll_index_to</a>, <a href="scroll_index_down.html">scroll_index_down</a></p>

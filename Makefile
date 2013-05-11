@@ -1,0 +1,12 @@
+
+output: clean
+	templer
+
+clean:
+	@rm -rf output/ || true
+
+upload: output
+	rsync --delete -qazr output/ s-lumail@steve.org.uk:htdocs/
+
+serve: output
+	templer --serve=4433

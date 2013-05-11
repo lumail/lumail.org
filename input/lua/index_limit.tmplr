@@ -1,0 +1,33 @@
+title: index_limit()
+brief: Specify which messages to show.
+----
+
+<p>When the <a href="global_mode.html"><tt>global_mode</tt></a> is set to <tt>index</tt> you will be presented with a list of messages.</p>
+<p>The list will default to showing all available messages, but you may use <tt>message_limit()</tt> to change this:</p>
+
+<pre>
+--
+-- When in index-mode show all messages.
+--
+function all_msg()
+   index_limit( "all" );
+   clear();
+end
+
+--
+-- When in index-mode show all unread messages only.
+--
+function new_msg()
+   index_limit( "new" );
+   clear();
+end
+
+
+--
+-- Toggle display of folders
+--
+keymap['index']['a'] = 'all_msg()'
+keymap['index']['n'] = 'new_msg()'
+</pre>
+
+<p class="seealso">See also <a href="maildir_limit.html">maildir_limit()</a>.</p>

@@ -1,0 +1,5 @@
+title: clear()
+brief: Clears the screen.
+----
+
+<p>This function will clear the screen.</p>

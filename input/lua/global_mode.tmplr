@@ -1,0 +1,43 @@
+title: global_mode()
+brief: Get, or set, the global mode.
+----
+
+<p>The <tt>lumail</tt> client is a modal mail-client which means you're always in one of three modes:</p>
+<dl>
+<dt>maildir</dt>
+<dd><p>Viewing the list of Maildir folders.</p></dd>
+<dt>index</dt>
+<dd><p>Viewing the list of messages contained within your selected folder(s).</p></dd>
+<dt>message</dt>
+<dd><p>Viewing a single message.</p></dd>
+</dl>
+<p>The <tt>global_mode</tt> function will return the current mode, or allow you to change to a new one.</p>
+<p>For example:</p>
+<pre>
+-- view the mode
+msg( "The current mode is " .. global_mode() );
+
+-- change the mode
+global_mode( "maildir" );
+
+
+--
+-- Open a folder exclusively.
+--
+-- This behaves like the traditional "open folder"
+-- function in our favourite mail client.
+--
+function open_folder()
+   clear_selected_folders();
+   add_selected_folder()
+   global_mode( "index" );
+   clear();
+end
+
+--
+-- Call the function we've just defined if RETURN
+-- is pressed in maildir-mode
+--
+keymap['maildir']['\n'] = 'open_folder()'
+</pre>
+<p class="seelalso">See also <a href="keymap.html">keymap()</a>.</p>

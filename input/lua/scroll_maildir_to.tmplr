@@ -1,0 +1,12 @@
+title: scroll_maildir_to()
+brief: Scroll the list of folders to the next name matching a pattern.
+----
+
+<p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
+<p>The <tt>scroll_maildir_to()</tt> function allows the list of folders to be scrolled to the next folder that matches the given pattern.</p>
+<p>For example:</p>
+<pre>
+-- Scroll to steve.org.uk
+scroll_maildir_to("/.steve.org.uk");
+</pre>
+<p class="seealso">See also <a href="scroll_maildir_down.html">scroll_maildir_down</a>, <a href="scroll_maildir_up.html">scroll_maildir_up</a></p>

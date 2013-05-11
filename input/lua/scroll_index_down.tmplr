@@ -1,0 +1,15 @@
+title: scroll_index_down()
+brief: Scroll the list of messages down.
+----
+
+<p>When in index-mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of messages.</p>
+<p>The <tt>scroll_index_down()</tt> function allows the list of messages to be scrolled down by the specified amount.</p>
+<p>For example:</p>
+<pre>
+-- Scroll down one message
+scroll_index_down(1);
+
+-- Scroll down the full height of the screen
+scroll_index_down( screen_height() - 2 );
+</pre>
+<p class="seealso">See also <a href="scroll_index_to.html">scroll_index_to</a>, <a href="scroll_index_up.html">scroll_index_up</a></p>

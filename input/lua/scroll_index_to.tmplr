@@ -1,0 +1,11 @@
+title: scroll_index_to()
+brief: Scroll the list of messages to the next one matching a pattern.
+----
+
+<p>When a folder has been opened this function causes the list of messages to be scrolled to the next message which matches the specified pattern.</p>
+<p>The pattern-match will be applied to the formatted message, as displayed, and as specified by <a href="index_format.html">index_format()</a>.</p>
+<p>For example scroll to the next message matching the pattern "thanks for your order":</p>
+<pre>
+-- Scroll to the next matching pattern
+scroll_index_to("thanks for your order");
+</pre>

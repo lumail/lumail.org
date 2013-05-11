@@ -1,0 +1,40 @@
+title: maildir_limit()
+brief: Specify which maildir folders to show.
+----
+
+<p>When the <a href="global_mode.html"><tt>global_mode</tt></a> is set to <tt>maildir</tt> you will be presented with a list of Maildir folders.</p>
+<p>The list will default to showing all available folders, but you may use <tt>maildir_limit()</tt> to change this:</p>
+
+<pre>
+--
+-- When in maildir-mode show all folders.
+--
+function all_folders()
+   maildir_limit( "all" );
+   clear();
+end
+
+--
+-- When in maildir-mode show all folders which contain unread messages.
+--
+function new_folders()
+   maildir_limit( "new" );
+   clear();
+end
+
+--
+-- When in maildir-mode show all folders which have a path matching the given pattern.
+--
+function livejournal_folders()
+   maildir_limit( "livejournal.2" );
+   clear();
+end
+
+--
+-- Toggle display of folders
+--
+keymap['maildir']['a'] = 'all_folders()'
+keymap['maildir']['n'] = 'new_folders()'
+keymap['maildir']['l'] = 'livejournal_folders()'
+</pre>
+<p class="seealso">See also <a href="index_limit.html">index_limit()</a>.</p>

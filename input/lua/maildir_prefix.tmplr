@@ -1,0 +1,15 @@
+title: maildir_prefix()
+brief: Get, or set, the root of the maildir hierarchy.
+----
+
+<p>The <tt>lumail</tt> client operates solely on Maildir folders.  All folders beneath a given directory will be dynamically discovered at run-time.</p>
+<p>To configure the prefix of your folders <tt>maildir_prefix</tt> must be called with the path to examine.</p>
+<p>For example:</p>
+<pre>
+--
+-- This setting is used to specify the prefix for your maildir hierarchy.
+--
+maildir_prefix( os.getenv( "HOME" ) .. "/Maildir" );
+
+msg( "The maildir prefix is set to " .. maildir_prefix() );
+</pre>

@@ -1,0 +1,43 @@
+Title: Configuring lumail
+----
+
+<h2>Configuration File</h2>
+<blockquote>
+<p>When <tt>lumail</tt> is launched it looks for a configuration file to read.  The following locations are searched:</p>
+<ul>
+<li><tt>/etc/lumail.lua</tt></li>
+<li><tt>~/.lumail/config.lua</tt></li>
+</ul>
+<p>If you wish to make global changes, affecting all users, you should edit the former file.  If your configuration is just for yourself you should edit the latter.</p>
+<p>If you wish to launch with an additional configuration file this is supported:</p>
+<pre>
+~$ lumail --rcfile=~/.config/lumail.lua
+</pre>
+<p>The configuration file is 100% lua, extended with the <a href="/lua/">lua primitives</a> that <tt>lumail</tt> provides.</p>
+</blockquote>
+
+<h2>Basic Configuration</h2>
+<blockquote>
+<p>The most basic configuration would be used to point <tt>lumail</tt> at your Maildir folders, and configure some simple bindings.</p>
+<p>The following is the most basic configuration:</p>
+<pre>
+--
+-- Save this as ~/.lumail/config.lua
+--
+-- (If ~/.lumail/ does not exist create it.)
+--
+
+--
+-- Set the location of your maildir folders.
+--
+-- If they are in ~/Maildir/ then the following would suffice:
+--
+maildir_prefix( os.getenv( "HOME" ) .. "/Maildir/" );
+
+--
+-- If they are in ~/Mail/ then instead use:
+--
+maildir_prefix( os.getenv( "HOME" ) .. "/Mail/" );
+
+</pre>
+</blockquote>

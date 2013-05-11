@@ -1,0 +1,10 @@
+title: exec()
+brief: Execute a program, interactively.
+----
+
+<p>The <tt>exec</tt> function will reset the screen to allow you to run an interactive program without seeing any garbled display artifacts.</p>
+<p>You might use it as follows:</p>
+<pre>
+exec( "top" );
+</pre>
+<p>When the program terminates the screen will be reset, and the current display restored.</p>

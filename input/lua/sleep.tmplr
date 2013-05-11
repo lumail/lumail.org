@@ -1,0 +1,9 @@
+title: sleep()
+brief: sleep for the specified amount of time.
+----
+
+<p>This function accepts a single integer argument, and sleeps for that many seconds.</p>
+<p>For example:</p>
+<pre>
+sleep( 3 );
+</pre>

@@ -1,0 +1,11 @@
+title: prompt()
+brief: Prompt for input from the user.
+----
+
+<p>The bottom row of the <tt>lumail</tt> mail-client is designated as the message area, but it is also used to prompt for input.</p>
+<p>The <tt>prompt()</tt> function allows you to query a user for input.</p>
+<p>For example:</p>
+<pre>
+input = prompt( "my prompt" );
+msg( "You entered: " .. input );
+</pre>

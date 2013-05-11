@@ -1,0 +1,20 @@
+title: add_selected_folder()
+brief: Add a folder to the selection
+----
+
+<p><tt>luamil</tt> allows you to select multiple folders to open at the same time.</p>
+<p>The <tt>add_selected_folder()</tt> function allows you to add the currently selected folder to the list of selected folders.</p>
+<p>For example:</p>
+<pre>
+--
+-- Add the currently selected folder to the selected-set
+-- open the union.
+--
+function open_folder()
+   add_selected_folder()
+   global_mode( "index" );
+   clear();
+end
+keymap['maildir']['O'] = 'open_folder()';
+</pre>
+<p class="seealso">See also <a href="clear_selected_folders.html">clear_selected_folders()</a>, <a href="selected_folders.html">selected_folders()</a>, <a href="toggle_selected_folder.html">toggle_selected_folder()</a>, <a href="set_selected_folder.html">set_selected_folder()</a>.

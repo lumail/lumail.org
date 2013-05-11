@@ -1,0 +1,51 @@
+Title: The lumail console mail client
+home_page: 1
+----
+
+<h2>About</h2>
+<blockquote>
+<p><tt>lumail</tt> is a modern console-based email client developed for GNU/Linux.</p>
+<p>There are many graphical clients for email, but comparatively few are designed soley for console use.  With the exception of GNU Emacas none of the console clients I examined had any built in support for scripting with a <i>real</i> language.</p>
+<p>Lumail is a new entrant into the world of email clients, with the following four differences from existing projects:</p>
+<ul>
+<li>It operates exclusively on Maildir hierachies:
+<ul>
+<li>No support for POP3/IMAP.</li>
+<li>This reduces complexity, reduces coding, and gives the client focus.</li>
+</ul></li>
+<li>It is a modal client- you're always in one of three modes:
+<ul>
+<li>maildir-mode: Shows you the list of folders.</li>
+<li>index-mode: Shows you the list of messages.</li>
+<li>message-mode: Shows you a single message.</li>
+</ul></li>
+<li>Built in scripting with a mature language.
+<ul>
+<li>Lumail, as the name might suggest, uses <a href="http://www.lua.org/">lua</a>.</li>
+<li>Lumail contains a number of <a href="/lua/">useful primitives</a> to allow you to control its behaviour and functionality.</li>
+</ul></li>
+<li>Multi-folder operations.
+<ul>
+<li>Rather than opening a single folder you may open multiple folders at once.</li>
+<li>The displayed messages are the combined set from all selected folders.</li>
+</ul></li>
+</ul>
+</blockquote>
+
+<h2>Motivation</h2>
+<blockquote>
+<p>For the past few years I've been using <a href="http://packages.debian.org/mutt-patched">mutt-patched</a>, which adds the ability to display a "sidebar".  This sidebar allowed the navigation of open folders at almost all times, and the sidebar could be limited to display only folders containing unread mail.</p>
+<p>However recently the sidebar patch has lost the ability to see folders that contain unread messages.  This initially made me think about re-patching mutt, but later got me thinking about how you'd write and use a truly modal mail client.</p>
+<p>As it turns out I tend to focus my mail reading on viewing a list of folders with unread messages, then opening them in turn.  Better still would be the ability to open all folders with unread mail - and thus this idea of this client was born.</p>
+</blockquote>
+
+<h2>Installation</h2>
+<blockquote>
+<p>As the client is still under heavy development it is recommended that users install from the latest available source code.  All development is carried out in public using GitHub:</p>
+<ul>
+<li><a href="https://github.com/skx/lumail/">https://github.com/skx/lumail/</a></li>
+</ul>
+<p>The repository itself contains brief instructions, but there is also a <a href="/getting-started">getting started guide</a>.</p>
+<p>If you have questions feel free to <a href="/contact/">contact the author</a>.</p>
+</blockquote>
+

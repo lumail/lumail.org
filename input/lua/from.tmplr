@@ -1,0 +1,31 @@
+title: from()
+brief: Get, or set, your from-address.
+----
+
+<p>This function is designed to get/set the from-address as used when replying to
+a message, or composing a new one.</p>
+
+<p>It is expected that a user might configure a default from-address, but then change
+that depending upon the current folder.</p>
+
+<p>Sample usage:</p>
+
+<pre>
+default_email = "Steve Kemp <steve@random.example.com>";
+from( default_email );
+
+--
+-- Change the from-address if we're in a personal/work folder.
+--
+function on_select_folder( folder )
+
+   if ( string.find( folder, "personal", 1, true )  ) then
+      from ("Steve <steve@home.example.com>");
+   elseif ( string.find( folder, "work" , 1, true )  ) then
+      from("Steve <skx@work.example.com>");
+   else
+      from( default_email );
+   end
+end
+
+</pre>
