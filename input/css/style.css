@@ -141,8 +141,8 @@ pre {
 	background-color: silver;
 }
 .seealso {
-border: 1px solid silver;
-padding: 0.5em;
+    border: 1px solid silver;
+    padding: 0.5em;
 }
 
 pre{
@@ -165,5 +165,8 @@ pre{
 }
 
 dt {
-font-weight: bold;
+    font-weight: bold;
+}
+ul {
+    list-style: none;
 }
