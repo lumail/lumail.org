@@ -2,12 +2,16 @@ Title: Contact the author
 contact_page: 1
 ----
 
-<p>If you have any questions or feedback that you wish to give in private please drop me a mail:</p>
+<p>If you have any questions or feedback for <tt>luamil</tt> that you wish to give in private please drop me a mail:</p>
 <ul>
 <li>steve@steve.org.uk</li>
 </ul>
-<p>If you have a bug report, feature suggestion, or patch to submit please use the issue-tracker on the github repository.   This allows development to continue in a public manner:</p>
+<p>If you have a bug report, feature suggestion, or patch to submit please use the issue-tracker on the github repository.</p>
+<p>This allows development to continue in a public manner:</p>
 <ul>
 <li><a href="https://github.com/skx/lumail/">https://github.com/skx/lumail/</a></li>
 </ul>
-
+<p>If you spot a problem with this website (content, spelling, etc), please report it as an issue against the source repository:</p>
+<ul>
+<li><a href="https://github.com/skx/lumail.org/">https://github.com/skx/lumail.org/</a></li>
+</ul>
