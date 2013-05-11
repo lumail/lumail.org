@@ -1,11 +1,25 @@
-
+#
+# This is a templer-plugin.
+#
+# It is designed to read a series of files, and build a sorted list
+# of the lua-primitives contained within them.
+#
+# Given a file which requires this plugin every file matching
+# *.tmplr> will be tested.
+#
+# If the file contains a line "brief: ..." then the file will be
+# considered a primitive, with the brief description listed.
+#
+# See <input/lua/index.tmplr> for invokation.
+#
+# Steve
+# --
 
 use strict;
 use warnings;
 
 
 package Templer::Plugin::primitives;
-
 
 sub new
 {
@@ -31,40 +45,62 @@ sub expand_variables
     {
         if ( $key =~ /^primitives$/i )
         {
+
             #
             #  Where we find primitives on-disk.
             #
-            my $path = $page->source();
-            $path =~ s/index.tmplr//g;
+            #  (i.e. The same directory as the containing page.)
+            #
+            my $src = $page->source();
+            my $dir = File::Basename::dirname($src);
 
             #
             #  The values we'll set
             #
             my $loop;
 
-            foreach my $file ( sort( glob( $path . "*.tmplr" ) ) )
+            #
+            # Find all input-files that might contain lua-primitive
+            # docs.
+            #
+            foreach my $file ( sort( glob( $dir . "/*.tmplr" ) ) )
             {
-                next if ( $file =~ /index.tmplr/i );
 
+                # skip the invoking page.
+                next if ( $file eq $src );
+
+                # brief description of the primitive.
                 my $brief = "";
 
                 open( my $handle, "<", $file );
-                while( my $line = <$handle> )
+                while ( my $line = <$handle> )
                 {
                     $brief = $1 if ( $line =~ /^brief: (.*)/ );
-
                 }
-                close( $handle );
+                close($handle);
 
-                my $name = File::Basename::basename( $file );
+                warn "File $file didn't contain a brief: header"
+                  unless ( length($brief) );
+
+                #
+                # The name of the function is the name of the file..
+                #
+                my $name = File::Basename::basename($file);
                 $name =~ s/\.tmplr$//g;
 
+                #
+                # Add the found function to the list.
+                #
                 push( @$loop,
-                    {  name => $name ,
-                       brief =>$brief } );
+                      {  name  => $name,
+                         brief => $brief
+                      } ) if ( length($brief) );
             }
 
-
+            #
+            # Make the look-variable "primitives" available to the
+            # page that invoked us.
+            #
             $hash{ 'primitives' } = $loop if ($loop);
         }
     }
@@ -76,5 +112,4 @@ sub expand_variables
 #
 #  Register the plugin.
 #
-Templer::Plugin::Factory->new()
-  ->register_plugin("Templer::Plugin::primitives");
+Templer::Plugin::Factory->new()->register_plugin("Templer::Plugin::primitives");
