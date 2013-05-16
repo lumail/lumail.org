@@ -9,4 +9,4 @@ function on_idle()
    msg( "The client is idle " .. os.date() );
 end
 </pre>
-<p class="seealso">See also <a href="on_exit.html">on_exit()</a>.</p>
+<p class="seealso">See also <a href="on_exit.html">on_exit()</a>, <a href="on_read_message.html">on_read_message()</a>.</p>
