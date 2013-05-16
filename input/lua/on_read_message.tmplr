@@ -1,5 +1,5 @@
 title: on_read_message()
-brief: Called when the a mail is read.
+brief: Called when an email is read.
 ----
 
 <p>If you define the function <tt>on_read_message</tt> it will be called when a message has been read.</p>
