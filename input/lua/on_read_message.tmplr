@@ -1,0 +1,13 @@
+title: on_read_message()
+brief: Called when the a mail is read.
+----
+
+<p>If you define the function <tt>on_read_message</tt> it will be called when a message has been read.</p>
+<p>i.e. if you've opened a folder, then opened a message, then the hook will be called.
+<p>For example:</p>
+<pre>
+function on_read_message( path )
+   msg( "Now reading: " .. path );
+end
+</pre>
+<p class="seealso">See also <a href="on_exit.html">on_exit()</a>, <a href="on_idle.html">on_idle()</a>.</p>
