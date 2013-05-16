@@ -1,0 +1,19 @@
+title: is_new()
+brief: Is a message new?
+----
+
+
+<p>When in index mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of messages.</p>
+<p>This function will return 1 if the currently selected message is new, and 0 otherwise.</p>
+<p>You may prefer to call this with a path, which will cause the test to be applied to the named mesage.</p>
+<p>For example: </p>
+<pre>
+function on_read_message( path )
+   if ( is_new( path ) == 1 ) then
+      msg( "The current message is new" );
+   else
+      msg( "The current message has already been read" );
+   end
+end
+</pre>
+<p class="seealso">See also <a href="current_message.html">current_message()</a>.</p>

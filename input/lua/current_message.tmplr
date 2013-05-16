@@ -1,0 +1,14 @@
+title: current_message()
+brief: Retrieve the currently selected message.
+----
+
+
+<p>When in index mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of messages.</p>
+<p>This function will retrieve the full path to the currently highlighted message.</p>
+<p>When in message-mode, reading a single message, the function will return the message which is being displayed.
+<p>For example: </p>
+<pre>
+-- Show the message
+msg( current_message() );
+</pre>
+<p class="seealso">See also <a href="is_new.html">is_new()</a>.</p>
