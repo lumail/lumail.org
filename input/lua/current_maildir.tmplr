@@ -10,4 +10,4 @@ brief: Retrieve the currently selected folder.
 -- Show folder:
 msg( current_maildir() );
 </pre>
-<p class="seealso">See also <a href="selected_folders.html">selected_folders()</a>.</p>
+<p class="seealso">See also <a href="count_maildirs.html">count_maildirs()</a>, <a href="selected_folders.html">selected_folders()</a>.</p>
