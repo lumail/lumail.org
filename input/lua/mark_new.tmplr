@@ -1,0 +1,16 @@
+title: mark_new()
+brief: Mark a message as new/unread.
+----
+
+
+<p>This function will mark the currently selected message as new/unread.  You may also call this function with a path, which will update the message specified instead.</p>
+<p>For example: </p>
+<pre>
+--
+-- Mark every message we've read as new.  Weirdly.
+--
+function on_read_message( path )
+  mark_new();
+end
+</pre>
+<p class="seealso">See also <a href="current_message.html">current_message()</a>, <a href="is_new.html">is_new()</a>, <a href="mark_read.html">mark_read()</a>.</p>
