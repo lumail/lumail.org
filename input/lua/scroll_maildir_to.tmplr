@@ -9,4 +9,4 @@ brief: Scroll the list of folders to the next name matching a pattern.
 -- Scroll to steve.org.uk
 scroll_maildir_to("/.steve.org.uk");
 </pre>
-<p class="seealso">See also <a href="scroll_maildir_down.html">scroll_maildir_down</a>, <a href="scroll_maildir_up.html">scroll_maildir_up</a></p>
+<p class="seealso">See also <a href="jump_maildir_to.html">jump_maildir_to</a>, <a href="scroll_maildir_down.html">scroll_maildir_down</a>, <a href="scroll_maildir_up.html">scroll_maildir_up</a></p>

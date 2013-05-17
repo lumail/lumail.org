@@ -12,4 +12,4 @@ scroll_maildir_down(1);
 -- Scroll down the full height of the screen
 scroll_maildir_down( screen_height() - 2 );
 </pre>
-<p class="seealso">See also <a href="scroll_maildir_to.html">scroll_maildir_to</a>, <a href="scroll_maildir_up.html">scroll_maildir_up</a></p>
+<p class="seealso">See also <a href="jump_maildir_to.html">jump_maildir_to</a>, <a href="scroll_maildir_to.html">scroll_maildir_to</a>, <a href="scroll_maildir_up.html">scroll_maildir_up</a></p>

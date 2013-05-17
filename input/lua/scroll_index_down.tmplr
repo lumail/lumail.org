@@ -12,4 +12,4 @@ scroll_index_down(1);
 -- Scroll down the full height of the screen
 scroll_index_down( screen_height() - 2 );
 </pre>
-<p class="seealso">See also <a href="scroll_index_to.html">scroll_index_to</a>, <a href="scroll_index_up.html">scroll_index_up</a></p>
+<p class="seealso">See also <a href="jump_index_to.html">jump_index_to()</a>, <a href="scroll_index_to.html">scroll_index_to</a>, <a href="scroll_index_up.html">scroll_index_up</a></p>

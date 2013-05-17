@@ -1,0 +1,14 @@
+title: jump_maildir_to()
+brief: Jump to a position in the maildir list.
+----
+
+<p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
+<p>The <tt>jump_maildir_to()</tt> function allows you to jump to a particular offset in the list.</p>
+<p>For example:</p>
+<pre>
+-- Jump to the end of the list:
+function maildir_end()
+   jump_maildir_to( count_maildirs() - 1 );
+end
+</pre>
+<p class="seealso">See also <a href="scroll_maildir_to.html">scroll_maildir_to</a>, <a href="scroll_maildir_to.html">scroll_maildir_to</a>, <a href="scroll_maildir_up.html">scroll_maildir_up</a></p>

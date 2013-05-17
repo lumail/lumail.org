@@ -9,3 +9,4 @@ brief: Scroll the list of messages to the next one matching a pattern.
 -- Scroll to the next matching pattern
 scroll_index_to("thanks for your order");
 </pre>
+<p class="seealso">See also <a href="jump_index_to.html">jump_index_to</a>, <a href="scroll_index_down.html">scroll_index_down</a>, <a href="scroll_index_up.html">scroll_index_up</a>.</p>
