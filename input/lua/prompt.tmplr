@@ -7,5 +7,5 @@ brief: Prompt for input from the user.
 <p>For example:</p>
 <pre>
 input = prompt( "my prompt" );
-msg( "You entered: " .. input );
+<a href="msg.html">msg</a>( "You entered: " .. input );
 </pre>

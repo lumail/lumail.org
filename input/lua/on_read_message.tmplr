@@ -7,7 +7,7 @@ brief: Called when an email is read.
 <p>For example:</p>
 <pre>
 function on_read_message( path )
-   msg( "Now reading: " .. path );
+   <a href="msg.html">msg</a>( "Now reading: " .. path );
    if ( <a href="is_new.html">is_new</a>() == 1 ) then
       <a href="mark_read.html">mark_read</a>();
    end

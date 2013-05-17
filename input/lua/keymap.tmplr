@@ -20,7 +20,7 @@ keymap['maildir'] = {}
 -- The keystroke "Q" will exit in all modes, because we're
 -- placing it in the <b>global</b> keymap.
 --
-keymap['global']['Q'] = "exit()"
+keymap['global']['Q'] = "<a href="exit.html">exit</a>()"
 
 --
 -- The function "foo()" will be called if you press "f"

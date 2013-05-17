@@ -11,8 +11,8 @@ brief: Select only a single folder.
 --
 function open_folder()
    set_selected_folder()
-   global_mode( "index" );
-   clear();
+   <a href="global_mode.html">global_mode</a>( "index" );
+   <a href="clear.html">clear</a>();
 end
 keymap['maildir']['O'] = 'open_folder()';
 </pre>

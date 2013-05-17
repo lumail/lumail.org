@@ -6,7 +6,7 @@ brief: Called when the client is idle.
 <p>For example:</p>
 <pre>
 function on_idle()
-   msg( "The client is idle " .. os.date() );
+   <a href="msg.html">msg</a>( "The client is idle " .. os.date() );
 end
 </pre>
 <p class="seealso">See also <a href="on_exit.html">on_exit()</a>, <a href="on_read_message.html">on_read_message()</a>.</p>

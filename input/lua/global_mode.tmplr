@@ -15,10 +15,10 @@ brief: Get, or set, the global mode.
 <p>For example:</p>
 <pre>
 -- view the mode
-msg( "The current mode is " .. global_mode() );
+<a href="msg.html">msg</a>( "The current mode is " .. <a href="global_mode.html">global_mode</a>() );
 
 -- change the mode
-global_mode( "maildir" );
+<a href="global_mode.html">global_mode</a>( "maildir" );
 
 
 --
@@ -31,7 +31,7 @@ function open_folder()
    clear_selected_folders();
    add_selected_folder()
    global_mode( "index" );
-   clear();
+   <a href="clear.html">clear</a>();
 end
 
 --

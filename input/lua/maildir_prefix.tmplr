@@ -11,5 +11,5 @@ brief: Get, or set, the root of the maildir hierarchy.
 --
 maildir_prefix( os.getenv( "HOME" ) .. "/Maildir" );
 
-msg( "The maildir prefix is set to " .. maildir_prefix() );
+<a href="msg.html">msg</a>( "The maildir prefix is set to " .. maildir_prefix() );
 </pre>

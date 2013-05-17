@@ -6,6 +6,6 @@ brief: Retrieve the width of the screen.
 <p>For example:</p>
 <pre>
 -- show the width
-msg( "The screen is " .. screen_width() .. " characters wide" );
+<a href="msg.html">msg</a>( "The screen is " .. screen_width() .. " characters wide." );
 </pre>
 <p class="seealso">See also <a href="screen_height.html">screen_height</a></p>

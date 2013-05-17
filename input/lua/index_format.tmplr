@@ -9,7 +9,7 @@ brief: Control how message-lists are displayed.
 index_format( "[$FLAGS] - $SUBJECT" );
 
 -- Get the setting, and display it
-msg( index_format() );
+<a href="msg.html">msg</a>( index_format() );
 </pre>
 <p>The format string clearly makes use of variables like "<tt>$SUBJECT</tt>" to display particular pieces of information about the message.  The following  table lists possible values:</p>
 <table>

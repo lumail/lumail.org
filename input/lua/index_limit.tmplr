@@ -11,7 +11,7 @@ brief: Specify which messages to show.
 --
 function all_msg()
    index_limit( "all" );
-   clear();
+   <a href="clear.html">clear</a>();
 end
 
 --
@@ -19,7 +19,7 @@ end
 --
 function new_msg()
    index_limit( "new" );
-   clear();
+   <a href="clear.html">clear</a>();
 end
 
 

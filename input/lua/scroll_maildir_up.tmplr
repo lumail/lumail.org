@@ -10,6 +10,6 @@ brief: Scroll the list of folders up.
 scroll_maildir_up(1);
 
 -- Scroll up the full height of the screen
-scroll_maildir_up( screen_height() - 2 );
+scroll_maildir_up( <a href="screen_height.html">screen_height</a>() - 2 );
 </pre>
 <p class="seealso">See also <a href="jump_maildir_to.html">jump_maildir_to</a>, <a href="scroll_maildir_down.html">scroll_maildir_down</a>, <a href="scroll_maildir_to.html">scroll_maildir_to</a></p>

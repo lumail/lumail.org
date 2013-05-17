@@ -10,6 +10,6 @@ brief: Scroll the list of messages up.
 scroll_index_up(1);
 
 -- Scroll up the full height of the screen
-scroll_index_up( screen_height() - 2 );
+scroll_index_up( <a href="screen_height.html">screen_height</a>() - 2 );
 </pre>
 <p class="seealso">See also <a href="jump_index_to.html">jump_index_to</a>, <a href="scroll_index_to.html">scroll_index_to</a>, <a href="scroll_index_down.html">scroll_index_down</a></p>

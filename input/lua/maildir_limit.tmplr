@@ -11,7 +11,7 @@ brief: Specify which maildir folders to show.
 --
 function all_folders()
    maildir_limit( "all" );
-   clear();
+   <a href="clear.html">clear</a>();
 end
 
 --
@@ -19,7 +19,7 @@ end
 --
 function new_folders()
    maildir_limit( "new" );
-   clear();
+   <a href="clear.html">clear</a>();
 end
 
 --
@@ -27,7 +27,7 @@ end
 --
 function livejournal_folders()
    maildir_limit( "livejournal.2" );
-   clear();
+   <a href="clear.html">clear</a>();
 end
 
 --

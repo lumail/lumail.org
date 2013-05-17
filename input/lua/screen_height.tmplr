@@ -9,7 +9,7 @@ brief: Retrieve the height of the screen.
 -- Scroll down the list of folders in multiples of the screen height.
 --
 function maildir_page_down()
-   scroll_maildir_down( screen_height() - 2  );
+   <a href="scroll_maildir_down.html">scroll_maildir_down</a>( screen_height() - 2  );
 end
 
 keymap['maildir']['J'] = 'maildir_page_down()'

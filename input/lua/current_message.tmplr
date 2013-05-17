@@ -9,6 +9,6 @@ brief: Retrieve the currently selected message.
 <p>For example: </p>
 <pre>
 -- Show the message
-msg( current_message() );
+<a href="msg.html">msg</a>( current_message() );
 </pre>
 <p class="seealso">See also <a href="count_messages.html">count_messages()</a>, <a href="is_new.html">is_new()</a>, <a href="mark_new.html">mark_new()</a>, <a href="mark_read.html">mark_read()</a>.</p>
