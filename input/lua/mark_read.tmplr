@@ -1,0 +1,16 @@
+title: mark_read()
+brief: Mark a message as old/read.
+----
+
+
+<p>This function will mark the currently selected message as old/read.  You may also call this function with a path, which will update the message specified instead.</p>
+<p>For example: </p>
+<pre>
+--
+-- Mark every message we've read as such.
+--
+function on_read_message( path )
+  mark_read(path);
+end
+</pre>
+<p class="seealso">See also <a href="current_message.html">current_message()</a>, <a href="is_new.html">is_new()</a>, <a href="mark_new.html">mark_new()</a>.</p>
