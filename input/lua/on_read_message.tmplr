@@ -8,6 +8,9 @@ brief: Called when an email is read.
 <pre>
 function on_read_message( path )
    msg( "Now reading: " .. path );
+   if ( is_new() == 1 ) then
+      mark_read();
+   end
 end
 </pre>
 <p class="seealso">See also <a href="on_exit.html">on_exit()</a>, <a href="on_idle.html">on_idle()</a>.</p>
