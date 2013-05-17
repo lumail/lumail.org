@@ -2,7 +2,7 @@ title: jump_index_to()
 brief: Jump to a position in the message list.
 ----
 
-<p>When a folder has been opened this function causes the list of messages to be scrolled to given offset.</P>
+<p>When a folder has been opened this function causes the list of messages to be scrolled to the given offset.</P>
 <p>For example:</p>
 <pre>
 -- Jump to the end of the list:
@@ -10,4 +10,4 @@ function index_end()
    jump_index_to( count_messages() - 1 );
 end
 </pre>
-<p class="seealso">See also  <a href="scroll_index_down.html">scroll_index_down</a>, <a href="scroll_index_to.html">scroll_index_to</a>, <a href="scroll_index_up.html">scroll_index_up</a></p>
+<p class="seealso">See also <a href="scroll_index_down.html">scroll_index_down</a>, <a href="scroll_index_to.html">scroll_index_to</a>, <a href="scroll_index_up.html">scroll_index_up</a></p>
