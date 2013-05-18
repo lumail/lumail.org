@@ -6,6 +6,6 @@ brief: Toggle the selected state of the current folder.
 <p>The <tt>toggle_selected_folder()</tt> function allows you to toggle the state of the currently folder.</p>
 <p>For example:</p>
 <pre>
-keymap['maildir'][' '] = 'toggle_selected_folder()';
+<a href="keymap.html">keymap</a>['maildir'][' '] = 'toggle_selected_folder()';
 </pre>
 <p class="seealso">See also <a href="add_selected_folder.html">add_selected_folder()</a>, <a href="clear_selected_folders.html">clear_selected_folders()</a>, <a href="selected_folders.html">selected_folders()</a>, <a href="set_selected_folder.html">set_selected_folder()</a>.

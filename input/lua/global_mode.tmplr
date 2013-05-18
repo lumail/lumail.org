@@ -38,6 +38,6 @@ end
 -- Call the function we've just defined if RETURN
 -- is pressed in maildir-mode
 --
-keymap['maildir']['\n'] = 'open_folder()'
+<a href="keymap.html">keymap</a>['maildir']['\n'] = 'open_folder()'
 </pre>
 <p class="seelalso">See also <a href="keymap.html">keymap()</a>.</p>

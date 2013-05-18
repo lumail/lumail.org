@@ -20,6 +20,6 @@ function debugy()
    ff:close();
 end
 
-keymap['maildir']['D'] = 'debugy()';
+<a href="keymap.html">keymap</a>['maildir']['D'] = 'debugy()';
 </pre>
 <p class="seealso">See also <a href="add_selected_folder.html">add_selected_folder()</a>, <a href="clear_selected_folders.html">clear_selected_folders()</a>, <a href="toggle_selected_folder.html">toggle_selected_folder()</a>, <a href="set_selected_folder.html">set_selected_folder()</a>.

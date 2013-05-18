@@ -26,8 +26,8 @@ end
 --
 -- Toggle display of folders
 --
-keymap['index']['a'] = 'all_msg()'
-keymap['index']['n'] = 'new_msg()'
+<a href="keymap.html">keymap</a>['index']['a'] = 'all_msg()'
+<a href="keymap.html">keymap</a>['index']['n'] = 'new_msg()'
 </pre>
 
 <p class="seealso">See also <a href="maildir_limit.html">maildir_limit()</a>.</p>

@@ -14,6 +14,6 @@ function open_folder()
    <a href="global_mode.html">global_mode</a>( "index" );
    <a href="clear.html">clear</a>();
 end
-keymap['maildir']['O'] = 'open_folder()';
+<a href="keymap.html">keymap</a>['maildir']['O'] = 'open_folder()';
 </pre>
 <p class="seealso">See also <a href="add_selected_folder.html">add_selected_folder()</a>, <a href="clear_selected_folders.html">clear_selected_folders()</a>, <a href="selected_folders.html">selected_folders()</a>, <a href="toggle_selected_folder.html">toggle_selected_folder()</a>.

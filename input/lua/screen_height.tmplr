@@ -12,7 +12,7 @@ function maildir_page_down()
    <a href="scroll_maildir_down.html">scroll_maildir_down</a>( screen_height() - 2  );
 end
 
-keymap['maildir']['J'] = 'maildir_page_down()'
+<a href="keymap.html">keymap</a>['maildir']['J'] = 'maildir_page_down()'
 
 </pre>
 <p class="seealso">See also <a href="screen_width.thml">screen_width</a></p>
