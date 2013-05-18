@@ -8,12 +8,44 @@ and perform general configuration.</p>
 
 <h2>Writing useful functions</h2>
 <blockquote>
+<p>Using the <a href="/lua/">supplied primitives</a> you can write several useful functions easily.  For example this function will mark all messages as read:</p>
+<pre>
+--
+-- Mark all messages in the current folder as read.
+--
+function mark_all_read()
+   count = count_messages()
+   i = 0
+
+   while( i < count ) do
+      jump_index_to( i )
+      mark_read();
+      i = i + 1
+   end
+end
+</pre>
+<p>If you define this function in your configuration file you may invoke it at any time by pressing "<tt>:</tt>" to bring up the eval-prompt, then entering "<tt>mark_all_read();</tt>".</p>
 </blockquote>
 
 <h2>Binding keypresses to functions</h2>
 <blockquote>
+<p>All keybindings are configured by making entries in the global <a href="/lua/keymap.html">keymap</a>.  There are four entries in the keymap:</p>
+<ul>
+<li>Entries that apply in all modes.</li>
+<li>Entries that apply in maildir-mode.</li>
+<li>Entries that apply in index-mode.</li>
+<li>Entries that apply in message-mode.</li>
+</ul>
+<p>With the previous <tt>mark_all_read</tt> function you would probably prefer to make it execute only in index-mode:</p>
+<pre>
+keymap['index']['R'] = 'mark_all_read();'
+</pre>
+<p>This will invoke the function if you press "<tt>R</tt>" in the index-view only; in all other modes the keypress "<tt>R</tt>" will do nothing.</p>
 </blockquote>
 
 <h2>Responding to events</h2>
 <blockquote>
+<p><tt>lumail</tt> has several defined callbackups which are listed in the <a href="/lua/">primitive list</a>, each one is named "on_XXXX".</p>
+<p>For example when reading a message the function <tt>on_read_message()</tt> is called <b>if</b> you define it.</p>
+<p>If you're missing a handler that you think would be useful please <a href="<!-- tmpl_var name='repo' -->">report a bug</a>.</p>
 </blockquote>
