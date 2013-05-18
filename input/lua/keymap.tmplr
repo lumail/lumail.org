@@ -2,9 +2,10 @@ title: keymap
 brief: A table used for keybindings.
 ----
 
-<p>All keybindings are defined via the lua init file(s).  The definitions use a global table
-called <tt>keymap</tt>.</p>
-<p>Currently all keybindings are single character values; it is not possible to bind an action to a multi-part keypress (such as in emacs where you can bind a function to a key-combination such as "Ctrl-x Ctrl-s").</p>
+<p>All keybindings are defined via the lua init file(s), vua the  global Lua table "<tt>keymap</tt>".</p>
+<p>Currently all keybindings are single characters, although it is possible to bind keys
+such as "Ctrl-m", or "Ctrl-n", those keys should be written as "^M" and "^N" respectively.</p>
+<p>Because only single-keypresses are looked-up it is not possible to bind an action to a multi-part keypress (such as in emacs where you can bind a function to a key-combination such as "Ctrl-x Ctrl-s").</p>
 <p>The following is a good introduction to keybindings:</p>
 <pre>
 --
@@ -21,6 +22,11 @@ keymap['maildir'] = {}
 -- placing it in the <b>global</b> keymap.
 --
 keymap['global']['Q'] = "<a href="exit.html">exit</a>()"
+
+--
+-- The key "Ctrl-N" will cause a new mail to be created.
+--
+keymap['global']['^N'] = 'compose();'
 
 --
 -- The function "foo()" will be called if you press "f"
