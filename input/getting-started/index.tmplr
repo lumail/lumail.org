@@ -78,10 +78,10 @@ display, or opening several folders via a single-keystroke.</p>
 <p>In addition to this you can also evaluate lua functions via the prompt.</p>
 <p>In any mode pressing <tt>:</tt> will prompt for input, and evaluate it.  For example you might press "<tt>:</tt>" then enter:</p>
 <pre>
-msg( "Lua rocks!" );
+<a href="/lua/msg.html">msg</a>( "Lua rocks!" );
 </pre>
 <p>This is just one of the <a href="/lua/">lua primitives</a> available to you, and combining them works as you'd expect:</p>
 <pre>
-msg( "You are called : " .. prompt( "Enter your name:" ) );
+<a href="/lua/msg.html">msg</a>( "You are called : " .. <a href="/lua/prompt.html">prompt</a>( "Enter your name:" ) );
 </pre>
 </blockquote>
