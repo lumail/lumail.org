@@ -13,7 +13,7 @@ started_page: 1
 <p>Installation of the <tt>lumail</tt> client is currently only possible if you clone the master repository and build from the source code.</p>
 <p>Providing you have the dependencies you should be able to do this as follows:</p>
 <pre>
-$ git clone --quiet https://github.com/skx/lumail/
+$ git clone --quiet <!-- tmpl_var name='repo' -->
 $ cd lumail
 $ make
 </pre>

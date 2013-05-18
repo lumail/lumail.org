@@ -9,7 +9,7 @@ contact_page: 1
 <p>If you have a bug report, feature suggestion, or patch to submit please use the issue-tracker on the github repository.</p>
 <p>This allows development to continue in a public manner:</p>
 <ul>
-<li><a href="https://github.com/skx/lumail/">https://github.com/skx/lumail/</a></li>
+<li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
 </ul>
 <p>If you spot a problem with this website (content, spelling, etc), please report it as an issue against the source repository:</p>
 <ul>

@@ -43,7 +43,7 @@ home_page: 1
 <blockquote>
 <p>As the client is still under heavy development it is recommended that users install from the latest available source code.  All development is carried out in public using GitHub:</p>
 <ul>
-<li><a href="https://github.com/skx/lumail/">https://github.com/skx/lumail/</a></li>
+<li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
 </ul>
 <p>The repository itself contains brief instructions, but there is also a <a href="/getting-started">getting started guide</a>.</p>
 <p>If you have questions feel free to <a href="/contact/">contact the author</a>.</p>
