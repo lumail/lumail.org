@@ -1,5 +1,5 @@
 title: add_selected_folder()
-brief: Add a folder to the selection
+brief: Add a folder to the list of selected folders.
 ----
 
 <p><tt>luamil</tt> allows you to select multiple folders to open at the same time.</p>
