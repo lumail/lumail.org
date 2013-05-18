@@ -1,0 +1,16 @@
+title: sendmail_path()
+brief: Get, or set, the path to sendmail.
+----
+
+<p>The <b>unimplemented</b> compose() function, and the nonexistant <tt>reply()</tt> functions
+ will send outgoing email.</p>
+<p>All email will be sent by piping a message to the sendmail binary and the path to this binary will be set by this function.</p>
+<p>For example:</p>
+<pre>
+--
+-- Set the path to the binary that will actually deliver
+-- outgoing email.
+--
+sendmail_path( "/usr/lib/sendmail -t" );
+</pre>
+<p class="seealso">See also <a href="compose.html">compose()</a>.</p>
