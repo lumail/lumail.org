@@ -7,7 +7,7 @@ brief: Jump to a position in the message list.
 <pre>
 -- Jump to the end of the list:
 function index_end()
-   jump_index_to( count_messages() - 1 );
+   jump_index_to( <a href="/lua/count_messages.html">count_messages</a>() - 1 );
 end
 </pre>
 <p class="seealso">See also <a href="scroll_index_down.html">scroll_index_down</a>, <a href="scroll_index_to.html">scroll_index_to</a>, <a href="scroll_index_up.html">scroll_index_up</a></p>

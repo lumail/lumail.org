@@ -8,7 +8,7 @@ brief: Jump to a position in the maildir list.
 <pre>
 -- Jump to the end of the list:
 function maildir_end()
-   jump_maildir_to( count_maildirs() - 1 );
+   jump_maildir_to( <a href="/lua/count_maildirs.html">count_maildirs</a>() - 1 );
 end
 </pre>
 <p class="seealso">See also <a href="scroll_maildir_to.html">scroll_maildir_to</a>, <a href="scroll_maildir_to.html">scroll_maildir_to</a>, <a href="scroll_maildir_up.html">scroll_maildir_up</a></p>
