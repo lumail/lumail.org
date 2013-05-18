@@ -11,15 +11,15 @@ and perform general configuration.</p>
 <p>Using the <a href="/lua/">supplied primitives</a> you can write several useful functions easily.  For example this function will mark all messages as read:</p>
 <pre>
 --
--- Mark all messages in the current folder as read.
+-- Mark all messages in the currently selected folder(s) as read.
 --
 function mark_all_read()
-   count = count_messages()
+   count = <a href="/lua/count_messages.html">count_messages</a>()
    i = 0
 
    while( i < count ) do
-      jump_index_to( i )
-      mark_read();
+      <a href="/lua/jump_index_to.html">jump_index_to</a>( i )
+      <a href="/lua/mark_read.html">mark_read</a>();
       i = i + 1
    end
 end
