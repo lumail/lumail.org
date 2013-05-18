@@ -1,0 +1,14 @@
+title: headers()
+brief: Control which headers are displayed when reading a message.
+----
+
+<p>When in message-mode a message will be displayed upon the screen.  The display consists of two parts:</p>
+<ul>
+<li>A list of headers.</li>
+<li>The body of the email.</li>
+</ul>
+<p>The list of headers, and their orders, is specified via the <tt>headers</tt> table.</p>
+<p>For example:</p>
+<pre>
+headers = { "$TO", "$FROM", "$DATE", "$SUBJECT" };
+</pre>
