@@ -45,7 +45,11 @@
 <div id="main">
 <p>&nbsp;</p>
 <blockquote>
+ <!-- tmpl_if name='brief' -->
+  <h1><a href="/lua/">Lua</a>: <!-- tmpl_var name='title' --></h1>
+ <!-- tmpl_else -->
   <h1><!-- tmpl_var name='title' --></h1>
+ <!-- /tmpl_if -->
   <blockquote>
     <blockquote>
       <!-- tmpl_var name='content' -->
