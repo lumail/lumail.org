@@ -29,5 +29,18 @@ faq_page: 1
         <li>There is no support for MH-H/Mail folders.  Just Maildirs.</li>
       </ul>
     </dd>
+    <dt>4. Why embed lua?</dt>
+    <dd>
+      <p>The intention is that <tt>lumail</tt> will be a flexible email client, which means that it must allow things to be configured in ways that I do not expect.</p>
+      <p>Allowing a client to be configured in interesting ways demands some kind of "scripting", or the ability to set values/options conditionally in the configuration file.</p>
+      <p>Some clients allow this to be achieved using their own home-grown configuration language, with perhaps a few conditional operators.</p>
+      <p>Rather than inventing a simple language, spending the time required, it seems so much more natural to pick an existing implementation which is small, easy to learn, and well documented.  On that basis I picked Lua.</p>
+    </dd>
+    <dt>5. What can I do with lua?</dt>
+    <dd>
+      <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/lua/">primitives</a> made availabel to it.</p>
+      <p>Using the Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
+      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do; and if you find yourself missing a function/primitive you can report that as a bug against the <a href="<!-- tmpl_var name='repo' -->">github repository</a>.</p>
+    </dd>
   </dl>
 </blockquote>
