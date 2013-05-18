@@ -82,6 +82,9 @@ sub expand_variables
                 warn "File $file didn't contain a brief: header"
                   unless ( length($brief) );
 
+                warn "Brief description in $file missing punctuation"
+                  unless( $brief =~ /[.?]$/ );
+
                 #
                 # The name of the function is the name of the file..
                 #
