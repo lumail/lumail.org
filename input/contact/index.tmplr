@@ -13,5 +13,5 @@ contact_page: 1
 </ul>
 <p>If you spot a problem with this website (content, spelling, etc), please report it as an issue against the source repository:</p>
 <ul>
-<li><a href="https://github.com/skx/lumail.org/">https://github.com/skx/lumail.org/</a></li>
+<li><a href="<!-- tmpl_var name='repo_web' -->"><!-- tmpl_var name='repo_web' --></a></li>
 </ul>

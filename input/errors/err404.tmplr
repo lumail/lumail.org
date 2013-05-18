@@ -5,6 +5,6 @@ Title: Page Not Found
 <p>If you reached this page by following a link on the site please report a bug in the
 github tracker:</p>
 <ul>
-<li><a href="https://github.com/skx/lumail.org/">https://github.com/skx/lumail.org/</a></li>
+<li><a href="<!-- tmpl_var name='repo_web' -->"><!-- tmpl_var name='repo_web' --></a></li>
 </ul>
 </blockquote>
