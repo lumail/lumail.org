@@ -1,0 +1,19 @@
+Title: Examples of Lua functions
+----
+
+<p><tt>lumail</tt> has an embedded lua intepreter which is used to configure keybindings,
+and perform general configuration.</p>
+<p>If you're new to lua you might find the <a href="http://www.lua.org/">lua website</a> and the <a href="http://www.luafaq.org/">Lua Unofficial FAQ</a> useful resources.</p>
+
+
+<h2>Writing useful functions</h2>
+<blockquote>
+</blockquote>
+
+<h2>Binding keypresses to functions</h2>
+<blockquote>
+</blockquote>
+
+<h2>Responding to events</h2>
+<blockquote>
+</blockquote>
