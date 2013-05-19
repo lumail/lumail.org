@@ -9,3 +9,5 @@ brief: Prompt for input from the user.
 input = prompt( "my prompt" );
 <a href="msg.html">msg</a>( "You entered: " .. input );
 </pre>
+
+<p class="seealso">See also <a href="prompt_yn.html">prompt_yn</a>.</p>

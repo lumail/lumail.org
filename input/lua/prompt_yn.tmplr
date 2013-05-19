@@ -1,0 +1,13 @@
+title: prompt_yn()
+brief: Prompt for yes/no.
+----
+
+<p>The bottom row of the <tt>lumail</tt> mail-client is designated as the message area, but it is also used to prompt for input.</p>
+<p>The <tt>prompt_yn()</tt> function allows you to query a user for a response which is either "yes" or "no"..</p>
+<p>For example:</p>
+<pre>
+input = prompt_yn( "Do you wish to send the mail?" );
+<a href="msg.html">msg</a>( "The result was: " .. input );
+</pre>
+
+<p class="seealso">See also <a href="prompt.html">prompt</a>.</p>
