@@ -3,3 +3,4 @@ brief: Clears the screen.
 ----
 
 <p>This function will clear the screen.</p>
+<p class="seealso">See also <a href="refresh_display.html">refresh_display()</a>.</p>
