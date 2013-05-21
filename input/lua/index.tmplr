@@ -9,7 +9,7 @@ lua_page: 1
 
 <dl>
 <!-- tmpl_loop name='primitives' -->
-<dt><a href="<!-- tmpl_var name='name' -->.html"><!-- tmpl_var name='name' --></a></dt>
+<dt><!-- tmpl_if name='new' --><b>Updated</b> <!-- /tmpl_if --><a href="<!-- tmpl_var name='name' -->.html"><!-- tmpl_var name='name' --></a></dt>
 <dd><p><!-- tmpl_var name='brief' --></p></dd>
 <!-- /tmpl_loop -->
 </dl>

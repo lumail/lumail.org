@@ -69,6 +69,13 @@ sub expand_variables
                 # skip the invoking page.
                 next if ( $file eq $src );
 
+                # Age of the file.
+                my $age = int(-M $file);
+                my $new = undef;
+                if ( $age < 2 ) {
+                    $new = 1;
+                }
+
                 # brief description of the primitive.
                 my $brief = "";
 
@@ -96,7 +103,8 @@ sub expand_variables
                 #
                 push( @$loop,
                       {  name  => $name,
-                         brief => $brief
+                         brief => $brief,
+                         new   => $new,
                       } ) if ( length($brief) );
             }
 
