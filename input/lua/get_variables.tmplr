@@ -32,3 +32,14 @@ function dump_vars()
    ff:close();
 end
 </pre>
+<p>The names and values of the variables should be obvious when compared to the list of <a href="/lua/">Lua primitives</a>.  As an example the function above dumps this for me;</p>
+<pre>
+Setting global_mode has value maildir
+Setting index_format has value [$FLAGS] $FROM - $SUBJECT
+Setting maildir_limit has value all
+Setting from has value Steve Kemp &lt;steve@steve.org.uk&gt;
+Setting sendmail_path has value /usr/lib/sendmail -t
+Setting sent_mail has value /home/skx/Maildir/sent-mail
+Setting index_limit has value all
+Setting maildir_prefix has value /home/skx/Maildir
+</pre>
