@@ -1,0 +1,28 @@
+title: get_variables()
+brief: Get a copy of all current variables.
+----
+
+<p>The <tt>lumail</tt> client has several variables which are set such as:</p>
+<ul>
+<li><a href="index_limit.html">index_limit</a> - Which filters the display of messages in index-mode.</li>
+<li><a href="maildir_limit.html">maildir_limit</a> - WHich limits the display of messages in maildir-mode.</li>
+</ul>
+<p>Internally all these variables are stored as a hash, and the <tt>get_variables()</tt> function allows you to recieve a <b>read-only</b> copy of this hash.</p>
+<p>For example:</p>
+<pre>
+--
+-- Dump the current variables to a temporary file.
+--
+function dump_vars()
+   -- where we log
+   ff = io.open( "/tmp/vars.log", "w");
+
+   vars = get_variables();
+
+   -- Note the use of "pairs" here, rather than "ipairs".
+   for i,v in pairs( vars ) do
+      ff:write( "Setting " .. i .. " has value " .. v .. "\n" );
+   end
+   ff:close();
+end
+</pre>
