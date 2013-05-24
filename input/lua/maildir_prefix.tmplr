@@ -9,7 +9,17 @@ brief: Get, or set, the root of the maildir hierarchy.
 --
 -- This setting is used to specify the prefix for your maildir hierarchy.
 --
+-- Here we set ~/Maildir/
+--
 maildir_prefix( os.getenv( "HOME" ) .. "/Maildir" );
+
+--
+-- The folder to use for storing sent-messages.
+--
+-- Here we set ~/Maildir/sent-mail.
+--
+<a href="sent_mail.html">sent_mail</a>( maildir_prefix() .. "/sent-mail" );
 
 <a href="msg.html">msg</a>( "The maildir prefix is set to " .. maildir_prefix() );
 </pre>
+<p class="seealso">See also <a href="sent_mail.html">sent_mail()</a>.</p>
