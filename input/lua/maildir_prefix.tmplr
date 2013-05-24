@@ -19,7 +19,5 @@ maildir_prefix( os.getenv( "HOME" ) .. "/Maildir" );
 -- Here we set ~/Maildir/sent-mail.
 --
 <a href="sent_mail.html">sent_mail</a>( maildir_prefix() .. "/sent-mail" );
-
-<a href="msg.html">msg</a>( "The maildir prefix is set to " .. maildir_prefix() );
 </pre>
 <p class="seealso">See also <a href="sent_mail.html">sent_mail()</a>.</p>
