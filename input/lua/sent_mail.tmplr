@@ -1,0 +1,24 @@
+title: sent_mail()
+brief: Get, or set, the sent-mail folder path.
+----
+
+<p>The <tt>lumail</tt> client operates solely on Maildir folders.  All folders beneath a given directory will be dynamically discovered at run-time.</p>
+<p>When composing messages we need to save a copy of the outgoing mail, and to do that we need to know which folder is the one for "sent items".</p>
+<p>For example:</p>
+<pre>
+--
+-- This setting is used to specify the prefix for your maildir hierarchy.
+--
+-- Here we set ~/Maildir/.
+--
+<a href="maildir_prefix.html">maildir_prefix</a>( os.getenv( "HOME" ) .. "/Maildir" );
+
+--
+-- The folder to use for storing sent-messages.
+--
+-- Here we set ~/Maildir/sent-mail.
+--
+sent_mail( maildir_prefix() .. "/sent-mail" );
+
+</pre>
+<p class="seealso">See also <a href="maildir_prefix.html">maildir_prefix()</a>.</p>
