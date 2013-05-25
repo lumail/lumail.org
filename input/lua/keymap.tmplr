@@ -34,4 +34,4 @@ keymap['global']['^N'] = 'compose();'
 --
 keymap['maildir']['f'] = "foo()"
 </pre>
-<p class="seelalso">See also <a href="global_mode.html">global_mode()</a>.</p>
+<p class="seelalso">See also <a href="global_mode.html">global_mode()</a>, <a href="on_key.html">on_key()</a>.</p>
