@@ -26,7 +26,7 @@ keymap['global']['Q'] = "<a href="exit.html">exit</a>()"
 --
 -- The key "Ctrl-N" will cause a new mail to be created.
 --
-keymap['global']['^N'] = 'compose();'
+keymap['global']['^N'] = '<a href="compose.html">compose</a>();'
 
 --
 -- The function "foo()" will be called if you press "f"
