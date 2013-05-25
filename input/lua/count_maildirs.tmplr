@@ -5,4 +5,4 @@ brief: Count the number of maildirs.
 
 <p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
 <p>This function will count the number of visible maildirs.</p>
-<p class="seealso">See also <a href="current_maildir.html">current_maildir()</a>, <a href="selected_folders.html">selected_folders()</a>.</p>
+<p class="seealso">See also <a href="current_maildir.html">current_maildir()</a>, <a href="select_maildir.html">select_maildir()</a>, <a href="selected_folders.html">selected_folders()</a>.</p>

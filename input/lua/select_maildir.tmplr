@@ -1,0 +1,12 @@
+Title: select_maildir()
+brief: Select a maildir folder by path.
+----
+
+<p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
+<p>The list of maildirs may be scrolled up/down via <a href="scroll_maildir_up.html">scroll_maildir_up()</a>/<a href="scroll_maildir_down.html">scroll_maildir_down()</a>.  You can also jump to a given position via <a href="jump_maildir_to.html">jump_maildir_to()</a>.</p>
+<p>The function <tt>select_maildir()</tt> allows you to jump to a given maildir in the list via a literal path-comparision.</p>
+<p>For example:</p>
+<pre>
+select_maildir( "/home/skx/Maildir/.steve.org.uk" );
+</pre>
+<p class="seealso">See also <a href="current_maildir.html">current_maildir()</a>, <a href="jump_maildir_to.html">jump_maildir_to()</a>, <a href="select_maildir.html">select_maildir()</a>, <a href="selected_folders.html">selected_folders()</a>.</p>

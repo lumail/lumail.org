@@ -11,4 +11,4 @@ function maildir_end()
    jump_maildir_to( <a href="/lua/count_maildirs.html">count_maildirs</a>() - 1 );
 end
 </pre>
-<p class="seealso">See also <a href="scroll_maildir_to.html">scroll_maildir_to</a>, <a href="scroll_maildir_to.html">scroll_maildir_to</a>, <a href="scroll_maildir_up.html">scroll_maildir_up</a></p>
+<p class="seealso">See also <a href="select_maildir.html">select_maildir</a>, <a href="scroll_maildir_down.html">scroll_maildir_down</a>, <a href="scroll_maildir_up.html">scroll_maildir_up</a></p>
