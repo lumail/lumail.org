@@ -9,14 +9,16 @@ faq_page: 1
       <p>I login to my mailserver and read mail directly as it is delivered via procmail, so I have no need for it.</p>
       <p>Avoiding the use of POP3 or IMAP coding also greatly simplifies the client.</p>
       <p>If you have to use IMAP/POP3 to fetch your mail I'd suggest the use of <tt>imapsync</tt>, <tt>fetchmail</tt>, or similar.  These can be executed via <a href="/lua/on_idle.html">on_idle()</a>.</p>
+      <p>&nbsp;</p>
     </dd>
     <dt>2.  What license is the code released under?</dt>
     <dd>
       <p>The code is released under the GNU General Public License, version 2 or later.</p>
+      <p>&nbsp;</p>
     </dd>
     <dt>3.  How does this client differ from more established clients?</dt>
     <dd>
-      <p>At the moment the client isn't complete enough to be used, however many decisions have been taken already which differentiate this client from others:</p>
+      <p>At the moment the client isn't complete enough to be  used exclusively, however many decisions have been taken already which differentiate this client from others:</p>
       <ul>
         <li><tt>lumail</tt> is a modal client.  That is almost unique.</li>
         <li><tt>lumail</tt> has a real embedded language for scripting, lua.</li>
@@ -28,19 +30,28 @@ faq_page: 1
         <li>There is no IMAP/POP3 support.</li>
         <li>There is no support for MH-H/Mail folders.  Just Maildirs.</li>
       </ul>
+      <p>&nbsp;</p>
     </dd>
-    <dt>4. Why embed lua?</dt>
+    <dt>4. Why embed Lua?</dt>
     <dd>
       <p>The intention is that <tt>lumail</tt> will be a flexible email client, which means that it must allow things to be configured in ways that I do not expect.</p>
       <p>Allowing a client to be configured in interesting ways demands some kind of "scripting", or the ability to set values/options conditionally in the configuration file.</p>
       <p>Some clients allow this to be achieved using their own home-grown configuration language, with perhaps a few conditional operators.</p>
-      <p>Rather than inventing a simple language, spending the time required, it seems so much more natural to pick an existing implementation which is small, easy to learn, and well documented.  On that basis I picked Lua.</p>
+      <p>Rather than inventing a simple language, spending the time required, it seems so much more natural to pick an existing implementation which is small, easy to learn, and well-documented.  On that basis I picked Lua.</p>
+      <p>&nbsp;</p>
     </dd>
-    <dt>5. What can I do with lua?</dt>
+    <dt>5. What can I do with Lua?</dt>
     <dd>
       <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/lua/">primitives</a> made availabel to it.</p>
       <p>Using the Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
       <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do; and if you find yourself missing a function/primitive you can report that as a bug against the <a href="<!-- tmpl_var name='repo' -->">github repository</a>.</p>
+      <p>&nbsp;</p>
+    </dd>
+
+    <dt>6. What does it looke like?</dt>
+    <dd>
+    <p>There is a <a href="/screenshots">page of screenshots</a> available to give you some idea.</p>
+      <p>&nbsp;</p>
     </dd>
   </dl>
 </blockquote>
