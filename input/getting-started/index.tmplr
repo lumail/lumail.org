@@ -11,7 +11,7 @@ started_page: 1
 
 <h2>Installation</h2>
 <blockquote>
-<p>There are no binary packages, or source-tarballs, of lumail yet.  Instead you must build from source.</p>
+<p>There are no binary packages, or source-tarballs, of <tt>lumail</tt> yet.  Instead you must build from source.</p>
 <p>This process is documented upon the <a href="/download">download page</a>.</p>
 </blockquote>
 
