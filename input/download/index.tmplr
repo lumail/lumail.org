@@ -1,5 +1,6 @@
 Title: Download
 download_page: 1
+hubinfo: 1
 ----
 
 <blockquote>
@@ -11,3 +12,15 @@ download_page: 1
 <p>If you have questions feel free to <a href="/contact/">contact the author</a>.</p>
 </blockquote>
 
+
+<h2>Recent Activity</h2>
+<blockquote>
+<div id="hubInfo">
+</div>
+</blockquote>
+<script type="text/javascript">
+$("#hubInfo").hubInfo({
+    user: "skx",
+    repo: "lumail"
+});
+</script>
