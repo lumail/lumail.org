@@ -28,10 +28,10 @@
         <div id="main">
             <a href="/"><h1 id="title">Lumail - The console email client</h1></a>
 			<ul id="nav">
-				<li><a href="/download">Download</a></li>
-				<li><a href="/docs">Docs</a></li>
-				<li><a href="/faq/">FAQ</a></li>
-				<li><a href="/contact">Contact</a></li>
+				<li><a <!-- tmpl_if name='download_page' -->style="border-bottom:1px solid #2e2e2e;" <!-- /tmpl_if --> href="/download">Download</a></li>
+				<li><a <!-- tmpl_if name='docs_page' -->style="border-bottom:1px solid #2e2e2e;" <!-- /tmpl_if -->  href="/docs">Docs</a></li>
+				<li><a <!-- tmpl_if name='faq_page' -->style="border-bottom:1px solid #2e2e2e;" <!-- /tmpl_if --> href="/faq/">FAQ</a></li>
+				<li><a <!-- tmpl_if name='contact_page' -->style="border-bottom:1px solid #2e2e2e;" <!-- /tmpl_if --> href="/contact">Contact</a></li>
 			</ul>
 	<br style="clear: both">
 
