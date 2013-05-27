@@ -3,8 +3,8 @@ docs_page: 1
 ----
 
 <blockquote>
-<p>As the client is still under active development there isn't a stable set of documentation yet.</p>
-<p>However there is a good <a href="/getting-started">getting started</a> guide, along with complete documentation for each of the <a href="/lua/">Lua primitives</a>
-<p>In addition to those two resources the commented default configuration file <a href="https://raw.github.com/skx/lumail/master/lumail.lua">lumail.lua</a> is readable and a good reference.</p>
+<p>As the client is still under active development there isn't a complete set of documentation yet.</p>
+<p>However there is a good <a href="/getting-started">getting started</a> guide, along with complete documentation for each of the <a href="/lua/">Lua primitives</a>.</p>
+<p>The <a href="/examples/">examples page</a> gives hints of the interesting things you can do with the available primitives, especially alongside the <a href="<!-- tmpl_var name='cfg' -->">default configuration file</a>.</p>
 </blockquote>
 
