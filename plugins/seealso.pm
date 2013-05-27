@@ -40,10 +40,14 @@ sub expand_variables
             my $value = $hash{$key};
             my $data ;
 
-            foreach my $func ( split( /,/ , $value ) )
+            foreach my $func ( sort( split( /,/ , $value ) ) )
             {
                 $func =~ s/^\s+|\s+$//g;
                 next unless( length( $func ) );
+
+                if ( ! -e "./input/lua/$func.tmplr" ) {
+                    warn "Function linked in " . $page->source() . " but not defined: $func\n";
+                }
 
                 push( @$data, { function => $func } );
             }
