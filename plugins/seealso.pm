@@ -34,19 +34,22 @@ sub expand_variables
     {
         if ( $key =~ /^seealso$/i )
         {
+
             #
             #  For each function we'll add it to the list.
             #
-            my $value = $hash{$key};
-            my $data ;
+            my $value = $hash{ $key };
+            my $data;
 
-            foreach my $func ( sort( split( /,/ , $value ) ) )
+            foreach my $func ( sort( split( /,/, $value ) ) )
             {
                 $func =~ s/^\s+|\s+$//g;
-                next unless( length( $func ) );
+                next unless ( length($func) );
 
-                if ( ! -e "./input/lua/$func.tmplr" ) {
-                    warn "Function linked in " . $page->source() . " but not defined: $func\n";
+                if ( !-e "./input/lua/$func.tmplr" )
+                {
+                    warn "Function linked in " . $page->source() .
+                      " but not defined: $func\n";
                 }
 
                 push( @$data, { function => $func } );
@@ -57,7 +60,7 @@ sub expand_variables
             # page that invoked us.
             #
             $hash{ $key } = undef;
-            $hash{ $key } = $data if ( $data );
+            $hash{ $key } = $data if ($data);
         }
     }
 

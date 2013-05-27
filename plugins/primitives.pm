@@ -70,9 +70,10 @@ sub expand_variables
                 next if ( $file eq $src );
 
                 # Age of the file.
-                my $age = int(-M $file);
+                my $age = int( -M $file );
                 my $new = undef;
-                if ( $age < 2 ) {
+                if ( $age < 2 )
+                {
                     $new = 1;
                 }
 
@@ -90,7 +91,7 @@ sub expand_variables
                   unless ( length($brief) );
 
                 warn "Brief description in $file missing punctuation"
-                  unless( $brief =~ /[.?]$/ );
+                  unless ( $brief =~ /[.?]$/ );
 
                 #
                 # The name of the function is the name of the file..
