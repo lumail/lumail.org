@@ -1,5 +1,6 @@
 title: mark_read()
 brief: Mark a message as old/read.
+seealso: is_new, mark_new, current_message
 ----
 
 
@@ -13,4 +14,3 @@ function <a href="on_read_message.html">on_read_message</a>( path )
   mark_read(path);
 end
 </pre>
-<p class="seealso">See also <a href="current_message.html">current_message()</a>, <a href="is_new.html">is_new()</a>, <a href="mark_new.html">mark_new()</a>.</p>

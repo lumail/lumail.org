@@ -1,5 +1,6 @@
 title: current_message()
 brief: Retrieve the currently selected message.
+seealso: count_messages, delete, is_new, mark_new, mark_read, save_message
 ----
 
 
@@ -11,4 +12,3 @@ brief: Retrieve the currently selected message.
 -- Show the message
 <a href="msg.html">msg</a>( current_message() );
 </pre>
-<p class="seealso">See also <a href="count_messages.html">count_messages()</a>, <a href="delete.html">delete()</a>, <a href="is_new.html">is_new()</a>, <a href="mark_new.html">mark_new()</a>, <a href="mark_read.html">mark_read()</a>, <a href="save_message.html">save_Message()</a>.</p>

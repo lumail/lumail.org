@@ -1,5 +1,6 @@
 title: on_read_message()
 brief: Called when an email is read.
+seealso: on_key, on_exit, on_idle
 ----
 
 <p>If you define the function <tt>on_read_message</tt> it will be called when a message is displayed.</p>
@@ -13,4 +14,3 @@ function on_read_message( path )
    end
 end
 </pre>
-<p class="seealso">See also <a href="on_exit.html">on_exit()</a>, <a href="on_idle.html">on_idle()</a>.</p>

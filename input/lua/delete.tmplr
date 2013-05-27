@@ -1,5 +1,6 @@
 title: delete()
 brief: Delete a message.
+seealso: current_message, save_message
 ----
 
 
@@ -12,4 +13,3 @@ brief: Delete a message.
 <a href="keymap.html">keymap</a>['index']['D']   = 'delete()'
 <a href="keymap.html">keymap</a>['message']['D'] = 'delete()'
 </pre>
-<p class="seealso">See also <a href="current_message.html">current_message()</a>, <a href="save_message.html">save_message()</a>.</p>

@@ -1,5 +1,6 @@
 title: exit()
 brief: Exit the application.
+seealso: on_exit
 ----
 
 <p>This function will immediately exit the <tt>lumail</tt> client.</p>

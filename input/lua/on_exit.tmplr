@@ -1,5 +1,6 @@
 title: on_exit()
 brief: Called when the client exits.
+seealso: on_key, on_idle, on_read_message
 ----
 
 <p>If you define the function <tt>on_exit</tt> it will be called when the client is terminated.</p>
@@ -9,4 +10,3 @@ function on_exit()
    print("on_exit() called");
 end
 </pre>
-<p class="seealso">See also <a href="on_idle.html">on_idle()</a>.</p>

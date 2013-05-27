@@ -1,5 +1,6 @@
 title: on_idle()
 brief: Called when the client is idle.
+seealso: on_exit, on_key, on_read_message
 ----
 
 <p>If you define the function <tt>on_idle</tt> it will be regularly called when the client is idle.</p>
@@ -9,4 +10,3 @@ function on_idle()
    <a href="msg.html">msg</a>( "The client is idle " .. os.date() );
 end
 </pre>
-<p class="seealso">See also <a href="on_exit.html">on_exit()</a>, <a href="on_read_message.html">on_read_message()</a>.</p>
