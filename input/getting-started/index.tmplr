@@ -5,41 +5,25 @@ started_page: 1
 
 <blockquote>
 <p>This page briefly describes how you would get started using <tt>lumail</tt>.</p>
-<p>It only covers the bare essentials and documents the behaviour of the client with no configuration changes made - the client can be extended and altered significantly using the <a href="/lua/">available lua primitives</a>.</p>
+<p>It only covers the bare essentials and documents the behaviour of the client with the
+ default settings.  (You can configure the client significantly using the <a href="/lua/">available lua primitives</a>.)</p>
 </blockquote>
 
 <h2>Installation</h2>
 <blockquote>
-<p>Installation of the <tt>lumail</tt> client is currently only possible if you clone the master repository and build from the source code.</p>
-<p>Providing you have the dependencies you should be able to do this as follows:</p>
-<pre>
-$ git clone --quiet <!-- tmpl_var name='repo' -->
-$ cd lumail
-$ make
-</pre>
-<p>Once this building process completes you'll find an executable <tt>./lumail</tt> generated.</p>
-<p>The dependencies are :</p>
-<ul>
-<li>lua 5.1 - The scripting language</li>
-<li>ncurses - The console-graphics library.</li>
-<li>mimetic - The MIME-library.</li>
-</ul>
-<p>Upon a Debian GNU/Linux system you may install them all via:</p>
-<pre>
-# apt-get install libncurses-dev liblua5.1-0-dev lua5.1 libmimetic-dev
-</pre>
-
+<p>There are no binary packages, or source-tarballs, of lumail yet.  Instead you must build from source.</p>
+<p>This process is documented upon the <a href="/download">download page</a>.</p>
 </blockquote>
 
 <h2>Configuration</h2>
 <blockquote>
-<p>All the configuration of <tt>lumail</tt> is carried out via the editing of the lua file(s) which are read at startup-time.</p>
+<p>The configuration of <tt>lumail</tt> is carried out by the editing of the Lua configuration file(s) which are read at startup-time.</p>
 <p>The following two files are read by default:</p>
 <ul>
 <li><tt>/etc/lumail.lua</tt></li>
 <li><tt>~/.lumail/config.lua</tt></li>
 </ul>
-<p>You may specify a single additional file via the <tt>--rcfile</tt> command-line argument:</p>
+<p>You may specify an additional file via the <tt>--rcfile</tt> command-line argument:</p>
 <pre>
 ~$ lumail --rcfile ~/conf/lumail.lua
 </pre>
@@ -56,11 +40,11 @@ $ make
 <p>If you launch <tt>lumail</tt> you'll start in "maildir" mode, which consists of a
 scrollable list of folder-names.  You can page up/down with `j/k`, or search with `/`.</p>
 <blockquote>
-<p><b>Note</b>: The keybindings listed here are the defaults, and you are free to change them.</p>
+<p><b>Note</b>: The keybindings listed here are the defaults.</p>
 </blockquote>
 <p>Each folder-name has a small <tt>[ ]</tt> next to it.  This indicates whether the folder is
 selected or not.  Unlike other mail-clients you can open multiple folders with <tt>lumail</tt>,
-by selecting several folders and then opening the result - this will show you the messages
+by selecting several folders and then opening the result, which will show you the messages
 in all the selected folders.</p>
 <p>To open the single folder which is highlighted, press RETURN.  Otherwise you may toggle
 the folders selected state with "SPACE".  Once you've selected as many folders as you
@@ -73,15 +57,16 @@ then press "SPACE"/"RETURN" to view an individual message.</P>
 <h2>Advanced Usage</h2>
 <blockquote>
 <p>Because the client has a built-in Lua intepreter you can configure it in interesting
-ways with ease.  The supplied <tt>lumail.lua</tt> file shows examples of limiting the
-display, or opening several folders via a single-keystroke.</p>
-<p>In addition to this you can also evaluate lua functions via the prompt.</p>
+ways with ease.  The supplied <tt><a href="<!-- tmpl_var name='cfg' -->">lumail.lua</a></tt> file shows examples of limiting the display, or opening several folders via a single-keystroke.</p>
+<p>In addition to this you can also evaluate Lua functions via the prompt.</p>
 <p>In any mode pressing <tt>:</tt> will prompt for input, and evaluate it.  For example you might press "<tt>:</tt>" then enter:</p>
 <pre>
 <a href="/lua/msg.html">msg</a>( "Lua rocks!" );
 </pre>
-<p>This is just one of the <a href="/lua/">lua primitives</a> available to you, and combining them works as you'd expect:</p>
+<p>This uses just one of the <a href="/lua/">lua primitives</a> available to you, (<tt>msg</tt> outputs a message to the status are).</p>
+<p>Combining primitives works exactly as you'd expect:</p>
 <pre>
 <a href="/lua/msg.html">msg</a>( "You are called : " .. <a href="/lua/prompt.html">prompt</a>( "Enter your name:" ) );
 </pre>
+<p>(This prompts for your name, then displays it.)</p>
 </blockquote>

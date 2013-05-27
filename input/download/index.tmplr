@@ -12,6 +12,31 @@ hubinfo: 1
 <p>If you have questions feel free to <a href="/contact/">contact the author</a>.</p>
 </blockquote>
 
+<h2>Building from source</h2>
+<blockquote>
+<p>Lumail is deliberately designed to only depend upon a small number of libraries, to ensure that it is possible to build it upon the widest range of systems.</p>
+<p>Currently the depedencies are:</p>
+<ul>
+<li>lua 5.1 - The scripting language</li>
+<li>ncurses - The console-graphics library.</li>
+<li>mimetic - The MIME-library.</li>
+</ul>
+<blockquote>
+ <p>Upon a Debian GNU/Linux system you may install them all via:</p>
+ <pre>
+ # apt-get install libncurses-dev liblua5.1-0-dev lua5.1 libmimetic-dev
+ </pre>
+</blockquote>
+
+<p>Providing you have everything already present you should be able to build the project via:</p>
+<pre>
+$ git clone --quiet <!-- tmpl_var name='repo' -->
+$ cd lumail
+$ make
+</pre>
+<p>Once this building process completes you'll find an executable <tt>./lumail</tt> generated.</p>
+
+</blockquote>
 
 <h2>Recent Activity</h2>
 <blockquote>
