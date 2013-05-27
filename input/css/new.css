@@ -154,3 +154,7 @@ html[xmlns] .clearfix {
 * html .clearfix {
     height: 1%;
 }
+
+dt {
+    font-weight: bold;
+}
