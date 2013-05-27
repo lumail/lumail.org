@@ -1,5 +1,5 @@
 
-luamil.org
+lumail.org
 ==========
 
 The site http://lumail.org/ is generated from a series of templates,
