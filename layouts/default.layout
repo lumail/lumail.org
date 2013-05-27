@@ -53,6 +53,10 @@
   <blockquote>
     <blockquote>
       <!-- tmpl_var name='content' -->
+
+<!-- tmpl_if name='seealso' -->
+<p class="seealso">See also <!-- tmpl_loop name='seealso' --><a href="<!-- tmpl_var name='function' -->.html"><!-- tmpl_var name='function' -->()</a><!-- tmpl_if name='__last__' -->.<!-- tmpl_else -->, <!-- /tmpl_if --><!-- /tmpl_loop --></p>
+<!-- /tmpl_if -->
     </blockquote>
   </blockquote>
 </blockquote>
