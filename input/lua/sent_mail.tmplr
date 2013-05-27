@@ -1,5 +1,6 @@
 title: sent_mail()
 brief: Get, or set, the sent-mail folder path.
+seealso: maildir_prefix
 ----
 
 <p>The <tt>lumail</tt> client operates solely on Maildir folders.  All folders beneath a given directory will be dynamically discovered at run-time.</p>
@@ -21,4 +22,3 @@ brief: Get, or set, the sent-mail folder path.
 sent_mail( maildir_prefix() .. "/sent-mail" );
 
 </pre>
-<p class="seealso">See also <a href="maildir_prefix.html">maildir_prefix()</a>.</p>

@@ -1,5 +1,6 @@
 title: set_selected_folder()
 brief: Select only a single folder.
+seealso: toggle_selected_folder, add_selected_folder, clear_selected_folders, selected_folders,
 ----
 
 <p><tt>luamil</tt> allows you to select multiple folders to open at the same time.</p>
@@ -16,4 +17,3 @@ function open_folder()
 end
 <a href="keymap.html">keymap</a>['maildir']['O'] = 'open_folder()';
 </pre>
-<p class="seealso">See also <a href="add_selected_folder.html">add_selected_folder()</a>, <a href="clear_selected_folders.html">clear_selected_folders()</a>, <a href="selected_folders.html">selected_folders()</a>, <a href="toggle_selected_folder.html">toggle_selected_folder()</a>.

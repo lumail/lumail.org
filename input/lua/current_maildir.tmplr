@@ -1,5 +1,6 @@
 title: current_maildir()
 brief: Retrieve the currently selected folder.
+seealso: count_maildirs, jump_maildir_to, scroll_maildir_down, scroll_maildir_up, scroll_maildir_to, selected_folders
 ----
 
 
@@ -10,4 +11,4 @@ brief: Retrieve the currently selected folder.
 -- Show folder:
 <a href="msg.html">msg</a>( current_maildir() );
 </pre>
-<p class="seealso">See also <a href="count_maildirs.html">count_maildirs()</a>, <a href="jump_maildir_to.html">jump_maildir_to()</a>, <a href="select_maildir.html">select_maildir()</a>, <a href="selected_folders.html">selected_folders()</a>.</p>
+

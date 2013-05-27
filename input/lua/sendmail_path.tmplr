@@ -1,5 +1,6 @@
 title: sendmail_path()
 brief: Get, or set, the path to sendmail.
+seealso: compose
 ----
 
 <p>The <b>unimplemented</b> compose() function, and the nonexistant <tt>reply()</tt> functions
@@ -13,4 +14,3 @@ brief: Get, or set, the path to sendmail.
 --
 sendmail_path( "/usr/lib/sendmail -t" );
 </pre>
-<p class="seealso">See also <a href="compose.html">compose()</a>.</p>

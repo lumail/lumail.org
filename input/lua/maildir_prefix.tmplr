@@ -1,5 +1,6 @@
 title: maildir_prefix()
 brief: Get, or set, the root of the maildir hierarchy.
+seealso: sent_mail
 ----
 
 <p>The <tt>lumail</tt> client operates solely on Maildir folders.  All folders beneath a given directory will be dynamically discovered at run-time.</p>
@@ -20,4 +21,3 @@ maildir_prefix( os.getenv( "HOME" ) .. "/Maildir" );
 --
 <a href="sent_mail.html">sent_mail</a>( maildir_prefix() .. "/sent-mail" );
 </pre>
-<p class="seealso">See also <a href="sent_mail.html">sent_mail()</a>.</p>

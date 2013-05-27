@@ -1,5 +1,6 @@
 title: toggle_selected_folder()
 brief: Toggle the selected state of the current folder.
+seealso: add_selected_folder, clear_selected_folders, selected_folders, set_selected_folder
 ----
 
 <p><tt>luamil</tt> allows you to select multiple folders to open at the same time.</p>
@@ -8,4 +9,3 @@ brief: Toggle the selected state of the current folder.
 <pre>
 <a href="keymap.html">keymap</a>['maildir'][' '] = 'toggle_selected_folder()';
 </pre>
-<p class="seealso">See also <a href="add_selected_folder.html">add_selected_folder()</a>, <a href="clear_selected_folders.html">clear_selected_folders()</a>, <a href="selected_folders.html">selected_folders()</a>, <a href="set_selected_folder.html">set_selected_folder()</a>.

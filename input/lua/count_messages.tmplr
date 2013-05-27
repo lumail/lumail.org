@@ -1,8 +1,8 @@
 title: count_message()
 brief: Count the number of messages in the currently selected folder(s).
+seealso: current_message
 ----
 
 
 <p>When in index mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of messages.</p>
 <p>This function will count the number of messages which are visible.</P>
-<p class="seealso">See also <a href="current_message.html">current_message</a>.</p>
