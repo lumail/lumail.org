@@ -9,6 +9,11 @@
 	<meta name="description" content="lumail console mail client."/>
 	<meta name="author" content="Steve Kemp"/>
 	<meta name="robots" content="FOLLOW,INDEX"/>
+<!-- tmpl_if name='hubinfo' -->
+        <link rel="stylesheet" href="/css/hubinfo.min.css" type="text/css" media="screen">
+        <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+        <script type="text/javascript" src="/js/hubinfo.min.js"></script>
+<!-- /tmpl_if -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
