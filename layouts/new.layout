@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Lumail - Console Mail Client with Lua scripting</title>
+        <link rel="icon" type="image/png" href="/favicon.ico">
+        <link rel="stylesheet" href="/css/new.css" type="text/css" media="screen">
+	<meta name="keywords" content="email, console, linux"/>
+	<meta name="description" content="lumail console mail client."/>
+	<meta name="author" content="Steve Kemp"/>
+	<meta name="robots" content="FOLLOW,INDEX"/>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37997217-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </head>
+    <body>
+        <div id="main">
+            <a href="/"><h1 id="title">Lumail - The console email client</h1></a>
+			<ul id="nav">
+				<li><a href="/download">Download</a></li>
+				<li><a href="/docs">Docs</a></li>
+				<li><a href="/faq/">FAQ</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+	<br style="clear: both">
+
+
+<div id="content">
+  <!-- tmpl_if name='brief' -->
+  <h2><a href="/lua/">Lua</a>: <!-- tmpl_var name='title' --></h2>
+  <!-- tmpl_else -->
+  <h2><!-- tmpl_var name='title' --></h2>
+  <!-- /tmpl_if -->
+      <!-- tmpl_var name='content' -->
+
+<!-- tmpl_if name='seealso' -->
+<h3>See Also</h3>
+<p class="seealso">See also <!-- tmpl_loop name='seealso' --><a href="<!-- tmpl_var name='function' -->.html"><!-- tmpl_var name='function' -->()</a><!-- tmpl_if name='__last__' -->.<!-- tmpl_else -->, <!-- /tmpl_if --><!-- /tmpl_loop --></p>
+<!-- /tmpl_if -->
+
+</div>
+
+        </div>
+
+	<div id="footer" lang="de">
+	© 2009-2012 Michael Stapelberg, <a href="/impress.html">Impressum</a>
+	</div>
+    </body>
+</html>
