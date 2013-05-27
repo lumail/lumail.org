@@ -1,5 +1,6 @@
 title: screen_height()
 brief: Retrieve the height of the screen.
+seealso: screen_width
 ----
 
 <p>This function will return the integer count of the number of lines the console within which <tt>lumail</tt> is running.</p>
@@ -15,4 +16,3 @@ end
 <a href="keymap.html">keymap</a>['maildir']['J'] = 'maildir_page_down()'
 
 </pre>
-<p class="seealso">See also <a href="screen_width.thml">screen_width</a></p>

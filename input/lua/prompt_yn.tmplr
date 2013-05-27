@@ -1,5 +1,6 @@
 title: prompt_yn()
 brief: Prompt for yes/no.
+seealso: prompt
 ----
 
 <p>The bottom row of the <tt>lumail</tt> mail-client is designated as the message area, but it is also used to prompt for input.</p>
@@ -9,5 +10,3 @@ brief: Prompt for yes/no.
 input = prompt_yn( "Do you wish to send the mail?" );
 <a href="msg.html">msg</a>( "The result was: " .. input );
 </pre>
-
-<p class="seealso">See also <a href="prompt.html">prompt</a>.</p>

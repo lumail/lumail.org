@@ -1,6 +1,6 @@
 title: refresh_display()
 brief: Redraw the screen.
+seealso: clear
 ----
 
 <p>This function will clear and redraw the display, it is useful while there are still a couple of odd redraw-related glitches.</p>
-<p class="seealso">See also <a href="clear.html">clear()</a>.</p>

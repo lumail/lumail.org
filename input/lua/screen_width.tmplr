@@ -1,5 +1,6 @@
 title: screen_width()
 brief: Retrieve the width of the screen.
+seealso: screen_height
 ----
 
 <p>This function will return the integer count of the number of columns the console within which <tt>lumail</tt> is running.</p>
@@ -8,4 +9,3 @@ brief: Retrieve the width of the screen.
 -- show the width
 <a href="msg.html">msg</a>( "The screen is " .. screen_width() .. " characters wide." );
 </pre>
-<p class="seealso">See also <a href="screen_height.html">screen_height</a></p>
