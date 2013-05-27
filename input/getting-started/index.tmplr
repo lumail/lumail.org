@@ -68,5 +68,5 @@ ways with ease.  The supplied <tt><a href="<!-- tmpl_var name='cfg' -->">lumail.
 <pre>
 <a href="/lua/msg.html">msg</a>( "You are called : " .. <a href="/lua/prompt.html">prompt</a>( "Enter your name:" ) );
 </pre>
-<p>(This prompts for your name, then displays it.)</p>
+<p>(This prompts for your name, then displays it.  In Lua "<tt>..</tt>" is used for string concatenation.)</p>
 </blockquote>
