@@ -4,5 +4,6 @@ seealso: sent_mail, sendmail_path
 ----
 
 <p>This function will prompt for a recipient &amp; subject, then open your editor to compose a new email.</p>
-<p>After prompting for confirmation the outgoing mail will then be sent.</p>
-<p><b>Note</b>: No copy of the message will be archived.</p>
+<p>You can specify the editor to use via the <tt>EDITOR</tt> environmental variable, if unset vim is used.</p>
+<p>After prompting for confirmation the outgoing mail will then be sent, and a copy written to your configured sent-mail folder.</p>
+
