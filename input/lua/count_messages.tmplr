@@ -1,6 +1,6 @@
 title: count_message()
 brief: Count the number of messages in the currently selected folder(s).
-seealso: current_message
+seealso: current_message, count_maildirs
 ----
 
 
