@@ -38,13 +38,4 @@ home_page: 1
 <p>As it turns out I tend to focus my mail reading on viewing a list of folders with unread messages, then opening them in turn.  Better still would be the ability to open all folders with unread mail - and thus this idea of this client was born.</p>
 </blockquote>
 
-<h2>Installation</h2>
-<blockquote>
-<p>As the client is still under heavy development it is recommended that users install from the latest available source code.  All development is carried out in public using GitHub:</p>
-<ul>
-<li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
-</ul>
-<p>The repository itself contains brief instructions, but there is also a <a href="/getting-started">getting started guide</a>.</p>
-<p>If you have questions feel free to <a href="/contact/">contact the author</a>.</p>
-</blockquote>
 
