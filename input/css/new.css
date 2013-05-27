@@ -2,7 +2,6 @@ body {
     background-color: #fcfdfe;
     color: black;
     font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans", "Liberation Sans", sans-serif;
-//    font-size: 0.8em;
     overflow-y: scroll;
 }
 
@@ -24,7 +23,9 @@ a {
     text-decoration: underline;
 }
 
-
+a {
+    text-decoration: none;
+}
 a:hover {
     text-decoration: none;
 }
