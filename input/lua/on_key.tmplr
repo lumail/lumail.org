@@ -1,5 +1,6 @@
 title: on_key()
 brief: Called when a key is pressed.
+seealso: keymap
 ----
 
 <p>If you define the function <tt>on_key</tt> it will be called when the user presses any key.</p>
@@ -17,4 +18,3 @@ function on_key()
   end
 end
 </pre>
-<p class="seealso">See also <a href="keymap.html">keymap</a>.</p>

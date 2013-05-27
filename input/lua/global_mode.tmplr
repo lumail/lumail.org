@@ -1,5 +1,6 @@
 title: global_mode()
 brief: Get, or set, the global mode.
+seealso: keymap
 ----
 
 <p>The <tt>lumail</tt> client is a modal mail-client which means you're always in one of three modes:</p>
@@ -40,4 +41,3 @@ end
 --
 <a href="keymap.html">keymap</a>['maildir']['\n'] = 'open_folder()'
 </pre>
-<p class="seelalso">See also <a href="keymap.html">keymap()</a>.</p>

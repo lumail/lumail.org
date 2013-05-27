@@ -1,5 +1,6 @@
 title: jump_maildir_to()
 brief: Jump to a position in the maildir list.
+seealso: select_maildir, scroll_maildir_down, scroll_maildir_up
 ----
 
 <p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
@@ -11,4 +12,3 @@ function maildir_end()
    jump_maildir_to( <a href="/lua/count_maildirs.html">count_maildirs</a>() - 1 );
 end
 </pre>
-<p class="seealso">See also <a href="select_maildir.html">select_maildir</a>, <a href="scroll_maildir_down.html">scroll_maildir_down</a>, <a href="scroll_maildir_up.html">scroll_maildir_up</a></p>

@@ -1,5 +1,6 @@
 title: keymap
 brief: A table used for keybindings.
+seealso: global_mode, on_key
 ----
 
 <p>All keybindings are defined via the lua init file(s), vua the  global Lua table "<tt>keymap</tt>".</p>
@@ -34,4 +35,3 @@ keymap['global']['^N'] = '<a href="compose.html">compose</a>();'
 --
 keymap['maildir']['f'] = "foo()"
 </pre>
-<p class="seelalso">See also <a href="global_mode.html">global_mode()</a>, <a href="on_key.html">on_key()</a>.</p>

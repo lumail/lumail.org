@@ -1,5 +1,6 @@
 title: is_new()
 brief: Is a message new?
+seealso: current_message, mark_new, mark_read
 ----
 
 
@@ -16,4 +17,3 @@ function on_read_message( path )
    end
 end
 </pre>
-<p class="seealso">See also <a href="current_message.html">current_message()</a>, <a href="mark_new.html">mark_new()</a>, <a href="mark_read.html">mark_read()</a>.</p>
