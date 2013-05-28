@@ -1,6 +1,14 @@
 #
 # This is a templer-plugin.
 #
+# It is designed to take a line like this:
+#
+#   seealso: foo, bar, baz
+#
+# and turn it into a loop liking to /lua/$name.html.
+#
+# See <input/lua/*.tmplr> for examples.
+#
 # Steve
 # --
 
@@ -10,6 +18,10 @@ use warnings;
 
 package Templer::Plugin::seealso;
 
+
+#
+# Constructor
+#
 sub new
 {
     my ( $proto, %supplied ) = (@_);
@@ -38,14 +50,28 @@ sub expand_variables
             #
             #  For each function we'll add it to the list.
             #
-            my $value = $hash{ $key };
             my $data;
 
+            #
+            #  The value of the seealso: line.
+            #
+            my $value = $hash{ $key };
+
+            #
+            #  Split by comma, and sort.
+            #
             foreach my $func ( sort( split( /,/, $value ) ) )
             {
+
+                #
+                #  Skip leading/trailing whitespace and empty entries.
+                #
                 $func =~ s/^\s+|\s+$//g;
                 next unless ( length($func) );
 
+                #
+                #  See if the function was known.
+                #
                 if ( !-e "./input/lua/$func.tmplr" )
                 {
                     warn "Function linked in " . $page->source() .

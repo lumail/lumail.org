@@ -2,10 +2,10 @@
 # This is a templer-plugin.
 #
 # It is designed to read a series of files, and build a sorted list
-# of the lua-primitives contained within them.
+# of the Lua-primitives contained within them, based upon the filename.
 #
 # Given a file which requires this plugin every file matching
-# *.tmplr> will be tested.
+# <*.tmplr> will be tested.
 #
 # If the file contains a line "brief: ..." then the file will be
 # considered a primitive, with the brief description listed.
@@ -43,6 +43,12 @@ sub expand_variables
 
     foreach my $key ( keys %hash )
     {
+
+        #
+        #  We get invoked if the file contains:
+        #
+        #      primitives: 1
+        #
         if ( $key =~ /^primitives$/i )
         {
 
@@ -87,6 +93,9 @@ sub expand_variables
                 }
                 close($handle);
 
+                #
+                #  Sanity-check
+                #
                 warn "File $file didn't contain a brief: header"
                   unless ( length($brief) );
 
@@ -113,6 +122,7 @@ sub expand_variables
             # Make the look-variable "primitives" available to the
             # page that invoked us.
             #
+            $hash{ 'primitives' } = undef;
             $hash{ 'primitives' } = $loop if ($loop);
         }
     }
