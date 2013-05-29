@@ -1,6 +1,6 @@
 title: compose()
 brief: Begin composing a new email.
-seealso: sent_mail, sendmail_path
+seealso: reply, sent_mail, sendmail_path
 ----
 
 <p>This function will prompt for a recipient &amp; subject, then open your editor to compose a new email.</p>
