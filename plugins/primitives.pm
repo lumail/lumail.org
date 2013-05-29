@@ -78,7 +78,7 @@ sub expand_variables
                 # Age of the file.
                 my $age = int( -M $file );
                 my $new = undef;
-                if ( $age < 2 )
+                if ( $age < 1 )
                 {
                     $new = 1;
                 }

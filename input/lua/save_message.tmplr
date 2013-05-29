@@ -1,22 +1,4 @@
-title: save_message()
-brief: Move a message to a different folder.
-seealso: current_message, delete
+title: This function was renamed.
 ----
 
-
-<p>This function will delete the currently selected message from its location, and write a copy to the fully-qualified maildir folder given as an argument.</p>
-<p>For example: </p>
-<pre>
---
--- Save the given message in the spam-folder.
---
-function spam()
-  save_message(os.getenv("HOME") .. "/Maildir/.spam/" );
-end
-
---
--- Bind to "K"
---
-<a href="keymap.html">keymap</a>['index']['K']   = 'spam()'
-<a href="keymap.html">keymap</a>['message']['K'] = 'spam()'
-</pre>
+<p>The function <tt>save_message()</tt> was renamed to <a href="save.html">save()</a>.</p>
