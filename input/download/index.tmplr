@@ -15,7 +15,7 @@ hubinfo: 1
 <h2>Building from source</h2>
 <blockquote>
 <p>Lumail is deliberately designed to only depend upon a small number of libraries, to ensure that it is possible to build it upon the widest range of systems.</p>
-<p>Currently the depedencies are:</p>
+<p>Currently the dependencies are:</p>
 <ul>
 <li>lua 5.1 - The scripting language</li>
 <li>ncurses - The console-graphics library.</li>
