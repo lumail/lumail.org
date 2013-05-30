@@ -3,8 +3,8 @@ brief: Get, or set, the root of the maildir hierarchy.
 seealso: sent_mail
 ----
 
-<p>The <tt>lumail</tt> client operates solely on Maildir folders.  All folders beneath a given directory will be dynamically discovered at run-time.</p>
-<p>To configure the prefix of your folders <tt>maildir_prefix</tt> must be called with the path to examine.</p>
+<p>The <span class="tt">lumail</span> client operates solely on Maildir folders.  All folders beneath a given directory will be dynamically discovered at run-time.</p>
+<p>To configure the prefix of your folders <span class="tt">maildir_prefix</span> must be called with the path to examine.</p>
 <p>For example:</p>
 <pre>
 --

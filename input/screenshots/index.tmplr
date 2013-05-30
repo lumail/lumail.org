@@ -2,7 +2,7 @@ Title: lumail screenshots
 screen_page: 1
 ----
 
-<p>Because <tt>lumail</tt> is a modal client there are three distinct states you'll be in.  Here we show each of them:</p>
+<p>Because <span class="tt">lumail</span> is a modal client there are three distinct states you'll be in.  Here we show each of them:</p>
 
 <h2>maildir-mode</h2>
 <blockquote>

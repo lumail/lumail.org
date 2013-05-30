@@ -3,7 +3,7 @@ brief: A table used for keybindings.
 seealso: global_mode, on_key
 ----
 
-<p>All keybindings are defined via the lua init file(s), vua the  global Lua table "<tt>keymap</tt>".</p>
+<p>All keybindings are defined via the lua init file(s), vua the  global Lua table "<span class="tt">keymap</span>".</p>
 <p>Currently all keybindings are single characters, although it is possible to bind keys
 such as "Ctrl-m", or "Ctrl-n", those keys should be written as "^M" and "^N" respectively.</p>
 <p>Because only single-keypresses are looked-up it is not possible to bind an action to a multi-part keypress (such as in emacs where you can bind a function to a key-combination such as "Ctrl-x Ctrl-s").</p>

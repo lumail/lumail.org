@@ -3,8 +3,8 @@ brief: Get all selected folders.
 seealso: add_selected_folder, toggle_selected_folder, clear_selected_folders, set_selected_folder
 ----
 
-<p><tt>lumail</tt> allows you to select multiple folders to open at the same time.</p>
-<p>The <tt>selected_folders()</tt> function allows you to determine which folders are currently selected - this might be an empty set.</p>
+<p><span class="tt">lumail</span> allows you to select multiple folders to open at the same time.</p>
+<p>The <span class="tt">selected_folders()</span> function allows you to determine which folders are currently selected - this might be an empty set.</p>
 <p>For example:</p>
 <pre>
 --

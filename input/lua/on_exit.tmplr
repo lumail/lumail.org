@@ -3,7 +3,7 @@ brief: Called when the client exits.
 seealso: on_key, on_idle, on_read_message
 ----
 
-<p>If you define the function <tt>on_exit</tt> it will be called when the client is terminated.</p>
+<p>If you define the function <span class="tt">on_exit</span> it will be called when the client is terminated.</p>
 <p>For example:</p>
 <pre>
 function on_exit()

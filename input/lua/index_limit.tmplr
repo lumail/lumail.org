@@ -3,8 +3,8 @@ brief: Specify which messages to show.
 seealso: maildir_limit
 ----
 
-<p>When the <a href="global_mode.html"><tt>global_mode</tt></a> is set to <tt>index</tt> you will be presented with a list of messages.</p>
-<p>The list will default to showing all available messages, but you may use <tt>message_limit()</tt> to change this:</p>
+<p>When the <a href="global_mode.html"><span class="tt">global_mode</span></a> is set to <span class="tt">index</span> you will be presented with a list of messages.</p>
+<p>The list will default to showing all available messages, but you may use <span class="tt">message_limit()</span> to change this:</p>
 
 <pre>
 --

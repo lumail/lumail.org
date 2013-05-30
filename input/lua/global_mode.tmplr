@@ -3,7 +3,7 @@ brief: Get, or set, the global mode.
 seealso: keymap
 ----
 
-<p>The <tt>lumail</tt> client is a modal mail-client which means you're always in one of three modes:</p>
+<p>The <span class="tt">lumail</span> client is a modal mail-client which means you're always in one of three modes:</p>
 <dl>
 <dt>maildir</dt>
 <dd><p>Viewing the list of Maildir folders.</p></dd>
@@ -12,7 +12,7 @@ seealso: keymap
 <dt>message</dt>
 <dd><p>Viewing a single message.</p></dd>
 </dl>
-<p>The <tt>global_mode</tt> function will return the current mode, or allow you to change to a new one.</p>
+<p>The <span class="tt">global_mode</span> function will return the current mode, or allow you to change to a new one.</p>
 <p>For example:</p>
 <pre>
 -- view the mode

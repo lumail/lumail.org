@@ -3,7 +3,7 @@ brief: Get, or set, the sent-mail folder path.
 seealso: maildir_prefix
 ----
 
-<p>The <tt>lumail</tt> client operates solely on Maildir folders.  All folders beneath a given directory will be dynamically discovered at run-time.</p>
+<p>The <span class="tt">lumail</span> client operates solely on Maildir folders.  All folders beneath a given directory will be dynamically discovered at run-time.</p>
 <p>When composing messages we need to save a copy of the outgoing mail, and to do that we need to know which folder is the one for "sent items".</p>
 <p>For example:</p>
 <pre>

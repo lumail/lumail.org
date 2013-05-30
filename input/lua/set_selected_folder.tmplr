@@ -3,8 +3,8 @@ brief: Select only a single folder.
 seealso: toggle_selected_folder, add_selected_folder, clear_selected_folders, selected_folders,
 ----
 
-<p><tt>lumail</tt> allows you to select multiple folders to open at the same time.</p>
-<p>The <tt>add_selected_folder()</tt> function allows you to replace any currently-selected folders with the currently selected one.</p>
+<p><span class="tt">lumail</span> allows you to select multiple folders to open at the same time.</p>
+<p>The <span class="tt">add_selected_folder()</span> function allows you to replace any currently-selected folders with the currently selected one.</p>
 <p>For example:</p>
 <pre>
 --

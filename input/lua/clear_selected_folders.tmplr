@@ -3,5 +3,5 @@ brief: Clear all selected folders.
 seealso: add_selected_folder, toggle_selected_folder, selected_folders, set_selected_folder
 ----
 
-<p><tt>lumail</tt> allows you to select multiple folders to open at the same time.</p>
-<p>The <tt>clear_selected_folders()</tt> function allows you to unselect all currently selected folders.</p>
+<p><span class="tt">lumail</span> allows you to select multiple folders to open at the same time.</p>
+<p>The <span class="tt">clear_selected_folders()</span> function allows you to unselect all currently selected folders.</p>

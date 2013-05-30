@@ -4,7 +4,7 @@ seealso: current_maildir, jump_maildir_to, scroll_maildir_up, scroll_maildir_to
 ----
 
 <p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
-<p>The <tt>scroll_maildir_down()</tt> function allows the list of folders to be scrolled down by the specified amount.</p>
+<p>The <span class="tt">scroll_maildir_down()</span> function allows the list of folders to be scrolled down by the specified amount.</p>
 <p>For example:</p>
 <pre>
 -- Scroll down one folder

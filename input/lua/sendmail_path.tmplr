@@ -3,7 +3,7 @@ brief: Get, or set, the path to sendmail.
 seealso: compose
 ----
 
-<p>The <b>unimplemented</b> compose() function, and the nonexistant <tt>reply()</tt> functions
+<p>The <b>unimplemented</b> compose() function, and the nonexistant <span class="tt">reply()</span> functions
  will send outgoing email.</p>
 <p>All email will be sent by piping a message to the sendmail binary and the path to this binary will be set by this function.</p>
 <p>For example:</p>

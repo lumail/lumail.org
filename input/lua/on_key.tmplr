@@ -3,7 +3,7 @@ brief: Called when a key is pressed.
 seealso: keymap, on_idle, on_read_message, on_exit
 ----
 
-<p>If you define the function <tt>on_key</tt> it will be called when the user presses any key.</p>
+<p>If you define the function <span class="tt">on_key</span> it will be called when the user presses any key.</p>
 <p>Keyboard bindings are generally setup via the <a href="keymap.html">keymap</a> table, but it might be useful to allow processing to happen via Lua too.</p>
 <p>For example:</p>
 <pre>

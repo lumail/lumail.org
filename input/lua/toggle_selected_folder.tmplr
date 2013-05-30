@@ -3,8 +3,8 @@ brief: Toggle the selected state of the current folder.
 seealso: add_selected_folder, clear_selected_folders, selected_folders, set_selected_folder
 ----
 
-<p><tt>lumail</tt> allows you to select multiple folders to open at the same time.</p>
-<p>The <tt>toggle_selected_folder()</tt> function allows you to toggle the state of the currently folder.</p>
+<p><span class="tt">lumail</span> allows you to select multiple folders to open at the same time.</p>
+<p>The <span class="tt">toggle_selected_folder()</span> function allows you to toggle the state of the currently folder.</p>
 <p>For example:</p>
 <pre>
 <a href="keymap.html">keymap</a>['maildir'][' '] = 'toggle_selected_folder()';

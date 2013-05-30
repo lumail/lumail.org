@@ -3,7 +3,7 @@ brief: Retrieve the width of the screen.
 seealso: screen_height
 ----
 
-<p>This function will return the integer count of the number of columns the console within which <tt>lumail</tt> is running.</p>
+<p>This function will return the integer count of the number of columns the console within which <span class="tt">lumail</span> is running.</p>
 <p>For example:</p>
 <pre>
 -- show the width

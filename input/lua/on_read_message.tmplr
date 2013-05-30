@@ -3,7 +3,7 @@ brief: Called when an email is read.
 seealso: on_key, on_exit, on_idle
 ----
 
-<p>If you define the function <tt>on_read_message</tt> it will be called when a message is displayed.</p>
+<p>If you define the function <span class="tt">on_read_message</span> it will be called when a message is displayed.</p>
 <p>i.e. If you've opened a folder, then opened a message, then the hook will be called.
 <p>For example:</p>
 <pre>

@@ -1,7 +1,7 @@
 Title: Examples of Lua functions
 ----
 
-<p><tt>lumail</tt> has an embedded Lua intepreter which is used to configure keybindings,
+<p><span class="tt">lumail</span> has an embedded Lua intepreter which is used to configure keybindings,
 and perform general configuration.</p>
 <p>If you're new to Lua you might find the <a href="http://www.lua.org/">Lua website</a> and the <a href="http://www.luafaq.org/">Lua Unofficial FAQ</a> useful resources.</p>
 
@@ -24,7 +24,7 @@ function mark_all_read()
    end
 end
 </pre>
-<p>If you define this function in your configuration file you may invoke it at any time by pressing "<tt>:</tt>" to bring up the eval-prompt, then entering "<tt>mark_all_read();</tt>".  (Alternatively you may bind a function to a keypress, via the notes below.)</p>
+<p>If you define this function in your configuration file you may invoke it at any time by pressing "<span class="tt">:</span>" to bring up the eval-prompt, then entering "<span class="tt">mark_all_read();</span>".  (Alternatively you may bind a function to a keypress, via the notes below.)</p>
 <p>This next example can be called against a message which is spam, and append the IP to a local blacklist file:</p>
 <pre>
 --
@@ -67,16 +67,16 @@ end
 <li>Entries that apply in index-mode.</li>
 <li>Entries that apply in message-mode.</li>
 </ul>
-<p>With the previous <tt>mark_all_read</tt> function you would probably prefer to make it execute only in index-mode:</p>
+<p>With the previous <span class="tt">mark_all_read</span> function you would probably prefer to make it execute only in index-mode:</p>
 <pre>
 keymap['index']['R'] = 'mark_all_read();'
 </pre>
-<p>This will invoke the function if you press "<tt>R</tt>" in the index-view only; in all other modes the keypress "<tt>R</tt>" will do nothing.</p>
+<p>This will invoke the function if you press "<span class="tt">R</span>" in the index-view only; in all other modes the keypress "<span class="tt">R</span>" will do nothing.</p>
 </blockquote>
 
 <h2>Responding to events</h2>
 <blockquote>
-<p><tt>lumail</tt> has several defined callbackups which are listed in the <a href="/lua/">primitive list</a>, each one is named "on_XXXX".</p>
-<p>For example when reading a message the function <tt>on_read_message()</tt> is called <b>if</b> you define it.</p>
+<p><span class="tt">lumail</span> has several defined callbackups which are listed in the <a href="/lua/">primitive list</a>, each one is named "on_XXXX".</p>
+<p>For example when reading a message the function <span class="tt">on_read_message()</span> is called <b>if</b> you define it.</p>
 <p>If you're missing a handler that you think would be useful please <a href="<!-- tmpl_var name='repo' -->">report a bug</a>.</p>
 </blockquote>

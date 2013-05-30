@@ -4,7 +4,7 @@ seealso: scroll_index_to, jump_index_to, scroll_index_down
 ----
 
 <p>When in index-mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of messages.</p>
-<p>The <tt>scroll_index_up()</tt> function allows the list of messages to be scrolled iup by the specified amount.</p>
+<p>The <span class="tt">scroll_index_up()</span> function allows the list of messages to be scrolled iup by the specified amount.</p>
 <p>For example:</p>
 <pre>
 -- Scroll up one message

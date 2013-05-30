@@ -8,7 +8,7 @@ seealso: header
 <li>A list of headers.</li>
 <li>The body of the email.</li>
 </ul>
-<p>The list of headers, and their orders, is specified via the <tt>headers</tt> table.</p>
+<p>The list of headers, and their orders, is specified via the <span class="tt">headers</span> table.</p>
 <p>For example:</p>
 <pre>
 headers = { "$TO", "$FROM", "$DATE", "$SUBJECT" };

@@ -3,7 +3,7 @@ brief: Retrieve the height of the screen.
 seealso: screen_width
 ----
 
-<p>This function will return the integer count of the number of lines the console within which <tt>lumail</tt> is running.</p>
+<p>This function will return the integer count of the number of lines the console within which <span class="tt">lumail</span> is running.</p>
 <p>It can be useful for paging down messages/folders in multipls of the screen height:</p>
 <pre>
 --

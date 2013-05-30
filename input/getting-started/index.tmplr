@@ -4,26 +4,26 @@ started_page: 1
 
 
 <blockquote>
-<p>This page briefly describes how you would get started using <tt>lumail</tt>.</p>
+<p>This page briefly describes how you would get started using <span class="tt">lumail</span>.</p>
 <p>It only covers the bare essentials and documents the behaviour of the client with the
  default settings.  (You can configure the client significantly using the <a href="/lua/">available lua primitives</a>.)</p>
 </blockquote>
 
 <h2>Installation</h2>
 <blockquote>
-<p>There are no binary packages, or source-tarballs, of <tt>lumail</tt> yet.  Instead you must build from source.</p>
+<p>There are no binary packages, or source-tarballs, of <span class="tt">lumail</span> yet.  Instead you must build from source.</p>
 <p>This process is documented upon the <a href="/download">download page</a>.</p>
 </blockquote>
 
 <h2>Configuration</h2>
 <blockquote>
-<p>The configuration of <tt>lumail</tt> is carried out by the editing of the Lua configuration file(s) which are read at startup-time.</p>
+<p>The configuration of <span class="tt">lumail</span> is carried out by the editing of the Lua configuration file(s) which are read at startup-time.</p>
 <p>The following two files are read by default:</p>
 <ul>
-<li><tt>/etc/lumail.lua</tt></li>
-<li><tt>~/.lumail/config.lua</tt></li>
+<li><span class="tt">/etc/lumail.lua</span></li>
+<li><span class="tt">~/.lumail/config.lua</span></li>
 </ul>
-<p>You may specify an additional file via the <tt>--rcfile</tt> command-line argument:</p>
+<p>You may specify an additional file via the <span class="tt">--rcfile</span> command-line argument:</p>
 <pre>
 ~$ lumail --rcfile ~/conf/lumail.lua
 </pre>
@@ -31,19 +31,19 @@ started_page: 1
 
 <h2>Basic Usage</h2>
 <blockquote>
-<p><tt>lumail</tt> is a modal mail client, which means you're always in one of three modes (see <a href="/lua/global_mode.html">global_mode()</a> for documentation):</p>
+<p><span class="tt">lumail</span> is a modal mail client, which means you're always in one of three modes (see <a href="/lua/global_mode.html">global_mode()</a> for documentation):</p>
 <ul>
 <li>maildir-mode - Views folders.</li>
 <li>index-mode - Views messages.</li>
 <li>message-mode - Views a single message.</li>
 </ul>
-<p>If you launch <tt>lumail</tt> you'll start in "maildir" mode, which consists of a
+<p>If you launch <span class="tt">lumail</span> you'll start in "maildir" mode, which consists of a
 scrollable list of folder-names.  You can page up/down with `j/k`, or search with `/`.</p>
 <blockquote>
 <p><b>Note</b>: The keybindings listed here are the defaults.</p>
 </blockquote>
-<p>Each folder-name has a small <tt>[ ]</tt> next to it.  This indicates whether the folder is
-selected or not.  Unlike other mail-clients you can open multiple folders with <tt>lumail</tt>,
+<p>Each folder-name has a small <span class="tt">[ ]</span> next to it.  This indicates whether the folder is
+selected or not.  Unlike other mail-clients you can open multiple folders with <span class="tt">lumail</span>,
 by selecting several folders and then opening the result, which will show you the messages
 in all the selected folders.</p>
 <p>To open the single folder which is highlighted, press RETURN.  Otherwise you may toggle
@@ -57,16 +57,16 @@ then press "SPACE"/"RETURN" to view an individual message.</P>
 <h2>Advanced Usage</h2>
 <blockquote>
 <p>Because the client has a built-in Lua intepreter you can configure it in interesting
-ways with ease.  The supplied <tt><a href="<!-- tmpl_var name='cfg' -->">lumail.lua</a></tt> file shows examples of limiting the display, or opening several folders via a single-keystroke.</p>
+ways with ease.  The supplied <span class="tt"><a href="<!-- tmpl_var name='cfg' -->">lumail.lua</a></span> file shows examples of limiting the display, or opening several folders via a single-keystroke.</p>
 <p>In addition to this you can also evaluate Lua functions via the prompt.</p>
-<p>In any mode pressing <tt>:</tt> will prompt for input, and evaluate it.  For example you might press "<tt>:</tt>" then enter:</p>
+<p>In any mode pressing <span class="tt">:</span> will prompt for input, and evaluate it.  For example you might press "<span class="tt">:</span>" then enter:</p>
 <pre>
 <a href="/lua/msg.html">msg</a>( "Lua rocks!" );
 </pre>
-<p>This uses just one of the <a href="/lua/">lua primitives</a> available to you, (<tt>msg</tt> outputs a message to the status are).</p>
+<p>This uses just one of the <a href="/lua/">lua primitives</a> available to you, (<span class="tt">msg</span> outputs a message to the status are).</p>
 <p>Combining primitives works exactly as you'd expect:</p>
 <pre>
 <a href="/lua/msg.html">msg</a>( "You are called : " .. <a href="/lua/prompt.html">prompt</a>( "Enter your name:" ) );
 </pre>
-<p>(This prompts for your name, then displays it.  In Lua "<tt>..</tt>" is used for string concatenation.)</p>
+<p>(This prompts for your name, then displays it.  In Lua "<span class="tt">..</span>" is used for string concatenation.)</p>
 </blockquote>
