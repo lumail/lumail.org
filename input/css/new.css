@@ -128,7 +128,7 @@ pre {
     color: white;
 }
 
-tt {
+.tt {
     font-family: 'Droid Sans Mono', sans-serif;
     font-size: inherit;
 }
