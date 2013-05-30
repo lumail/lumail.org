@@ -1,4 +1,5 @@
 title: This function was renamed.
+removed: 1
 ----
 
-<p>The function <tt>save_message()</tt> was renamed to <a href="save.html">save()</a>.</p>
+<p>The function <tt>save_message()</tt> was renamed to <a href="save.html">save()</a>, for consistency with other primitives.</p>

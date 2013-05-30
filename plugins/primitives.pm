@@ -85,13 +85,17 @@ sub expand_variables
 
                 # brief description of the primitive.
                 my $brief = "";
+                my $removed = 0;
 
                 open( my $handle, "<", $file );
                 while ( my $line = <$handle> )
                 {
                     $brief = $1 if ( $line =~ /^brief: (.*)/ );
+                    $removed = 1 if ( $line =~ /^removed:/ );
                 }
                 close($handle);
+
+                next if ( $removed );
 
                 #
                 #  Sanity-check
