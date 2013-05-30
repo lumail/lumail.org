@@ -6,5 +6,5 @@ seealso: header
 <p>When in message-mode, or index-mode, the header function may be used to retrieve the value of a given header in the currently selected message.</p>
 <p>For example:</p>
 <pre>
-msg( "This mail has subject" .. header( "Subject" ) );
+<a href="msg.html">msg</a>( "This mail has subject" .. header( "Subject" ) );
 </pre>
