@@ -34,7 +34,7 @@ $ git clone --quiet <!-- tmpl_var name='repo' -->
 $ cd lumail
 $ make
 </pre>
-<p>Once this building process completes you'll find an executable <span class="tt">./lumail</span> generated.</p>
+<p>Once this compilation completes you'll find the executable <span class="tt">./lumail</span> generated, and you can now <a href="/getting-started/">get started</a>.</p>
 
 </blockquote>
 
