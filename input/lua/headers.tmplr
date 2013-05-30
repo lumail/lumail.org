@@ -1,5 +1,6 @@
 title: headers()
 brief: Control which headers are displayed when reading a message.
+seealso: header
 ----
 
 <p>When in message-mode a message will be displayed upon the screen.  The display consists of two parts:</p>
