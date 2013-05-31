@@ -1,15 +1,43 @@
 Title: Download
 download_page: 1
 hubinfo: 1
+src: lumail-0.07.tar.gz
 ----
 
+<p>The <tt>lumail</tt> mail-client is still under active development, but to gain additional feedback we're making semi-stable releases periodically.</p>
+
+<h2>Debian GNU/Linux Packages</h2>
 <blockquote>
-<p>As the client is still under heavy development it is recommended that users install from the latest available source code.  All development is carried out in public using GitHub:</p>
+<p>There is a simple Debian Squeeze repository hosted here, containing both binaries and source, which you can enable by adding the following contents to <span class="tt">/etc/apt/sources.list.d/lumail.list</span>:</p>
+<pre>
+# The lumail email client - http://lumail.org/
+deb     http://lumail.org/download/debian/squeeze ./
+deb-src http://lumail.org/download/debian/squeeze ./
+</pre>
+<p>Once added you can run:</p>
+<pre>
+# apt-get update
+# apt-get install lumail
+</pre>
+<p>The binaries are currently only present for the AMD64 architecture, but this will change shortly.</p>
+</blockquote>
+
+
+<h2>Source Snapshots</h2>
+<blockquote>
+<p>The most recent snapshot is:</p>
+<ul>
+<li><a href="<!-- tmpl_var name='src' -->"><!-- tmpl_var name='src' --></a></li>
+</ul>
+</blockquote>
+
+
+<h2>Cutting Edge Git Repository</h2>
+<blockquote>
+<p>All development on <tt>lumail</tt> is carried out, in public, against a git repository:</p>
 <ul>
 <li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
 </ul>
-<p>The repository itself contains brief instructions, but there is also a <a href="/getting-started">getting started guide</a> included in our <a href="/docs">docs section</a>.</p>
-<p>If you have questions feel free to <a href="/contact/">contact the author</a>.</p>
 </blockquote>
 
 <h2>Building from source</h2>
@@ -21,21 +49,18 @@ hubinfo: 1
 <li>ncurses - The console-graphics library.</li>
 <li>mimetic - The MIME-library.</li>
 </ul>
-<blockquote>
- <p>Upon a Debian GNU/Linux system you may install them all via:</p>
+<div style="padding-left:20px; border:1px solid silver">
+ <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
  <pre>
  # apt-get install libncurses-dev liblua5.1-0-dev lua5.1 libmimetic-dev
  </pre>
-</blockquote>
+</div>
 
-<p>Providing you have everything already present you should be able to build the project via:</p>
+<p>Providing you have everything already present you should be able to build the project via a single "<tt>make</tt>" command:</p>
 <pre>
-$ git clone --quiet <!-- tmpl_var name='repo' -->
-$ cd lumail
 $ make
 </pre>
-<p>Once this compilation completes you'll find the executable <span class="tt">./lumail</span> generated, and you can now <a href="/getting-started/">get started</a>.</p>
-
+<p>Once the compilation completes you'll find the executable <span class="tt">./lumail</span> generated, and you can now <a href="/getting-started/">get started</a>.</p>
 </blockquote>
 
 <h2>Recent Activity</h2>

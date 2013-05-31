@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Fri, 31 May 2013 09:09:09 +0000
+Source: lumail
+Binary: lumail
+Architecture: source amd64
+Version: 0.07
+Distribution: stable
+Urgency: low
+Maintainer: Steve Kemp <steve@steve.org.uk>
+Changed-By: Steve Kemp <steve@steve.org.uk>
+Description: 
+ lumail     - Modal text-based mail client.
+Changes: 
+ lumail (0.07) stable; urgency=low
+ .
+   * First stable binary release.
+Checksums-Sha1: 
+ 712c24d88d8fdaf8c838446d2a2416896aa3c2a0 523 lumail_0.07.dsc
+ b0a36844000e52a53ff71186f0beac1c612968e9 75117 lumail_0.07.tar.gz
+ 6e9fafe93601dc96ee81222c8145fe6e5076240c 58646 lumail_0.07_amd64.deb
+Checksums-Sha256: 
+ c14aff3a68ec5a69309ea695b43ecee35070ccccb541a3b2668841fecf886288 523 lumail_0.07.dsc
+ 7f6806673be8beb26dc7f687ee8f5bdfa0fac51182cc7bc5b04005a7192031c2 75117 lumail_0.07.tar.gz
+ e66f0963555849c27120878d827114e817a5f0507a64b6928391e8ef47c9e2a2 58646 lumail_0.07_amd64.deb
+Files: 
+ b937458992d7582f718c6be8fcd1bff1 523 mail optional lumail_0.07.dsc
+ dad79d27335708c5c95a4fada01318ee 75117 mail optional lumail_0.07.tar.gz
+ 387872c9bb88d0cd5560e55ca965b44d 58646 mail optional lumail_0.07_amd64.deb

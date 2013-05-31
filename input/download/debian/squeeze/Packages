@@ -1,0 +1,17 @@
+Package: lumail
+Version: 0.07
+Architecture: amd64
+Maintainer: Steve Kemp <steve@steve.org.uk>
+Installed-Size: 184
+Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), liblua5.1-0, libmimetic0, libncurses5 (>= 5.7+20100313), libstdc++6 (>= 4.4.0)
+Filename: ./lumail_0.07_amd64.deb
+Size: 58646
+MD5sum: 387872c9bb88d0cd5560e55ca965b44d
+SHA1: 6e9fafe93601dc96ee81222c8145fe6e5076240c
+SHA256: e66f0963555849c27120878d827114e817a5f0507a64b6928391e8ef47c9e2a2
+Section: mail
+Priority: optional
+Homepage: http://www.lumail.org/
+Description: Modal text-based mail client.
+ This is the lumail modal-email client for console use.
+
