@@ -158,3 +158,17 @@ html[xmlns] .clearfix {
 dt {
     font-weight: bold;
 }
+
+.left {
+    float: left;
+    text-align: left;
+}
+
+.right {
+    float:right;
+    text-align:right;
+}
+
+#footer table {
+    width: 100%;
+}
