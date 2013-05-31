@@ -8,5 +8,9 @@ clean:
 upload: output
 	rsync --delete -qazr output/ s-lumail@steve.org.uk:htdocs/
 
+upload-no-modified:
+	templer --define no-updated=1 --force
+	rsync --delete -qazr output/ s-lumail@steve.org.uk:htdocs/
+
 serve: output
 	templer --serve=4433
