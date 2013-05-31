@@ -5,6 +5,7 @@ src: lumail-0.07.tar.gz
 ----
 
 <p>The <tt>lumail</tt> mail-client is still under active development, but to gain additional feedback we're making semi-stable releases periodically.</p>
+<p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/faq/#bug">should be reported</a> as such.</p>
 
 <h2>Debian GNU/Linux Packages</h2>
 <blockquote>
