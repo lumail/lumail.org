@@ -7,12 +7,7 @@ started_page: 1
 <p>This page briefly describes how you would get started using <span class="tt">lumail</span>.</p>
 <p>It only covers the bare essentials and documents the behaviour of the client with the
  default settings.  (You can configure the client significantly using the <a href="/lua/">available lua primitives</a>.)</p>
-</blockquote>
-
-<h2>Installation</h2>
-<blockquote>
-<p>There are no binary packages, or source-tarballs, of <span class="tt">lumail</span> yet.  Instead you must build from source.</p>
-<p>This process is documented upon the <a href="/download">download page</a>.</p>
+<p>Before proceeding you'll first need to <a href="/download/">install the client</a>.</p>
 </blockquote>
 
 <h2>Configuration</h2>
