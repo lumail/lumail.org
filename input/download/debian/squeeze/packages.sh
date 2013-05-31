@@ -1,6 +1,6 @@
 #!/bin/sh
-dpkg-scanpackages . > Packages
+dpkg-scanpackages -m . > Packages
 bzip2 -kf Packages
 
-dpkg-scansources . > Sources
+dpkg-scansources  . > Sources
 bzip2 -kf Sources
