@@ -58,7 +58,7 @@ ways with ease.  The supplied <span class="tt"><a href="<!-- tmpl_var name='cfg'
 <pre>
 <a href="/lua/msg.html">msg</a>( "Lua rocks!" );
 </pre>
-<p>This uses just one of the <a href="/lua/">lua primitives</a> available to you, (<span class="tt">msg</span> outputs a message to the status are).</p>
+<p>This uses just one of the <a href="/lua/">lua primitives</a> available to you, (<span class="tt">msg</span> outputs a message to the status area).</p>
 <p>Combining primitives works exactly as you'd expect:</p>
 <pre>
 <a href="/lua/msg.html">msg</a>( "You are called : " .. <a href="/lua/prompt.html">prompt</a>( "Enter your name:" ) );
