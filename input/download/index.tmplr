@@ -52,11 +52,10 @@ deb-src http://lumail.org/download/debian/squeeze ./
 <div style="padding-left:20px; border:1px solid silver">
  <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
  <pre>
- # apt-get install libncurses-dev liblua5.1-0-dev lua5.1 libmimetic-dev
- </pre>
+ # apt-get install libncurses-dev liblua5.1-0-dev lua5.1 libmimetic-dev</pre>
 </div>
 
-<p>Providing you have everything already present you should be able to build the project via a single "<tt>make</tt>" command:</p>
+<p>Providing you have the appropriate dependencies installed can build the client via a single "<tt>make</tt>" command:</p>
 <pre>
 $ make
 </pre>
