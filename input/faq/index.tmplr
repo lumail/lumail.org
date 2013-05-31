@@ -42,16 +42,22 @@ faq_page: 1
     </dd>
     <dt>5. What can I do with Lua?</dt>
     <dd>
-      <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/lua/">primitives</a> made availabel to it.</p>
+      <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/lua/">primitives</a> made available to it.</p>
       <p>Using the Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
       <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do; and if you find yourself missing a function/primitive you can report that as a bug against the <a href="<!-- tmpl_var name='repo' -->">github repository</a>.</p>
       <p>&nbsp;</p>
     </dd>
 
-    <dt>6. What does it looke like?</dt>
+    <dt>6. What does it look like?</dt>
     <dd>
     <p>There is a <a href="/screenshots">page of screenshots</a> available to give you some idea.</p>
       <p>&nbsp;</p>
+    </dd>
+
+    <dt id="bug">7. I found a bug, what do I do?</dt>
+    <dd>
+    <p>First of all thank you for trying the client.</p>
+    <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/skx/lumail/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
     </dd>
   </dl>
 </blockquote>
