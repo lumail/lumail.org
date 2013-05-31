@@ -3,8 +3,13 @@ docs_page: 1
 ----
 
 <blockquote>
-<p>As the client is still under active development there isn't a complete set of documentation yet.</p>
-<p>However there is a good <a href="/getting-started">getting started</a> guide, along with complete documentation for each of the <a href="/lua/">Lua primitives</a>.</p>
-<p>The <a href="/examples/">examples page</a> gives hints of the interesting things you can do with the available primitives, especially alongside the <a href="<!-- tmpl_var name='cfg' -->">default configuration file</a>.</p>
+<p>As the client is still under active development there isn't a complete set of documentation yet, there are just a few specific pieces of reading:</p>
+<ul>
+<li>A <a href="/getting-started">getting started</a> guide.
+<ul>
+<li>The <a href="<!-- tmpl_var name='cfg' -->">default configuration file</a>.</li>
+</ul></li>
+<li>The <a href="/examples/">examples page</a> gives hints of the interesting things you can do with the available primitives.</li>
+</ul>
 </blockquote>
 
