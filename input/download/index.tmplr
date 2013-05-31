@@ -20,7 +20,7 @@ deb-src http://lumail.org/download/debian/squeeze ./
 # apt-get update
 # apt-get install lumail
 </pre>
-<p>The binaries are currently only present for the AMD64 architecture, but this will change shortly.</p>
+<p>The binaries are currently only present for the Squeeze release of Debian GNU/Linux, but this will change shortly.</p>
 </blockquote>
 
 
