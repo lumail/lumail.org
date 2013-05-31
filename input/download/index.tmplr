@@ -34,7 +34,7 @@ deb-src http://lumail.org/download/debian/squeeze ./
 
 <h2>Cutting Edge Git Repository</h2>
 <blockquote>
-<p>All development on <tt>lumail</tt> is carried out, in public, against a git repository:</p>
+<p>All development on <tt>lumail</tt> is carried out, in public, against a central git repository:</p>
 <ul>
 <li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
 </ul>
