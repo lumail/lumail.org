@@ -4,10 +4,10 @@ hubinfo: 1
 src: lumail-0.07.tar.gz
 ----
 
-<p>The <tt>lumail</tt> mail-client is still under active development, but to gain additional feedback we're making semi-stable releases periodically.</p>
+<p>The <tt>lumail</tt> mail-client is still under active development, but to gain additional feedback we're releasing versioned <a href="#source">source-snapshots</a> periodically.</p>
 <p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/faq/#bug">should be reported</a> as such.</p>
 
-<h2>Debian GNU/Linux Packages</h2>
+<h2 id="debian">Debian GNU/Linux Packages</h2>
 <blockquote>
 <p>There is a simple Debian Squeeze repository hosted here, containing both binaries and source, which you can enable by adding the following contents to <span class="tt">/etc/apt/sources.list.d/lumail.list</span>:</p>
 <pre>
@@ -24,7 +24,7 @@ deb-src http://lumail.org/download/debian/squeeze ./
 </blockquote>
 
 
-<h2>Source Snapshots</h2>
+<h2 id="source">Source Snapshots</h2>
 <blockquote>
 <p>The most recent snapshot is:</p>
 <ul>
@@ -33,7 +33,7 @@ deb-src http://lumail.org/download/debian/squeeze ./
 </blockquote>
 
 
-<h2>Cutting Edge Git Repository</h2>
+<h2 id="git">Cutting Edge Git Repository</h2>
 <blockquote>
 <p>All development on <tt>lumail</tt> is carried out, in public, against a central git repository:</p>
 <ul>
@@ -41,7 +41,7 @@ deb-src http://lumail.org/download/debian/squeeze ./
 </ul>
 </blockquote>
 
-<h2>Building from source</h2>
+<h2 id="building">Building from source</h2>
 <blockquote>
 <p>Lumail is deliberately designed to only depend upon a small number of libraries, to ensure that it is possible to build it upon the widest range of systems.</p>
 <p>Currently the dependencies are:</p>
