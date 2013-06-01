@@ -8,18 +8,29 @@ src: lumail-0.07.tar.gz
 
 <h2 id="debian">Debian GNU/Linux Packages</h2>
 <blockquote>
-<p>There is a simple Debian Squeeze repository hosted here, containing both binaries and source, which you can enable by adding the following contents to <span class="tt">/etc/apt/sources.list.d/lumail.list</span>:</p>
-<pre>
+<p>I host a repository for binaries for the Squeeze &amp; Wheezy releases of Debian GNU/Linux.  You can find this repository here:</p.
+<ul>
+<li><a href="http://packages.steve.org.uk/lumail/">http://packages.steve.org.uk/lumail/</a></li>
+</ul>
+<p>Create the file <tt>/etc/apt/sources.list.d/lumail.list</tt> and add in one set of the following lines:</p>
+<pre>#
 # The lumail email client - http://lumail.org/
-deb     http://lumail.org/download/debian/squeeze ./
-deb-src http://lumail.org/download/debian/squeeze ./
+#
+
+# Squeeze:
+deb-src http://packages.steve.org.uk/lumail/squeeze/ ./
+deb     http://packages.steve.org.uk/lumail/squeeze/ ./
+
+# Wheezy:
+deb-src http://packages.steve.org.uk/lumail/wheezy/ ./
+deb     http://packages.steve.org.uk/lumail/wheezy/ ./
 </pre>
 <p>Once added you can run:</p>
 <pre>
 # apt-get update
 # apt-get install lumail
 </pre>
-<p>The binaries are currently only present for the Squeeze release of Debian GNU/Linux, but this will change shortly.</p>
+<p>The binaries are compiled for both i386 and AMD64.</p>
 </blockquote>
 
 
