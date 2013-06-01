@@ -3,16 +3,16 @@ download_page: 1
 src: lumail-0.07.tar.gz
 ----
 
-<p>The <tt>lumail</tt> mail-client is still under active development, but to gain additional feedback we're releasing versioned <a href="#source">source-snapshots</a> periodically.</p>
+<p>The <span class="tt">lumail</span> mail-client is still under active development, but to gain additional feedback we're releasing versioned <a href="#source">source-snapshots</a> periodically.</p>
 <p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/faq/#bug">should be reported</a> as such.</p>
 
 <h2 id="debian">Debian GNU/Linux Packages</h2>
 <blockquote>
-<p>I host a repository for binaries for the Squeeze &amp; Wheezy releases of Debian GNU/Linux.  You can find this repository here:</p.
+<p>I host a repository for binaries for the Squeeze &amp; Wheezy releases of Debian GNU/Linux.  You can find this repository here:</p>
 <ul>
 <li><a href="http://packages.steve.org.uk/lumail/">http://packages.steve.org.uk/lumail/</a></li>
 </ul>
-<p>Create the file <tt>/etc/apt/sources.list.d/lumail.list</tt> and add in one set of the following lines:</p>
+<p>Create the file <span class="tt">/etc/apt/sources.list.d/lumail.list</span> and add in one set of the following lines:</p>
 <pre>#
 # The lumail email client - http://lumail.org/
 #
@@ -45,7 +45,7 @@ deb     http://packages.steve.org.uk/lumail/wheezy/ ./
 
 <h2 id="git">Cutting Edge Git Repository</h2>
 <blockquote>
-<p>All development on <tt>lumail</tt> is carried out, in public, against a central git repository:</p>
+<p>All development on <span class="tt">lumail</span> is carried out, in public, against a central git repository:</p>
 <ul>
 <li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
 </ul>
@@ -66,7 +66,7 @@ deb     http://packages.steve.org.uk/lumail/wheezy/ ./
  # apt-get install libncurses-dev liblua5.1-0-dev lua5.1 libmimetic-dev</pre>
 </div>
 
-<p>Providing you have the appropriate dependencies installed can build the client via a single "<tt>make</tt>" command:</p>
+<p>Providing you have the appropriate dependencies installed can build the client via a single "<span class="tt">make</span>" command:</p>
 <pre>
 $ make
 </pre>
