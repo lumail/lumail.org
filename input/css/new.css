@@ -71,6 +71,12 @@ a:hover {
 h1#title {
     float: left;
     color: black;
+    margin: 0;
+    background-image: url(/img/logo.gif);
+    background-repeat: no-repeat;
+    height:150px;
+    width:240px;
+    text-indent: -9999px;
 }
 h1#title:hover {
     color: black;
