@@ -27,3 +27,13 @@ no arguments::
      All done: 58 page(s) updated in less than 1 second.
 
 
+Testing
+-------
+
+If you run `make serve` you can open the rebuilt site by point your browser
+at the following URL:
+
+* http://localhost:4433/
+
+Steve
+--
