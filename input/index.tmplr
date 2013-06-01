@@ -1,5 +1,6 @@
 Title: About
 home_page: 1
+hubinfo: 1
 ----
 
 <blockquote>
@@ -46,3 +47,14 @@ home_page: 1
   </dl>
 </blockquote>
 
+<h2>Recent Commits</h2>
+<blockquote>
+<div id="hubInfo">
+</div>
+</blockquote>
+<script type="text/javascript">
+$("#hubInfo").hubInfo({
+    user: "skx",
+    repo: "lumail"
+});
+</script>

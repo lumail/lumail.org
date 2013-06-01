@@ -1,6 +1,5 @@
 Title: Download
 download_page: 1
-hubinfo: 1
 src: lumail-0.07.tar.gz
 ----
 
@@ -63,14 +62,3 @@ $ make
 <p>Once the compilation completes you'll find the executable <span class="tt">./lumail</span> generated, and you can now <a href="/getting-started/">get started</a>.</p>
 </blockquote>
 
-<h2>Recent Activity</h2>
-<blockquote>
-<div id="hubInfo">
-</div>
-</blockquote>
-<script type="text/javascript">
-$("#hubInfo").hubInfo({
-    user: "skx",
-    repo: "lumail"
-});
-</script>
