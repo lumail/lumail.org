@@ -17,20 +17,20 @@ src: lumail-0.07.tar.gz
 # The lumail email client - http://lumail.org/
 #
 
-# Squeeze:
+# For the Squeeze release:
 deb-src http://packages.steve.org.uk/lumail/squeeze/ ./
 deb     http://packages.steve.org.uk/lumail/squeeze/ ./
 
-# Wheezy:
+# For Wheezy release:
 deb-src http://packages.steve.org.uk/lumail/wheezy/ ./
 deb     http://packages.steve.org.uk/lumail/wheezy/ ./
 </pre>
-<p>Once added you can run:</p>
+<p>Once you've done this you can install the client via:</p>
 <pre>
 # apt-get update
 # apt-get install lumail
 </pre>
-<p>The binaries are compiled for both i386 and AMD64.</p>
+<p>(The binaries are compiled for both i386 and AMD64.)</p>
 </blockquote>
 
 
@@ -66,7 +66,7 @@ deb     http://packages.steve.org.uk/lumail/wheezy/ ./
  # apt-get install libncurses-dev liblua5.1-0-dev lua5.1 libmimetic-dev</pre>
 </div>
 
-<p>Providing you have the appropriate dependencies installed can build the client via a single "<span class="tt">make</span>" command:</p>
+<p>Providing you have the appropriate dependencies installed you can build the client via a single "<span class="tt">make</span>" command:</p>
 <pre>
 $ make
 </pre>
