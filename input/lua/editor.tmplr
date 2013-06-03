@@ -1,0 +1,14 @@
+title: editor()
+brief: Configure the editor to use for mail composition.
+seealso: compose, reply
+----
+
+<p>When <span class="tt">lumail</span> is used to compose a new message, or reply to an existing message,
+it will invoke your editor to do so.</p>
+<p>The <span class="tt">editor()</span> primitive will allow you to get/set the editor to use.</p>
+<p>There are several attempts made to use the editor:</p>
+<ol>
+<li>If a path as been set with <span class="tt">editor()</span> it will be used.</li>
+<li>If there is an environmental variable named EDITOR then the value will be used.</li>
+<li>Otherwise <span class="tt">/usr/bin/vim</span> will be used.</li>
+</ol>
