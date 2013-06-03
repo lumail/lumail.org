@@ -4,7 +4,18 @@ seealso: index_limit
 ----
 
 <p>When the <a href="global_mode.html"><span class="tt">global_mode</span></a> is set to <span class="tt">maildir</span> you will be presented with a list of Maildir folders.</p>
-<p>The list will default to showing all available folders, but you may use <span class="tt">maildir_limit()</span> to change this:</p>
+<p>The list will default to showing all available folders, but you may use <span class="tt">maildir_limit()</span> to change this.</p>
+<p>There are three options for limiting:</p>
+<dl>
+<dt><span class="tt">all</span></dt>
+<dd><p>Show all maildirs.</p></dd>
+<dt><span class="tt">new</span></dt>
+<dd><p>Show all maildirs which contain unread messages.</p></dd>
+<dt><span class="tt">"str"</span></dt>
+<dd><p>Show all maildirs match the pattern "str".</p></dd>
+</dt>
+<p>For example:</p>
+
 
 <pre>
 --
