@@ -1,9 +1,9 @@
 title: reply()
 brief: Reply to an email.
-seealso: compose, sent_mail, sendmail_path
+seealso: editor, compose, sent_mail, sendmail_path
 ----
 
 <p>This function will open your configured editor with the current message quoted in it, such that you can trim and reply to it.</p>
-<p>You may specify the editor to use via the <span class="tt">EDITOR</span> environmental variable, if unset vim is used.</p>
+<p>You may specify the editor to use via the <a href="editor.html">editor()</a> primitive.</p>
 <p>After prompting for confirmation the outgoing mail will then be sent, and a copy written to your configured sent-mail folder.</p>
 
