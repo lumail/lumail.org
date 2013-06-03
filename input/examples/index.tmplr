@@ -74,9 +74,6 @@ function global_unread()
    <a href="/lua/maildir_limit.html">maildir_limit</a>( "new" );
    <a href="/lua/global_mode.html">global_mode</a>( "maildir" );
 
-   -- get all visible folders - i.e. those containing unread mails.
-   dirs = <a href="/lua/current_maildirs.html">current_maildirs</a>();
-
    -- ensure we have no selected folders.
    <a href="/lua/clear_selected_folders.html">clear_selected_folders</a>();
 
