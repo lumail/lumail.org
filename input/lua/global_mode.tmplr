@@ -29,10 +29,10 @@ seealso: keymap
 -- function in our favourite mail client.
 --
 function open_folder()
-   clear_selected_folders();
-   add_selected_folder()
+   <a href="/lua/clear_selected_folders.html">clear_selected_folders</a>();
+   <a href="/lua/add_selected_folder.html">add_selected_folder</a>()
    global_mode( "index" );
-   <a href="clear.html">clear</a>();
+   <a href="/lua/clear.html">clear</a>();
 end
 
 --
