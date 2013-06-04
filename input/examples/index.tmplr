@@ -10,6 +10,11 @@ and perform general configuration.</p>
 <blockquote>
   <p>Using the <a href="/lua/">supplied primitives</a> you can write several useful functions easily.  This section contains several simple examples which you can try reading/experimenting with.</p>
   <dl>
+    <dt><a href="global_unread.html">global_unread()</a></dt>
+    <dd>
+      <p>Lumail allows multiple folders to be opened at once, and via the <a href="/lua/index_limit.html">index_limit()</a> primitive you can cause the list of messages to show those which are new.  Together these two things allow you to write the <span class="tt">global_unread()</span> method.</p>
+      <p>This function shows all currently unread messages, regardless of their folder.</p>
+    </dd>
     <dt><a href="mark_all_read.html">mark_all_read()</a></dt>
     <dd>
       <p>This function will mark all messages in the currently open maildir, or series of maildirs, as being read.</p>
@@ -19,13 +24,8 @@ and perform general configuration.</p>
       <p>This function reads X-Remote-IP header form a message, which I've configured my mailserver to populate with the IP address of the mail-server which sent me a mail.</p>
       <p>Once the remote IP address has been found it is appended to a local blacklist.</p>
     </dd>
-    <dt><a href="global_unread.html">global_unread()</a></dt>
-    <dd>
-      <p>Lumail allows multiple folders to be opened at once, and via the <a href="/lua/index_limit.html">index_limit()</a> primitive you can cause the list of messages to show those which are new.  Together these two things allow you to write the <span class="tt">global_unread()</span> method.</p>
-      <p>This function shows all currently unread messages, regardless of their folder.</p>
-    </dd>
 </dl>
-<p>Remember you can invoke any function you've defined by pressing <span class="tt">:</span> and entering it in the prompt.  (For example you could press "<span class="tt">:</span>" then enter "<span class="tt">mark_all_read()</span>.) </p>
+<p>Remember you can invoke any function you've defined by pressing <span class="tt">:</span> and entering it in the prompt.  (For example you could press "<span class="tt">:</span>" then enter "<span class="tt">mark_all_read()</span>".) </p>
 </blockquote>
 
 <h2>Binding keypresses to functions</h2>
