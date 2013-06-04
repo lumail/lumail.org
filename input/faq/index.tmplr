@@ -11,11 +11,13 @@ faq_page: 1
       <p>If you have to use IMAP/POP3 to fetch your mail I'd suggest the use of <span class="tt">imapsync</span>, <span class="tt">fetchmail</span>, or similar.  These can be executed via <a href="/lua/on_idle.html">on_idle()</a>.</p>
       <p>&nbsp;</p>
     </dd>
+
     <dt>2.  What license is the code released under?</dt>
     <dd>
       <p>The code is released under the GNU General Public License, version 2 or later.</p>
       <p>&nbsp;</p>
     </dd>
+
     <dt>3.  How does this client differ from more established clients?</dt>
     <dd>
       <p>At the moment the client has just reached the point where it is complete enough to be used almost-exclusively.  There are many differences between this client, and existing ones:</p>
@@ -33,6 +35,7 @@ faq_page: 1
       </ul>
       <p>&nbsp;</p>
     </dd>
+
     <dt>4. Why embed Lua?</dt>
     <dd>
       <p>The intention is that <span class="tt">lumail</span> will be a flexible email client, which means that it must allow things to be configured in ways that I do not expect.</p>
@@ -41,6 +44,7 @@ faq_page: 1
       <p>Rather than inventing a simple language, spending the time required, it seems so much more natural to pick an existing implementation which is small, easy to learn, and well-documented.  On that basis I picked Lua.</p>
       <p>&nbsp;</p>
     </dd>
+
     <dt>5. What can I do with Lua?</dt>
     <dd>
       <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/lua/">primitives</a> made available to it.</p>
@@ -61,7 +65,12 @@ faq_page: 1
       <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/skx/lumail/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
     </dd>
 
-    <dt id="motivation">8.  Why write another mail client?</dt>
+    <dt id="schedule">8.  How do I schedule invoking <span class="tt">imapsync</span>?</dt>
+    <dd>
+     <p>The <a href="/lua/on_idle.html">on_idle</a>() documentation has been updated to provide an example of calling exeternal commands on a regular schedule.</p>
+    </dd>
+
+    <dt id="motivation">9.  Why write another mail client?</dt>
     <dd>
       <p>For the past few years I've been using <a href="http://packages.debian.org/mutt-patched">mutt-patched</a>, which adds the ability to display a "sidebar".  This sidebar allowed the navigation of open folders at almost all times, and the sidebar could be limited to display only folders containing unread mail.</p>
       <p>However recently the sidebar patch has lost the ability to see folders only containing unread messages.  This initially made me think about re-patching mutt, but later got me thinking about how you'd write and use a truly modal mail client.</p>
