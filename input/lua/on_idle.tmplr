@@ -3,7 +3,7 @@ brief: Called when the client is idle.
 seealso: on_exit, on_key, on_read_message
 ----
 
-<p>If you define the function <span class="tt">on_idle</span> it will be regularly called approximately once a second when the the client is idle.</p>
+<p>If you define the function <span class="tt">on_idle</span> it will be called approximately once a second when the the client is idle.</p>
 <p>For example:</p>
 <pre>
 function on_idle()
