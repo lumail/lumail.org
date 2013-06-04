@@ -1,6 +1,6 @@
 title: maildir_prefix()
 brief: Get, or set, the root of the maildir hierarchy.
-seealso: sent_mail
+seealso: sent_mail, is_directory
 ----
 
 <p>The <span class="tt">lumail</span> client operates solely on Maildir folders.  All folders beneath a given directory will be dynamically discovered at run-time.</p>
