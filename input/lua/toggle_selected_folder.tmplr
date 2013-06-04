@@ -1,6 +1,6 @@
 title: toggle_selected_folder()
 brief: Toggle the selected state of the current folder.
-seealso: add_selected_folder, clear_selected_folders, selected_folders, set_selected_folder
+seealso: add_selected_folder, clear_selected_folders, selected_folders, set_selected_folder,on_folder_selection
 ----
 
 <p><span class="tt">lumail</span> allows you to select multiple folders to open at the same time.</p>

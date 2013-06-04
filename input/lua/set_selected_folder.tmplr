@@ -1,6 +1,6 @@
 title: set_selected_folder()
 brief: Select only a single folder.
-seealso: toggle_selected_folder, add_selected_folder, clear_selected_folders, selected_folders,
+seealso: toggle_selected_folder, add_selected_folder, clear_selected_folders, selected_folders,on_folder_selection
 ----
 
 <p><span class="tt">lumail</span> allows you to select multiple folders to open at the same time.</p>
