@@ -1,0 +1,24 @@
+Title: dump_vars()
+----
+
+<p>This function will dump each of the variables which are currently set
+to a temporary file.</p>
+<pre>
+--
+-- Dump all variables we know about.
+--
+function dump_vars()
+
+   -- where we log
+   ff = io.open( "/tmp/vars.log", "w");
+
+   vars = <a href="/lua/get_variables.html">get_variables</a>();
+
+   for i,v in pairs( vars ) do
+      ff:write( "Variable '" .. i .. "' has value '" .. v .. "'\n" );
+   end
+   ff:write("End\n");
+   ff:close();
+
+end
+</pre>
