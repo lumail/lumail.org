@@ -1,5 +1,6 @@
 title: from()
 brief: Get, or set, your from-address.
+seealso: on_folder_selection
 ----
 
 <p>This function is designed to get/set the from-address as used when replying to
@@ -17,7 +18,7 @@ from( default_email );
 --
 -- Change the from-address if we're in a personal/work folder.
 --
-function on_select_folder( folder )
+function <a href="/lua/on_folder_selection.html">on_folder_selection</a>( folder )
 
    if ( string.find( folder, "personal", 1, true )  ) then
       from ("Steve <steve@home.example.com>");
