@@ -10,6 +10,10 @@ and perform general configuration.</p>
 <blockquote>
   <p>Using the <a href="/lua/">supplied primitives</a> you can write several useful functions easily.  This section contains several simple examples which you can try reading/experimenting with.</p>
   <dl>
+    <dt><a href="dump_unread.html">dump_unread()</a></dt>
+    <dd>
+      <p>This example shows how to dump a list of unread-messages to disk.</p>
+    </dd>
     <dt><a href="dump_vars.html">dump_vars()</a></dt>
     <dd>
       <p>Internally lumail keeps a collection of variables which are made availble to Lua.  This function dumps them to a temporary file on-disk.</p>

@@ -1,0 +1,50 @@
+Title: dump_unread()
+----
+
+<p>This function will dump, to a file on-disk, a list of all Maildir-folders which contain new/unread messages, as well as a count of the number of such messages.</p>
+<pre>
+--
+-- Dump a list of all folders with unread messages, along with the
+-- count of unread messages.
+--
+function dump_unread()
+
+   -- get the current state
+   mode  = global_mode()
+   limit = maildir_limit();
+
+   -- set the mode appropriately.
+   maildir_limit( "new" );
+   global_mode( "maildir" );
+
+   offset = 0;
+
+   -- where we log
+   ff = io.open( "/tmp/unread.log", "a");
+
+   -- Now for each one we'll open them.
+   while( offset <= (count_maildirs() - 1) ) do
+
+      -- jump to folder.
+      jump_maildir_to( offset )
+
+      -- we want to know the current folder name.
+      current = current_maildir();
+      ff:write( "Selected folder " .. current .. "\n" );
+
+      global_mode( "index" );
+      index_limit( "new" );
+      count = count_messages()
+      ff:write("\tFolder has " .. count .. " unread messages\n" );
+
+      global_mode( "maildir" );
+      offset = offset + 1;
+   end
+
+   ff:close();
+
+   -- restore
+   global_mode( mode );
+   maildir_limit( limit );
+end
+</pre>
