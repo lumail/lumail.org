@@ -10,12 +10,12 @@ Title: dump_unread()
 function dump_unread()
 
    -- get the current state
-   mode  = global_mode()
-   limit = maildir_limit();
+   mode  = <a href="/lua/global_mode.html">global_mode</a>()
+   limit = <a href="/lua/maildir_limit.html">maildir_limit</a>();
 
    -- set the mode appropriately.
-   maildir_limit( "new" );
-   global_mode( "maildir" );
+   <a href="/lua/maildir_limit.html">maildir_limit</a>( "new" );
+   <a href="/lua/globa_mode.html">global_mode</a>( "maildir" );
 
    offset = 0;
 
@@ -23,28 +23,28 @@ function dump_unread()
    ff = io.open( "/tmp/unread.log", "a");
 
    -- Now for each one we'll open them.
-   while( offset <= (count_maildirs() - 1) ) do
+   while( offset <= (<a href="/lua/count_maildirs.html">count_maildirs</a>() - 1) ) do
 
       -- jump to folder.
-      jump_maildir_to( offset )
+      <a href="/lua/jump_maildir_to.html">jump_maildir_to</a>( offset )
 
       -- we want to know the current folder name.
-      current = current_maildir();
+      current = <a href="/lua/current_maildir.html">current_maildir</a>();
       ff:write( "Selected folder " .. current .. "\n" );
 
-      global_mode( "index" );
-      index_limit( "new" );
-      count = count_messages()
+      <a href="/lua/global_mode.html">global_mode</a>( "index" );
+      <a href="/lua/index_limit.html">index_limit</a>( "new" );
+      count = <a href="/lua/count_messages.html">count_messages</a>()
       ff:write("\tFolder has " .. count .. " unread messages\n" );
 
-      global_mode( "maildir" );
+      <a href="/lua/global_mode.html">global_mode</a>( "maildir" );
       offset = offset + 1;
    end
 
    ff:close();
 
    -- restore
-   global_mode( mode );
-   maildir_limit( limit );
+   <a href="/lua/global_mode.html">global_mode</a>( mode );
+   <a href="/lua/maildir_limit.html">maildir_limit</a>( limit );
 end
 </pre>
