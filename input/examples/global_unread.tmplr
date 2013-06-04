@@ -1,0 +1,49 @@
+Title: global_unread()
+----
+
+<p>This example highlights the power of a modal client.  Remember that with lumail you're always in one of three modes:</p>
+<ul>
+<li>maildir-mode - Which shows you maildirs.</li>
+<li>index-mode - Which shows you indexes.</li>
+<li>message-mode - Which shows you a single message.</li>
+</ul>
+<p>The following function has the net result of showing all unread mail, in a list, regardless of which folder it is contained within:</p>
+<pre>
+--
+-- Open all folders that contain unread messages, and view them  all.
+--
+function global_unread()
+
+   -- set the mode appropriately.
+   <a href="/lua/maildir_limit.html">maildir_limit</a>( "new" );
+   <a href="/lua/global_mode.html">global_mode</a>( "maildir" );
+
+   -- ensure we have no selected folders.
+   <a href="/lua/clear_selected_folders.html">clear_selected_folders</a>();
+
+   offset = 0;
+
+   -- Now for each one we'll add it to the selected set.
+   while( offset &lt;= (<a href="/lua/count_maildirs.html">count_maildirs</a>() - 1) ) do
+
+      -- jump to folder.
+      <a href="/lua/jump_maildir_to.html">jump_maildir_to</a>( offset )
+
+      -- Added the folder to the selected set.
+      <a href="/lua/add_selected_folder.html">add_selected_folder</a>()
+
+      -- move to the next.
+      offset = offset + 1;
+   end
+
+   --
+   -- Now we've added all maildirs with new mail to the list
+   -- of selected maildirs.
+   --
+   -- Jump to the global index-mode, and view only new mails.
+   --
+   --
+   <a href="/lua/global_mode.html">global_mode</a>( "index" );
+   <a href="/lua/index_limit.html">index_limit</a>( "new" );
+end
+</pre>

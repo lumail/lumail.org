@@ -1,0 +1,35 @@
+Title: spam()
+----
+
+<p>This example can be called against a message which is spam, and append the IP to a local blacklist file:</p>
+<pre>
+--
+-- Append the IP address of the message to a blacklist.
+--
+-- <b>NOTE</b> - This only works because my mailserver is configured to write
+-- the IP address of the sender to the header.
+--
+function spam()
+   mode = <a href="global_mode.html">global_mode</a>()
+   mode = string.lower( mode );
+   val  = ""
+
+   if ( string.find( mode, "message" ) ) then
+      val = <a href="header.html">header</a>( "X-Remote-IP" )
+   elseif (string.find(mode, "index" ) ) then
+      val = <a href="header.html">header</a>( "X-Remote-IP" )
+   else
+      <a href="msg.html">msg</a>( "spam() not present for mode:" .. mode );
+   end
+
+   if ( val == "" ) then
+      <a href="msg.html">msg</a>( "IP address not found in message." );
+   else
+      ff = io.open( "/etc/blacklist.d/smtp" , "a");
+      ff:write( val .. "\n" )
+      ff:close();
+      <a href="msg.html">msg</a>( "blacklisted IP: " .. val );
+   end
+end
+</pre>
+<p><b>NOTE</b>: This only works because my mail-server is configured to log the remote IP of the sending host in such a header.</p>

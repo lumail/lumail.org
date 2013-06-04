@@ -8,101 +8,24 @@ and perform general configuration.</p>
 
 <h2>Writing useful functions</h2>
 <blockquote>
-<p>Using the <a href="/lua/">supplied primitives</a> you can write several useful functions easily.  For example this function will mark all messages as read:</p>
-<pre>
---
--- Mark all messages in the currently selected folder(s) as read.
---
-function mark_all_read()
-   count = <a href="/lua/count_messages.html">count_messages</a>()
-   i = 0
-
-   while( i < count ) do
-      <a href="/lua/jump_index_to.html">jump_index_to</a>( i )
-      <a href="/lua/mark_read.html">mark_read</a>()
-      i = i + 1
-   end
-end
-</pre>
-<p>If you define this function in your configuration file you may invoke it at any time by pressing "<span class="tt">:</span>" to bring up the eval-prompt, then entering "<span class="tt">mark_all_read();</span>".  (Alternatively you may bind a function to a keypress, via the notes below.)</p>
-<p>This next example can be called against a message which is spam, and append the IP to a local blacklist file:</p>
-<pre>
---
--- Append the IP address of the message to a blacklist.
---
--- <b>NOTE</b> - This only works because my mailserver is configured to write
--- the IP address of the sender to the header.
---
-function spam()
-   mode = <a href="global_mode.html">global_mode</a>()
-   mode = string.lower( mode );
-   val  = ""
-
-   if ( string.find( mode, "message" ) ) then
-      val = <a href="header.html">header</a>( "X-Remote-IP" )
-   elseif (string.find(mode, "index" ) ) then
-      val = <a href="header.html">header</a>( "X-Remote-IP" )
-   else
-      <a href="msg.html">msg</a>( "spam() not present for mode:" .. mode );
-   end
-
-   if ( val == "" ) then
-      <a href="msg.html">msg</a>( "IP address not found in message." );
-   else
-      ff = io.open( "/etc/blacklist.d/smtp" , "a");
-      ff:write( val .. "\n" )
-      ff:close();
-      <a href="msg.html">msg</a>( "blacklisted IP: " .. val );
-   end
-end
-</pre>
-<p>The final example highlights the power of a modal client.  Remember that with lumail you're always in one of three modes:</p>
-<ul>
-<li>maildir-mode - WHich shows you maildirs.</li>
-<li>index-mode - Which shows you indexes.</li>
-<li>message-mode - Which shows you a single message.</li>
-</ul>
-<p>Remember that unlike other mail-clients you can also open multiple folders.  This is the reason why maildir-mode has a small "[ ]" next to each name.  If that is ticked then the maildir is selected, and multiple folders can be selected.</p>
-<p>The following function has the net result of showing all unread mail, in a list, regardless of which folder it is contained within:</p>
-<pre>
---
--- Open all folders that contain unread messages, and view them  all.
---
-function global_unread()
-
-   -- set the mode appropriately.
-   <a href="/lua/maildir_limit.html">maildir_limit</a>( "new" );
-   <a href="/lua/global_mode.html">global_mode</a>( "maildir" );
-
-   -- ensure we have no selected folders.
-   <a href="/lua/clear_selected_folders.html">clear_selected_folders</a>();
-
-   offset = 0;
-
-   -- Now for each one we'll add it to the selected set.
-   while( offset &lt;= (<a href="/lua/count_maildirs.html">count_maildirs</a>() - 1) ) do
-
-      -- jump to folder.
-      <a href="/lua/jump_maildir_to.html">jump_maildir_to</a>( offset )
-
-      -- Added the folder to the selected set.
-      <a href="/lua/add_selected_folder.html">add_selected_folder</a>()
-
-      -- move to the next.
-      offset = offset + 1;
-   end
-
-   --
-   -- Now we've added all maildirs with new mail to the list
-   -- of selected maildirs.
-   --
-   -- Jump to the global index-mode, and view only new mails.
-   --
-   --
-   <a href="/lua/global_mode.html">global_mode</a>( "index" );
-   <a href="/lua/index_limit.html">index_limit</a>( "new" );
-end
-</pre>
+  <p>Using the <a href="/lua/">supplied primitives</a> you can write several useful functions easily.  This section contains several simple examples which you can try reading/experimenting with.</p>
+  <dl>
+    <dt><a href="mark_all_read.html">mark_all_read()</a></dt>
+    <dd>
+      <p>This function will mark all messages in the currently open maildir, or series of maildirs, as being read.</p>
+    </dd>
+    <dt><a href="spam.html">spam()</a></dt>
+    <dd>
+      <p>This function reads X-Remote-IP header form a message, which I've configured my mailserver to populate with the IP address of the mail-server which sent me a mail.</p>
+      <p>Once the remote IP address has been found it is appended to a local blacklist.</p>
+    </dd>
+    <dt><a href="global_unread.html">global_unread()</a></dt>
+    <dd>
+      <p>Lumail allows multiple folders to be opened at once, and via the <a href="/lua/index_limit.html">index_limit()</a> primitive you can cause the list of messages to show those which are new.  Together these two things allow you to write the <span class="tt">global_unread()</span> method.</p>
+      <p>This function shows all currently unread messages, regardless of their folder.</p>
+    </dd>
+</dl>
+<p>Remember you can invoke any function you've defined by pressing <span class="tt">:</span> and entering it in the prompt.  (For example you could press "<span class="tt">:</span>" then enter "<span class="tt">mark_all_read()</span>.) </p>
 </blockquote>
 
 <h2>Binding keypresses to functions</h2>
