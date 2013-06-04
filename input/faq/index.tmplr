@@ -59,22 +59,23 @@ faq_page: 1
       <p>&nbsp;</p>
     </dd>
 
-    <dt id="bug">7. I found a bug, what do I do?</dt>
-    <dd>
-      <p>First of all thank you for trying the client.</p>
-      <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/skx/lumail/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
-    </dd>
-
-    <dt id="schedule">8.  How do I schedule invoking <span class="tt">imapsync</span>?</dt>
+    <dt id="schedule">7.  How do I schedule invoking <span class="tt">imapsync</span>?</dt>
     <dd>
      <p>The <a href="/lua/on_idle.html">on_idle</a>() documentation has been updated to provide an example of calling exeternal commands on a regular schedule.</p>
     </dd>
 
-    <dt id="motivation">9.  Why write another mail client?</dt>
+    <dt id="motivation">8.  Why write another mail client?</dt>
     <dd>
       <p>For the past few years I've been using <a href="http://packages.debian.org/mutt-patched">mutt-patched</a>, which adds the ability to display a "sidebar".  This sidebar allowed the navigation of open folders at almost all times, and the sidebar could be limited to display only folders containing unread mail.</p>
       <p>However recently the sidebar patch has lost the ability to see folders only containing unread messages.  This initially made me think about re-patching mutt, but later got me thinking about how you'd write and use a truly modal mail client.</p>
       <p>As it turns out I tend to focus my mail reading on viewing a list of folders with unread messages, then opening them in turn.  Better still would be the ability to open all folders with unread mail - and thus this idea of this client was born.</p>
     </dd>
+
+    <dt id="bug">9. I found a bug, what do I do?</dt>
+    <dd>
+      <p>First of all thank you for trying the client.</p>
+      <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/skx/lumail/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
+    </dd>
+
   </dl>
 </blockquote>
