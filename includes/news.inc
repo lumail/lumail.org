@@ -1,4 +1,8 @@
   <dl>
+    <dt>4th June 2013</dt>
+    <dd>
+      <p>The examples were removed from the <a href="https://raw.github.com/skx/lumail/master/lumail.lua">default config file</a>, and instead placed in the <a href="/examples/">online examples area</a>.</p>
+    </dd>
     <dt>1st June 2013</dt>
     <dd>
       <p>Thanks to the reddit user <a href="http://www.reddit.com/user/Bigbuddhabelly">Bigbuddhabelly</a> we have a logo.</p>
