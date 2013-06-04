@@ -1,0 +1,12 @@
+title: executable()
+brief: Test whether a given path represents an executable.
+seealso: is_directory, file_exists
+----
+
+<p>This function tests whether the specified path is executable.</p>
+<p>For example:</p>
+<pre>
+if ( executable( "/usr/bin/imapsync" ) ) then
+   <a href="/lua/msg.html">msg</a>( "We have imapsync installed" )
+end
+</pre>

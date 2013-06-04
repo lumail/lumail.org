@@ -1,0 +1,12 @@
+title: is_directory()
+brief: Test whether a given path represents a directory.
+seealso: executable, file_exists
+----
+
+<p>This function tests whether the specified path is a directory.</p>
+<p>For example:</p>
+<pre>
+if ( is_directory( os.getenv( "HOME" ) .. "/Maildir" ) ) then
+   <a href="/lua/maildir_prefix.html">maildir_prefix</a>( os.getenv( "HOME" ) .. "/Maildir" );
+end
+</pre>

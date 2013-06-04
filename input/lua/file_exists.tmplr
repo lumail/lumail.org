@@ -1,0 +1,12 @@
+title: file_exists()
+brief: Test whether a given path exists.
+seealso: is_directory, executable
+----
+
+<p>This function tests whether the specified path exists.</p>
+<p>For example:</p>
+<pre>
+if ( file_exists( "/usr/bin/imapsync" ) ) then
+   <a href="/lua/msg.html">msg</a>( "We have imapsync installed" )
+end
+</pre>
