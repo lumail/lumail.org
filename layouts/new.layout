@@ -43,16 +43,20 @@
 
 <div id="content">
   <!-- tmpl_if name='brief' -->
-  <h2><a href="/lua/">Lua</a>: <!-- tmpl_var name='title' --></h2>
+  <h2><a href="/lua/">Lua primitives</a>: <!-- tmpl_var name='title' --></h2>
+  <!-- tmpl_else -->
+  <!-- tmpl_if name='example' -->
+  <h2><a href="/examples/">Examples</a>: <!-- tmpl_var name='title' --></h2>
   <!-- tmpl_else -->
   <h2><!-- tmpl_var name='title' --></h2>
   <!-- /tmpl_if -->
-      <!-- tmpl_var name='content' -->
+  <!-- /tmpl_if -->
+  <!-- tmpl_var name='content' -->
 
-<!-- tmpl_if name='seealso' -->
-<h3>See Also</h3>
-<p class="seealso">See also <!-- tmpl_loop name='seealso' --><a href="<!-- tmpl_var name='function' -->.html"><!-- tmpl_var name='function' -->()</a><!-- tmpl_if name='__last__' -->.<!-- tmpl_else -->, <!-- /tmpl_if --><!-- /tmpl_loop --></p>
-<!-- /tmpl_if -->
+  <!-- tmpl_if name='seealso' -->
+  <h3>See Also</h3>
+  <p class="seealso">See also <!-- tmpl_loop name='seealso' --><a href="<!-- tmpl_var name='function' -->.html"><!-- tmpl_var name='function' -->()</a><!-- tmpl_if name='__last__' -->.<!-- tmpl_else -->, <!-- /tmpl_if --><!-- /tmpl_loop --></p>
+  <!-- /tmpl_if -->
 
 </div>
 
