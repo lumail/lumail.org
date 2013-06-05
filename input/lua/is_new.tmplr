@@ -10,7 +10,7 @@ seealso: current_message, mark_new, mark_read
 <p>For example: </p>
 <pre>
 function on_read_message( path )
-   if ( is_new( path ) == 1 ) then
+   if ( is_new( path ) ) then
       <a href="msg.html">msg</a>( "The current message is new" );
    else
       <a href="msg.html">msg</a>( "The current message has already been read" );
