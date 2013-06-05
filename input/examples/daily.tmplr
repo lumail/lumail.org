@@ -1,0 +1,87 @@
+Title: daily()
+example:1
+----
+
+<p>Every morning I receive a bunch of messages which are filed away automatically, and there are some folders which I just ignore.</p>
+<p>This function will iterate over a small number of folders, matching a pattern, and mark each messages as read within them.</p>
+<pre>
+--
+-- Given a list of patterns find each folder which matches, and mark each mail as
+-- read in them.
+--
+function daily()
+
+   -- Get the current mode + limit
+   cur_mode   = global_mode();
+   cur_mlimit = maildir_limit();
+   cur_ilimit = index_limit();
+
+   -- The patterns which match folders we're going to process.
+   interesting = { "/.machines", "/.CRM.Spam", "/.Automated" };
+
+   -- setup the new state - showing maildirs which have unread messages.
+   maildir_limit( "new" );
+   global_mode( "maildir" );
+   jump_maildir_to(0);
+
+   -- ensure we have no selected folders.
+   clear_selected_folders();
+
+   offset = 0;
+
+   -- Now for each one find the name, and see if it a match against
+   -- our table of interesting messages.
+   while( offset <= (count_maildirs() - 1) ) do
+
+      -- jump to folder.
+      jump_maildir_to( offset )
+
+      --
+      -- See if the current maildir name matches one of our interesting ones.
+      --
+      name = current_maildir();
+
+      -- For each entry in our interesting-table.
+      for ii,iname in ipairs( interesting ) do
+
+         -- See if the entry matches the current maildir-name.
+         if ( string.find( name, iname ) ) then
+            -- OK the current maildir matches.
+
+            -- open the folder.
+            clear_selected_folders();
+            add_selected_folder()
+            global_mode( "index" );
+
+            --
+            -- The next code is identical to that in the "mark_read"
+            -- function included with lumail by default.
+            --
+            -- It is placed inline here so the example is standalone.
+            --
+            -- mark_read: start
+            count = count_messages()
+            i = 0
+            -- mark all read.
+            while( i < count ) do
+               jump_index_to( i )
+               mark_read()
+               i = i + 1
+            end
+            -- mark_read: end
+         end
+      end
+
+      -- move to the next.
+      offset = offset + 1;
+   end
+
+   --
+   -- Now reset things back to the way we were.
+   --
+   global_mode(cur_mode);
+   maildir_limit(cur_mlimit);
+   index_limit(cur_ilimit);
+end
+
+</pre>

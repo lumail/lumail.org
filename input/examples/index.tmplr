@@ -11,6 +11,10 @@ and perform general configuration.</p>
   <p>Using the <a href="/lua/">supplied primitives</a> you can write several useful functions which interact with your messages/maildirs.</p>
   <p>Here we show several simple examples which you can try reading/experimenting with.</p>
   <dl>
+    <dt><a href="daily.html">daily()</a></dt>
+    <dd>
+      <p>Every morning I receive a bunch of messages which are filed away automatically, and there are some folders which I just ignore.  This function will iterate over a small number of folders, matching a pattern, and mark each messages as read within them.</p></dd>
+    </dd>
     <dt><a href="dump_unread.html">dump_unread()</a></dt>
     <dd>
       <p>This example shows how to dump a list of unread-messages to disk.</p>
