@@ -5,7 +5,7 @@ example:1
 <p>This example highlights the power of a modal client.  Remember that with lumail you're always in one of three modes:</p>
 <ul>
 <li>maildir-mode - Which shows you maildirs.</li>
-<li>index-mode - Which shows you indexes.</li>
+<li>index-mode - Which shows you indexes from the set of maildirs which are "selected".</li>
 <li>message-mode - Which shows you a single message.</li>
 </ul>
 <p>The following function has the net result of showing all unread mail, in a list, regardless of which folder it is contained within:</p>
@@ -48,3 +48,4 @@ function global_unread()
    <a href="/lua/index_limit.html">index_limit</a>( "new" );
 end
 </pre>
+<p>The key to this is to remember that more than one folder may be selected at the same time, and that the index-view will show a union of all selected folders.</p>
