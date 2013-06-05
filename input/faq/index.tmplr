@@ -83,5 +83,12 @@ faq_page: 1
       <p>&nbsp;</p>
     </dd>
 
+
+    <dt id="help">10.  How can I help?</dt>
+    <dd>
+    <p><a href="#bug">Bug reports</a> are very useful, whether they relate to missing functionality you'd like to see present (new primitives, etc), or report actual problems you've encountered.</p>
+    <p>Code contributions, typo-fixes for this website, and similar are equally welcome.  I'm happy to give commit access to the main repository to anybody who sends me more than two valid patches.</p>
+    <p>Finally if you just want to <a href="http://www.amazon.co.uk/gp/registry/2LTKRAY9O22LI/">buy me presents</a> that's always nice; though an email saying "This is cool" is just as rewarding.</p>
+    </dd>
   </dl>
 </blockquote>
