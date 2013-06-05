@@ -1,0 +1,17 @@
+title: abort()
+brief: Exit the application with a fatal error
+seealso: exit, on_exit
+----
+
+<p>This function will immediately exit the <span class="tt">lumail</span> client, printing a diagnostic message to the console.</p>
+<p>This function differs from <a href="/lua/exit.html">exit()</a> because it will not run any <a href="/lua/on_exit.html">on_exit()</a> function you've defined.</P>
+<p>This can be used to add tests to your configuration file:</p>
+<pre>
+prefix = os.getenv( "HOME" ) .. "/Maildir"
+
+if ( <a href="/lua/is_directory.html">is_directory</a>(prefix) ) then
+   <a href="/lua/maildir_prefix.html">maildir_prefix</a>(prefix)
+else
+   abort( "The specified Maildir prefix isn't a directory: " .. prefix );
+end
+</pre>
