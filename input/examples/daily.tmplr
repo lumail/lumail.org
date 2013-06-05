@@ -83,5 +83,40 @@ function daily()
    maildir_limit(cur_mlimit);
    index_limit(cur_ilimit);
 end
+</pre>
+<p>With the use of <a href="/lua/maildirs_matching.html">maildirs_matching()</a> this function could be simplified significantly:</p>
+<pre>
+--
+-- Mark all messages in the current folder as read.
+--
+function mark_all_read()
+   count = count_messages()
+   i = 0
+   while( i < count ) do
+      jump_index_to( i )
+      mark_read()
+      i = i + 1
+   end
+end
+
+--
+-- Mark all the mails in all maildirs matching the pattern "/.machines."
+-- as being read.
+--
+function mark_machines_read()
+   test = maildirs_matching( "/.machines." );
+
+   -- for each matching maildir
+   for index,name in ipairs( test ) do
+      -- select it
+      if ( <a href="/lua/select_maildir.html">select_maildir</a>( name ) == 1 ) then
+         -- open it.
+         <a href="/lua/clear_selected_folders.html">clear_selected_folders</a>();
+         <a href="/lua/add_selected_folder.html">add_selected_folder</a>()
+         -- mark them read, using the previously defined function.
+         mark_all_read();
+      end
+   end
+end
 
 </pre>
