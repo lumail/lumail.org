@@ -1,4 +1,5 @@
 Title: spam()
+example:1
 ----
 
 <p>This example can be called against a message which is spam, and append the IP to a local blacklist file:</p>

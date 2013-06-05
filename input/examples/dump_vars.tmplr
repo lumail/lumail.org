@@ -1,4 +1,5 @@
 Title: dump_vars()
+example:1
 ----
 
 <p>This function will dump each of the variables which are currently set

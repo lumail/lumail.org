@@ -1,4 +1,5 @@
 Title: dump_unread()
+example:1
 ----
 
 <p>This function will dump, to a file on-disk, a list of all Maildir-folders which contain new/unread messages, as well as a count of the number of such messages.</p>
