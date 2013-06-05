@@ -5,7 +5,7 @@ seealso: current_message, mark_new, mark_read
 
 
 <p>When in index mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of messages.</p>
-<p>This function will return 1 if the currently selected message is new, and 0 otherwise.</p>
+<p>This function will return true if the currently selected message is new, and false otherwise.</p>
 <p>You may prefer to call this with a path, which will cause the test to be applied to the named mesage.</p>
 <p>For example: </p>
 <pre>
