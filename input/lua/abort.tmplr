@@ -1,5 +1,5 @@
 title: abort()
-brief: Exit the application with a fatal error
+brief: Exit the application with a fatal error.
 seealso: exit, on_exit
 ----
 
