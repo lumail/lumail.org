@@ -1,6 +1,7 @@
 title: executable()
 brief: Test whether a given path represents an executable.
 seealso: is_directory, file_exists
+version: 0.08
 ----
 
 <p>This function tests whether the specified path is executable.</p>

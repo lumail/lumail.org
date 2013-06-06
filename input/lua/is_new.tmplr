@@ -1,6 +1,7 @@
 title: is_new()
 brief: Is a message new?
 seealso: current_message, mark_new, mark_read
+version: 0.07
 ----
 
 

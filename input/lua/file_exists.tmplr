@@ -1,6 +1,7 @@
 title: file_exists()
 brief: Test whether a given path exists.
 seealso: is_directory, executable
+version: 0.08
 ----
 
 <p>This function tests whether the specified path exists.</p>

@@ -1,6 +1,7 @@
 title: delete()
 brief: Delete a message.
 seealso: current_message, save_message
+version: 0.07
 ----
 
 

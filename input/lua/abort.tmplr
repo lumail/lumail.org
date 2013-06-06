@@ -1,7 +1,7 @@
 title: abort()
 brief: Exit the application with a fatal error.
 seealso: exit, on_exit
-version: 0.8
+version: 0.08
 ----
 
 <p>This function will immediately exit the <span class="tt">lumail</span> client, printing a diagnostic message to the console.</p>

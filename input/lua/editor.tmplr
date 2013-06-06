@@ -1,7 +1,7 @@
 title: editor()
 brief: Configure the editor to use for mail composition.
 seealso: compose, reply, send_email
-version: 0.8
+version: 0.08
 ----
 
 <p>When <span class="tt">lumail</span> is used to compose a new message, or reply to an existing message, it will invoke your editor to do so.</p>

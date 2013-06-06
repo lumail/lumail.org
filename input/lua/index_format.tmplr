@@ -1,5 +1,6 @@
 title: index_format()
 brief: Control how message-lists are displayed.
+version: 0.07
 ----
 
 <p>A simple format-string is used to control how message-lists are displayed, this format string is fetched/updated via the <span class="tt">index_format()</span> function.</p>

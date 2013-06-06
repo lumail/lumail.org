@@ -1,5 +1,6 @@
 title: get_variables()
 brief: Get a copy of all current variables.
+version: 0.08
 ----
 
 <p>The <span class="tt">lumail</span> client has several variables which are set such as:</p>

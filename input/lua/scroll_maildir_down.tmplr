@@ -1,6 +1,7 @@
 title: scroll_maildir_down()
 brief: Scroll the list of folders down.
 seealso: current_maildir, jump_maildir_to, scroll_maildir_up, scroll_maildir_to
+version: 0.07
 ----
 
 <p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>

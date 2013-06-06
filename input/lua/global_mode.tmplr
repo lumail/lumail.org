@@ -1,6 +1,7 @@
 title: global_mode()
 brief: Get, or set, the global mode.
 seealso: keymap
+version: 0.07
 ----
 
 <p>The <span class="tt">lumail</span> client is a modal mail-client which means you're always in one of three modes:</p>

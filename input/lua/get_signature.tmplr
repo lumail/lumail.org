@@ -1,7 +1,7 @@
 title: get_signature()
 brief: Retrieve the signature for this new mail.
 seealso: compose, editor
-version: 0.9
+version: 0.09
 ----
 
 <p><span class="tt">lumail</span> will launch your editor when you compose a new mail, and if the function <span class="tt">get_signature</span> is defined it will be called.</p>

@@ -1,6 +1,7 @@
 title: keymap
 brief: A table used for keybindings.
 seealso: global_mode, on_key
+version: 0.07
 ----
 
 <p>All keybindings are defined via the lua init file(s), vua the  global Lua table "<span class="tt">keymap</span>".</p>

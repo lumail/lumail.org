@@ -1,6 +1,7 @@
 title: on_key()
 brief: Called when a key is pressed.
 seealso: keymap, on_idle, on_read_message, on_exit
+version: 0.07
 ----
 
 <p>If you define the function <span class="tt">on_key</span> it will be called when the user presses any key.</p>

@@ -1,6 +1,7 @@
 title: scroll_index_to()
 brief: Scroll the list of messages to the next one matching a pattern.
 seealso: scroll_index_down, jump_index_to, scroll_index_up
+version: 0.07
 ----
 
 <p>When a folder has been opened this function causes the list of messages to be scrolled to the next message which matches the specified pattern.</p>

@@ -1,7 +1,7 @@
 title: send_email()
 brief: Sent an email programatically.
 seealso: editor, reply, compose
-version: 0.9
+version: 0.09
 ----
 
 <p>This function will allow you to send an email via Lua, without user-intervention.</p>

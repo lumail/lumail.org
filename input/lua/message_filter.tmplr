@@ -1,6 +1,7 @@
 title: message_filter()
 brief: Pass email bodies through a filter prior to display.
 seealso: on_read_message, headers
+version: 0.08
 ----
 
 <p>When in message-mode an email will be displayed upon the screen.  The display consists of two parts:</p>

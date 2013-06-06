@@ -1,6 +1,7 @@
 title: save()
 brief: Move a message to a different folder.
 seealso: current_message, delete
+version: 0.07
 ----
 
 

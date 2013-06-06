@@ -87,7 +87,7 @@ sub expand_variables
                 my $brief = "";
                 my $title = "";
                 my $removed = 0;
-                my $version = "0.7";
+                my $version = "";
 
                 open( my $handle, "<", $file );
                 while ( my $line = <$handle> )

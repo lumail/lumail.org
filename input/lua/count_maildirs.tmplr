@@ -1,6 +1,7 @@
 title: count_maildirs()
 brief: Count the number of maildirs.
 seealso: current_maildir, select_maildir, selected_folders, count_messages
+version: 0.07
 ----
 
 

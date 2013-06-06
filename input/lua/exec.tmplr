@@ -1,5 +1,6 @@
 title: exec()
 brief: Execute a program, interactively.
+version: 0.07
 ----
 
 <p>The <span class="tt">exec</span> function will reset the screen to allow you to run an interactive program without seeing any garbled display artifacts.</p>

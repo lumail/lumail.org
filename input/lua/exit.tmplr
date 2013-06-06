@@ -1,6 +1,7 @@
 title: exit()
 brief: Exit the application.
 seealso: abort, on_exit
+version: 0.07
 ----
 
 <p>This function will immediately exit the <span class="tt">lumail</span> client.</p>

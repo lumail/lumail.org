@@ -1,6 +1,7 @@
 title: mark_new()
 brief: Mark a message as new/unread.
 seealso: is_new, mark_read, current_message
+version: 0.07
 ----
 
 

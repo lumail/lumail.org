@@ -1,6 +1,7 @@
 title: current_maildir()
 brief: Retrieve the currently selected folder.
 seealso: count_maildirs, jump_maildir_to, scroll_maildir_down, scroll_maildir_up, scroll_maildir_to, selected_folders, maildirs_matching
+version: 0.07
 ----
 
 

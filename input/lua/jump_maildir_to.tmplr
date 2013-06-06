@@ -1,6 +1,7 @@
 title: jump_maildir_to()
 brief: Jump to a position in the maildir list.
 seealso: select_maildir, scroll_maildir_down, scroll_maildir_up
+version: 0.07
 ----
 
 <p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
