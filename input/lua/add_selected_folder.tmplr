@@ -1,6 +1,6 @@
 title: add_selected_folder()
 brief: Add a folder to the list of selected folders.
-seealso: toggle_selected_folder, clear_selected_folders, selected_folders,  on_folder_selection, on_folder_selection
+seealso: toggle_selected_folder, clear_selected_folders, selected_folders,  on_folder_selection
 ----
 
 <p><span class="tt">lumail</span> allows you to select multiple folders to open at the same time.</p>

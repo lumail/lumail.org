@@ -1,6 +1,6 @@
 Title: maildirs_matching()
 brief: Retrieve the maildirs matching a given pattern.
-seealso: current_maildir, select_maildir, jump_maildir_to, scroll_maildir_up, scroll_maildir_down, scroll_maildir_to, select_maildir
+seealso: current_maildir,  jump_maildir_to, scroll_maildir_up, scroll_maildir_down, scroll_maildir_to, select_maildir
 ----
 
 <p>The <span class="tt">maildirs_matching</span> function returns a table which contains the names of each maildir matching a given pattern.</p>
