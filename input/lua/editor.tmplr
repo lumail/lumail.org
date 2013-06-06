@@ -1,6 +1,6 @@
 title: editor()
 brief: Configure the editor to use for mail composition.
-seealso: compose, reply
+seealso: compose, reply, send_email
 version: 0.8
 ----
 
