@@ -1,0 +1,7 @@
+title: scroll_message_up()
+brief: Scroll the current message up.
+seealso: scroll_message_down
+----
+
+<p>When in message-mode, set with <a href="global_mode.html">global_mode</a>, the user interface allows you to view a single message.</p>
+<p>The <span class="tt">scroll_message_up()</span> function allows you to scroll the current message up.</p>
