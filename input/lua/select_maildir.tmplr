@@ -10,3 +10,4 @@ seealso: current_maildir, select_maildir, jump_maildir_to, scroll_maildir_up, sc
 <pre>
 select_maildir( "/home/skx/Maildir/.steve.org.uk" );
 </pre>
+<p>The return value is <span class="tt">true</tt> if the selection succeeded, <span class="tt">false</span> otherwise.</p>

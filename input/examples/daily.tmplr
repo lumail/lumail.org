@@ -109,7 +109,7 @@ function mark_machines_read()
    -- for each matching maildir
    for index,name in ipairs( test ) do
       -- select it
-      if ( <a href="/lua/select_maildir.html">select_maildir</a>( name ) == 1 ) then
+      if ( <a href="/lua/select_maildir.html">select_maildir</a>( name ) ) then
          -- open it.
          <a href="/lua/clear_selected_folders.html">clear_selected_folders</a>();
          <a href="/lua/add_selected_folder.html">add_selected_folder</a>()

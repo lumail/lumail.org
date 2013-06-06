@@ -1,6 +1,7 @@
 Title: maildirs_matching()
 brief: Retrieve the maildirs matching a given pattern.
 seealso: current_maildir,  jump_maildir_to, scroll_maildir_up, scroll_maildir_down, scroll_maildir_to, select_maildir
+version: 0.8
 ----
 
 <p>The <span class="tt">maildirs_matching</span> function returns a table which contains the names of each maildir matching a given pattern.</p>
@@ -30,7 +31,7 @@ function mark_machines_read()
    -- for each matching maildir
    for index,name in ipairs( test ) do
       -- select it
-      if ( <a href="/lua/select_maildir.html">select_maildir</a>( name ) == 1 ) then
+      if ( <a href="/lua/select_maildir.html">select_maildir</a>( name ) ) then
          -- open it.
          <a href="/lua/clear_selected_folders.html">clear_selected_folders</a>();
          <a href="/lua/add_selected_folder.html">add_selected_folder</a>()
