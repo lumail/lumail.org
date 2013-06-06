@@ -1,0 +1,48 @@
+title: get_signature()
+brief: Retrieve the signature for this new mail.
+seealso: compose, editor
+version: 0.9
+----
+
+<p><span class="tt">lumail</span> will launch your editor when you compose a new mail, and if the function <span class="tt">get_signature</span> is defined it will be called.</p>
+<p>The <span class="tt">get_signature</span> function is expected to return a string which will be inserted in the new mail that your editor shows you.</p>
+<p>This is a basic example:</p>
+<pre>
+--
+-- Return the contents of the given (text) file.
+--
+-- Note: Called by on_signature
+--
+function file_contents(file)
+    local f = io.open(file, "rb")
+    if ( f ) then
+       local content = f:read("*all")
+       f:close()
+       return( content );
+    else
+       return( "Error reading file: \"" .. file .. "\"" )
+    end
+end
+
+
+--
+-- This function is called when you compose an email, the return value
+-- is the signature text to insert at the end of the new mail.
+--
+function get_signature( from, to, subject )
+   --
+   -- Return the contents of ~/.signature if present
+   --
+   home = os.getenv( "HOME" )
+
+   if ( file_exists( home .. "/.signature" ) ) then
+      return( file_contents( home .. "/.signature" ) )
+   else
+      --
+      -- No signature found.  Return empty text.
+      --
+      return ""
+   end
+end
+</pre>
+<p>A more flexible solution is shown in the <a href="/examples/get_signature.html">get_signature example</a>.</p>
