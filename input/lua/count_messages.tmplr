@@ -1,8 +1,24 @@
-title: count_message()
+title: count_messages()
 brief: Count the number of messages in the currently selected folder(s).
 seealso: current_message, count_maildirs
 ----
 
 
 <p>When in index mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of messages.</p>
-<p>This function will count the number of messages which are visible.</P>
+<p>This function will count the number of messages which are visible.</p>
+<p>For example this can be used to mark all messages read:</p>
+<pre>
+--
+-- Mark all messages in the currently selected folder(s) as read.
+--
+function mark_all_read()
+   count = count_messages()
+   i = 0
+
+   while( i < count ) do
+      <a href="/lua/jump_index_to.html">jump_index_to</a>( i )
+      <a href="/lua/mark_read.html">mark_read</a>()
+      i = i + 1
+   end
+end
+</pre>
