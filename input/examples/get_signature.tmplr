@@ -6,7 +6,7 @@ example:1
 <p>The following implementation attempts to dynamically and intelligently choose a suitable signature.  The selection is made based upon the first match made:</p>
 <ul>
 <li>Using the domain name of the recipient of the message.</li>
-<li>Using the domain name of yoru <a href="/lua/from.html">from</a> address.</li>
+<li>Using the domain name of your <a href="/lua/from.html">from</a> address.</li>
 <li>Using <span class="tt">~/.signature</span>.</li>
 </ul>
 <pre>
