@@ -1,15 +1,14 @@
 Title: Examples of Lua functions
 ----
 
-<p><span class="tt">lumail</span> has an embedded Lua intepreter which is used to configure keybindings,
-and perform general configuration.</p>
+<p><span class="tt">lumail</span> has an embedded Lua intepreter which is used to configure keybindings, perform general configuration, &amp; etc.</p>
 <p>If you're new to Lua you might find the <a href="http://www.lua.org/">Lua website</a> and the <a href="http://www.luafaq.org/">Lua Unofficial FAQ</a> useful resources.</p>
 
 
 <h2>Writing useful functions</h2>
 <blockquote>
-  <p>Using the <a href="/lua/">supplied primitives</a> you can write several useful functions which interact with your messages/maildirs.</p>
-  <p>Here we show several simple examples which you can try reading/experimenting with.</p>
+  <p>Using the <a href="/lua/">supplied primitives</a> you can write many interesting funcions to interact with your messages/maildirs.</p>
+  <p>Here we show several examples of the kind of things that <span class="tt">lumail</span> allows:</p>
   <dl>
     <dt><a href="daily.html">daily()</a></dt>
     <dd>
