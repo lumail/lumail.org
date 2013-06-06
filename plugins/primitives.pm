@@ -87,11 +87,13 @@ sub expand_variables
                 my $brief = "";
                 my $title = "";
                 my $removed = 0;
+                my $version = "0.7";
 
                 open( my $handle, "<", $file );
                 while ( my $line = <$handle> )
                 {
                     $brief = $1 if ( $line =~ /^brief: (.*)/ );
+                    $version = $1 if ( $line =~ /^version: (.*)/ );
                     $title = $1 if ( $line =~ /^title: (.*)/ );
                     $removed = 1 if ( $line =~ /^removed:/ );
                 }
@@ -133,6 +135,7 @@ sub expand_variables
                 push( @$loop,
                       {  name  => $name,
                          brief => $brief,
+                         version => $version,
                          new   => $new,
                       } ) if ( length($brief) );
             }
