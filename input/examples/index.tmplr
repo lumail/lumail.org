@@ -22,6 +22,11 @@ Title: Examples of Lua functions
     <dd>
       <p>Internally lumail keeps a collection of variables which are made availble to Lua.  This function dumps them to a temporary file on-disk.</p>
     </dd>
+    <dt><a href="get_signature.html">get_signature()</a> <sup>v0.9+</sup></dt>
+    <dd>
+    <p>The <a href="/lua/get_signature.html">get_signature()</a> function is called prior to a mail being opened in your editor for composition.</p>
+    <p>This example shows how you can usefully and dynamically select the appropriate <span class="tt">.signature</span> file for the mail.</p>
+    </dd>
     <dt><a href="global_unread.html">global_unread()</a></dt>
     <dd>
       <p>Lumail allows multiple folders to be opened at once, and via the <a href="/lua/index_limit.html">index_limit()</a> primitive you can cause the list of messages to show those which are new.  Together these two things allow you to write the <span class="tt">global_unread()</span> method.</p>
