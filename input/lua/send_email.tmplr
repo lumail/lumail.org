@@ -1,0 +1,20 @@
+title: send_email()
+brief: Sent an email programatically.
+seealso: editor, reply, compose
+version: 0.9
+----
+
+<p>This function will allow you to send an email via Lua, without user-intervention.</p>
+<p>For example:</p>
+<pre>
+function mail_steve()
+   mail = {
+      ["to"]      = "steve@steve.org.uk",
+      ["subject"] = "I like cake",
+      ["from"]    = "me@example.com",
+      ["body"]    = "This is the body\nThis is the text\n",
+   }
+
+   send_email( mail );
+end
+</pre>
