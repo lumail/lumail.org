@@ -1,6 +1,6 @@
 Title: Download
 download_page: 1
-src: lumail-0.07.tar.gz
+src: lumail-0.08.tar.gz
 ----
 
 <p>The <span class="tt">lumail</span> mail-client is still under active development, but to gain additional feedback we're releasing versioned <a href="#source">source-snapshots</a> periodically.</p>
