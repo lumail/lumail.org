@@ -58,16 +58,35 @@ sub expand_variables
             my $value = $hash{ $key };
 
             #
-            #  Split by comma, and sort.
+            #  The functions we find
             #
-            foreach my $func ( sort( split( /,/, $value ) ) )
-            {
+            my %also;
 
+            #
+            #  Store each function we found in the hash "%also".
+            #
+            foreach my $func ( split( /,/, $value ) )
+            {
                 #
                 #  Skip leading/trailing whitespace and empty entries.
                 #
                 $func =~ s/^\s+|\s+$//g;
                 next unless ( length($func) );
+
+                $also{ $func } += 1;
+            }
+
+            #
+            #  For each unique function we saw listed in the seealso line
+            # we'll now store that in the hash
+            #
+            foreach my $func ( sort keys %also )
+            {
+                if ( $also{ $func } > 1 )
+                {
+                    warn "Duplicate function $func in " . $page->source() .
+                      "\n";
+                }
 
                 #
                 #  See if the function was known.
@@ -82,8 +101,7 @@ sub expand_variables
             }
 
             #
-            # Make the look-variable "primitives" available to the
-            # page that invoked us.
+            # Make the loop-variable "seealso" available to the page that invoked us.
             #
             $hash{ $key } = undef;
             $hash{ $key } = $data if ($data);
