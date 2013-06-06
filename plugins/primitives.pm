@@ -85,18 +85,33 @@ sub expand_variables
 
                 # brief description of the primitive.
                 my $brief = "";
+                my $title = "";
                 my $removed = 0;
 
                 open( my $handle, "<", $file );
                 while ( my $line = <$handle> )
                 {
                     $brief = $1 if ( $line =~ /^brief: (.*)/ );
+                    $title = $1 if ( $line =~ /^title: (.*)/ );
                     $removed = 1 if ( $line =~ /^removed:/ );
                 }
                 close($handle);
 
                 next if ( $removed );
 
+                #
+                #  If we got a title ensure it matches the filename.
+                #
+                if ( $title )
+                {
+                    $title =~ s/\(\)//g;
+                    my $f = File::Basename::basename($file);
+                    $f =~ s/\.tmplr//g;
+                    if ( $title ne $f )
+                    {
+                        print "WARNING: $title in $file\n";
+                    }
+                }
                 #
                 #  Sanity-check
                 #
