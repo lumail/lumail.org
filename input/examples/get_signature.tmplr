@@ -78,7 +78,7 @@ function get_signature( from, to, subject )
 
       -- Look for the domain-file beneath ~/.sigs/
       file = home .. "/.sigs/" .. domain
-      if ( file_exists( file ) ) then
+      if ( <a href="/lua/file_exists.html">file_exists</a>( file ) ) then
          return( file_contents( file ) )
       end
    end
@@ -86,7 +86,7 @@ function get_signature( from, to, subject )
    --
    -- Fallback to ~/.signature if present
    --
-   if ( file_exists( home .. "/.signature" ) ) then
+   if ( <a href="/lua/file_exists.html">file_exists</a>( home .. "/.signature" ) ) then
       return( file_contents( home .. "/.signature" ) )
    else
       --
