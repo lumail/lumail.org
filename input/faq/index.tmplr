@@ -8,26 +8,32 @@ faq_page: 1
     <dd>
       <p>I login to my mailserver and read mail directly as it is delivered via procmail, so I have no need for it.</p>
       <p>Avoiding the use of POP3 or IMAP coding also greatly simplifies the client.</p>
-      <p>If you have to use IMAP/POP3 to fetch your mail I'd suggest the use of <span class="tt">imapsync</span>, <span class="tt">fetchmail</span>, or similar.</p>
+      <p>If you have to use IMAP/POP3 to fetch your mail I'd suggest the use of <span class="tt">imapsync</span>, <span class="tt">offlineimap</span>, <span class="tt">fetchmail</span>, or similar.</p>
       <p>&nbsp;</p>
     </dd>
 
-
-    <dt id="schedule">2.  How do I schedule invoking <span class="tt">imapsync</span>?</dt>
+    <dt>2.  How does outgoing mail get sent?</dt>
     <dd>
-     <p>The <a href="/lua/on_idle.html">on_idle</a>() documentation has been updated to provide an example of calling exeternal commands on a regular schedule.</p>
+      <p>Outgoing mail is sent by executing the command you specify via the <a href="/lua/sendmail.html">sendmail()</a> primitive.</p>
+      <p>There is no integreated SMTP support in <span class="tt">lumail</span>.</p>
+    </dd>
+
+    <dt id="schedule">3.  How do I schedule invoking mail-fetching?</dt>
+    <dd>
+     <p>The <a href="/lua/on_idle.html">on_idle</a>() documentation has been updated to provide an example of calling your external command to sync mail on a regular schedule.</p>
+     <p>If mail is delivered directly, via <span class="tt">procmail</span> or similar, no such action is required.</p>
       <p>&nbsp;</p>
     </dd>
 
-    <dt>3.  What license is the code released under?</dt>
+    <dt>4.  What license is the code released under?</dt>
     <dd>
       <p>The code is released under the GNU General Public License, version 2 or later.</p>
       <p>&nbsp;</p>
     </dd>
 
-    <dt>4.  How does this client differ from more established clients?</dt>
+    <dt>5.  How does this client differ from more established clients?</dt>
     <dd>
-      <p>At the moment the client has just reached the point where it is complete enough to be used almost-exclusively.  There are many differences between this client, and existing ones:</p>
+      <p>At the moment the client has reached the point where it is complete enough to be used exclusively.  There are many differences between this client, and existing ones:</p>
       <ul>
         <li><span class="tt">lumail</span> is a modal client.  That is almost unique.</li>
         <li><span class="tt">lumail</span> has a real embedded language for scripting, lua.</li>
@@ -36,7 +42,7 @@ faq_page: 1
       <p>Other differences are, sadly, negative:</p>
       <ul>
         <li>You'll only ever operate on a single message.</li>
-        <li>There is no IMAP/POP3 support.</li>
+        <li>There is no IMAP/POP3/SMTP support.</li>
         <li>There is no support for MH-H/Mail folders.  Just Maildirs.</li>
         <li>There is zero support for attachment-handling, either in receiving mail or composing mail.</li>
       </ul>
@@ -44,7 +50,7 @@ faq_page: 1
     </dd>
 
 
-    <dt id="motivation">5.  Why write another mail client?</dt>
+    <dt id="motivation">6.  Why write another mail client?</dt>
     <dd>
       <p>For the past few years I've been using <a href="http://packages.debian.org/mutt-patched">mutt-patched</a>, which adds the ability to display a "sidebar".  This sidebar allowed the navigation of open folders at almost all times, and the sidebar could be limited to display only folders containing unread mail.</p>
       <p>However recently the sidebar patch has lost the ability to see folders only containing unread messages.  This initially made me think about re-patching mutt, but later got me thinking about how you'd write and use a truly modal mail client.</p>
@@ -52,7 +58,7 @@ faq_page: 1
       <p>&nbsp;</p>
     </dd>
 
-    <dt>6. Why embed Lua?</dt>
+    <dt>7. Why embed Lua?</dt>
     <dd>
       <p>The intention is that <span class="tt">lumail</span> will be a flexible email client, which means that it must allow things to be configured in ways that I do not expect.</p>
       <p>Allowing a client to be configured in interesting ways demands some kind of "scripting", or the ability to set values/options conditionally in the configuration file.</p>
@@ -61,7 +67,7 @@ faq_page: 1
       <p>&nbsp;</p>
     </dd>
 
-    <dt>7. What can I do with Lua?</dt>
+    <dt>8. What can I do with Lua?</dt>
     <dd>
       <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/lua/">primitives</a> made available to it.</p>
       <p>Using the Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
@@ -69,14 +75,14 @@ faq_page: 1
       <p>&nbsp;</p>
     </dd>
 
-    <dt>8. What does it look like?</dt>
+    <dt>9. What does it look like?</dt>
     <dd>
     <p>There is a <a href="/screenshots">page of screenshots</a> available to give you some idea.</p>
       <p>&nbsp;</p>
     </dd>
 
 
-    <dt id="bug">9. I found a bug, what do I do?</dt>
+    <dt id="bug">10. I found a bug, what do I do?</dt>
     <dd>
       <p>First of all thank you for trying the client.</p>
       <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/skx/lumail/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
@@ -84,7 +90,7 @@ faq_page: 1
     </dd>
 
 
-    <dt id="help">10.  How can I help?</dt>
+    <dt id="help">11.  How can I help?</dt>
     <dd>
     <p><a href="#bug">Bug reports</a> are very useful, whether they relate to missing functionality you'd like to see present (new primitives, etc), or report actual problems you've encountered.</p>
     <p>Code contributions, typo-fixes for this website, and similar are equally welcome.  I'm happy to give commit access to the main repository to anybody who sends me more than two valid patches.</p>
