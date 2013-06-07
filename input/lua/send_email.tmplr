@@ -1,6 +1,6 @@
 title: send_email()
 brief: Sent an email programatically.
-seealso: editor, reply, compose
+seealso: editor, reply, compose, sendmail_path
 version: 0.09
 ----
 
