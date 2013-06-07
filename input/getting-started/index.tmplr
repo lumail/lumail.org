@@ -7,21 +7,34 @@ started_page: 1
 <p>This page briefly describes how you would get started using <span class="tt">lumail</span>.</p>
 <p>It only covers the bare essentials and documents the behaviour of the client with the
  default settings.  (You can configure the client significantly using the <a href="/lua/">available lua primitives</a>.)</p>
-<p>Before proceeding you'll first need to <a href="/download/">install the client</a>.</p>
+<p>Before proceeding you'll need to <a href="/download/">install the client</a>.</p>
 </blockquote>
 
-<h2>Configuration</h2>
+<h2>Configuration Files</h2>
 <blockquote>
-<p>The configuration of <span class="tt">lumail</span> is carried out by the editing of the Lua configuration file(s) which are read at startup-time.</p>
-<p>The following two files are read by default:</p>
+<p><span class="tt">lumail</span> is configured by a pair of Lua configuration files, which are loaded at startup-time:</p>
+<p>If present the following two files are read:</p>
 <ul>
-<li><span class="tt">/etc/lumail.lua</span></li>
-<li><span class="tt">~/.lumail/config.lua</span></li>
+<li><span class="tt">/etc/lumail.lua</span>
+<ul>
+<li>This system-wide configuration file will affect all users.</li>
+</ul></li>
+<li><span class="tt">~/.lumail/config.lua</span>
+<ul>
+<li>This is a per-user file for yoru own changes.</li>
+</ul></li>
 </ul>
 <p>You may specify an additional file via the <span class="tt">--rcfile</span> command-line argument:</p>
 <pre>
 ~$ lumail --rcfile ~/conf/lumail.lua
 </pre>
+</blockquote>
+
+<h2>Initial Configuration</h2>
+<blockquote>
+<p>The initial configuration will consist of you telling lumail where to find your mail, setting your from address, and configuring the sending of new mail.</p>
+<p>The <a href="<!-- tmpl_var name='cfg' -->">sample configuration file</a> contains settings that you can adopt or adapt.</p>
+<p>Once you have these settings defined you'll be able to use the client, and consider looking at the <a href="/examples/">example functions</a> we've documented for furhter inspiration.</p>
 </blockquote>
 
 <h2>Basic Usage</h2>
@@ -51,10 +64,9 @@ then press "SPACE"/"RETURN" to view an individual message.</P>
 
 <h2>Advanced Usage</h2>
 <blockquote>
-<p>Because the client has a built-in Lua intepreter you can configure it in interesting
-ways with ease.  The supplied <span class="tt"><a href="<!-- tmpl_var name='cfg' -->">lumail.lua</a></span> file shows examples of limiting the display, or opening several folders via a single-keystroke.</p>
-<p>In addition to this you can also evaluate Lua functions via the prompt.</p>
-<p>In any mode pressing <span class="tt">:</span> will prompt for input, and evaluate it.  For example you might press "<span class="tt">:</span>" then enter:</p>
+<p>Because lumail has a built-in Lua intepreter you can configure it to do many interesting things.  The supplied <span class="tt"><a href="<!-- tmpl_var name='cfg' -->">lumail.lua</a></span> file shows examples of limiting the display, or opening several folders via a single-keystroke.</p>
+<p>As well as the sample configuration file there are <a href="/examples/">sample functions</a> available to give you inspiration.</p>
+<p>At any time you can evaluation/call Lua functions via the prompt, you're not limited to binding them to keys.  In <b>any</b> mode pressing "<span class="tt">:</span>" will prompt for input, and evaluate it.  For example you might press "<span class="tt">:</span>" then enter:</p>
 <pre>
 <a href="/lua/msg.html">msg</a>( "Lua rocks!" );
 </pre>
