@@ -4,10 +4,13 @@ Title: Command-Line arguments
 <blockquote>
 <p>The <span class="tt">lumail</span> client accepts several command-line arguments:</p>
 <dl>
+<dt><span class="tt">--debug</span></dt>
+<dd><p>If lumail has been compiled with debugging enabled this will allow you to specify a logfile to write "interesting events" to.</p><p>It is not expected users will ever need this support.</p></dd>
 <dt><span class="tt">--exit</span></dt>
-<dd><p>Exit the application.  This is present so that you may exit after evaluating an expression with the <span class="tt">--eval</span> flag.</p></dd>
+<dd><p>Exit the application.</p>
+<p>This is present so that you may exit after evaluating an expression with the <span class="tt">--eval</span> flag.</p></dd>
 <dt><span class="tt">--eval "string"</span></dt>
-<dd><p>Evaluate the given Lua expression, or function.  It is largely assumed that the thing to be executed will be a function you've defined in your startup configuration file.</p></ddd>
+<dd><p>Evaluate the given Lua expression, or function.  It is assumed that the function to be executed will be one you've defined in your startup configuration file.</p></ddd>
 <dt><span class="tt">--folder "path"</span></dt>
 <dd><p>Open the given folder, and switch to index-mode on startup.</p></dd>
 <dt><span class="tt">--rcfile "file"</span></dt>
