@@ -3,8 +3,28 @@ download_page: 1
 src: lumail-0.08.tar.gz
 ----
 
-<p>The <span class="tt">lumail</span> mail-client is still under active development, but to gain additional feedback we're releasing versioned <a href="#source">source-snapshots</a> periodically.</p>
+<p>Luamil is still under active development, but to gain additional feedback we're releasing versioned <a href="#source">source-snapshots</a> periodically.</p>
 <p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/faq/#bug">should be reported</a> as such.</p>
+
+
+<h2 id="source">Source Snapshots</h2>
+<blockquote>
+<p>The most recent snapshot is:</p>
+<ul>
+<li><a href="<!-- tmpl_var name='src' -->"><!-- tmpl_var name='src' --></a></li>
+</ul>
+<p>See <a href="#building">the notes on building</a> for requirements, and instructions.</p>
+</blockquote>
+
+
+<h2 id="git">Cutting Edge Git Repository</h2>
+<blockquote>
+<p>All development on <span class="tt">lumail</span> is carried out, in public, against a central git repository:</p>
+<ul>
+<li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
+</ul>
+<p>See <a href="#building">the notes on building</a> for requirements, and instructions.</p>
+</blockquote>
 
 <h2 id="debian">Debian GNU/Linux Packages</h2>
 <blockquote>
@@ -33,23 +53,6 @@ deb     http://packages.steve.org.uk/lumail/wheezy/ ./
 <p>(The binaries are compiled for both i386 and AMD64.)</p>
 </blockquote>
 
-
-<h2 id="source">Source Snapshots</h2>
-<blockquote>
-<p>The most recent snapshot is:</p>
-<ul>
-<li><a href="<!-- tmpl_var name='src' -->"><!-- tmpl_var name='src' --></a></li>
-</ul>
-</blockquote>
-
-
-<h2 id="git">Cutting Edge Git Repository</h2>
-<blockquote>
-<p>All development on <span class="tt">lumail</span> is carried out, in public, against a central git repository:</p>
-<ul>
-<li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
-</ul>
-</blockquote>
 
 <h2 id="building">Building from source</h2>
 <blockquote>
