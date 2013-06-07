@@ -16,10 +16,10 @@ maildir_format( "$CHECK - $PATH" );
 <p>The format string clearly makes use of variables like "<span class="tt">$CHECK</span>" to display particular pieces of information about the maildir-folder.  The following  table lists possible values:</p>
 <table>
 <tr><td><span class="tt">$CHECK</span></td><td>"<span class="tt">[X]</span>" if the folder is selected, "<span class="tt">[ ]</span>" otherwise.</td></tr>
-<tr><td><span class="tt">$TOTAL</span></td><td>The total number omessages in the maildir.</td></tr>
+<tr><td><span class="tt">$TOTAL</span></td><td>The total number of messages in the maildir.</td></tr>
 <tr><td><span class="tt">$NEW</span></td><td>The total number of new/unread messages in the maildir.</td></tr>
 <tr><td><span class="tt">$UNREAD</span></td><td>The total number of new/unread messages in the maildir.</td></tr>
-<tr><td><span class="tt">$READ</span></td><td>The total number of old/read messages in the folder.</td></tr>
+<tr><td><span class="tt">$READ</span></td><td>The total number of old/read messages in the maildir.</td></tr>
 <tr><td><span class="tt">$PATH</span></td><td>The full path to the maildir.</td></tr>
 <tr><td><span class="tt">$NAME</span></td><td>The last component of the maildir-name.</td></tr>
 </table>
