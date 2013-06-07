@@ -14,3 +14,15 @@ version: 0.07
 <pre>
 headers = { "$TO", "$FROM", "$DATE", "$SUBJECT" };
 </pre>
+<p>There are several values that are defined:</p>
+<table>
+<tr><td><span class="tt">$TO</span></td><td>The recipient of the message.</td></tr>
+<tr><td><span class="tt">$FROM</span></td><td>The sender of the message.</td></tr>
+<tr><td><span class="tt">$SUBJECT</span></td><td>The subject of the message.</td></tr>
+<tr><td><span class="tt">$DATE</span></td><td>The date of the message.</td></tr>
+</table>
+<p>Any other value will be similarly treated as a message-header.  So the following is
+valid:</p>
+<pre>
+headers = { "$TO", "$FROM", "$DATE", "$Message-ID" };
+</pre>
