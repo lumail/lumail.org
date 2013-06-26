@@ -9,11 +9,11 @@ version: 0.09
 <p>The return value will be the single character the user entered.</p>
 <p>Usage:</p>
 <pre>
-prompt( "The prompt to display", "Valid characters to accept" );
+prompt_chars( "The prompt to display", "Valid characters to accept" );
 </pre>
 <p>For example:</p>
 <pre>
-entered = prompt( "my prompt will accept A, B, or C", "ABC" );
+entered = prompt_chars( "my prompt will accept A, B, or C", "ABC" );
 <a href="msg.html">msg</a>( "You entered: " .. entered );
 </pre>
 <p>You'll notice that <span class="tt">prompt_yn</span> is just a special case of this function.</p>
