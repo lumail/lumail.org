@@ -1,6 +1,6 @@
 title: prompt_yn()
 brief: Prompt for yes/no.
-seealso: prompt
+seealso: prompt, prompt_chars
 version: 0.07
 ----
 
@@ -10,4 +10,15 @@ version: 0.07
 <pre>
 input = prompt_yn( "Do you wish to send the mail?" );
 <a href="msg.html">msg</a>( "The result was: " .. input );
+</pre>
+<p>You'll notice that <span class="tt">prompt_yn()</span> is a special case of the <span class="tt">prompt_chars()</span> function.  For example you could emulate <span class="tt">prompt_yn()</span> like so:</p>
+<pre>
+function yes_no(prompt_str)
+   ret = prompt_chars( prompt_str, "ynYN" )
+   if ( ret == 'y' || ret == 'Y' ) then
+     return true
+   else
+     return false
+   end
+end
 </pre>
