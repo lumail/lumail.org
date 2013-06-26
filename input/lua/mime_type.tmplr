@@ -1,0 +1,12 @@
+title: mime_type()
+brief: Get the MIME-type for the given filename.
+version: 0.09
+----
+
+<p>This function will attempt to determine the correct MIME-type for the specified filename.</p>
+<p>Currently this lookup uses a small hardwired-list, in the future it is hoped this function will be extended to support <span class="tt">/etc/mime.types</span>.</p>
+<p>For example:</p>
+<pre>
+<a href="/lua/msg.html">msg</a>(mime_type( "/path/to/foo.jpg" ));
+</pre>
+<p>This will result in the message <span class="tt">image/jpg</span> being displayed.</p>
