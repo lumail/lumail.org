@@ -4,7 +4,8 @@ version: 0.09
 ----
 
 <p>This function will attempt to determine the correct MIME-type for the specified filename.</p>
-<p>Currently this lookup uses a small hardwired-list, in the future it is hoped this function will be extended to support <span class="tt">/etc/mime.types</span>.</p>
+<p>The MIME-type is determined by examining the filename extension, if present, and if the lookup fails then the default value of <span class="tt">application/octet-stream</span> will be returned.</p>
+<p>The code to perform the lookup parses the system file <span class="tt">/etc/mime.types</span>, if present, and if that fails it will revert to a small list of known-values.</p>
 <p>For example:</p>
 <pre>
 <a href="/lua/msg.html">msg</a>(mime_type( "/path/to/foo.jpg" ));
