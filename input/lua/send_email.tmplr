@@ -13,6 +13,9 @@ function mail_steve()
       ["subject"] = "I like cake",
       ["from"]    = "me@example.com",
       ["body"]    = "This is the body\nThis is the text\n",
+
+      # Optional attachments.
+      ["attachments"] = { "/path/to/file1", "/path/to/file2" }
    }
 
    send_email( mail );
