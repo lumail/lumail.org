@@ -1,6 +1,6 @@
   <dl>
-    <dt>25th June 2013</dt>
-    <dd><p>I'm back from a holiday in Helsinki, so development will restart shortly.</p></dd>
+    <dt>29th June 2013</dt>
+    <dd><p>A new release has been made, version 0.09, which is available from the <a href="/download/">download page</a>.</p></dd>
     <dt>6th June 2013</dt>
     <dd><p>A new release of lumail, version 0.08.  Changes include bugfixes, additional primitives, and code cleanps.</p></dd>
     <dt>4th June 2013</dt>
