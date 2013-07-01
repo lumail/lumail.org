@@ -1,0 +1,12 @@
+title: count_attachments()
+brief: Count the attachments in the current message.
+seealso: save_attachment
+version: 0.10
+----
+
+<p>This function will return an integer count of the number of attachments in the currently specified message.</p>
+<p>For example:</p>
+<pre>
+<a href="/lua/msg.html">msg</a>("There are " .. count_attachments() .. " attachments");
+</pre>
+

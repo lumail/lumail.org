@@ -1,0 +1,19 @@
+title: save_attachment()
+brief: Save a single attachment to disk.
+seealso: count_attachments
+version: 0.10
+----
+
+<p>This function will save the specified attachment to disk.</p>
+<p>For example:</p>
+<pre>
+int count = <a href="/lua/count_attachments.html">count_attachments</a>();
+int i = 1
+
+while( i <= count ) do
+  save_attachment( i, "/tmp/attachment." .. i );
+  i = i + 1
+end
+</pre>
+
+
