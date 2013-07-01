@@ -10,7 +10,7 @@ version: 0.10
 int count = <a href="/lua/count_attachments.html">count_attachments</a>();
 int i = 1
 
-while( i <= count ) do
+while( i &lt;= count ) do
   save_attachment( i, "/tmp/attachment." .. i );
   i = i + 1
 end
