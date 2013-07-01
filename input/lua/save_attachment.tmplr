@@ -1,6 +1,6 @@
 title: save_attachment()
 brief: Save a single attachment to disk.
-seealso: count_attachments
+seealso: count_attachments, attachments
 version: 0.10
 ----
 

@@ -1,6 +1,6 @@
 title: count_attachments()
 brief: Count the attachments in the current message.
-seealso: save_attachment
+seealso: save_attachment, attachments
 version: 0.10
 ----
 
