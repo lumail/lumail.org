@@ -4,7 +4,7 @@ seealso: on_exit, on_key, on_read_message, on_idle
 version: 0.10
 ----
 
-<p>If you define the function <span class="tt">on_completion</span> it will be invoked when the user attempts to use TAB-completion within the input-prompt.</p>
+<p>If you define the function <span class="tt">on_complete()</span> it will be invoked when the user attempts to use TAB-completion within the input-prompt.</p>
 <p>(When the user is prompted for input it will mostly be as a result of the <a href="/lua/prompt.html">prompt()</a> function being invoked.  The TAB-completion function is wired into this function.)</p>
 <p>The <span class="tt">on_complete()</span> function is expected to return a table to the caller.  The <b>values</b> of any keys will be presented as possible completion-options.</p>
 <p>The standard <span class="tt">on_complete()</span> function will attempt to complete user-defined functions:</p>
