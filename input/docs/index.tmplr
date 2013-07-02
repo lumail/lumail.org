@@ -3,14 +3,19 @@ docs_page: 1
 ----
 
 <blockquote>
-<p>As the client is still under active development there isn't a complete set of documentation yet, there are just a few specific pieces of reading:</p>
-<ul>
-<li>A list of all valid <a href="/cmdline/">command-line flags</a>.</li>
-<li>A <a href="/getting-started">getting started</a> guide.
-<ul>
-<li>The <a href="<!-- tmpl_var name='cfg' -->">default configuration file</a>.</li>
-</ul></li>
-<li>The <a href="/examples/">examples page</a> gives hints of the interesting things you can do with the available primitives.</li>
-</ul>
+<p>As the client is still under active development there isn't a complete set of documentation yet, so this page just indexes some useful resources.</p>
+<p>If you have an questions please do <a href="/contact/">get in touch</a></p>
+
+<dl>
+<dt><a href="/cmdline/">Command-line flags</a></dt>
+<dd><p>The <span class="tt">lumail</span> accepts several command-line flags, which this page documents.</p></dd>
+<dt>The <a href="/getting-started/">getting started</a> guide</dt>
+<dd><p>The getting-started guide gives a basic overview of the client, and introduces you to using it.</p></dd>
+<dt>The <a href="<!-- tmpl_var name='cfg' -->">default configuration file</a></dt>
+<dd><p>The default configuration file gives a flavour of how the software can be configured, and the default keybindings.</p></dd>
+<dt>The <a href="/examples/">examples page</a></dt>
+<dd><p>The example page shows how you can define functions in your configuration-file to do interesting things with your mail.</p>
+<p>The examples are each built using the <a href="/lua/">lua primitives</a> that <span class="tt">lumail</span> offers.</p></dd>
+</dl>
 </blockquote>
 
