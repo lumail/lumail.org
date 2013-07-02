@@ -10,7 +10,7 @@ Title: Command-Line arguments
 <dd><p>Exit the application.</p>
 <p>This is present so that you may exit after evaluating an expression with the <span class="tt">--eval</span> flag.</p></dd>
 <dt><span class="tt">--eval "string"</span></dt>
-<dd><p>Evaluate the given Lua expression, or function.  It is assumed that the function to be executed will be one you've defined in your startup configuration file.</p></ddd>
+<dd><p>Evaluate the given Lua expression, or function.  It is assumed that the function to be executed will be one you've defined in your startup configuration file.</p></dd>
 <dt><span class="tt">--folder "path"</span></dt>
 <dd><p>Open the given folder, and switch to index-mode on startup.</p></dd>
 <dt><span class="tt">--rcfile "file"</span></dt>
