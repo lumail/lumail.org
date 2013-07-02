@@ -1,6 +1,6 @@
 title: on_exit()
 brief: Called when the client exits.
-seealso: on_key, on_idle, on_read_message
+seealso: on_key, on_idle, on_read_message, on_complete
 version: 0.07
 ----
 

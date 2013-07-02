@@ -1,6 +1,6 @@
 title: on_key()
 brief: Called when a key is pressed.
-seealso: keymap, on_idle, on_read_message, on_exit
+seealso: keymap, on_idle, on_read_message, on_exit, on_complete
 version: 0.07
 ----
 
