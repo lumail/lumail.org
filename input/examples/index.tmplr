@@ -1,13 +1,13 @@
 Title: Examples of Lua functions
 ----
 
-<p><span class="tt">lumail</span> has an embedded Lua intepreter which is used to configure keybindings, perform general configuration, &amp; etc.</p>
+<p><span class="tt">lumail</span> has an embedded Lua interpreter which is used to configure keybindings, perform general configuration, &amp; etc.</p>
 <p>If you're new to Lua you might find the <a href="http://www.lua.org/">Lua website</a> and the <a href="http://www.luafaq.org/">Lua Unofficial FAQ</a> useful resources.</p>
 
 
 <h2>Writing useful functions</h2>
 <blockquote>
-  <p>Using the <a href="/lua/">supplied primitives</a> you can write many interesting funcions to interact with your messages/maildirs.</p>
+  <p>Using the <a href="/lua/">supplied primitives</a> you can write many interesting functions to interact with your messages/maildirs.</p>
   <p>Here we show several examples of the kind of things that <span class="tt">lumail</span> allows:</p>
   <dl>
     <dt><a href="daily.html">daily()</a></dt>
@@ -20,7 +20,7 @@ Title: Examples of Lua functions
     </dd>
     <dt><a href="dump_vars.html">dump_vars()</a></dt>
     <dd>
-      <p>Internally lumail keeps a collection of variables which are made availble to Lua.  This function dumps them to a temporary file on-disk.</p>
+      <p>Internally lumail keeps a collection of variables which are made available to Lua.  This function dumps them to a temporary file on-disk.</p>
     </dd>
     <dt><a href="get_signature.html">get_signature()</a> <sup>v0.9+</sup></dt>
     <dd>
@@ -63,7 +63,7 @@ keymap['index']['R'] = 'mark_all_read();'
 
 <h2>Responding to events</h2>
 <blockquote>
-<p><span class="tt">lumail</span> has several defined callbackups which are listed in the <a href="/lua/">primitive list</a>, each one is named "on_XXXX".</p>
+<p><span class="tt">lumail</span> has several defined callbacks which are listed in the <a href="/lua/">primitive list</a>, each one is named "on_XXXX".</p>
 <p>For example when reading a message the function <span class="tt">on_read_message()</span> is called <b>if</b> you define it.</p>
 <p>If you're missing a handler that you think would be useful please <a href="<!-- tmpl_var name='repo' -->">report a bug</a>.</p>
 </blockquote>

@@ -15,7 +15,7 @@ faq_page: 1
     <dt >How does outgoing mail get sent?</dt>
     <dd>
       <p>Outgoing mail is sent by executing the command you specify via the <a href="/lua/sendmail_path.html">sendmail_path()</a> primitive.</p>
-      <p>There is no integreated SMTP support in <span class="tt">lumail</span>.</p>
+      <p>There is no integrated SMTP support in <span class="tt">lumail</span>.</p>
       <p>&nbsp;</p>
     </dd>
 
