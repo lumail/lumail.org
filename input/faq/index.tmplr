@@ -45,7 +45,6 @@ faq_page: 1
         <li>You'll only ever operate on a single message.</li>
         <li>There is no IMAP/POP3/SMTP support.</li>
         <li>There is no support for MH-H/Mail folders.  Just Maildirs.</li>
-        <li>There is zero support for attachment-handling, either in receiving mail or composing mail.</li>
       </ul>
       <p>&nbsp;</p>
     </dd>
