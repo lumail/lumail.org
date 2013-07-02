@@ -14,6 +14,12 @@ use warnings;
 
 
 #
+#  Show functions if called with any arguments.
+#
+my $DEBUG = shift;
+
+
+#
 # Get the home directory
 #
 my $home = $ENV{ 'HOME' };
@@ -43,31 +49,29 @@ while ( my $line = <$handle> )
     #
     # Look for calls to the lua-function registration method
     #
-    if ( $line =~ /lua_register\((.*)\);/ )
+    next unless( $line =~ /CFunction/ );
+
+    if ( $line =~ /"([^"]+)"\S*,\s*([^}]+)}/ )
     {
 
         #
         # "Parse"
         #
-        my $reg = $1;
-        my @ents = split( /,/, $reg );
+        my $lua = $1;
+        my $c   = $2;
+        $c =~ s/\(lua_CFunction\)//g;
+        $c =~ s/^\s+|\s+$//g;
 
-        # The lua handle, the name of the function, and the C-implementation method.
-        my $lua  = $ents[0];
-        my $name = $ents[1];
-        my $c    = $ents[2];
 
-        # strip " and whitespace
-        $name =~ s/^\s+|\s+$//g;
-        $name =~ s/"//g;
+        $DEBUG && print "Lua: $lua -> $c\n";
 
         #
         # If there is no matching documentation file, then it is
         # a function that is undocumented.
         #
-        if ( !-e "./input/lua/$name.tmplr" )
+        if ( !-e "./input/lua/$lua.tmplr" )
         {
-            print "undocumented primitive: $name\n";
+            print "undocumented primitive: $lua\n";
         }
     }
 }
