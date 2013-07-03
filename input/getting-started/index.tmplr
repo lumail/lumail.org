@@ -24,10 +24,13 @@ started_page: 1
 <li>This is a per-user file for your own changes.</li>
 </ul></li>
 </ul>
-<p>You may specify an additional file via the <span class="tt">--rcfile</span> command-line argument:</p>
+<p>You may specify an additional file via the <span class="tt">--rcfile</span> <a href="/cmdline/">command-line argument</a>:</p>
 <pre>
 ~$ lumail --rcfile ~/conf/lumail.lua
 </pre>
+<blockquote>
+ <p><b>Note</b>: The default configuration file uses the <a href="/lua/load_directory.html">load_directory()</a> function to execute all files matching the pattern <span class="tt">~/.lumail/*.lua</span>.  This is optional behaviour which you can remove or modify.</p>
+</blockquote>
 </blockquote>
 
 <h2>Initial Configuration</h2>
