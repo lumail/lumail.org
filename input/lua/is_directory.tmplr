@@ -1,6 +1,6 @@
 title: is_directory()
 brief: Test whether a given path represents a directory.
-seealso: executable, file_exists
+seealso: executable, file_exists, load_directory
 version: 0.08
 ----
 

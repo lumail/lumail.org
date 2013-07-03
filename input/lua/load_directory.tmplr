@@ -1,0 +1,15 @@
+title: load_directory()
+brief: Load *.lua from the given directory.
+seealso: is_directory
+version: 0.10
+----
+
+<p>The <span class="tt">load_directory</span> function will attempt to load
+and execute any files matching the pattern <span class="tt">*.lua</span> inside the given directory.</p>
+<p>This function is invoked in the <a href="<!-- tmpl_var name='cfg' -->">default cofiguration file</a> to load files from beneath <span class="tt">~/.lumail</span> if that directory exists.</p>
+<p>Here is that usage:</p>
+<pre>
+if ( <a href="/lua/is_directory.html">is_directory</a>( os.getenv( "HOME" ) .. "/.lumail" ) ) then
+   load_directory( os.getenv( "HOME" ) .. "/.lumail" )
+end
+</pre>
