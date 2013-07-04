@@ -1,0 +1,12 @@
+title: log_message()
+brief: Write a string to the debug-file.
+seealso: dump_stack
+version: 0.10
+----
+
+<p>If <span class="tt">lumail</span> is compiled with debugging support enabled then output will be written to a logfile.  (The logfile name is specified via the <span class="tt">--debug</span> <a href="/cmdline/">command-line flag</a>.)</p>
+<p>The <span class="tt">log_message()</span> primitive will allow you to write your own message to that logfile.</p>
+<p>For example:</p>
+<pre>
+log_message( "THe user is " .. os.getenv( "USER" ) );
+</pre>
