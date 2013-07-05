@@ -1,4 +1,6 @@
   <dl>
+    <dt>5th July 2012</dt>
+    <dd><p>A new release has been made, version 0.10, which is available from the <a href="/download/">download page</a>.</p></dd>
     <dt>29th June 2013</dt>
     <dd><p>A new release has been made, version 0.09, which is available from the <a href="/download/">download page</a>.</p></dd>
     <dt>6th June 2013</dt>
