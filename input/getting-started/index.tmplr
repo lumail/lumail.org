@@ -29,7 +29,7 @@ started_page: 1
 ~$ lumail --rcfile ~/conf/lumail.lua
 </pre>
 <blockquote>
- <p><b>Note</b>: The default configuration file uses the <a href="/lua/load_directory.html">load_directory()</a> function to execute all files matching the pattern <span class="tt">~/.lumail/*.lua</span>.  This is optional behaviour which you can remove or modify.</p>
+ <p><b>Note</b>: The default configuration file uses the <a href="/lua/load_directory.html">load_directory()</a> function to execute all files matching the pattern <span class="tt">~/.lumail.d/*.lua</span>.  This is optional behaviour which you can remove or modify.</p>
 </blockquote>
 </blockquote>
 
