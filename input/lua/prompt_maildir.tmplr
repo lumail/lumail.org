@@ -1,0 +1,13 @@
+title: prompt_maildir()
+brief: Prompt for a Maildir.
+seealso: prompt_yn, prompt_chars, prompt
+version: 0.09
+----
+
+<p>The <span class="tt">prompt_maildir()</span> function allows you to prompt a user for an (existing) Maildir.</p>
+<p>It is intended to be used with the <a href="/lua/save.html">save()</a> function, and other similar primitives.</p>
+<p>For example:</p>
+<pre>
+dest = prompt_maildir();
+save( dest );
+</pre>

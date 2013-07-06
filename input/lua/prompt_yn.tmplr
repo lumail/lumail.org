@@ -1,6 +1,6 @@
 title: prompt_yn()
 brief: Prompt for yes/no.
-seealso: prompt, prompt_chars
+seealso: prompt, prompt_chars, prompt_maildir
 version: 0.07
 ----
 

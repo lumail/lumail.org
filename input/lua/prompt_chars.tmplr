@@ -1,6 +1,6 @@
 title: prompt_chars()
 brief: Prompt for input from the user.
-seealso: prompt_yn, prompt
+seealso: prompt_yn, prompt, prompt_maildir
 version: 0.09
 ----
 
