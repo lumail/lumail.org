@@ -62,12 +62,12 @@ deb     http://packages.steve.org.uk/lumail/wheezy/ ./
 <li>lua 5.1 - The scripting language</li>
 <li>ncurses - The console-graphics library.</li>
 <li>mimetic - The MIME-library.</li>
-<li>pcrec++ - The regular-expression library.
+<li>pcre    - The regular-expression library.
 </ul>
 <div style="padding-left:20px; border:1px solid silver">
  <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
  <pre>
- # apt-get install libncurses-dev liblua5.1-0-dev lua5.1 libmimetic-dev libpcre++-dev</pre>
+ # apt-get install libncurses-dev liblua5.1-0-dev lua5.1 libmimetic-dev libpcre3-dev</pre>
 </div>
 
 <p>Providing you have the appropriate dependencies installed you can build the client via a single "<span class="tt">make</span>" command:</p>
