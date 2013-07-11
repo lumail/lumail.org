@@ -22,6 +22,7 @@ function daily()
    -- setup the new state - showing maildirs which have unread messages.
    maildir_limit( "new" );
    global_mode( "maildir" );
+
    jump_maildir_to(0);
 
    -- ensure we have no selected folders.
@@ -69,6 +70,13 @@ function daily()
                i = i + 1
             end
             -- mark_read: end
+
+            --
+            -- Jump to the 0th mailbox (because the loop will add one shortly).
+            -- Do this because the number of mailboxes will change now we've
+            -- marked the current one as read.
+            --
+            offset = -1;
          end
       end
 
