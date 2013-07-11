@@ -1,6 +1,6 @@
 title: unread_message_colour()
 brief: Control the colour for displaying unread messages.
-seealso: unread_maildir_colour
+seealso: attachment_colour, unread_maildir_colour
 version: 0.12
 ----
 
