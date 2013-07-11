@@ -1,0 +1,15 @@
+title: unread_maildir_colour()
+brief: Control the colour for folders containing unread messages.
+seealso: unread_message_colour
+version: 0.12
+----
+
+<p>When in maildir-mode, set with <a href="global_mode.html">global_mode</a>, the display will consist of a list of maildir folders.</p>
+<p>Maildirs which do not contain any unread messages will be displayed as white, while maildirs which contain new/unread messages will be coloured red by default.</p>
+<p>This function lets you change the colour which maildirs containing unread mail will be drawn in.</p>
+<p>Valid colours are "blue", "cyan", "green", "magenta", "red", "white", &amp; "yellow".</p>
+<p>For example:</p>
+<pre>
+-- Show maildirs containing unread message in yellow, as that jumps out:
+unread_maildir_colour( "yellow" );
+</pre>
