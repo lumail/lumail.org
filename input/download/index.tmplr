@@ -1,6 +1,6 @@
 Title: Download
 download_page: 1
-src: lumail-0.11.tar.gz
+src: lumail-0.12.tar.gz
 ----
 
 <p>Luamil is still under active development, but to gain additional feedback we're releasing versioned <a href="#source">source-snapshots</a> periodically.</p>
