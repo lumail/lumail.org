@@ -6,43 +6,43 @@ faq_page: 1
   <dl>
     <dt>Why no IMAP/POP3?</dt>
     <dd>
-      <p>I login to my mailserver and read mail directly as it is delivered via procmail, so I have no need for it.</p>
+      <p>I login to my mailserver and read mail directly as it is delivered via <span class="tt">procmail</span>, so I have no need for it.</p>
       <p>Avoiding the use of POP3 or IMAP coding also greatly simplifies the client.</p>
       <p>If you have to use IMAP/POP3 to fetch your mail I'd suggest the use of <span class="tt">imapsync</span>, <span class="tt">offlineimap</span>, <span class="tt">fetchmail</span>, or similar.</p>
       <p>&nbsp;</p>
     </dd>
 
-    <dt >How does outgoing mail get sent?</dt>
+    <dt>How does outgoing mail get sent?</dt>
     <dd>
       <p>Outgoing mail is sent by executing the command you specify via the <a href="/lua/sendmail_path.html">sendmail_path()</a> primitive.</p>
       <p>There is no integrated SMTP support in <span class="tt">lumail</span>.</p>
       <p>&nbsp;</p>
     </dd>
 
-    <dt  id="schedule">How do I schedule mail-fetching?</dt>
+    <dt id="schedule">How do I schedule mail-fetching?</dt>
     <dd>
      <p>The <a href="/lua/on_idle.html">on_idle</a>() documentation has been updated to provide an example of calling your external command to sync mail on a regular schedule.</p>
      <p>If mail is delivered directly, via <span class="tt">procmail</span> or similar, no such action is required.</p>
       <p>&nbsp;</p>
     </dd>
 
-    <dt >What license is the code released under?</dt>
+    <dt>What license is the code released under?</dt>
     <dd>
       <p>The code is released under the GNU General Public License, version 2 or later.</p>
       <p>&nbsp;</p>
     </dd>
 
-    <dt >How does this client differ from more established clients?</dt>
+    <dt>How does this client differ from more established clients?</dt>
     <dd>
       <p>At the moment the client has reached the point where it is complete enough to be used exclusively.  There are many differences between this client, and existing ones:</p>
       <ul>
         <li><span class="tt">lumail</span> is a modal client.  That is almost unique.</li>
-        <li><span class="tt">lumail</span> has a real embedded language for scripting, lua.</li>
+        <li><span class="tt">lumail</span> has a real embedded language for scripting, Lua.</li>
         <li><span class="tt">lumail</span> allows you to open <i>multiple</i> folders.</li>
       </ul>
       <p>Other differences are, sadly, negative:</p>
       <ul>
-        <li>You'll only ever operate on a single message.</li>
+        <li>You'll only ever operate on a single message.  There is nothing like mutt's tag-prefix command.</li>
         <li>There is no IMAP/POP3/SMTP support.</li>
         <li>There is no support for MH-H/Mail folders.  Just Maildirs.</li>
       </ul>
@@ -58,7 +58,7 @@ faq_page: 1
       <p>&nbsp;</p>
     </dd>
 
-    <dt >Why embed Lua?</dt>
+    <dt>Why embed Lua?</dt>
     <dd>
       <p>The intention is that <span class="tt">lumail</span> will be a flexible email client, which means that it must allow things to be configured in ways that I do not expect.</p>
       <p>Allowing a client to be configured in interesting ways demands some kind of "scripting", or the ability to set values/options conditionally in the configuration file.</p>
@@ -67,22 +67,22 @@ faq_page: 1
       <p>&nbsp;</p>
     </dd>
 
-    <dt >What can I do with Lua?</dt>
+    <dt>What can I do with Lua?</dt>
     <dd>
       <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/lua/">primitives</a> made available to it.</p>
-      <p>Using the Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
+      <p>Using Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
       <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do; and if you find yourself missing a function/primitive you can report that as a bug against the <a href="<!-- tmpl_var name='repo' -->">github repository</a>.</p>
       <p>&nbsp;</p>
     </dd>
 
-    <dt >What does it look like?</dt>
+    <dt>What does it look like?</dt>
     <dd>
     <p>There is a <a href="/screenshots">page of screenshots</a> available to give you some idea.</p>
       <p>&nbsp;</p>
     </dd>
 
 
-    <dt  id="bug">I found a bug, what do I do?</dt>
+    <dt id="bug">I found a bug, what do I do?</dt>
     <dd>
       <p>First of all thank you for trying the client.</p>
       <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/skx/lumail/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
