@@ -1,0 +1,20 @@
+title: header_colour()
+brief: Specify the colour to draw message headers in.
+seealso: attachment_colour, unread_maildir_colour, unread_message_colour, body_colour
+version: 0.12
+----
+
+<p>When a single messages is being viewed the display will consist of three parts:</p>
+<ul>
+<li>The header of the message.</li>
+<li>The list of attachments, if any are present.</li>
+<li>The body of the message.</li>
+</ul>
+<p>The <span class="tt">header_colour<span> primitive allows you to specify the colour used to draw the message headers, and their values.</p>
+<p>Valid choices are  "blue", "cyan", "green", "magenta", "red", "white", &amp; "yellow".</p>
+<p>For example:</p>
+<pre>
+header_colour( "white" );
+</pre>
+
+
