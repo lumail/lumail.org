@@ -16,9 +16,9 @@ screen_page: 1
 
 <h2>message-mode</h2>
 <blockquote>
-<p><img src="message.png" alt="message-mode view" width="714" height="523" /></p>
+<p><img src="message.png" alt="message-mode view" width="729" height="488" /></p>
 <blockquote>
-<p>I have an <a href="http://www.amazon.co.uk/gp/registry/2LTKRAY9O22LI/">Amazon wishlist</a>, and I queried Amazon because an item appeared to have been purchased from it, but never arrived at my house.  Their reply still confuses me.</P>
+<p>This is the view of a single message.  The colours are my own personal preference, but you can set the colour of <a href="/lua/header_colour.html">the header</a>, any <a href="/lua/attachment_colour.html">attachments</a>, and the <a href="/lua/body_colour.html">body</a> separately.  If unset things will default to white on black, as you would expect</p>
 </blockquote>
 </blockquote>
 
