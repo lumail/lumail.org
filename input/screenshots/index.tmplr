@@ -7,6 +7,10 @@ screen_page: 1
 <h2>maildir-mode</h2>
 <blockquote>
 <p><img src="maildir.gif" alt="maildir-mode view" width="671" height="488"/></p>
+<blockquote>
+<p>Here we show scrolling down the list of of available Maildirs.</p>
+<p>The display can be altered via the <a href="/lua/maildir_format.html">maildir_format</a> primitive.  (For example you might prefer to display <span class="tt">Amazon.com</span>, rather than <span class="tt">/home/skx/Maildir/Amazon.com</span>.)</p>
+</blockquote>
 </blockquote>
 
 <h2>index-mode</h2>
