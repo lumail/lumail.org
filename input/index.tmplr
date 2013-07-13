@@ -1,7 +1,7 @@
 Title: About
 home_page: 1
 hubinfo: 1
-news: read_file( "./news.inc" )
+news: read_file( "./news.recent.inc" )
 ----
 
 <blockquote>
