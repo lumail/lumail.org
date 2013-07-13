@@ -16,6 +16,9 @@ screen_page: 1
 <h2>index-mode</h2>
 <blockquote>
 <p><img src="index.png" alt="index-mode view" width="714" height="523"/></p>
+<blockquote>
+<p>The display can be altered via the <a href="/lua/index_format.html">index_format</a> primitive.  (For example you might wish to see the date the mail was received in the summary.)</p>
+</blockquote>
 </blockquote>
 
 <h2>message-mode</h2>
