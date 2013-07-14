@@ -1,0 +1,7 @@
+Title: News
+news: read_file( "./news.inc" )
+----
+
+<blockquote>
+<!-- tmpl_var name='news' -->
+</blockquote>
