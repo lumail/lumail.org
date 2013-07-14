@@ -1,0 +1,13 @@
+title: ignored_folders()
+brief: Exclude Maildirs from maildir-mode.
+seealso: global_mode
+version: 0.13
+----
+
+<p>When in maildir-mode the screen consists of a list of Maildir folders.  These may be anavigated/explored.</p>
+<p>Any folder matching an entry in <span class="tt">ignored_folders</span> will be excluded from the display, and will appear.</p>
+<p>For example:</p>
+<pre>
+ignored_folders = { "Archive.", "Backup." };
+</pre>
+<p>The default is to include all folders.</P>
