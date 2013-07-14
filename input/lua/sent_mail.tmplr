@@ -1,6 +1,6 @@
 title: sent_mail()
 brief: Get, or set, the sent-mail folder path.
-seealso: maildir_prefix
+seealso: maildir_prefix, ignored_folders
 version: 0.07
 ----
 

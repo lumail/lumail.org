@@ -1,6 +1,6 @@
 title: maildir_prefix()
 brief: Get, or set, the root of the maildir hierarchy.
-seealso: sent_mail, is_directory
+seealso: sent_mail, is_directory, ignored_folders
 version: 0.07
 ----
 

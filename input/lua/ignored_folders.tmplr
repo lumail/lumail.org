@@ -10,4 +10,4 @@ version: 0.13
 <pre>
 ignored_folders = { "Archive.", "Backup." };
 </pre>
-<p>The default is to include all folders.</P>
+<p>The default is to include all folders, as there will be no excluded entries.</p>
