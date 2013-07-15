@@ -5,7 +5,7 @@ version: 0.07
 ----
 
 <p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
-<p>The <span class="tt">scroll_maildir_to()</span> function allows the list of folders to be scrolled to the next folder that matches the given pattern.</p>
+<p>The <span class="tt">scroll_maildir_to()</span> function allows the list of folders to be scrolled to the next folder that matches the <b>regular expression</b>.</p>
 <p>For example:</p>
 <pre>
 -- Scroll to steve.org.uk

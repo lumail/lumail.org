@@ -4,7 +4,7 @@ seealso: scroll_index_down, jump_index_to, scroll_index_up
 version: 0.07
 ----
 
-<p>When a folder has been opened this function causes the list of messages to be scrolled to the next message which matches the specified pattern.</p>
+<p>When a folder has been opened this function causes the list of messages to be scrolled to the next message which matches the specified <b>regular expression</b>.</p>
 <p>The pattern-match will be applied to the formatted message, as displayed, and as specified by <a href="index_format.html">index_format()</a>.</p>
 <p>For example scroll to the next message matching the pattern "thanks for your order":</p>
 <pre>
