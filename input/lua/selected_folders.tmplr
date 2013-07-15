@@ -1,6 +1,6 @@
 title: selected_folders()
 brief: Get all selected folders.
-seealso: add_selected_folder, toggle_selected_folder, clear_selected_folders, on_folder_selection
+seealso: add_selected_folder, toggle_selected_folder, clear_selected_folders, on_folder_selection, set_selected_folder
 version: 0.07
 ----
 

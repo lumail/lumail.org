@@ -1,6 +1,6 @@
 title: add_selected_folder()
 brief: Add a folder to the list of selected folders.
-seealso: toggle_selected_folder, clear_selected_folders, selected_folders,  on_folder_selection
+seealso: toggle_selected_folder, clear_selected_folders, selected_folders,  on_folder_selection, set_selected_folder
 version: 0.07
 ----
 

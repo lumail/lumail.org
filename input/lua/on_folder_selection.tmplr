@@ -1,6 +1,6 @@
 title: on_folder_selection()
 brief: Called when the set of selected folder is changed.
-seealso: add_selected_folder, clear_selected_folders, toggle_selected_folder, selected_folders
+seealso: add_selected_folder, clear_selected_folders, toggle_selected_folder, selected_folders, set_selected_folder
 version: 0.07
 ----
 
