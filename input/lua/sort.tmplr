@@ -1,0 +1,22 @@
+title: sort()
+brief: Specify the sorting order for messages.
+seealso: index_limit
+version: 0.15
+----
+
+<p>When the <a href="global_mode.html"><span class="tt">global_mode</span></a> is set to <span class="tt">index</span> you will be presented with a list of messages.</p>
+<p>The list will default to showing all available messages, in the order "oldest" to "most recent".  The sort-primitive allows you to change that order.</p>
+<p>Valid options are:</p>
+<table>
+<tr><td>date-asc</td><td>Oldest to most recent.  The default.</td></tr>
+<tr><td>date-desc</td><td>Most recent to oldest.</td></tr>
+<tr><td>from-asc</td><td>By sender, ascending.</td></tr>
+<tr><td>from-desc</td><td>By sender, descending.</td></tr>
+<tr><td>subject-asc</td><td>By subject, ascending.</td></tr>
+<tr><td>subject-desc</td><td>By subject, descending.</td></tr>
+</table>
+<p>For example:</p>
+<pre>
+-- Show in order received.
+sort( "date-asc" );
+</pre>
