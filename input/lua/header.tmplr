@@ -4,7 +4,7 @@ seealso: header
 version: 0.07
 ----
 
-<p>When in message-mode, or index-mode, the header function may be used to retrieve the value of a given header in the currently selected message.</p>
+<p>When in message-mode, or index-mode, the <span class="tt">header()</span> function may be used to retrieve the value of a given header in the currently selected message.</p>
 <p>For example:</p>
 <pre>
 <a href="msg.html">msg</a>( "This mail has subject" .. header( "Subject" ) );

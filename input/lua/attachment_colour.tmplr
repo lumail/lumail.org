@@ -1,6 +1,6 @@
 title: attachment_colour()
 brief: Specify the colour to draw attachment-names in.
-seealso: unread_maildir_colour, unread_message_colour, header_colour, body_colour
+seealso: unread_maildir_colour, unread_message_colour, header_colour, body_colour, wrap_lines
 version: 0.12
 ----
 
