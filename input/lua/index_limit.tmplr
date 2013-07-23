@@ -1,6 +1,6 @@
 title: index_limit()
 brief: Specify which messages to show.
-seealso: maildir_limit
+seealso: maildir_limit, get_variables
 version: 0.07
 ----
 

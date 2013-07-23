@@ -35,12 +35,22 @@ end
 </pre>
 <p>The names and values of the variables should be obvious when compared to the list of <a href="/lua/">Lua primitives</a>.  As an example the function above dumps this for me;</p>
 <pre>
-Setting global_mode has value maildir
-Setting index_format has value [$FLAGS] $FROM - $SUBJECT
-Setting maildir_limit has value all
-Setting from has value Steve Kemp &lt;steve@steve.org.uk&gt;
-Setting sendmail_path has value /usr/lib/sendmail -t
-Setting sent_mail has value /home/skx/Maildir/sent-mail
-Setting index_limit has value all
-Setting maildir_prefix has value /home/skx/Maildir
+Setting <a href="/lua/attachment_colour.html">attachment_colour</a> has value white
+Setting <a href="/lua/sort.html">sort</a> has value NULL
+Setting <a href="/lua/sendmail_path.html">sendmail_path</a> has value /usr/lib/sendmail -t
+Setting <a href="/lua/header_colour.html">header_colour</a> has value white
+Setting <a href="/lua/unread_message_colour.html">unread_message_colour</a> has value red
+Setting <a href="/lua/editor.html">editor</a> has value /usr/bin/vim
+Setting <a href="/lua/sent_mail.html">sent_mail</a> has value /home/skx/Maildir/sent-mail
+Setting <a href="/lua/message_filter.html">message_filter</a> has value
+Setting <a href="/lua/index_format.html">index_format</a> has value [$FLAGS] $DAY/$MONTH/$YEAR $FROM - $SUBJECT
+Setting <a href="/lua/index_limit.html">index_limit</a> has value all
+Setting <a href="/lua/global_mode.html">global_mode</a> has value index
+Setting <a href="/lua/maildir_limit.html">maildir_limit</a> has value all
+Setting tmp has value /tmp
+Setting <a href="/lua/from.html">from</a> has value Steve Kemp <steve@steve.org.uk>
+Setting <a href="/lua/maildir_format.html">maildir_format</a> has value $CHECK - $UNREAD/$TOTAL - $PATH
+Setting <a href="/lua/unread_maildir_colour.html">unread_maildir_colour</a> has value red
+Setting <a href="/lua/body_colour.html">body_colour</a> has value white
+Setting <a href="/lua/maildir_prefix.html">maildir_prefix</a> has value /home/skx/Maildir
 </pre>

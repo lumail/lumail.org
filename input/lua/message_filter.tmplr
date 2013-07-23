@@ -1,6 +1,6 @@
 title: message_filter()
 brief: Pass email bodies through a filter prior to display.
-seealso: on_read_message, headers, wrap_lines
+seealso: on_read_message, headers, wrap_lines, get_variables
 version: 0.08
 ----
 

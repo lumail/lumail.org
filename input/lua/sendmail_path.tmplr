@@ -1,6 +1,6 @@
 title: sendmail_path()
 brief: Get, or set, the path to sendmail.
-seealso: compose, reply, send_email
+seealso: compose, reply, send_email, get_variables
 version: 0.07
 ----
 

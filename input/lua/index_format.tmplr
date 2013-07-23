@@ -1,6 +1,6 @@
 title: index_format()
 brief: Control how message-lists are displayed.
-seealso: maildir_format, date_formats
+seealso: maildir_format, date_formats, get_variables
 version: 0.07
 ----
 

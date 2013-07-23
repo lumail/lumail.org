@@ -1,6 +1,6 @@
 title: maildir_limit()
 brief: Specify which maildir folders to show.
-seealso: index_limit
+seealso: index_limit, get_variables
 version: 0.07
 ----
 

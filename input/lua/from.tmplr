@@ -1,6 +1,6 @@
 title: from()
 brief: Get, or set, your from-address.
-seealso: on_folder_selection
+seealso: on_folder_selection, get_variables
 version: 0.07
 ----
 

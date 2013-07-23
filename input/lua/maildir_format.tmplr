@@ -1,6 +1,6 @@
 title: maildir_format()
 brief: Control how maildir-lists are displayed.
-seealso: index_format
+seealso: index_format, get_variables
 version: 0.07
 ----
 

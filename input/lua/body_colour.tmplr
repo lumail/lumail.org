@@ -1,6 +1,6 @@
 title: body_colour()
 brief: Specify the colour to draw message bodies in.
-seealso: attachment_colour, unread_maildir_colour, unread_message_colour, header_colour, wrap_lines
+seealso: attachment_colour, unread_maildir_colour, unread_message_colour, header_colour, wrap_lines, get_variables
 version: 0.12
 ----
 
