@@ -10,7 +10,7 @@ version: 0.15
 <li>The list of attachments, if any are present.</li>
 <li>The body of the message.</li>
 </ul>
-<p>The <span class="tt">wrap_lines</span> boolean allows you to specify whether long-lines should be wrapped, or truncated.</p>
+<p>The <span class="tt">wrap_lines</span> boolean allows you to specify whether long-lines should be wrapped, or truncated in the display of the message body</p>
 <p>A simple example:</p>
 <pre>
 --
