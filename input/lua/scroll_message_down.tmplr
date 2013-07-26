@@ -1,6 +1,6 @@
 title: scroll_message_down()
 brief: Scroll the current message down.
-seealso: scroll_message_up
+seealso: scroll_message_up, scroll_message_to
 version: 0.08
 ----
 

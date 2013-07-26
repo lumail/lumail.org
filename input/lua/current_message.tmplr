@@ -1,6 +1,6 @@
 title: current_message()
 brief: Retrieve the currently selected message.
-seealso: count_messages, delete, is_new, mark_new, mark_read, save
+seealso: count_lines, count_messages, delete, is_new, mark_new, mark_read, save
 version: 0.07
 ----
 
