@@ -1,0 +1,57 @@
+Title: conditional_maildirs()
+example:1
+----
+
+<p>On some hosts I use <span class="tt">offlineimap</span> to sync a collection of remote Gmail accounts.  On other hosts there are no such Google-mirrors located nearby.</p>
+<p>Using <a href="/lua/maildirs_matching.html">maildirs_matching()</a> we can determine if this is a google-host or not:</p>
+<pre>
+
+--
+-- Return True if this host has folders which are local Gmail mirrors.
+--
+-- Return false otherwise.
+--
+function is_google()
+
+   --
+   -- The regexp we'll look for.  If there are folder names
+   -- matching this pattern we have a local Gmail mirror.
+   --
+   regexp = "(Google.*INBOX|Google.*All Mail)";
+
+   --
+   -- Get the current maildir_limit, and set it to "all".
+   -- We do this because maildirs_matching will only consider the
+   -- limit currently in play.
+   --
+   ol = maildir_limit();
+   maildir_limit( "all" );
+
+   --
+   -- See if we have folders matching the regexp.
+   --
+   results = maildirs_matching( regexp );
+
+   --
+   -- If the count is >0 we do
+   --
+   if (#results > 0) then
+      maildir_limit( ol );
+      return true;
+   end
+
+   --
+   -- Reset the old limit, and fail.
+   --
+   maildir_limit( ol );
+   return false;
+end
+
+--
+-- Now use that function to setup "g" if present.
+--
+if ( is_google() ) then
+   keymap['maildir']['g'] = 'maildir_limit( "(Google.*INBOX|Google.*All Mail)" );'
+end
+
+</pre>

@@ -10,6 +10,8 @@ Title: Examples of Lua functions
   <p>Using the <a href="/lua/">supplied primitives</a> you can write many interesting functions to interact with your messages/maildirs.</p>
   <p>Here we show several examples of the kind of things that <span class="tt">lumail</span> allows:</p>
   <dl>
+    <dt><a href="conditional_maildirs.html">Apply actions only if particular maildirs exist</a></dt>
+    <dd><p>If you wish to have the same lumail configuration files across a number of hosts you might find it useful to define code that executes only if particular Maildirs exist.</p><p>This brief example shows how that can be done.</p></dd>
     <dt><a href="daily.html">daily()</a></dt>
     <dd>
       <p>Every morning I receive a bunch of messages which are filed away automatically, and there are some folders which I just ignore.  This function will iterate over a small number of folders, matching a pattern, and mark each messages as read within them.</p></dd>
