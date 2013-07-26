@@ -1,0 +1,22 @@
+title: stuff()
+brief: Insert keystrokes into the input buffer.
+version: 0.16
+----
+
+<p>The <span class="tt">stuff</span> function will insert keystrokes into the input-buffer, which will allow preset-keys to be typed via a function-call.</p>
+<p>For example if you wished to echo a mesage you'd ordinarily run:
+<pre>
+:msg( "Test" );
+</pre>
+<p>(Where ":" activates the input mode, allowing Lua expressions to be evaluated, and <a href="/lua/msg.html">msg()</a> is a primitive lumail exports).</p>
+<p>If you wished to automate this function you could run:</p>
+<pre>
+-- Cause a message to be displayed, indirectly
+stuff( ":msg(\"OK\");\n" );
+</pre>
+<p>This would emulate the user typing the <span class="tt">:msg(...);\n</span> keys, and ultimately show the message.</p>
+<p>This function can be useful to ensure that you run daily jobs on-startup.  For example:</p>
+<pre>
+$ lumail --eval 'stuff( ":daily()\n" )'
+</pre>
+<p>Which would invoke the user-defined <span class="tt">daily</span> function.</p>
