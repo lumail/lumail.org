@@ -24,26 +24,26 @@ function is_google()
    -- We do this because maildirs_matching will only consider the
    -- limit currently in play.
    --
-   ol = maildir_limit();
-   maildir_limit( "all" );
+   ol = <a href="/lua/maildir_limit.html">maildir_limit</a>();
+   <a href="/lua/maildir_limit.html">maildir_limit</a>( "all" );
 
    --
    -- See if we have folders matching the regexp.
    --
-   results = maildirs_matching( regexp );
+   results = <a href="/lua/maildirs_matching.html">maildirs_matching</a>( regexp );
 
    --
    -- If the count is >0 we do
    --
    if (#results > 0) then
-      maildir_limit( ol );
+      <a href="/lua/maildir_limit.html">maildir_limit</a>( ol );
       return true;
    end
 
    --
    -- Reset the old limit, and fail.
    --
-   maildir_limit( ol );
+   <a href="/lua/maildir_limit.html">maildir_limit</a>( ol );
    return false;
 end
 
@@ -51,7 +51,7 @@ end
 -- Now use that function to setup "g" if present.
 --
 if ( is_google() ) then
-   keymap['maildir']['g'] = 'maildir_limit( "(Google.*INBOX|Google.*All Mail)" );'
+   <a href="/lua/keymap.html">keymap</a>['maildir']['g'] = '<a href="/lua/maildir_limit.html">maildir_limit</a>( "(Google.*INBOX|Google.*All Mail)" );'
 end
 
 </pre>
