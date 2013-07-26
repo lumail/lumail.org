@@ -4,9 +4,9 @@ version: 0.16
 ----
 
 <p>The <span class="tt">stuff</span> function will insert keystrokes into the input-buffer, which will allow preset-keys to be typed via a function-call.</p>
-<p>For example if you wished to echo a mesage you'd ordinarily run:
+<p>For example if you wished to echo a message you'd ordinarily run:
 <pre>
-:msg( "Test" );
+:<a href="/lua/msg.html">msg</a>( "Test" );
 </pre>
 <p>(Where ":" activates the input mode, allowing Lua expressions to be evaluated, and <a href="/lua/msg.html">msg()</a> is a primitive lumail exports).</p>
 <p>If you wished to automate this function you could run:</p>
