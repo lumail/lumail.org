@@ -18,7 +18,7 @@ Title: Examples of Lua functions
     </dd>
     <dt><a href="dump_unread.html">dump_unread()</a></dt>
     <dd>
-      <p>This example shows how to dump a list of unread-messages to disk.</p>
+      <p>This example shows how to dump a list of unread-messages to disk.  The dump includes  unread mail from <b>all</b> Maildirs.</p>
     </dd>
     <dt><a href="dump_vars.html">dump_vars()</a></dt>
     <dd>
