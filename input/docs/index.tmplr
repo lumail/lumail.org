@@ -18,6 +18,8 @@ docs_page: 1
 <dt>The <a href="/examples/">examples page</a></dt>
 <dd><p>The example page shows how you can define functions in your configuration-file to do interesting things with your mail.</p>
 <p>The examples are each built using the <a href="/lua/">lua primitives</a> that <span class="tt">lumail</span> offers.</p></dd>
+<dt><a href="/lua/">Primitives</a></dt>
+<dd><p>Each of the Lua primitives that <span class="tt">lumail</span> provides is documented, usually with an example.</p></dd>
 </dl>
 </blockquote>
 
