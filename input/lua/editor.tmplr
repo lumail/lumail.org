@@ -1,6 +1,6 @@
 title: editor()
 brief: Configure the editor to use for mail composition.
-seealso: compose, reply, send_email, get_variables
+seealso: compose, reply, send_email, get_variables, on_edit_message
 version: 0.08
 ----
 
