@@ -10,9 +10,9 @@ version: 0.16
 Send mail?  y/n/a>
 </pre>
 <p>Valid options are:</p>
-<table>
-<tr><td>y</td><td><p>Send the mail.</p></td></tr>
-<tr><td>n</td><td><p>Abort the sending.</p></td></tr>
-<tr><td>a</td><td><p>Add an attachment.</p></td></tr>
+<table border="1">
+<tr><td><p><span class="tt">y</span></p></td><td><p>Send the mail.</p></td></tr>
+<tr><td><p><span class="tt">n</span></td><td><p>Abort the sending.</p></td></tr>
+<tr><td><p><span class="tt">a</span></td><td><p>Add an attachment.</p></td></tr>
 </table>
 <p>The second option, "n", will cause this hook to be defined.</p>
