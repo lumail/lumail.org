@@ -1,6 +1,6 @@
 title: reply()
 brief: Reply to an email.
-seealso: editor, compose, sent_mail, sendmail_path, send_email
+seealso: editor, compose, sent_mail, sendmail_path, send_email, on_message_aborted
 version: 0.07
 ----
 
