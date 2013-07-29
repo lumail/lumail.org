@@ -5,7 +5,7 @@ version: 0.16
 ----
 
 <p>If you define the function <span class="tt">on_message_aborted</span> it will be called when a message isn't sent.</p>
-<p>After calling <a href="/lua/compose.html">compose()</a> or <a href="/lua/reply.html">reply()</a>, you will be receive a prompt:</p>
+<p>After calling <a href="/lua/compose.html">compose()</a> or <a href="/lua/reply.html">reply()</a>, you will receive a prompt:</p>
 <pre>
 Send mail?  y/n/a>
 </pre>
@@ -15,4 +15,4 @@ Send mail?  y/n/a>
 <tr><td><p><span class="tt">n</span></td><td><p>Abort the sending.</p></td></tr>
 <tr><td><p><span class="tt">a</span></td><td><p>Add an attachment.</p></td></tr>
 </table>
-<p>The second option, "n", will cause this hook to be defined.</p>
+<p>The second option, "n", will cause this hook to be invoked, if it is defined.</p>
