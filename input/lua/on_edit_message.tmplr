@@ -1,0 +1,9 @@
+title: on_edit_message()
+brief: Called after the editor has terminated.
+seealso: editor, send_email, compose, reply
+version: 0.16
+----
+
+<p>When you're composing an email via <a href="/lua/compose.html">compose()</a>, or <a href="/lua/reply.html">reply()</a>, your preferred editor will be invoked for you to enter your message text.</p>
+<p>Immediately after the editor has terminated the function <span class="tt">on_edit_message()</span> will be invoked with the path to the recently-edited message.</p>
+<p>This allows you the opportunity to update the message with a GPG-signature, invoke a spell-check, or similar.</p>

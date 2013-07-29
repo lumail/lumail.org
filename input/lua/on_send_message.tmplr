@@ -1,0 +1,8 @@
+title: on_send_message()
+brief: Called just prior to sending an email.
+seealso: editor, send_email, compose, reply
+version: 0.16
+----
+
+<p>Just prior to the sending of any mail, via  <a href="/lua/compose.html">compose()</a>,  <a href="/lua/reply.html">reply()</a>, or <a href="/lua/send_email.html">send_email()</a> the function <span class="tt">on_send_message()</span> will be invoked with the path to the outgoing message.</p>
+<p>This allows you the opportunity to add a GPG-signature, or similar.</p>
