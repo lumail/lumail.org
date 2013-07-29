@@ -6,14 +6,16 @@ version: 0.07
 
 <p>When the <a href="global_mode.html"><span class="tt">global_mode</span></a> is set to <span class="tt">index</span> you will be presented with a list of messages.</p>
 <p>The list will default to showing all available messages, but you may use <span class="tt">index_limit()</span> to change this.</p>
-<p>There are three options for limiting:</p>
+<p>There are four options for limiting:</p>
 <dl>
 <dt><span class="tt">all</span></dt>
 <dd><p>Show all messages.</p></dd>
 <dt><span class="tt">new</span></dt>
 <dd><p>Show all messages which are unread.</p></dd>
+<dt><span class="tt">header:NAME:VAL</span></dt>
+<dd><p>Show all messages which have a value matching the regular expression "VAL" in the header with name NAME.</p></dd>
 <dt><span class="tt">"str"</span></dt>
-<dd><p>Show all messages which match the pattern "str".</p></dd>
+<dd><p>Format the message as per <a href="/lua/index_format.html">index_format</a> and show all messages which match the pattern "str".</p></dd>
 </dt>
 <p>For example:</p>
 <pre>
@@ -40,4 +42,8 @@ end
 <a href="keymap.html">keymap</a>['index']['a'] = 'all_msg()'
 <a href="keymap.html">keymap</a>['index']['n'] = 'new_msg()'
 </pre>
-
+<p>As an example of the header-limiting you might wish to see all messages received in June:</p>
+<pre>
+-- Jun is used to cover the abbreviated form of the date.
+index_limit( "HEADER:Date:Jun" );
+</pre>
