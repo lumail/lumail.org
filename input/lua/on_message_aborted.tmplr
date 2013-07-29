@@ -1,6 +1,6 @@
 title: on_message_aborted()
 brief: Called when sending an email is aborted.
-seealso: on_read_message, compose, reply
+seealso: on_read_message, compose, reply, on_send_message, on_edit_message
 version: 0.16
 ----
 
