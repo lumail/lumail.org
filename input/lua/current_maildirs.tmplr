@@ -1,0 +1,21 @@
+Title: current_maildirs()
+brief: Retrieve the maildirs currently visible
+seealso: current_maildir, maildirs_matching, count_maildirs
+version: 0.16
+----
+
+<p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
+<p>This function will return a table containing the names of the currently-visible Maildir folders.</p>
+<p>For example you could discover <i>all</i> maildirs by running:</p>
+<pre>
+-- Show all Maildirs, saving the currnet limit.
+saved = <a href="/lua/maildir_limit.html">maildir_limit</a>();
+<a href="/lua/maildir_limit.html">maildir_limit</a>( "all" );
+
+-- Get all maildirs
+all = current_maildirs();
+
+-- reset the previous limit
+<a href="/lua/maildir_limit.html">maildir_limit</a>( saved );
+</pre>
+<p>This would be roughly the same result as <a href="/lua/maildirs_matching.html">maildirs_matching( "?" )</a>.</p>
