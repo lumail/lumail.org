@@ -1,4 +1,4 @@
-title: help[()
+title: help()
 brief: Show brief help information for a primitive.
 version: 0.16
 ----
