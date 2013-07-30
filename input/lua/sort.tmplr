@@ -12,6 +12,8 @@ version: 0.15
 <tr><td>date-desc</td><td>Most recent to oldest.</td></tr>
 <tr><td>from-asc</td><td>By sender, ascending.</td></tr>
 <tr><td>from-desc</td><td>By sender, descending.</td></tr>
+<tr><td>header-asc</td><td>By the value of the Date: header, ascending.</td></tr>
+<tr><td>header-desc</td><td>By the value of the Date: header, descending.</td></tr>
 <tr><td>subject-asc</td><td>By subject, ascending.</td></tr>
 <tr><td>subject-desc</td><td>By subject, descending.</td></tr>
 </table>
