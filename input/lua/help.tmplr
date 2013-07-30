@@ -1,0 +1,11 @@
+title: help[()
+brief: Show brief help information for a primitive.
+version: 0.16
+----
+
+<p>This function will display a brief description of the named primitive, in the message-area.</p>
+<p>For example:</p>
+<pre>
+-- Show the clear primitive.
+help( "clear" );
+</pre>
