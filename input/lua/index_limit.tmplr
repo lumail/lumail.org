@@ -47,3 +47,8 @@ end
 -- Jun is used to cover the abbreviated form of the date.
 index_limit( "HEADER:Date:Jun" );
 </pre>
+<p>You can limit on more than one header by using the <span class="tt">|</span>:</p>
+<pre>
+-- Limit to mails to/from me:
+index_limit( "HEADER:To|From:steve@steve.org.uk" );
+</pre>
