@@ -1,0 +1,27 @@
+title: on_message_parse()
+brief: Allow the content of messages to be replaced.
+seealso: on_read_message, headers, wrap_lines, get_variables, message_filter
+version: 0.16
+----
+
+<p>Prior to parsing and displaying any given message Lumail allows you to modify the message significantly.</p>
+<p>The modification works at the file-level, to give the greatest possible opportunity to allow modifications.</p>
+<p>The <span class="tt">on_message_parse</span> allows you to replace the file which is being parsed with an updated file which will be operated upon:</p>
+<pre>
+--
+-- Lumail will open a single message to parse it
+--
+-- This function will be invoked with that filename.  If you leave the file
+-- alone then no changes will be applied, but you can do one of two things
+-- instead:
+--
+--  1.  Edit the file in-place prior to further use by lumail.
+--
+--  2.  Return the name of an updated copy of the message.
+--
+--
+function on_message_parse( filename )
+   -- NOP
+   return( filename )
+end
+</pre>
