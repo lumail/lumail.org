@@ -1,5 +1,5 @@
 Title: current_maildirs()
-brief: Retrieve the maildirs currently visible
+brief: Retrieve the maildirs currently visible.
 seealso: current_maildir, maildirs_matching, count_maildirs
 version: 0.16
 ----
