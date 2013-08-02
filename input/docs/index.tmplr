@@ -13,6 +13,13 @@ docs_page: 1
 <dd><p>The default configuration file gives a flavour of how the software can be configured, and the default keybindings.</p></dd>
 <dt>The <a href="/examples/">examples page</a></dt>
 <dd><p>The example page shows how you can define functions in your configuration-file to do interesting things with your mail.</p></dd>
+<dt>Frequently Asked Questions</dt>
+<dd><P>We have two frequently-asked-questions pages:</p>
+<ul>
+<li>The <a href="/faq/">Lumail FAQ</a></li>
+<li>The <a href="/faq/technical/">Lumail Technical FAQ</a></li>
+</ul><p>&nbsp;</p>
+</dd>
 <dt>The <a href="/getting-started/">getting started</a> guide</dt>
 <dd><p>The getting-started guide gives a basic overview of the client, and introduces you to using it.</p></dd>
 <dt><a href="/lua/">Lua primitives</a></dt>
