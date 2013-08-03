@@ -1,6 +1,6 @@
 title: on_complete()
 brief: Called when the user invokes TAB-completion.
-seealso: on_exit, on_key, on_read_message, on_idle
+seealso: on_exit, on_key, on_read_message, on_idle,completion_chars
 version: 0.10
 ----
 
