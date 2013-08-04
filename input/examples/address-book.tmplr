@@ -1,0 +1,42 @@
+Title: address_book()
+example:1
+----
+
+<p><span class="tt">Lumail</span> contains extensive TAB-completion support, which by default will allow completion upon <a href="/lua/">the built-in primitives</a> which it exports, as well as functions you might define yourself.</p>
+<p>To allow you to add your own completions the <a href="/lua/on_complete.html">on_complete()</a> hook is defined.  This will allow you to populate a Lua table whth things that can be completed.</p>
+<p>Because <b>all</b> input is handled via the same primitive, and the completion table is global, you can add TAB-completion of recipients by using the <span class="tt">on_complete()</span> function.</p>
+<p>The following example reads lines from <span class="tt">~/.address-book</span>, if it exists and adds the addresses read (one per line) to the list of completion options:</p>
+<pre>
+--
+-- This function is called at run-time when TAB-completion is invoked.
+--
+-- The function is expected to return a Lua table, the values of which
+-- will be used for completion.  (The keys being ignored.)
+--
+-- Here we add any user-defined function the to the completion set.
+-- This works because Lua uses the global "_G" table to store functions, etc.
+--
+-- We also add the contents of ~/.address-book, if it exists, as completions
+-- to allow completion of message-recipients.
+--
+function on_complete()
+   ret = {}
+
+   for k,v in pairs(_G) do
+      ret[k] = k .. "();"
+   end
+
+   --
+   -- Add ~/.address-book if it exists
+   --
+   if ( exists( os.getenv( "HOME" ) .. "/.address-book" ) ) then
+      file = assert(io.open( os.getenv( "HOME" ) .. "/.address-book", "r"))
+      for line in file:lines() do
+         ret[line]= line
+      end
+   end
+
+   return(ret)
+end
+
+</pre>
