@@ -1,6 +1,6 @@
 title: file_exists()
 brief: Test whether a given path exists.
-seealso: is_directory, executable
+seealso: is_directory, executable, is_maildir
 version: 0.08
 ----
 

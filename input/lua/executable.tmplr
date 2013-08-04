@@ -1,6 +1,6 @@
 title: executable()
 brief: Test whether a given path represents an executable.
-seealso: is_directory, file_exists
+seealso: is_directory, file_exists, is_maildir
 version: 0.08
 ----
 
