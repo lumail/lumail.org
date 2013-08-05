@@ -37,7 +37,7 @@ if ( !-d "$home/git/lumail" )
 #
 #  Open the binding-file
 #
-open( my $handle, "<", $home . "/git/lumail/lua.cc" ) or
+open( my $handle, "<", $home . "/git/lumail/src/lua.cc" ) or
   die "Failed to open binding file - $!";
 
 #
