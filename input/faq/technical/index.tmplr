@@ -18,7 +18,7 @@ function on_message_parse( filaneme )
 end
 </pre>
 <p>The returned filename will then be parsed such that the first text/plain MIME component can be displayed.  Just prior to the display this text will be passed through the shell-command defined in the <span class="tt">message_filter</span> command.</p>
-<p>The former hook can be used, via an external tool, to convert HTML to text, the latter operating solely on the <span class="tt">text/plain</tt> component will be used to neaten the filter, remove quotes, etc.</p>
+<p>The former hook can be used, via an external tool, to convert HTML to text, the latter operating solely on the <span class="tt">text/plain</span> component will be used to neaten the filter, remove quotes, etc.</p>
 </blockquote>
 
 
@@ -45,11 +45,11 @@ end
 <li>The "word" you're currently entering, which is passed to the completion code.</li>
 </ul>
 <p><p>(i.e. Rather than using TAB-completion to complete a line it is always used to complete the "word", or token, you're currently entering.)</p>
-<p>The word you're completing is determined by breaking up the line into pieces, based upon whitespace.  For example the following line has the cursor at the position "edit":</p>
-<Pre>
+<p>The word you're completing is determined by breaking up the line into pieces, based upon a small list of terminating-characters.  For example the following line has the cursor at the end of the word "edit":</p>
+<pre>
 foo( edit[TAB]
 </pre>
-<p>Because the input was split at space we're trying to complete the word "edit" (whch will probably become <a href="/lua/editor.html">editor</a>.  Without that space?  We'd still be completing "edit" - because "(" is another valid character to split the line at.</p>
+<p>Because the input is split at the space character we're trying to complete the word "edit" (which will probably become <a href="/lua/editor.html">editor</a>.  Without that space?  We'd still be completing "edit" - because "(" is another valid character to split the line at.</p>
 <p>The complete list of characters which lines are split upon is fetched/updated by the Lua function <a href="/lua/completion_chars.html">completion_chars</a>.  You can change this to alter the completion code.</p>
 <p>Similarly you can configure the completion to be case-sensitive via "ignore_case" boolean variable:</p>
 <pre>
