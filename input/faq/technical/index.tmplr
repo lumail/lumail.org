@@ -22,11 +22,42 @@ end
 </blockquote>
 
 
-<h4>2. How does TAB-completion work?</h4>
+<h4>2. How does TAB-completion, and character input work?</h4>
 <blockquote>
-<p>TODO:</p>
+<p>Every time you're prompted for input, in the status-area, the code which handles it is that used by the <a href="/lua/prompt.html">prompt()</a> primitive.   This function reads individual characters and allows you to enter a complete "line".</p>
+<p>This function has been written to have the standard keybindings you might find via readline, etc.  For example:</p>
 <ul>
-<li>prompt()</li>
-<li>on_complete.</li>
+<li><span class="tt">Ctrl-a</span>: Go to beginning of line.</li>
+<li><span class="tt">Ctrl-b</span>: Go backwards one character.</li>
+<li><span class="tt">Ctrl-e</span>: Go to the end of line.</li>
+<li><span class="tt">Ctrl-f</span>: Go forwardso ne character.</li>
+<li><span class="tt">Ctrl-k</span>: Kill the reminder of the line.</li>
 </ul>
+<p>The reading of individual characters, along with all keyboard input, uses two sources of keys:</p>
+<ul>
+<li>The private input queue which has been seeded with <a href="/lua/stuff.html">stuff()</a>.</li>
+<li>The ncurses input queue.</li>
+</ul>
+<p>By using the private input buffer, and only reading the keyboard with ncurses when that is empty, we allow the user-interface to be driven via automation, which is very useful.</p>
+<p>The only part of the input-phase which is non-deterministic is the TAB-completion support.  When you're entering a line and you press TAB the line you've entered is broken into two parts:</p>
+<ul>
+<li>The start of the line, which is left unchanged.</li>
+<li>The "word" you're currently entering, which is passed to the completion code.</li>
+</ul>
+<p><p>(i.e. Rather than using TAB-completion to complete a line it is always used to complete the "word", or token, you're currently entering.)</p>
+<p>The word you're completing is determined by breaking up the line into pieces, based upon whitespace.  For example the following line has the cursor at the position "edit":</p>
+<Pre>
+foo( edit[TAB]
+</pre>
+<p>Because the input was split at space we're trying to complete the word "edit" (whch will probably become <a href="/lua/editor.html">editor</a>.  Without that space?  We'd still be completing "edit" - because "(" is another valid character to split the line at.</p>
+<p>The complete list of characters which lines are split upon is fetched/updated by the Lua function <a href="/lua/completion_chars.html">completion_chars</a>.  You can change this to alter the completion code.</p>
+<p>Similarly you can configure the completion to be case-sensitive via "ignore_case" boolean variable:</p>
+<pre>
+-- ignore case when completing - the default
+ignore_case = true
+
+-- Case is considered
+ignore_case = false
+</pre>
+<p>When ambiguity is present for completion you'll be presented with a list of possible matches.  Press TAB repeatedly to select the completion you prefer, or press Esc to cancel and complete manually.</p>
 </blockquote>
