@@ -1,0 +1,21 @@
+title: create_maildir()
+brief: Create a given Maildir.
+seealso: is_maildir
+version: 0.17
+----
+
+<p>This function will create a new maildir folder.</p>
+<p>For example:</p>
+<pre>
+sent = os.getenv( "HOME" ) .. "/Maildir/.sent" ;
+
+if ( ! <a href="/lua/is_maildir.html">is_maildir</a>( sent ) ) then
+   create_maildir( sent )
+end
+</pre>
+<p>Creating a Maildir involves creating four directories:</p>
+<ul>
+<li>The path specified itself.</li>
+<li>The subdirectories: cur, new, &amp; tmp</li>
+</ul>
+<p>NOTE: The parent directory must exist already, prior to calling <span class="tt">create_maildir</span> otherwise this function will fail and return false.</p>
