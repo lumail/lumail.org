@@ -17,6 +17,6 @@ Title: Command-Line arguments
 <dd><p>Open and parse the given Lua file, in addition to the standard configuration files that are examined.</p></dd>
 <dt><span class="tt">--version</span></dt>
 <dd><p>Show the version number of your <span class="tt">lumail</span> binary, then exit.</p></dd>
-</dt>
+</dl>
 </blockquote>
 
