@@ -1,6 +1,6 @@
 title: is_maildir()
 brief: Test whether a given path represents a Maildir.
-seealso: executable, file_exists, load_directory, is_directory
+seealso: executable, file_exists, load_directory, is_directory, create_maildir
 version: 0.17
 ----
 

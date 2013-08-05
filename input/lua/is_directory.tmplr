@@ -1,6 +1,6 @@
 title: is_directory()
 brief: Test whether a given path represents a directory.
-seealso: executable, file_exists, load_directory, is_maildir
+seealso: executable, file_exists, load_directory, is_maildir, create_maildir
 version: 0.08
 ----
 
