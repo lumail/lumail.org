@@ -1,7 +1,7 @@
 Title: Technical FAQ
 ----
 
-<h4>How can I modify message bodies?</h4>
+<h4>1. How can I modify message bodies?</h4>
 <blockquote>
 <p>There are times when it is necessary to modify a message prior to display.  Lumail provides two opportunities to modify the message:</p>
 <ul>
@@ -19,4 +19,14 @@ end
 </pre>
 <p>The returned filename will then be parsed such that the first text/plain MIME component can be displayed.  Just prior to the display this text will be passed through the shell-command defined in the <span class="tt">message_filter</span> command.</p>
 <p>The former hook can be used, via an external tool, to convert HTML to text, the latter operating solely on the <span class="tt">text/plain</tt> component will be used to neaten the filter, remove quotes, etc.</p>
+</blockquote>
+
+
+<h4>2. How does TAB-completion work?</h4>
+<blockquote>
+<p>TODO:</p>
+<ul>
+<li>prompt()</li>
+<li>on_complete.</li>
+</ul>
 </blockquote>
