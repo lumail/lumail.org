@@ -12,7 +12,7 @@ version: 0.08
 <p>If you set a <span class="tt">message_filter</span> the body of the message being displayed will be filtered through it.</p>
 <p>For example:</p>
 <pre>
- message_filter( "-prot -cmekatlS --bigq --pgp-move-vrf -Mmutt -L/etc/t-prot/footers -A/etc/t-prot/ads" );
+ message_filter( "t-prot -cmekatlS --bigq --pgp-move-vrf -Mmutt -L/etc/t-prot/footers -A/etc/t-prot/ads" );
 </pre>
 <p>The following example would cause all messages to be displayed in upper-case:</p>
 <pre>
