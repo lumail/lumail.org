@@ -1,0 +1,10 @@
+title: This function was renamed.
+removed: 1
+----
+
+<p>The function <span class="tt">on_message_parse()</span> was removed.</p>
+<p>As per the <a href="/faq/technical/">technical FAQ</a> we now use two filters:</p>
+<ul>
+<li><a href="/lua/msg_filter.html">msg_filter</a></li>
+<li><a href="/lua/message_filter.html">message_filter</a></li>
+</ul>
