@@ -1,6 +1,6 @@
 title: on_read_message()
 brief: Called when an email is read.
-seealso: on_key, on_exit, on_idle, on_complete, wrap_lines
+seealso: on_key, on_exit, on_idle, on_complete, wrap_lines, msg_filter, message_filter
 version: 0.07
 ----
 

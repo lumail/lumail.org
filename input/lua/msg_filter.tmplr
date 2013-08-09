@@ -1,12 +1,12 @@
 title: msg_filter()
 brief: Pass whole emails through a filter.
-seealso: on_read_message, headers, wrap_lines, get_variables, message_filter
+seealso: on_read_message, headers, message_filter
 version: 0.17
 ----
 
 
 <p>If you define a command via <span class="tt">msg_filter</span> it will be invoked on every email message prior to further processing.</p>
-<P>The flow of execution goes something like this:</p.
+<p>The flow of execution goes something like this:</p>
 <ul>
 <li>Find the mail message.</li>
 <li>If <span class="tt">msg_filter()</span> is set, use it.</li>
