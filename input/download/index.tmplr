@@ -57,17 +57,20 @@ deb     http://packages.steve.org.uk/lumail/wheezy/ ./
 <h2 id="building">Building from source</h2>
 <blockquote>
 <p>Lumail is deliberately designed to only depend upon a small number of libraries, to ensure that it is possible to build it upon the widest range of systems.</p>
-<p>Currently the dependencies are:</p>
+<p>After the release of 0.17 the dependencies are as follows:</p>
 <ul>
 <li>lua 5.1 - The scripting language</li>
 <li>ncursesw - The console-graphics library (wide-version).</li>
-<li>mimetic - The MIME-library.</li>
+<li>gmime-2.6 - The MIME-library.</li>
 <li>pcre    - The regular-expression library.
 </ul>
+<blockquote>
+<p><b>Note</b>: Releases 0.1-0.17 used mimetic for MIME parsing, anything from 0.17 onwards uses GMime 2.6.x.</p>
+</blockquote>
 <div style="padding-left:20px; border:1px solid silver">
  <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
  <pre>
- # apt-get install libncursesw5-dev liblua5.1-0-dev lua5.1 libmimetic-dev libpcre3-dev</pre>
+ # apt-get install libncursesw5-dev liblua5.1-0-dev lua5.1 libgmime-2.6-dev libpcre3-dev</pre>
 </div>
 
 <p>Providing you have the appropriate dependencies installed you can build the client via a single "<span class="tt">make</span>" command:</p>
