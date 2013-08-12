@@ -23,3 +23,27 @@ function dump_vars()
 
 end
 </pre>
+<p>On my system, running Lumail v0.18, I see output like this:</p>
+<pre>
+Variable 'index_format' has value '[$FLAGS] $DAY/$MONTH/$YEAR $FROM - $SUBJECT'
+Variable 'maildir_limit' has value 'all'
+Variable 'sendmail_path' has value '/usr/lib/sendmail -t'
+Variable 'header_colour' has value 'white'
+Variable 'completion_chars' has value ''"( ,'
+Variable 'attachment_colour' has value 'white'
+Variable 'unread_message_colour' has value 'red'
+Variable 'editor' has value '/usr/bin/vim'
+Variable 'msg_filter' has value ''
+Variable 'message_filter' has value ''
+Variable 'sent_mail' has value '/home/skx/Maildir/sent-mail'
+Variable 'history_file' has value '/home/skx/.lumail.history'
+Variable 'global_mode' has value 'maildir'
+Variable 'index_limit' has value 'all'
+Variable 'tmp' has value '/tmp'
+Variable 'from' has value 'Steve Kemp <steve@steve.org.uk>'
+Variable 'maildir_format' has value '$CHECK - $UNREAD/$TOTAL - $PATH'
+Variable 'unread_maildir_colour' has value 'red'
+Variable 'body_colour' has value 'white'
+Variable 'maildir_prefix' has value '/home/skx/Maildir'
+End
+</pre>
