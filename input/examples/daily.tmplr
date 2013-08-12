@@ -32,7 +32,7 @@ function daily()
 
    -- Now for each one find the name, and see if it a match against
    -- our table of interesting messages.
-   while( offset <= (<a href="/lua/count_maildirs.html">count_maildirs</a>() - 1) ) do
+   while( offset &lt;= (<a href="/lua/count_maildirs.html">count_maildirs</a>() - 1) ) do
 
       -- jump to folder.
       <a href="/lua/jump_maildir_to.html">jump_maildir_to</a>( offset )
@@ -64,7 +64,7 @@ function daily()
             count = <a href="/lua/count_messages.html">count_messages</a>()
             i = 0
             -- mark all read.
-            while( i < count ) do
+            while( i &lt; count ) do
                <a href="/lua/jump_index_to.html">jump_index_to</a>( i )
                <a href="/lua/mark_read.html">mark_read</a>()
                i = i + 1
@@ -100,7 +100,7 @@ end
 function mark_all_read()
    count = count_messages()
    i = 0
-   while( i < count ) do
+   while( i &lt; count ) do
       jump_index_to( i )
       mark_read()
       i = i + 1
