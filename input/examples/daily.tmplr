@@ -12,35 +12,35 @@ example:1
 function daily()
 
    -- Get the current mode + limit
-   cur_mode   = global_mode();
-   cur_mlimit = maildir_limit();
-   cur_ilimit = index_limit();
+   cur_mode   = <a href="/lua/global_mode.html">global_mode</a>();
+   cur_mlimit = <a href="/lua/maildir_limit.html">maildir_limit</a>();
+   cur_ilimit = <a href="/lua/index_limit.html">index_limit</a>();
 
    -- The patterns which match folders we're going to process.
    interesting = { "/.machines", "/.CRM.Spam", "/.Automated" };
 
    -- setup the new state - showing maildirs which have unread messages.
-   maildir_limit( "new" );
-   global_mode( "maildir" );
+   <a href="/lua/maildir_limit.html">maildir_limit</a>( "new" );
+   <a href="/lua/global_mode.html">global_mode</a>( "maildir" );
 
-   jump_maildir_to(0);
+   <a href="/lua/jump_maildir_to.html">jump_maildir_to</a>(0);
 
    -- ensure we have no selected folders.
-   clear_selected_folders();
+   <a href="/lua/clear_selected_folders.html">clear_selected_folders</a>();
 
    offset = 0;
 
    -- Now for each one find the name, and see if it a match against
    -- our table of interesting messages.
-   while( offset <= (count_maildirs() - 1) ) do
+   while( offset <= (<a href="/lua/count_maildirs.html">count_maildirs</a>() - 1) ) do
 
       -- jump to folder.
-      jump_maildir_to( offset )
+      <a href="/lua/jump_maildir_to.html">jump_maildir_to</a>( offset )
 
       --
       -- See if the current maildir name matches one of our interesting ones.
       --
-      name = current_maildir();
+      name = <a href="/lua/current_maildir.html">current_maildir</a>();
 
       -- For each entry in our interesting-table.
       for ii,iname in ipairs( interesting ) do
@@ -50,9 +50,9 @@ function daily()
             -- OK the current maildir matches.
 
             -- open the folder.
-            clear_selected_folders();
-            add_selected_folder()
-            global_mode( "index" );
+            <a href="/lua/clear_selected_folders.html">clear_selected_folders</a>();
+            <a href="/lua/add_selected_folder.html">add_selected_folder</a>()
+            <a href="/lua/global_mode.html">global_mode</a>( "index" );
 
             --
             -- The next code is identical to that in the "mark_read"
@@ -61,12 +61,12 @@ function daily()
             -- It is placed inline here so the example is standalone.
             --
             -- mark_read: start
-            count = count_messages()
+            count = <a href="/lua/count_messages.html">count_messages</a>()
             i = 0
             -- mark all read.
             while( i < count ) do
-               jump_index_to( i )
-               mark_read()
+               <a href="/lua/jump_index_to.html">jump_index_to</a>( i )
+               <a href="/lua/mark_read.html">mark_read</a>()
                i = i + 1
             end
             -- mark_read: end
@@ -87,9 +87,9 @@ function daily()
    --
    -- Now reset things back to the way we were.
    --
-   global_mode(cur_mode);
-   maildir_limit(cur_mlimit);
-   index_limit(cur_ilimit);
+   <a href="/lua/global_mode.html">global_mode</a>(cur_mode);
+   <a href="/lua/maildir_limit.html">maildir_limit</a>(cur_mlimit);
+   <a href="/lua/index_limit.html">index_limit</a>(cur_ilimit);
 end
 </pre>
 <p>With the use of <a href="/lua/maildirs_matching.html">maildirs_matching()</a> this function could be simplified significantly:</p>
