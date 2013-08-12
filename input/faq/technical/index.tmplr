@@ -5,15 +5,15 @@ Title: Technical FAQ
 <blockquote>
 <p>There are times when it is necessary to modify a message prior to display.  Lumail provides two opportunities to modify the message:</p>
 <ul>
-<li><a href="/lua/message_filter.html">message_filter()</a></li>
-<li><a href="/lua/msg_filter.html">msg_filter()</a></li>
+<li><a href="/lua/mail_filter.html">mail_filter()</a></li>
+<li><a href="/lua/display_filter.html">display_filter()</a></li>
 </ul>
-<p>Initially a message is read from disk, and the body is piped through the <span class="tt">msg_filter()</span> command, if one is set.</p>
-<p>Then the resulting output will be parsed such that the first text/plain MIME component can be displayed.  Just prior to the display this text will be passed through the shell-command defined in <span class="tt">message_filter</span>.</p>
+<p>Initially a message is read from disk, and the body is piped through the <span class="tt">mail_filter()</span> command, if one is set.</p>
+<p>Then the resulting output will be parsed such that the first text/plain MIME component can be displayed.  Just prior to the display this text will be passed through the shell-command defined in <span class="tt">display_filter</span>.</p>
 <p>This means you have two ways of filtering a command, both via the shell:</p>
 <ul>
-<li><span class="tt">message_filter</span> - Will filter just the first text/plain part, and will be done prior to display.</li>
-<li><span class="tt">msg_filter</span> - Will filter just the whole message (headers, attachments, and all).</li>
+<li><span class="tt">display_filter</span> - Will filter just the first text/plain part, and will be done prior to display.</li>
+<li><span class="tt">mail_filter</span> - Will filter just the whole message (headers, attachments, and all).</li>
 </ul>
 <p>If you need to convert HTML to text then you'd use the second filter.  If you want to snip excessive quoting you'd use the first filter.</p>
 </blockquote>
