@@ -1,6 +1,6 @@
 title: prompt()
 brief: Prompt for input from the user.
-seealso: prompt_yn, prompt_chars, on_complete, prompt_maildir
+seealso: prompt_yn, prompt_chars, on_complete, prompt_maildir, history_file
 version: 0.07
 ----
 
