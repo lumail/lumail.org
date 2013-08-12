@@ -1,6 +1,6 @@
 title: prompt_maildir()
 brief: Prompt for a Maildir.
-seealso: prompt_yn, prompt_chars, prompt
+seealso: prompt_yn, prompt_chars, prompt, choose_string
 version: 0.09
 ----
 
