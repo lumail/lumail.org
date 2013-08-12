@@ -55,3 +55,14 @@ if ( is_google() ) then
 end
 
 </pre>
+<p>An alternative, and simpler solution, is to use the <a href="/lua/is_maildir.html">is_maildir</a> function.  For example we could use this :</p>
+<pre>
+function is_google()
+
+   if ( is_maildir( os.getenv( "HOME" ) .. "/Maildir/Google/.some.username/INBOX" ) )
+       return true
+   else
+       return false
+   end
+end
+</pre>
