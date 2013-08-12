@@ -59,7 +59,7 @@ end
 <pre>
 function is_google()
 
-   if ( is_maildir( os.getenv( "HOME" ) .. "/Maildir/Google/.some.username/INBOX" ) )
+   if ( <a href="/lua/is_maildir.html">is_maildir</a>( os.getenv( "HOME" ) .. "/Maildir/Google/.some.username/INBOX" ) )
        return true
    else
        return false
