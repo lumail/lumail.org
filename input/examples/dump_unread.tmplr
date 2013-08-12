@@ -24,7 +24,7 @@ function dump_unread()
    ff = io.open( "/tmp/unread.log", "a");
 
    -- Now for each one we'll open them.
-   while( offset <= (<a href="/lua/count_maildirs.html">count_maildirs</a>() - 1) ) do
+   while( offset &lt;= (<a href="/lua/count_maildirs.html">count_maildirs</a>() - 1) ) do
 
       -- jump to folder.
       <a href="/lua/jump_maildir_to.html">jump_maildir_to</a>( offset )
