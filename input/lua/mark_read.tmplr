@@ -1,6 +1,6 @@
 title: mark_read()
 brief: Mark a message as old/read.
-seealso: is_new, mark_new, current_message
+seealso: is_new, mark_unread, current_message
 version: 0.07
 ----
 
