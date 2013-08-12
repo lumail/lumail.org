@@ -1,0 +1,15 @@
+title: choose_string()
+brief: Choose from a small list of possible options.
+seealso: prompt,prompt_yn, prompt_chars, prompt_maildir
+version: 0.18
+----
+
+<p>The  <span class="tt">choose_string</span> function allows you to prompt the user to make a selection from a small number of possible options.</p>
+<p>It is primarily designed for our TAB-completion code, but due to its flexible nature it can be used for building simple menus, selecting signatures, or GPG keys, for example.</p>
+<p>For example:</p>
+<pre>
+choice = prompt( "Depeche Mode", "Curve", "Prince" );
+<a href="msg.html">msg</a>( "You entered: " .. choice );
+</pre>
+<p>The function expects to receive an array of choices, and will return either the string chosen or "" if the user cancels the menu without choosing anything.</p>
+<p>TAB and the arrow-keys may be used to highlight the desired choice, and the selection is confirmed via RETURN, or canceled via Esc.</p>
