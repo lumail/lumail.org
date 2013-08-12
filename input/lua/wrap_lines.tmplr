@@ -1,6 +1,6 @@
 title: wrap_lines
 brief: Should long lines be wrapped when reading a message?
-seealso: headers, message_filter
+seealso: headers, display_filter
 version: 0.15
 ----
 

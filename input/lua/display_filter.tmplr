@@ -1,7 +1,7 @@
-title: message_filter()
+title: display_filter()
 brief: Pass email bodies through a filter prior to display.
-seealso: on_read_message, headers, msg_filter
-version: 0.08
+seealso: on_read_message, headers, mail_filter
+version: 0.18
 ----
 
 <p>When in message-mode an email will be displayed upon the screen.  The display consists of two parts:</p>
@@ -9,12 +9,12 @@ version: 0.08
 <li>A list of headers.</li>
 <li>The body of the email.</li>
 </ul>
-<p>If you set a <span class="tt">message_filter</span> the body of the message being displayed will be filtered through it.</p>
+<p>If you set a <span class="tt">display_filter</span> the body of the message being displayed will be filtered through it.</p>
 <p>For example:</p>
 <pre>
- message_filter( "t-prot -cmekatlS --bigq --pgp-move-vrf -Mmutt -L/etc/t-prot/footers -A/etc/t-prot/ads" );
+display_filter( "t-prot -cmekatlS --bigq --pgp-move-vrf -Mmutt -L/etc/t-prot/footers -A/etc/t-prot/ads" );
 </pre>
 <p>The following example would cause all messages to be displayed in upper-case:</p>
 <pre>
-message_filter( "tr '[:lower:]' '[:upper:]'" );
+display_filter( "tr '[:lower:]' '[:upper:]'" );
 </pre>
