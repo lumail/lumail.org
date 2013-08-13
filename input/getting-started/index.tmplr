@@ -14,7 +14,7 @@ started_page: 1
 <blockquote>
 <p><span class="tt">lumail</span> is configured by a pair of Lua configuration files, which are loaded at startup-time:</p>
 <p>If present the following two files are read:</p>
-<ul>
+<ul class="invisible">
 <li><span class="tt">/etc/lumail.lua</span>
 <ul>
 <li>This system-wide configuration file will affect all users.</li>
@@ -44,9 +44,18 @@ started_page: 1
 <blockquote>
 <p><span class="tt">lumail</span> is a modal mail client, which means you're always in one of three modes (see <a href="/lua/global_mode.html">global_mode()</a> for documentation):</p>
 <ul>
-<li>maildir-mode - Views folders.</li>
-<li>index-mode - Views messages.</li>
-<li>message-mode - Views a single message.</li>
+<li>maildir-mode
+<ul>
+<li>This mode allows you to view a list of Maildir folders.</li>
+</ul></li>
+<li>index-mode
+<ul>
+<li>This mode allows you to view lists of messages.</li>
+</ul></li>
+<li>message-mode
+<ul>
+<li>This mode allows you to view a single message.</li>
+</ul></ul>
 </ul>
 <p>If you launch <span class="tt">lumail</span> you'll start in "maildir" mode, which consists of a
 scrollable list of folder-names.  You can page up/down with `j/k`, or search with `/`.</p>
