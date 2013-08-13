@@ -11,3 +11,10 @@ function on_mode_change( old, new )
    <a href="/lua/msg.html">msg</a>( "Old mode:" .. old .. " -> " .. new );
 end
 </pre>
+<p><b>NOTE</b>: This function will only be called if the mode is changed.  The following sequence will only call the <span class="tt">on_mode_change</span> function once:</p>
+<pre>
+global_mode( "index" );
+global_mode( "maildir" );
+global_mode( "maildir" );
+global_mode( "maildir" );
+</pre>
