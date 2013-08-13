@@ -4,7 +4,7 @@ seealso: scroll_index_down, scroll_index_up, scroll_index_to, index_offset
 version: 0.07
 ----
 
-<p>When a folder has been opened this function causes the list of messages to be scrolled to the given offset.</P>
+<p>When a folder has been opened this function causes the list of messages to be scrolled to the given offset.</p>
 <p>For example:</p>
 <pre>
 -- Jump to the end of the list:

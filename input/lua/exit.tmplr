@@ -5,4 +5,4 @@ version: 0.07
 ----
 
 <p>This function will immediately exit the <span class="tt">lumail</span> client.</p>
-<p>If you have defined a function called <span class="tt">on_exit()</span> it will be called prior to the exit.</P>
+<p>If you have defined a function called <span class="tt">on_exit()</span> it will be called prior to the exit.</p>

@@ -5,7 +5,7 @@ version: 0.08
 ----
 
 <p>This function will immediately exit the <span class="tt">lumail</span> client, printing a diagnostic message to the console.</p>
-<p>This function differs from <a href="/lua/exit.html">exit()</a> because it will not run any <a href="/lua/on_exit.html">on_exit()</a> function you've defined.</P>
+<p>This function differs from <a href="/lua/exit.html">exit()</a> because it will not run any <a href="/lua/on_exit.html">on_exit()</a> function you've defined.</p>
 <p>This can be used to add tests to your configuration file:</p>
 <pre>
 prefix = os.getenv( "HOME" ) .. "/Maildir"
