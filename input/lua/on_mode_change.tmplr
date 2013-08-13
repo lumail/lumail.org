@@ -1,0 +1,13 @@
+title: on_mode_change()
+brief: Called when the global mode changes.
+seealso: global_mode
+version: 0.18
+----
+
+<p>If you define the function <span class="tt">on_mode_change</span> it will be called whenever the global mode changes.</p>
+<p>For example:</p>
+<pre>
+function on_mode_change( old, new )
+   <a href="/lua/msg.html">msg</a>( "Old mode:" .. old .. " -> " .. new );
+end
+</pre>

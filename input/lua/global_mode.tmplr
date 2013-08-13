@@ -1,6 +1,6 @@
 title: global_mode()
 brief: Get, or set, the global mode.
-seealso: keymap
+seealso: keymap, on_mode_change
 version: 0.07
 ----
 
