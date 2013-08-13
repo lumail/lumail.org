@@ -3,53 +3,35 @@ download_page: 1
 src: lumail-0.17.tar.gz
 ----
 
-<p>Luamil is still under active development, but to gain additional feedback we're releasing versioned <a href="#source">source-snapshots</a> periodically.</p>
+<p>Luamil is under constant development, but versioned <a href="#source">source-snapshots</a> are released when things are judged to be stable.</p>
 <p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/faq/#bug">should be reported</a> as such.</p>
 
 
 <h2 id="source">Source Snapshots</h2>
 <blockquote>
-<p>The most recent snapshot is:</p>
+<p>The most recent release is:</p>
 <ul>
 <li><a href="<!-- tmpl_var name='src' -->"><!-- tmpl_var name='src' --></a></li>
 </ul>
-<p>See <a href="#building">the notes on building</a> for requirements, and instructions.</p>
+<p>See <a href="#building">the notes on building</a> for requirements and instructions on building the release.</p>
 </blockquote>
 
 
 <h2 id="git">Cutting Edge Git Repository</h2>
 <blockquote>
-<p>All development on <span class="tt">lumail</span> is carried out, in public, against a central git repository:</p>
+<p>All development on <span class="tt">lumail</span> is carried out, in public, via a central git repository:</p>
 <ul>
 <li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
 </ul>
-<p>See <a href="#building">the notes on building</a> for requirements, and instructions.</p>
+<p>See <a href="#building">the notes on building</a> for requirements, and instructions on building the source.</p>
 </blockquote>
 
 <h2 id="debian">Debian GNU/Linux Packages</h2>
 <blockquote>
-<p>I host a repository for binaries for the Squeeze &amp; Wheezy releases of Debian GNU/Linux.  You can find this repository here:</p>
+<p>I host a repository containing binary packages for the Wheezy/stable release of Debian GNU/Linux.  You can find this repository, along with instructions for using it, here:</p>
 <ul>
 <li><a href="http://packages.steve.org.uk/lumail/">http://packages.steve.org.uk/lumail/</a></li>
 </ul>
-<p>Create the file <span class="tt">/etc/apt/sources.list.d/lumail.list</span> and add in one set of the following lines:</p>
-<pre>#
-# The lumail email client - http://lumail.org/
-#
-
-# For the Squeeze release:
-deb-src http://packages.steve.org.uk/lumail/squeeze/ ./
-deb     http://packages.steve.org.uk/lumail/squeeze/ ./
-
-# For Wheezy release:
-deb-src http://packages.steve.org.uk/lumail/wheezy/ ./
-deb     http://packages.steve.org.uk/lumail/wheezy/ ./
-</pre>
-<p>Once you've done this you can install the client via:</p>
-<pre>
-# apt-get update
-# apt-get install lumail
-</pre>
 <p>(The binaries are compiled for both i386 and AMD64.)</p>
 </blockquote>
 
@@ -57,12 +39,25 @@ deb     http://packages.steve.org.uk/lumail/wheezy/ ./
 <h2 id="building">Building from source</h2>
 <blockquote>
 <p>Lumail is deliberately designed to only depend upon a small number of libraries, to ensure that it is possible to build it upon the widest range of systems.</p>
-<p>After the release of 0.17 the dependencies are as follows:</p>
+<p>As of release 0.18 the dependencies are as follows:</p>
+<ul class="invisible">
+<li>Lua 5.1
 <ul>
-<li>lua 5.1 - The scripting language</li>
-<li>ncursesw - The console-graphics library (wide-version).</li>
-<li>gmime-2.6 - The MIME-library.</li>
-<li>pcre    - The regular-expression library.
+<li>The scripting language.</li>
+<li>Lua 5.2 is also supported, but is not the default.</li>
+</ul></li>
+<li>ncursesw
+<ul>
+<li>The console-graphics library (wide-version).</li>
+</ul></li>
+<li>gmime-2.6
+<ul>
+<li>The MIME-library.</li>
+<li>Releases prior to 0.18 used the mimetic MIME library instead.</li>
+</ul></li>
+<li>pcre
+<li>The regular-expression library.</li>
+</ul></li>
 </ul>
 <blockquote>
 <p><b>Note</b>: Releases 0.1-0.17 used mimetic for MIME parsing, anything from 0.17 onwards uses GMime 2.6.x.</p>
@@ -70,7 +65,8 @@ deb     http://packages.steve.org.uk/lumail/wheezy/ ./
 <div style="padding-left:20px; border:1px solid silver">
  <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
  <pre>
- # apt-get install libncursesw5-dev liblua5.1-0-dev lua5.1 libgmime-2.6-dev libpcre3-dev</pre>
+ # apt-get install libncursesw5-dev liblua5.1-0-dev lua5.1 \
+    libgmime-2.6-dev libpcre3-dev</pre>
 </div>
 
 <p>Providing you have the appropriate dependencies installed you can build the client via a single "<span class="tt">make</span>" command:</p>
