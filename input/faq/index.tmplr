@@ -2,7 +2,9 @@ Title: Frequently Asked Questions
 faq_page: 1
 ----
 
-<p>This page lists questions &amp; answers relating to the project as a whole.  There is a separate <a href="/faq/technical/">technical FAQ</a>.</p>
+<p>This page lists questions &amp; answers relating to the project as a whole.</p>
+<p>There is a separate <a href="/faq/technical/">technical FAQ</a>.</p>
+
 <blockquote>
   <dl>
     <dt>Why no IMAP/POP3?</dt>
