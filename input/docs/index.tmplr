@@ -14,8 +14,8 @@ docs_page: 1
 <dt>The <a href="/examples/">examples page</a></dt>
 <dd><p>The example page shows how you can define functions in your configuration-file to do interesting things with your mail.</p></dd>
 <dt>Frequently Asked Questions</dt>
-<dd><P>We have two frequently-asked-questions pages:</p>
-<ul>
+<dd><p>We have two frequently-asked-questions pages:</p>
+<ul class="invisible">
 <li>The <a href="/faq/">Lumail FAQ</a></li>
 <li>The <a href="/faq/technical/">Lumail Technical FAQ</a></li>
 </ul><p>&nbsp;</p>
