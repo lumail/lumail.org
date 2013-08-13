@@ -1,6 +1,6 @@
 title: jump_maildir_to()
 brief: Jump to a position in the maildir list.
-seealso: select_maildir, scroll_maildir_down, scroll_maildir_up
+seealso: select_maildir, scroll_maildir_down, scroll_maildir_up,maildir_offset
 version: 0.07
 ----
 

@@ -1,6 +1,6 @@
 title: jump_index_to()
 brief: Jump to a position in the message list.
-seealso: scroll_index_down, scroll_index_up, scroll_index_to
+seealso: scroll_index_down, scroll_index_up, scroll_index_to, index_offset
 version: 0.07
 ----
 
