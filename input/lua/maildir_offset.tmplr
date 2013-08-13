@@ -1,0 +1,22 @@
+title: maildir_offset()
+brief: Get the current offset into the Maildir list.
+seealso: select_maildir, scroll_maildir_down, scroll_maildir_up, jump_maildir_to
+version: 0.18
+----
+
+<p>When in maildir mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of a list of maildir folders.</p>
+<p>The <span class="tt">maildir_offset()</span> function allows you to learn the current position of the selected folder.</p>
+<p>The offset will range from 0 to <span class="tt">count_maildirs()</span>.</p>
+<p>For example:</p>
+<pre>
+-- Iterate over every maildir from the current position to the end of the list.
+function do_stuff()
+   i = index_offset();
+   while( i &lt; count_maildirs() )
+       <a href="/lua/jump_maildir_to.html">jump_maildir_to</a>( i )
+       -- do stuff
+       i = i + 1
+   end
+end
+</pre>
+

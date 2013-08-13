@@ -1,0 +1,21 @@
+title: index_offset()
+brief: Get the current offset into the message list.
+seealso: scroll_index_down, scroll_index_up, scroll_index_to, index_offset, jump_index_to
+version: 0.18
+----
+
+<p>When a folder has been opened this function will return the currently selected message offset.</p>
+<p>The offset will range from 0 to <span class="tt">count_messages()</span>.</p>
+<p>For example:</p>
+<pre>
+-- Iterate over every message from the current position to the end of the list.
+function do_stuff()
+   i = index_offset();
+   while( i &lt; count_messages() )
+       <a href="/lua/jump_index_to.html">jump_index_to</a>( i )
+       -- do stuff
+       i = i + 1
+   end
+end
+</pre>
+
