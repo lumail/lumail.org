@@ -178,3 +178,7 @@ dt {
 #footer table {
     width: 100%;
 }
+
+ul.invisible {
+    list-style-type: none;
+}
