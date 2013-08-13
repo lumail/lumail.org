@@ -1,6 +1,6 @@
 title: scroll_maildir_down()
 brief: Scroll the list of folders down.
-seealso: current_maildir, jump_maildir_to, scroll_maildir_up, scroll_maildir_to
+seealso: current_maildir, jump_maildir_to, scroll_maildir_up, scroll_maildir_to, maildir_offset
 version: 0.07
 ----
 

@@ -1,6 +1,6 @@
 title: scroll_maildir_to()
 brief: Scroll the list of folders to the next name matching a pattern.
-seealso: current_maildir, jump_maildir_to, scroll_maildir_down, scroll_maildir_up
+seealso: current_maildir, jump_maildir_to, scroll_maildir_down, scroll_maildir_up, maildir_offset
 version: 0.07
 ----
 

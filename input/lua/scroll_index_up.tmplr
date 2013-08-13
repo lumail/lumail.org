@@ -1,6 +1,6 @@
 title: scroll_index_up()
 brief: Scroll the list of messages up.
-seealso: scroll_index_to, jump_index_to, scroll_index_down
+seealso: scroll_index_to, jump_index_to, scroll_index_down, index_offset
 version: 0.07
 ----
 

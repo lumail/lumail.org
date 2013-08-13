@@ -1,6 +1,6 @@
 Title: select_maildir()
 brief: Select a maildir folder by path.
-seealso: current_maildir, select_maildir, jump_maildir_to, scroll_maildir_up, scroll_maildir_down, scroll_maildir_to, maildirs_matching
+seealso: current_maildir, select_maildir, jump_maildir_to, scroll_maildir_up, scroll_maildir_down, scroll_maildir_to, maildirs_matching, maildir_offset
 version: 0.07
 ----
 

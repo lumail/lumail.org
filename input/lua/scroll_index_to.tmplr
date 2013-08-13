@@ -1,6 +1,6 @@
 title: scroll_index_to()
 brief: Scroll the list of messages to the next one matching a pattern.
-seealso: scroll_index_down, jump_index_to, scroll_index_up
+seealso: scroll_index_down, jump_index_to, scroll_index_up, index_offset
 version: 0.07
 ----
 
