@@ -4,7 +4,7 @@ contact_page: 1
 
 <p>If you have any questions or feedback for <span class="tt">lumail</span> that you wish to give in private please drop me a mail:</p>
 <ul class="invisible">
-<li><span class="tt">&lt;steve@steve.org.uk&gt;</tt></li>
+<li><span class="tt">&quot;Steve Kemp&quot; &lt;steve@steve.org.uk&gt;</span></li>
 </ul>
 <p>If you have a bug report, feature suggestion, or patch to submit please use the issue-tracker on the github repository.</p>
 <p>This allows development to continue in a public manner:</p>
