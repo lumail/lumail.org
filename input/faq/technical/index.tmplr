@@ -1,7 +1,20 @@
 Title: Technical FAQ
 ----
 
-<h4>1. How can I modify message bodies?</h4>
+
+<blockquote>
+ <ul class="invisible">
+  <li><a href="#faq_1">How can I modify message bodies?</a></li>
+  <li><a href="#faq_2">How does TAB-completion, and character input work?</a></li>
+  <li><a href="#faq_3">How can I handle GPG?</a></li>
+  <li><a href="#faq_4">How can I iterate over messages?</a></li>
+ </ul>
+ <p>&nbsp;</p>
+</blockquote>
+
+
+
+<h4 id="faq_1">1. How can I modify message bodies?</h4>
 <blockquote>
 <p>There are times when it is necessary to modify a message prior to display.  Lumail provides two opportunities to modify the message:</p>
 <ul>
@@ -19,7 +32,7 @@ Title: Technical FAQ
 </blockquote>
 
 
-<h4>2. How does TAB-completion, and character input work?</h4>
+<h4 id="faq_2">2. How does TAB-completion, and character input work?</h4>
 <blockquote>
 <p>Every time you're prompted for input, in the status-area, the code which handles it is that used by the <a href="/lua/prompt.html">prompt()</a> primitive.   This function reads individual characters and allows you to enter a complete "line".</p>
 <p>This function has been written to have the standard keybindings you might find via readline, etc.  For example:</p>
@@ -60,7 +73,66 @@ ignore_case = false
 </blockquote>
 
 
-<h4>3. How can I handle GPG?</h4>
+<h4 id="faq_3">3. How can I handle GPG?</h4>
 <blockquote>
 <p>TODO:  <a href="https://github.com/skx/lumail/issues/87#issuecomment-22605624">https://github.com/skx/lumail/issues/87#issuecomment-22605624</a></p>
 </blockquote>
+
+<h4 id="faq_4">4. How can I iterate over messages?</h4>
+<blockquote>
+<p>The traditional way of iterating over messages is to start at message zero, and advance one message at a time, until you hit the final one.  This is achieved like so:</p>
+<pre>
+function iterate()
+   offset = 0
+   while( offset &lt; count_messages() )
+      jump_index_to( offset )
+
+      -- do your processing here.
+
+      offset = offset + 1
+   end
+end
+</pre>
+<p>This works perfectly, but it surprises people because it starts iterating from the first messages in the current index-view, rather than the current position.  To resolve this problem the <a href="/lua/index_offset.html">index_offset()</a> primitive was added.</p>
+<p>Using the index primitive you can start iterating forward from the current position, like so:</p>
+<pre>
+-- Start from the current position, stop on the last message.
+function iterate()
+   offset = <b>index_offset()</b>
+   while( offset &lt; count_messages() )
+      jump_index_to( offset )
+
+      -- do your processing here.
+
+      offset = offset + 1
+   end
+end
+</pre>
+<p>This will iterate from the current message to the end of the list, which is generally what people want.  The final alternative is to start from the current position and iterate forward, wrapping when we hit the end of the list:</p>
+<pre>
+-- Start from the current position, continue until we wrap around.
+function iterate()
+   cur = index_offset()
+   max = count_messages()
+
+   -- start from the next message.
+   offset = cur + 1
+   if ( offset > max ) then offset = 0 end
+
+   while( offset != cur )
+      jump_index_to( offset )
+
+      -- do your processing here.
+
+
+      -- jump forward, but reset to the start if you hit the last message
+      offset = offset + 1
+      if ( offset > max ) then
+          offset = 0
+      end
+   end
+end
+
+</pre>
+</blockquote>
+
