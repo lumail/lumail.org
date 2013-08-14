@@ -58,3 +58,9 @@ ignore_case = false
 </pre>
 <p>When ambiguity is present for completion you'll be presented with a list of possible matches.  Press TAB repeatedly to select the completion you prefer, or press Esc to cancel and complete manually.</p>
 </blockquote>
+
+
+<h4>3. How can I handle GPG?</h4>
+<blockquote>
+<p>TODO:  <a href="https://github.com/skx/lumail/issues/87#issuecomment-22605624">https://github.com/skx/lumail/issues/87#issuecomment-22605624</a></p>
+</blockquote>
