@@ -60,7 +60,7 @@ src: lumail-0.18.tar.gz
 </ul></li>
 </ul>
 <blockquote>
-<p><b>Note</b>: Releases 0.1-0.17 used mimetic for MIME parsing, anything from 0.17 onwards uses GMime 2.6.x.</p>
+<p><b>Note</b>: Releases prior to <tt>0.18</tt> used mimetic for MIME parsing, anything from 0.18 onwards uses GMime 2.6.x.</p>
 </blockquote>
 <div style="padding-left:20px; border:1px solid silver">
  <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
