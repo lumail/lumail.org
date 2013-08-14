@@ -39,7 +39,7 @@ src: lumail-0.18.tar.gz
 <h2 id="building">Building from source</h2>
 <blockquote>
 <p>Lumail is deliberately designed to only depend upon a small number of libraries, to ensure that it is possible to build it upon the widest range of systems.</p>
-<p>As of release 0.18 the dependencies are as follows:</p>
+<p>As of release <span class="tt">0.18</span> the dependencies are as follows:</p>
 <ul class="invisible">
 <li>Lua 5.1
 <ul>
@@ -53,14 +53,14 @@ src: lumail-0.18.tar.gz
 <li>gmime-2.6
 <ul>
 <li>The MIME-library.</li>
-<li>Releases prior to 0.18 used the mimetic MIME library instead.</li>
+<li>Releases prior to <span class="tt">0.18</span> used the mimetic MIME library instead.</li>
 </ul></li>
 <li>pcre
 <li>The regular-expression library.</li>
 </ul></li>
 </ul>
 <blockquote>
-<p><b>Note</b>: Releases prior to <tt>0.18</tt> used mimetic for MIME parsing, anything from 0.18 onwards uses GMime 2.6.x.</p>
+<p><b>Note</b>: Releases prior to <span class="tt">0.18</span> used mimetic for MIME parsing, anything from <span class="tt">0.18</a> onwards uses GMime 2.6.x.</p>
 </blockquote>
 <div style="padding-left:20px; border:1px solid silver">
  <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
