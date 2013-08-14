@@ -14,7 +14,8 @@ Title: Command-Line arguments
 <dt><span class="tt">--folder "path"</span></dt>
 <dd><p>Open the given folder, and switch to index-mode on startup.</p></dd>
 <dt><span class="tt">--rcfile "file"</span></dt>
-<dd><p>Open and parse the given Lua file, in addition to the standard configuration files that are examined.</p></dd>
+<dd><p>Open and parse the given Lua file, in addition to the standard configuration files that are examined.</p>
+    <p>You may add multiple <span class="tt">--rcfile</span> arguments, if you wish to load multiple different files.</dd>
 <dt><span class="tt">--version</span></dt>
 <dd><p>Show the version number of your <span class="tt">lumail</span> binary, then exit.</p></dd>
 </dl>
