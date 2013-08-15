@@ -1,0 +1,16 @@
+title: on_delete_message()
+brief: Called just prior to the deletion of a message.
+seealso: current_message, save_message, delete
+version: 0.19
+----
+
+
+<p>If you define the function <span class="tt">on_delete_message()</span> it will be invoked immediately prior to the removal of the selected/specified message.</p>
+<p>The function will be invoked with the path to the message on-disk.
+<p>For example: </p>
+<pre>
+function on_delete_message( path )
+   <a href="/lua/msg.html">msg</a>( "Message deleted: " .. path );
+end
+</pre>
+<p><b>NOTE</b>: Any return value is ignored, and you cannot prevent the deletion with this hook.   Though if you wanted you could save any deleted message to <span class="tt">~/Maildir/.Trash</span>.</p>
