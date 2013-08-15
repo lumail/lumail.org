@@ -4,17 +4,18 @@ Title: Technical FAQ
 
 <blockquote>
  <ul class="invisible">
-  <li><a href="#faq_1">How can I modify message bodies?</a></li>
-  <li><a href="#faq_2">How does TAB-completion, and character input work?</a></li>
-  <li><a href="#faq_3">How can I handle GPG?</a></li>
-  <li><a href="#faq_4">How can I iterate over messages?</a></li>
+  <li><a href="#faq_bodies">How can I modify message bodies?</a></li>
+  <li><a href="#faq_rfc2047">Parsing of headers is broken (to/from/subject)?</a></li>
+  <li><a href="#faq_tab">How does TAB-completion, and character input work?</a></li>
+  <li><a href="#faq_gpg">How can I handle GPG?</a></li>
+  <li><a href="#faq_iterate">How can I iterate over messages?</a></li>
  </ul>
  <p>&nbsp;</p>
 </blockquote>
 
 
 
-<h4 id="faq_1">1. How can I modify message bodies?</h4>
+<h4 id="faq_bodies">How can I modify message bodies?</h4>
 <blockquote>
 <p>There are times when it is necessary to modify a message prior to display.  Lumail provides two opportunities to modify the message:</p>
 <ul>
@@ -32,7 +33,16 @@ Title: Technical FAQ
 </blockquote>
 
 
-<h4 id="faq_2">2. How does TAB-completion, and character input work?</h4>
+<h4 id="faq_rfc2047">Parsing of headers is broken (to/from/subject)?</h4>
+<blockquote>
+<p>We use <a href="http://spruce.sourceforge.net/gmime/">GMime</a> for parsing headers, message-bodies, and attachments.</p>
+<p>By default GMime is pretty strict, but it has a looser mode which can be enabled via custom flags.  If you're seeing some oddities with decoding of headers in particular please set the environmental variable <span class="tt">RFC2047</span> to a non-empty value.</p>
+<p>Upon a typical host you could do that via:</p>
+<pre>
+RFC2047=1 lumail [...args...]
+</pre>
+</blockquote>
+<h4 id="faq_tab">How does TAB-completion, and character input work?</h4>
 <blockquote>
 <p>Every time you're prompted for input, in the status-area, the code which handles it is that used by the <a href="/lua/prompt.html">prompt()</a> primitive.   This function reads individual characters and allows you to enter a complete "line".</p>
 <p>This function has been written to have the standard keybindings you might find via readline, etc.  For example:</p>
@@ -73,12 +83,12 @@ ignore_case = false
 </blockquote>
 
 
-<h4 id="faq_3">3. How can I handle GPG?</h4>
+<h4 id="faq_gpg">How can I handle GPG?</h4>
 <blockquote>
 <p>TODO:  <a href="https://github.com/skx/lumail/issues/87#issuecomment-22605624">https://github.com/skx/lumail/issues/87#issuecomment-22605624</a></p>
 </blockquote>
 
-<h4 id="faq_4">4. How can I iterate over messages?</h4>
+<h4 id="faq_iterate">How can I iterate over messages?</h4>
 <blockquote>
 <p>The traditional way of iterating over messages is to start at message zero, and advance one message at a time, until you hit the final one.  This is achieved like so:</p>
 <pre>
