@@ -13,5 +13,4 @@ function on_delete_message( path )
    <a href="/lua/msg.html">msg</a>( "Message deleted: " .. path );
 end
 </pre>
-<p><b>NOTE</b>: Any return value is ignored, and you cannot prevent the deletion with this hook.   Though if you wanted you could save any deleted message to <span class="tt">~/Maildir/.Trash</span>.</p>
-<p>See also the <a href="/examples/trash.html">trash() example</a>.</p>
+<p><b>NOTE</b>: Any return value is ignored, and you cannot prevent the deletion with this hook.  Although if you wish you could save any deleted message to a "trash" folder - which the <a href="/examples/trash.html">trash() example</a> demonstrates.</p>
