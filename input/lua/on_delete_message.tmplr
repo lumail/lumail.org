@@ -1,6 +1,6 @@
 title: on_delete_message()
 brief: Called just prior to the deletion of a message.
-seealso: current_message, save_message, delete
+seealso: current_message, save, delete
 version: 0.19
 ----
 
