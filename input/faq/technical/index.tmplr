@@ -14,6 +14,7 @@ Title: Technical FAQ
 </blockquote>
 
 
+<p>&nbsp;</p>
 
 <h4 id="faq_bodies">How can I modify message bodies?</h4>
 <blockquote>
@@ -33,6 +34,9 @@ Title: Technical FAQ
 </blockquote>
 
 
+<p>&nbsp;</p>
+
+
 <h4 id="faq_rfc2047">Parsing of headers is broken (to/from/subject)?</h4>
 <blockquote>
 <p>We use <a href="http://spruce.sourceforge.net/gmime/">GMime</a> for parsing headers, message-bodies, and attachments.</p>
@@ -42,6 +46,10 @@ Title: Technical FAQ
 RFC2047=1 lumail [...args...]
 </pre>
 </blockquote>
+
+
+<p>&nbsp;</p>
+
 <h4 id="faq_tab">How does TAB-completion, and character input work?</h4>
 <blockquote>
 <p>Every time you're prompted for input, in the status-area, the code which handles it is that used by the <a href="/lua/prompt.html">prompt()</a> primitive.   This function reads individual characters and allows you to enter a complete "line".</p>
@@ -83,10 +91,17 @@ ignore_case = false
 </blockquote>
 
 
+<p>&nbsp;</p>
+
+
 <h4 id="faq_gpg">How can I handle GPG?</h4>
 <blockquote>
 <p>TODO:  <a href="https://github.com/skx/lumail/issues/87#issuecomment-22605624">https://github.com/skx/lumail/issues/87#issuecomment-22605624</a></p>
 </blockquote>
+
+
+<p>&nbsp;</p>
+
 
 <h4 id="faq_iterate">How can I iterate over messages?</h4>
 <blockquote>
