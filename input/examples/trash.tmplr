@@ -1,0 +1,39 @@
+Title: trash()
+example:1
+----
+
+<p>This example shows how you can use the <a href="/lua/on_delete_message.html">on_delete_message()</a> hook to save deleted messages into a <span class="tt">Trash</span> folder - rather than immediately deleting them.</p>
+<p>From there you can auto-expire them with a cronjob, or similar.</p>
+<pre>
+--
+-- Save messages into ~/Maildir/.Trash on delete.
+--
+function on_delete_message( path )
+
+   --
+   -- If deleting a message in /.Trash, then do so
+   --
+   if ( string.find( path, "/.Trash" ) ) then
+      return
+   end
+
+   --
+   -- OK we're deleting a message that isn't in trash already
+   -- ensure we have a destination to save the message to.
+   --
+   trash = maildir_prefix() .. "/.Trash"
+   if ( not is_maildir( trash ) ) then
+      create_maildir( trash )
+   end
+
+   --
+   -- Save: Note we cannot use "save_message" here, because that
+   -- truis to call delete post-save.
+   --
+   -- Which means the message will disappear from behind the back
+   -- of the delete() handler.
+   --
+   os.execute( "/bin/cp " .. path .. " " .. trash .. "/cur/" )
+
+end
+</pre>

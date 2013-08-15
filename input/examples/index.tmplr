@@ -46,6 +46,8 @@ Title: Examples of Lua functions
       <p>This function reads X-Remote-IP header form a message, which I've configured my mailserver to populate with the IP address of the mail-server which sent me a mail.</p>
       <p>Once the remote IP address has been found it is appended to a local blacklist.</p>
     </dd>
+    <dt><a href="trash.html">Trash() handling</a></dt>
+    <dd><p>This example shows how to save messages to a Trash folder, instead of deleting them entirely.</p></dd>
     <dt><a href="view_attachments.html">view_attachments()</a></dt>
     <dd><p>This example demonstrates a simple menu to automatically open the attachments associated with a message with the correct application.</p></dd>
 </dl>
