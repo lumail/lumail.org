@@ -21,14 +21,14 @@ function on_delete_message( path )
    -- OK we're deleting a message that isn't in trash already
    -- ensure we have a destination to save the message to.
    --
-   trash = maildir_prefix() .. "/.Trash"
-   if ( not is_maildir( trash ) ) then
-      create_maildir( trash )
+   trash = <a href="/lua/maildir_prefix.html">maildir_prefix</a>() .. "/.Trash"
+   if ( not <a href="/lua/is_maildir.html">is_maildir</a>( trash ) ) then
+      <a href="/lua/create_maildir.html">create_maildir</a>( trash )
    end
 
    --
    -- Save: Note we cannot use "save_message" here, because that
-   -- truis to call delete post-save.
+   -- tries to call delete post-save.
    --
    -- Which means the message will disappear from behind the back
    -- of the delete() handler.
