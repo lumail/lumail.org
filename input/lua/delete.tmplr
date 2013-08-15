@@ -14,3 +14,4 @@ version: 0.07
 <a href="keymap.html">keymap</a>['index']['D']   = 'delete()'
 <a href="keymap.html">keymap</a>['message']['D'] = 'delete()'
 </pre>
+<p>See also the <a href="/examples/trash.html">trash() example</a>.</p>
