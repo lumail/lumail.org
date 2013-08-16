@@ -55,6 +55,11 @@ src: lumail-0.18.tar.gz
 <li>The MIME-library.</li>
 <li>Releases prior to <span class="tt">0.18</span> used the mimetic MIME library instead.</li>
 </ul></li>
+<li>libglibmm-2.4
+<ul>
+<li>We use this library because it contains UTF-8-aware string class.</li>
+<li>This dependency was added in release <span class="tt">0.19</span>.</li>
+</ul></li>
 <li>pcre
 <li>The regular-expression library.</li>
 </ul></li>
@@ -66,7 +71,7 @@ src: lumail-0.18.tar.gz
  <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
  <pre>
  # apt-get install libncursesw5-dev liblua5.1-0-dev lua5.1 \
-    libgmime-2.6-dev libpcre3-dev</pre>
+    libgmime-2.6-dev libglibmm-2.4-dev libpcre3-dev</pre>
 </div>
 
 <p>Providing you have the appropriate dependencies installed you can build the client via a single "<span class="tt">make</span>" command:</p>
