@@ -39,7 +39,7 @@ src: lumail-0.18.tar.gz
 <h2 id="building">Building from source</h2>
 <blockquote>
 <p>Lumail is deliberately designed to only depend upon a small number of libraries, to ensure that it is possible to build it upon the widest range of systems.</p>
-<p>As of release <span class="tt">0.18</span> the dependencies are as follows:</p>
+<p>As of the current release the dependencies are as follows:</p>
 <ul class="invisible">
 <li>Lua 5.1
 <ul>
