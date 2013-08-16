@@ -55,7 +55,7 @@ src: lumail-0.18.tar.gz
 <li>The MIME-library.</li>
 <li>Releases prior to <span class="tt">0.18</span> used the mimetic MIME library instead.</li>
 </ul></li>
-<li>libglibmm-2.4
+<li>glibmm-2.4
 <ul>
 <li>We use this library because it contains UTF-8-aware string class.</li>
 <li>This dependency was added in release <span class="tt">0.19</span>.</li>
