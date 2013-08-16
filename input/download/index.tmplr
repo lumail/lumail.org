@@ -61,6 +61,7 @@ src: lumail-0.18.tar.gz
 <li>This dependency was added in release <span class="tt">0.19</span>.</li>
 </ul></li>
 <li>pcre
+<ul>
 <li>The regular-expression library.</li>
 </ul></li>
 </ul>
