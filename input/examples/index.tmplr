@@ -37,6 +37,8 @@ Title: Examples of Lua functions
       <p>Lumail allows multiple folders to be opened at once, and via the <a href="/lua/index_limit.html">index_limit()</a> primitive you can cause the list of messages to show those which are new.  Together these two things allow you to write the <span class="tt">global_unread()</span> method.</p>
       <p>This function shows all currently unread messages, regardless of their folder.</p>
     </dd>
+    <dt><a href="mark_read_by_pattern.html">mark_read_by_pattern()</a></dt>
+    <dd><p>This is related to the <span class="tt">daily()</span> example listed above.  Instead of blindly marking all messages as read it marks messages as read, in folders, if they match a given pattern.</p></dd>
     <dt><a href="mark_all_read.html">mark_all_read()</a></dt>
     <dd>
       <p>This function will mark all messages in the currently open maildir, or series of maildirs, as being read.</p>

@@ -1,0 +1,71 @@
+Title: mark_read_by_pattern()
+example:1
+----
+
+<p>This function will mark all mails in a folder as read if they match the given pattern.</p>
+<p>I use it to mark backup mails as read if they show "succss" in their subjects, etc.</p>
+<pre>
+--
+-- Given a Maildir path and a pattern mark each mail in the
+-- folder as read if the subject: matches the pattern.
+--
+function mark_read_in_folder( path, pattern )
+   om = global_mode();
+   ol = index_limit();
+
+   --
+   -- Ensure we got a valid Maildir.
+   --
+   if ( not is_maildir( path ) ) then
+      msg( "The specified path is not a maildir : " .. path )
+      return
+   end
+
+   -- Open the maildir and limit to new mails only.
+   global_mode( "maildir" );
+   clear_selected_folders();
+   set_selected_folder( path );
+   global_mode( "index" );
+   index_limit( "new" )
+
+   --
+   -- Iterate over every message
+   --
+   max = count_messages()
+   cur = 0
+   handled = 0
+
+   while( cur &lt; max ) do
+
+      jump_index_to( cur );
+
+      -- get the header of the message.
+      subject = header( "subject" )
+      if ( string.find( subject, pattern ) ) then
+         mark_read()
+         handled = handled + 1
+      end
+      cur = cur + 1
+   end
+
+   if ( handled &gt; 0 ) then
+      msg( "Marked " .. handled .. " messages as read" );
+   end
+
+   global_mode(om);
+   index_limit(ol);
+
+end
+
+--
+-- Handle a few simple cases
+--
+function daily()
+   mark_read_in_folder( os.getenv( "HOME" ) .. "/Maildir/.Automated.backups",
+                        "backup2l: success" );
+
+   mark_read_in_folder( os.getenv( "HOME" ) .. "/Maildir/.machines.spotlight",
+                        "/usr/local/cpanel/scripts/upcp --cron" )
+
+end
+</pre>
