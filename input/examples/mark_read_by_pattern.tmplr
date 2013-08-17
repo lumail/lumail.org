@@ -3,7 +3,7 @@ example:1
 ----
 
 <p>This function will mark all mails in a folder as read if they match the given pattern.</p>
-<p>I use it to mark backup mails as read if they show "succss" in their subjects, etc.</p>
+<p>I use it to mark backup mails as read if they show "success" in their subjects, etc.</p>
 <pre>
 --
 -- Given a Maildir path and a pattern mark each mail in the
