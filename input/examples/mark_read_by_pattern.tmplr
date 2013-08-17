@@ -41,7 +41,9 @@ function mark_read_by_pattern( path, pattern )
 
       -- get the header of the message.
       subject = <a href="/lua/header.html">header</a>( "subject" )
-      if ( string.find( subject, pattern ) ) then
+
+      -- use string.find in "literal" mode.  Disabling pattersn.
+      if ( string.find( subject, pattern, 1, true ) ) then
          <a href="/lua/mark_read.html">mark_read</a>()
          handled = handled + 1
       end
