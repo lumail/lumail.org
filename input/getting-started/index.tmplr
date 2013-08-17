@@ -13,11 +13,15 @@ started_page: 1
 <h2>Configuration Files</h2>
 <blockquote>
 <p><span class="tt">lumail</span> is configured by a pair of Lua configuration files, which are loaded at startup-time:</p>
-<p>If present the following two files are read:</p>
+<p>If present the following configuration files are read and executed:</p>
 <ul class="invisible">
 <li><span class="tt">/etc/lumail.lua</span>
 <ul>
 <li>This system-wide configuration file will affect all users.</li>
+</ul></li>
+<li><span class="tt">/etc/lumail.d/*.lua</span>
+<ul>
+<li>Any file matching this pattern is read.</li>
 </ul></li>
 <li><span class="tt">~/.lumail/config.lua</span>
 <ul>
