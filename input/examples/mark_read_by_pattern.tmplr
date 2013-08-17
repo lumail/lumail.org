@@ -10,34 +10,34 @@ example:1
 -- folder as read if the subject: matches the pattern.
 --
 function mark_read_by_pattern( path, pattern )
-   om = <a href="/lua/global_mode.html">global_mode</a>();
-   ol = <a href="/lua/index_limit.html">index_limit</a>();
+   om = <a href="/lua/global_mode.html">global_mode</a>()
+   ol = <a href="/lua/index_limit.html">index_limit</a>()
 
    --
    -- Ensure we got a valid Maildir.
    --
-   if ( not is_maildir( path ) ) then
+   if ( not <a href="/lua/is_maildir.html">is_maildir</a>( path ) ) then
       msg( "The specified path is not a maildir : " .. path )
       return
    end
 
    -- Open the maildir and limit to new mails only.
-   <a href="/lua/global_mode.html">global_mode</a>( "maildir" );
-   clear_selected_folders();
-   set_selected_folder( path );
-   <a href="/lua/global_mode.html">global_mode</a>( "index" );
+   <a href="/lua/global_mode.html">global_mode</a>( "maildir" )
+   clear_selected_folders()
+   set_selected_folder( path )
+   <a href="/lua/global_mode.html">global_mode</a>( "index" )
    <a href="/lua/index_limit.html">index_limit</a>( "new" )
 
    --
    -- Iterate over every message
    --
-   max = count_messages()
+   max = <a href="/lua/count_messages.html">count_messages</a>()
    cur = 0
    handled = 0
 
    while( cur &lt; max ) do
 
-      <a href="/lua/jump_index_to.html">jump_index_to</a>( cur );
+      <a href="/lua/jump_index_to.html">jump_index_to</a>( cur )
 
       -- get the header of the message.
       subject = <a href="/lua/header.html">header</a>( "subject" )
@@ -49,7 +49,7 @@ function mark_read_by_pattern( path, pattern )
    end
 
    if ( handled &gt; 0 ) then
-      msg( "Marked " .. handled .. " messages as read" );
+      <a href="/lua/msg.html">msg</a>( "Marked " .. handled .. " messages as read" )
    end
 
    <a href="/lua/global_mode.html">global_mode</a>(om);
