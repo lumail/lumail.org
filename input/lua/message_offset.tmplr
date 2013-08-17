@@ -1,7 +1,7 @@
 title: message_offset()
 brief: Get the current offset into the message.
 seealso: index_offset, maildir_offset
-version: 0.18
+version: 0.19
 ----
 
 <p>When in message-mode a message will be displayed upon the screen.  The display consists of two parts:</p>
