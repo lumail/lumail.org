@@ -9,9 +9,9 @@ example:1
 -- Given a Maildir path and a pattern mark each mail in the
 -- folder as read if the subject: matches the pattern.
 --
-function mark_read_in_folder( path, pattern )
-   om = global_mode();
-   ol = index_limit();
+function mark_read_by_pattern( path, pattern )
+   om = <a href="/lua/global_mode.html">global_mode</a>();
+   ol = <a href="/lua/index_limit.html">index_limit</a>();
 
    --
    -- Ensure we got a valid Maildir.
@@ -22,11 +22,11 @@ function mark_read_in_folder( path, pattern )
    end
 
    -- Open the maildir and limit to new mails only.
-   global_mode( "maildir" );
+   <a href="/lua/global_mode.html">global_mode</a>( "maildir" );
    clear_selected_folders();
    set_selected_folder( path );
-   global_mode( "index" );
-   index_limit( "new" )
+   <a href="/lua/global_mode.html">global_mode</a>( "index" );
+   <a href="/lua/index_limit.html">index_limit</a>( "new" )
 
    --
    -- Iterate over every message
@@ -37,12 +37,12 @@ function mark_read_in_folder( path, pattern )
 
    while( cur &lt; max ) do
 
-      jump_index_to( cur );
+      <a href="/lua/jump_index_to.html">jump_index_to</a>( cur );
 
       -- get the header of the message.
-      subject = header( "subject" )
+      subject = <a href="/lua/header.html">header</a>( "subject" )
       if ( string.find( subject, pattern ) ) then
-         mark_read()
+         <a href="/lua/mark_read.html">mark_read</a>()
          handled = handled + 1
       end
       cur = cur + 1
@@ -52,8 +52,8 @@ function mark_read_in_folder( path, pattern )
       msg( "Marked " .. handled .. " messages as read" );
    end
 
-   global_mode(om);
-   index_limit(ol);
+   <a href="/lua/global_mode.html">global_mode</a>(om);
+   <a href="/lua/index_limit.html">index_limit</a>(ol);
 
 end
 
@@ -61,10 +61,10 @@ end
 -- Handle a few simple cases
 --
 function daily()
-   mark_read_in_folder( os.getenv( "HOME" ) .. "/Maildir/.Automated.backups",
+   mark_read_by_pattern( os.getenv( "HOME" ) .. "/Maildir/.Automated.backups",
                         "backup2l: success" );
 
-   mark_read_in_folder( os.getenv( "HOME" ) .. "/Maildir/.machines.spotlight",
+   mark_read_by_pattern( os.getenv( "HOME" ) .. "/Maildir/.machines.spotlight",
                         "/usr/local/cpanel/scripts/upcp --cron" )
 
 end
