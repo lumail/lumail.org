@@ -22,3 +22,4 @@ version: 0.15
 -- Show in order received.
 sort( "date-asc" );
 </pre>
+<p><b>NOTE</b>: The <span class="tt">date-*</span> options sort the messages based upon the <span class="tt">mtime</span> attribute of the message-files, as returned by <span class="tt">stat</span> which might be inaccurate.  Please see the <a href="/faq/technical/#faq_sort">technical FAQ</a> for notes on this.</p>

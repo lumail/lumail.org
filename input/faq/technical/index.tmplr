@@ -9,6 +9,7 @@ Title: Technical FAQ
   <li><a href="#faq_tab">How does TAB-completion, and character input work?</a></li>
   <li><a href="#faq_gpg">How can I handle GPG?</a></li>
   <li><a href="#faq_iterate">How can I iterate over messages?</a></li>
+  <li><a href="#faq_sort">Why is the sort-order of my messages wrong?</a></li>
  </ul>
  <p>&nbsp;</p>
 </blockquote>
@@ -161,3 +162,16 @@ end
 </pre>
 </blockquote>
 
+
+<p>&nbsp;</p>
+
+<h4 id="faq_sort">Why is the sort-order of my messages wrong?</h4>
+<blockquote>
+<p>Lumail has several different sorting methods that can be applied to folders, which are set with the <a href="/lua/sort.html">sort()</a> method.</p>
+<p>Because it is the fastest we default to sorting messages by the modification time of the files which messages are stored in.  This only requires the use of <span class="tt">stat()</span>, rather than parsing the Date: headers of each message.</p>
+<p>If you're using offlineimap, or some other tool, which manipulates the <span class="tt">mtime</span> of message-files on-disk then you should use :</p>
+<pre>
+-- slower, but more accurate sorting method
+sort( "header-asc" );
+</pre>
+</blockquote>
