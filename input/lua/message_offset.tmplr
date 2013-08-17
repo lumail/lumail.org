@@ -1,0 +1,12 @@
+title: message_offset()
+brief: Get the current offset into the message.
+seealso: index_offset, maildir_offset
+version: 0.18
+----
+
+<p>When in message-mode a message will be displayed upon the screen.  The display consists of two parts:</p>
+<ul>
+<li>A list of headers (&amp; optionally a list of attachment-names).</li>
+<li>The body of the email.</li>
+</ul>
+<p>The <span class="tt">message_offset()</span> function will return the number of lines the message has been scrolled down.</p>
