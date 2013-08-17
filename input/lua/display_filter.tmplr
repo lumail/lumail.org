@@ -6,7 +6,7 @@ version: 0.18
 
 <p>When in message-mode an email will be displayed upon the screen.  The display consists of two parts:</p>
 <ul>
-<li>A list of headers.</li>
+<li>A list of headers (&amp; optionally a list of attachment-names).</li>
 <li>The body of the email.</li>
 </ul>
 <p>If you set a <span class="tt">display_filter</span> the body of the message being displayed will be filtered through it.</p>
