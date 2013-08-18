@@ -99,7 +99,7 @@ sub expand_variables
                 }
                 close($handle);
 
-                next if ( $removed );
+                next if ($removed);
 
                 #
                 #  If we got a title ensure it matches the filename.
@@ -118,7 +118,7 @@ sub expand_variables
                 #  Sanity-check
                 #
                 warn "File $file didn't contain a brief: header"
-                  unless ( length($brief) );
+                  unless ( length($brief)  );
 
                 warn "Brief description in $file missing punctuation"
                   unless ( $brief =~ /[.?]$/ );
@@ -141,11 +141,41 @@ sub expand_variables
             }
 
             #
+            # Get the max version
+            #
+            my $max = "0";
+            foreach my $e ( @$loop )
+            {
+                if ( $e->{'version'} && ( $e->{'version'} > $max ) )
+                {
+                    $max = $e->{'version'};
+                }
+            }
+
+            #
+            #  Only show version of the last five releases
+            #
+            $max -= 0.05;
+
+            #
+            #  Update hash
+            #
+            my $updated;
+            foreach my $e ( @$loop )
+            {
+                if ( $e->{'version'} && ( $e->{'version'} < $max ) )
+                {
+                    delete( $e->{'version'} );
+                }
+                push(@$updated, $e );
+            }
+
+            #
             # Make the look-variable "primitives" available to the
             # page that invoked us.
             #
             $hash{ 'primitives' } = undef;
-            $hash{ 'primitives' } = $loop if ($loop);
+            $hash{ 'primitives' } = $updated if ($updated);
         }
     }
 
