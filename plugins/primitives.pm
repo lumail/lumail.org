@@ -69,7 +69,7 @@ sub expand_variables
             # Find all input-files that might contain lua-primitive
             # docs.
             #
-            foreach my $file ( sort( glob( $dir . "/*.tmplr" ) ) )
+            foreach my $file ( sort {lc $a cmp lc $b}( glob( $dir . "/*.tmplr" ) ) )
             {
 
                 # skip the invoking page.
