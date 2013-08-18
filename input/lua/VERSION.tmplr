@@ -1,7 +1,7 @@
 title: VERSION
 brief: A text-string containing the Lumail version number.
 seealso: get_variables, DEBUG
-version: 0.08
+version: 0.19
 ----
 
 <p>The global variable <span class="tt">VERSION</span> contains the version number of the Lumail release.</p>
