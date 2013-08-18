@@ -1,5 +1,6 @@
 title: get_variables()
 brief: Get a copy of all current variables.
+seealso: DEBUG, VERSION
 version: 0.08
 ----
 
