@@ -59,7 +59,7 @@
   <p>This function has been available since version <!-- tmpl_var name='version' -->.</p>
   <!-- /tmpl_if -->
   <h3>See Also</h3>
-  <p class="seealso">See also <!-- tmpl_loop name='seealso' --><a href="<!-- tmpl_var name='function' -->.html"><!-- tmpl_var name='function' -->()</a><!-- tmpl_if name='__last__' -->.<!-- tmpl_else -->, <!-- /tmpl_if --><!-- /tmpl_loop --></p>
+  <p class="seealso">See also <!-- tmpl_loop name='seealso' --><a href="<!-- tmpl_var name='function' -->.html"><!-- tmpl_var name='function' --></a><!-- tmpl_if name='__last__' -->.<!-- tmpl_else -->, <!-- /tmpl_if --><!-- /tmpl_loop --></p>
   <!-- /tmpl_if -->
 
 </div>
