@@ -59,7 +59,7 @@ RFC2047=1 lumail [...args...]
 <li><span class="tt">Ctrl-a</span>: Go to beginning of line.</li>
 <li><span class="tt">Ctrl-b</span>: Go backwards one character.</li>
 <li><span class="tt">Ctrl-e</span>: Go to the end of line.</li>
-<li><span class="tt">Ctrl-f</span>: Go forwardso ne character.</li>
+<li><span class="tt">Ctrl-f</span>: Go forwards one character.</li>
 <li><span class="tt">Ctrl-k</span>: Kill the reminder of the line.</li>
 </ul>
 <p>The reading of individual characters, along with all keyboard input, uses two sources of keys:</p>
