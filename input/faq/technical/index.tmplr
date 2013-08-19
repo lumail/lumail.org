@@ -10,6 +10,7 @@ Title: Technical FAQ
   <li><a href="#faq_gpg">How can I handle GPG?</a></li>
   <li><a href="#faq_iterate">How can I iterate over messages?</a></li>
   <li><a href="#faq_sort">Why is the sort-order of my messages wrong?</a></li>
+  <li><a href="#faq_state">Many functions need to save/restore state, how can that be done?</a></li>
  </ul>
  <p>&nbsp;</p>
 </blockquote>
@@ -174,4 +175,29 @@ end
 -- slower, but more accurate sorting method
 sort( "header-asc" );
 </pre>
+</blockquote>
+
+
+<p>&nbsp;</p>
+
+<h4 id="faq_state">Many functions need to save/restore state, how can that be done?</a></li></h4>
+<blockquote>
+<p>Many operations involve changing the global-mode, or limits, programatically.  If these limits aren't saved/restored then the user will be surprised by user-interface changes.</p>
+<p>To avoid this a common idiom is to save/restore state.  This can be as basic as:</p>
+<pre>
+-- save mode / limits
+old_mode   = global_mode()
+old_ilimit = index_limit()
+old_mlimit = maildir_limit()
+
+--
+-- ...
+--
+
+-- restore
+global_mode( old_mode )
+index_limit( old_ilimit )
+maildir_limit( old_mlimit)
+</pre>
+<p>However this doesn't take into account selected folders, or message offsets.  It is perhaps more useful to wrap the save/restore steps into distinct functions.  That is what the <a href="/examples/state.html">save_state() &amp; load_state()</a> functions do.</p>
 </blockquote>
