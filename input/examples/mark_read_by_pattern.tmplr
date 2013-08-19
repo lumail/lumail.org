@@ -10,6 +10,12 @@ example:1
 -- folder as read if the subject: matches the pattern.
 --
 function mark_read_by_pattern( path, pattern )
+
+   --
+   -- Save the state
+   --
+   -- See also : <a href="http://lumail.org/examples/state.html">save_state() &amp; load_state()</a>
+   --
    om = <a href="/lua/global_mode.html">global_mode</a>()
    ol = <a href="/lua/index_limit.html">index_limit</a>()
 
@@ -54,6 +60,12 @@ function mark_read_by_pattern( path, pattern )
       <a href="/lua/msg.html">msg</a>( "Marked " .. handled .. " messages as read" )
    end
 
+   --
+   -- Restore the saved-state.
+   --
+   --
+   -- See also : <a href="http://lumail.org/examples/state.html">save_state() &amp; load_state()</a>
+   --
    <a href="/lua/global_mode.html">global_mode</a>(om);
    <a href="/lua/index_limit.html">index_limit</a>(ol);
 

@@ -12,6 +12,9 @@ example:1
 function daily()
 
    -- Get the current mode + limit
+   --
+   -- See also : <a href="http://lumail.org/examples/state.html">save_state() &amp; load_state()</a>
+   --
    cur_mode   = <a href="/lua/global_mode.html">global_mode</a>();
    cur_mlimit = <a href="/lua/maildir_limit.html">maildir_limit</a>();
    cur_ilimit = <a href="/lua/index_limit.html">index_limit</a>();
@@ -86,6 +89,8 @@ function daily()
 
    --
    -- Now reset things back to the way we were.
+   --
+   -- See also : <a href="http://lumail.org/examples/state.html">save_state() &amp; load_state()</a>
    --
    <a href="/lua/global_mode.html">global_mode</a>(cur_mode);
    <a href="/lua/maildir_limit.html">maildir_limit</a>(cur_mlimit);
