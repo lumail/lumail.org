@@ -27,7 +27,7 @@ Title: Examples of Lua functions
     <dd>
       <p>Internally lumail keeps a collection of variables which are made available to Lua.  This function dumps them to a temporary file on-disk.</p>
     </dd>
-    <dt><a href="get_signature.html">get_signature()</a> <sup>v0.9+</sup></dt>
+    <dt><a href="get_signature.html">get_signature()</a></dt>
     <dd>
     <p>The <a href="/lua/get_signature.html">get_signature()</a> function is called prior to a mail being opened in your editor for composition.</p>
     <p>This example shows how you can usefully and dynamically select the appropriate <span class="tt">.signature</span> file for the mail.</p>
