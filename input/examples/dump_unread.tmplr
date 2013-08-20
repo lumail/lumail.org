@@ -11,6 +11,9 @@ example:1
 function dump_unread()
 
    -- get the current state
+   --
+   -- See also : <a href="http://lumail.org/examples/state.html">save_state() &amp; load_state()</a>
+   --
    mode  = <a href="/lua/global_mode.html">global_mode</a>()
    limit = <a href="/lua/maildir_limit.html">maildir_limit</a>();
 
@@ -44,7 +47,7 @@ function dump_unread()
 
    ff:close();
 
-   -- restore
+   -- restore state
    <a href="/lua/global_mode.html">global_mode</a>( mode );
    <a href="/lua/maildir_limit.html">maildir_limit</a>( limit );
 end

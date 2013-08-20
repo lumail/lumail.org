@@ -21,8 +21,11 @@ function is_google()
 
    --
    -- Get the current maildir_limit, and set it to "all".
+   --
    -- We do this because maildirs_matching will only consider the
    -- limit currently in play.
+   --
+   -- See also : <a href="http://lumail.org/examples/state.html">save_state() &amp; load_state()</a>
    --
    ol = <a href="/lua/maildir_limit.html">maildir_limit</a>();
    <a href="/lua/maildir_limit.html">maildir_limit</a>( "all" );
@@ -35,7 +38,7 @@ function is_google()
    --
    -- If the count is >0 we do
    --
-   if (#results > 0) then
+   if (#results &gt; 0) then
       <a href="/lua/maildir_limit.html">maildir_limit</a>( ol );
       return true;
    end
