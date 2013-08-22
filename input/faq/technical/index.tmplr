@@ -11,6 +11,7 @@ Title: Technical FAQ
   <li><a href="#faq_iterate">How can I iterate over messages?</a></li>
   <li><a href="#faq_sort">Why is the sort-order of my messages wrong?</a></li>
   <li><a href="#faq_state">Many functions need to save/restore state, how can that be done?</a></li>
+  <li><a href="#faq_msmtp">How can I use msmtp?</a></li>
  </ul>
  <p>&nbsp;</p>
 </blockquote>
@@ -200,4 +201,59 @@ index_limit( old_ilimit )
 maildir_limit( old_mlimit)
 </pre>
 <p>However this doesn't take into account selected folders, or message offsets.  It is perhaps more useful to wrap the save/restore steps into distinct functions.  That is what the <a href="/examples/state.html">save_state() &amp; load_state()</a> functions do.</p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<h4 id="faq_msmtp">How can I use msmtp?</h4>
+<blockquote>
+<p><a href="http://msmtp.sourceforge.net/">msmtp</a> is a simple mail client which works as a relay for sending outgoing mail.  In general you can use any command-line client for sending mail, so long as:</p>
+<ul>
+<li>The client can accept submissions on STDIN.</li>
+<li>The client has a consistent set of command-line  arguments.</li>
+</ul>
+<p>You'd set the path to the binary to use via <a href="/lua/sendmail_path.html">sendmail_path()</a> and all would be well.  Unfortunately <span class="tt">msmtp</span> requires the recipient to be specified upon the command-line, which makes using it a little more involved.</p>
+<p>The following example shows how to handle using it:</p>
+<pre>
+--
+-- msmtp needs to know which account you are using to send the mail and also
+-- to whom the mail should be sent.
+--
+-- The account name will be saved in a global variable 'cur_acc' and the
+-- recipient's email address can be parsed from the outgoing message via
+-- the <a href="/lua/on_send_message.html">on_send_message()</a> hook.
+--
+-- In short we're updating the command-line to use, to include the recipient
+-- every time we're sending a message.  A similar result could be achieved
+-- by setting <a href="/lua/sendmail_path.html">sendmail_path()</a> to a
+-- shell-script which parsed the message, and invoked mstpd.
+--
+
+--
+-- Path to binary
+msmtp_path = '/usr/bin/msmtp'
+
+-- The account that is used, as specified in the msmtprc file
+cur_acc = 'gmail'
+
+--
+-- Update the path to the mail-program to include the recipient address
+-- in the arguments.
+--
+function on_send_message(filepath)
+    local f = assert(io.open(filepath, 'r'))
+    while true do
+        local line = f:read('*line')
+        if ( string.find( line, "To:", 1, true )  ) then
+
+             -- the first 3 characters are "To:"
+            to = string.sub(line, 4)
+
+            sendmail_path(msmtp_path .. ' -a ' .. cur_acc .. ' ' .. to)
+            break
+        end
+    end
+    f:close()
+end
+</pre>
 </blockquote>
