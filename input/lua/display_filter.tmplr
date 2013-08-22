@@ -1,6 +1,6 @@
 title: display_filter()
 brief: Pass email bodies through a filter prior to display.
-seealso: on_read_message, headers, mail_filter
+seealso: on_read_message, headers, mail_filter, on_get_body
 version: 0.18
 ----
 
