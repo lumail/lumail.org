@@ -1,6 +1,6 @@
 title: mail_filter()
 brief: Pass whole emails through a filter.
-seealso: on_read_message, headers, display_filter,display_filter.tmplr
+seealso: on_read_message, headers, display_filter
 version: 0.18
 ----
 
