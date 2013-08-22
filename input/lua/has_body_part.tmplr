@@ -1,0 +1,13 @@
+title: has_body_part()
+brief: Does this message have a MIME part of the given type?
+seealso: on_get_body, get_body_part, count_body_parts, get_body_parts
+version: 0.20
+----
+
+<p>This function return TRUE if the current message has a MIME-part of the given content-type.</p>
+<p>For example:</p>
+<pre>
+if ( has_body_part( "image/jpg" ) ) then
+   <a href="/lua/msg.html">msg</a>( "This message contains an image" )
+end
+</pre>

@@ -16,13 +16,13 @@ version: 0.20
 -- parsing.
 --
 function on_get_body()
-   parts = get_body_parts()
+   parts = <a href="/lua/get_body_parts.html">get_body_parts</a>()
 
    result = ""
 
    for index,type in ipairs( parts ) do
       if ( type == "text/plain" ) then
-         result = result .. get_body_part( index )
+         result = result .. <a href="/lua/get_body_part.html">get_body_part</a>( index )
       end
    end
 

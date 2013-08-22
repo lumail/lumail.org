@@ -1,0 +1,7 @@
+title: get_body_part()
+brief: Retrieve a specified MIME part from the current message.
+seealso: on_get_body, get_body_parts, has_body_part, count_body_parts
+version: 0.20
+----
+
+<p>This function will retrieve the Nth MIME-part of the current message.</p>
