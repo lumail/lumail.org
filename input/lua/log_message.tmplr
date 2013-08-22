@@ -8,5 +8,5 @@ version: 0.10
 <p>The <span class="tt">log_message()</span> primitive will allow you to append your own message to that logfile.</p>
 <p>For example:</p>
 <pre>
-log_message( "THe user is " .. os.getenv( "USER" ) );
+log_message( "The user is " .. os.getenv( "USER" ) );
 </pre>
