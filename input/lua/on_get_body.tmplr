@@ -7,6 +7,7 @@ version: 0.20
 <p>If you define the function <span class="tt">on_get_body</span> it will be invoked and the return value used as the message-body to display.</p>
 <p>By default, in the absence of any filters, Lumail will display the <b>first</b> <span class="tt">text/plain</span> part of a message.  Using this function you can override that.</p>
 <p>For example:</p>
+<pre>
 --
 -- This is called to get the body of the message to display.
 --
