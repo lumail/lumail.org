@@ -10,4 +10,6 @@ seealso: alert
 <pre>
 msg( "I am alive!" );
 msg( "Today is " .. os.date() );
+msg( 3 );
+msg( false );
 </pre>
