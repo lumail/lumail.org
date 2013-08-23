@@ -21,19 +21,19 @@ Title: Technical FAQ
 
 <h4 id="faq_bodies">How can I modify message bodies?</h4>
 <blockquote>
-<p>There are times when it is necessary to modify a message prior to display.  Lumail provides two opportunities to modify the message:</p>
-<ul>
+<p>There are times when it is necessary to modify a message prior to display.  Lumail provides two ways in which you can modify the message:</p>
+<ol>
+<li><a href="/lua/on_get_body.html">on_get_body()</a></li>
 <li><a href="/lua/mail_filter.html">mail_filter()</a></li>
-<li><a href="/lua/display_filter.html">display_filter()</a></li>
-</ul>
-<p>Initially a message is read from disk, and the body is piped through the <span class="tt">mail_filter()</span> command, if one is set.</p>
-<p>Then the resulting output will be parsed such that the first text/plain MIME component can be displayed.  Just prior to the display this text will be passed through the shell-command defined in <span class="tt">display_filter</span>.</p>
+</ol>
+<p>The <span class="tt">on_get_body()</span> function is called initially when a message is to be displayed.  If that returns a non-empty string then the output will be used as the body to display.  This allows you to juggle MIME-parts, convert HTML to text, etc.</p>
+<p>If you don't use the <span class="tt">on_get_body()</span> function then the contents of the message will be read from the disk, and piped through the system command defined with <span class="tt">mail_filter()</span>.</p>
+<p>Finally just prior to the display the message body will be passed through the shell-command defined in <span class="tt">display_filter()</span>.</p>
 <p>This means you have two ways of filtering a command, both via the shell:</p>
 <ul>
-<li><span class="tt">display_filter</span> - Will filter just the first text/plain part, and will be done prior to display.</li>
+<li><span class="tt">display_filter</span> - Will filter just the text which is displayed upon the screen.</li>
 <li><span class="tt">mail_filter</span> - Will filter just the whole message (headers, attachments, and all).</li>
 </ul>
-<p>If you need to convert HTML to text then you'd use the second filter.  If you want to snip excessive quoting you'd use the first filter.</p>
 </blockquote>
 
 
