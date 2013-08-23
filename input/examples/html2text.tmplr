@@ -10,11 +10,11 @@ function on_get_body()
    --
    -- If we don't have lynx we can't do anything ..
    ---
-   if ( not executable( "/usr/bin/lynx" ) ) then
+   if ( not <a href="/lua/executable.html">executable</a>( "/usr/bin/lynx" ) ) then
       return( "" )
    end
 
-   parts = get_body_parts()
+   parts = <a href="/lua/get_body_parts.html">get_body_parts</a>()
 
    --
    -- Do we have text/plain?  If so return it immediately.
@@ -33,12 +33,12 @@ function on_get_body()
          --  2.  return(get_body_part(index)) - Explicitly return
          --     the first text/plain part we've found.
          --
-         return(get_body_part( index ))
+         return(<a href="/lua/get_body_part.html">get_body_part</a>( index ))
       end
       if ( type == "text/html" ) then
 
          -- Save the HTML part away.
-         html = get_body_part( index )
+         html = <a href="/lua/get_body_part.html">get_body_part</a>( index )
       end
    end
 
