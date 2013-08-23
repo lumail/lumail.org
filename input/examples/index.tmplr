@@ -37,6 +37,8 @@ Title: Examples of Lua functions
       <p>Lumail allows multiple folders to be opened at once, and via the <a href="/lua/index_limit.html">index_limit()</a> primitive you can cause the list of messages to show those which are new.  Together these two things allow you to write the <span class="tt">global_unread()</span> method.</p>
       <p>This function shows all currently unread messages, regardless of their folder.</p>
     </dd>
+    <dt><a href="html2text.html">HTML email handling</a></dt>
+    <dd><p>This function shows how to convert HTML-emails to plain text, via &quot;<span class="tt">lynx -dump</span>&quot;.</p></dd>
     <dt><a href="state.html">load_state() &amp; save_state()</a></dt>
     <dd><p>You'll notice that many operations require saving state before completing them, and restoring that state afterward.  These two helper functions save all useful state, and later allow it to be restored.</p></dd>
     <dt><a href="mark_read_by_pattern.html">mark_read_by_pattern()</a></dt>
