@@ -27,8 +27,7 @@ Title: Technical FAQ
 <li><a href="/lua/mail_filter.html">mail_filter()</a></li>
 </ol>
 <p>The <span class="tt">on_get_body()</span> function is called initially when a message is to be displayed.  If that returns a non-empty string then the output will be used as the body to display.  This allows you to juggle MIME-parts, convert HTML to text, etc.</p>
-<p>If you don't use the <span class="tt">on_get_body()</span> function then the contents of the message will be read from the disk, and piped through the system command defined with <span class="tt">mail_filter()</span>.</p>
-<p>Finally just prior to the display the message body will be passed through the shell-command defined in <span class="tt">display_filter()</span>.</p>
+<p>If you don't use the <span class="tt">on_get_body()</span> function then the contents of the message will be read from the disk, piped through the system command defined with <span class="tt">mail_filter()</span>, and then piped through the command which is defined in the <span class="tt">display_filter()</span> function..</p>
 <p>This means you have two ways of filtering a command, both via the shell:</p>
 <ul>
 <li><span class="tt">display_filter</span> - Will filter just the text which is displayed upon the screen.</li>
