@@ -1,6 +1,6 @@
 Title: Download
 download_page: 1
-src: lumail-0.19.tar.gz
+src: lumail-0.20.tar.gz
 ----
 
 <p>Luamil is under constant development, but versioned <a href="#source">source-snapshots</a> are released when things are judged to be stable.</p>
