@@ -1,6 +1,6 @@
 title: header_colour()
 brief: Specify the colour to draw message headers in.
-seealso: attachment_colour, unread_maildir_colour, unread_message_colour, body_colour, wrap_lines, get_variables
+seealso: attachment_colour, unread_maildir_colour, unread_message_colour, body_colour, wrap_lines, get_variables, maildir_highlight_mode,index_highlight_mode
 version: 0.12
 ----
 

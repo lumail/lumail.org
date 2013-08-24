@@ -1,6 +1,6 @@
 title: unread_maildir_colour()
 brief: Control the colour for folders containing unread messages.
-seealso: attachment_colour, unread_message_colour, header_colour, body_colour, get_variables
+seealso: attachment_colour, unread_message_colour, header_colour, body_colour, get_variables,maildir_highlight_mode,index_highlight_mode
 version: 0.12
 ----
 
