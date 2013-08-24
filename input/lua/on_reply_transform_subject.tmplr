@@ -1,0 +1,40 @@
+title: on_reply_transform_subject()
+brief: Allow the user to transform a subject, when hitting reply.
+version: 0.21
+----
+
+<p>When you reply to an email traditionally the subject of your reply becomes:</p>
+<Pre>
+Re: your mail.
+</pre>
+<p>i.e. A "Re:" prefix is added, if not already present.</p>
+<p>This function is called when you hit <a href="/lua/reply.html">reply()</a> on an existing message, and allows you to transform the subject.  The default implementation behaves as you would expect, for example:</p>
+<pre>
+--
+-- If the function "on_reply_transform_subject" is defined it will
+-- be invoked when a message is replied to.
+--
+-- The intention is that you return an updated subject.
+--
+-- Here we just add "Re: " if missing, stripping any existing chain
+-- of "Re: Re: Re: foo.."
+--
+function on_reply_transform_subject( sub )
+
+   -- Empty subject?  Setup a default.
+   if ( string.len( sub ) &lt; 1 ) then
+      return "No subject"
+   end
+
+   --
+   -- Remove (repeated) "Re:" from the start of string.
+   --
+   while( string.find(sub, "^Re:" ) ) do
+      sub = string.gsub( sub, "^[rR][eE]:[ \t]+", "" );
+   end
+
+   -- Add the prefix.
+   return "Re: " .. sub
+
+end
+</pre>
