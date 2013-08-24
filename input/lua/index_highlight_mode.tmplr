@@ -1,0 +1,18 @@
+title: index_highlight_mode()
+brief: Specify how the highlight should be drawn in index-mode.
+seealso: attachment_colour, unread_maildir_colour, unread_message_colour, header_colour, wrap_lines, get_variables, maildir_highlight_mode, body_colour
+version: 0.20
+----
+
+<p>When the <a href="global_mode.html"><span class="tt">global_mode</span></a> is set to <span class="tt">index</span> you will be presented with a list of messages.</p>
+<p>You may navigate through these messages, and the currently selected message will be highlighted visually.</p>
+<p>The <span class="tt">index_highlight_mode()</span> helper allows you to choose how that highlighting is applied.  Valid options are:</p>
+<ul>
+<li>blink</li>
+<li>bold</li>
+<li>dim</li>
+<li>reverse</li>
+<li>standout</li>
+<li>underline</li>
+</ul>
+<p>The default is &quot;<span class="tt">standout</tt>&quot;.</p>
