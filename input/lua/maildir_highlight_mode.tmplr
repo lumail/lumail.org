@@ -7,12 +7,16 @@ version: 0.20
 <p>When the <a href="global_mode.html"><span class="tt">global_mode</span></a> is set to <span class="tt">maildir</span> you will be presented with a list of Maildirs.</p>
 <p>You may navigate through these folders, and the currently selected folder will be highlighted visually.</p>
 <p>The <span class="tt">maildir_highlight_mode()</span> helper allows you to choose how that highlighting is applied.  Valid options are:</p>
-<ul>
-<li>blink</li>
-<li>bold</li>
-<li>dim</li>
-<li>reverse</li>
-<li>standout</li>
-<li>underline</li>
+<ul class="invisible">
+<li><span class="tt">blink</span></li>
+<li><span class="tt">bold</span></li>
+<li><span class="tt">dim</span></li>
+<li><span class="tt">reverse</span></li>
+<li><span class="tt">standout</span></li>
+<li><span class="tt">underline</span></li>
 </ul>
+<p><b>NOTE</b>: You can combine values, so this is valid:</p>
+<pre>
+index_highlight_mode( "bold reverse");
+</pre>
 <p>The default is &quot;<span class="tt">standout</tt>&quot;.</p>
