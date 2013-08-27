@@ -1,6 +1,6 @@
 title: compose()
 brief: Begin composing a new email.
-seealso: editor, reply, sent_mail, sendmail_path, send_email, on_message_aborted, on_send_message, on_edit_message
+seealso: editor, reply, sent_mail, sendmail_path, send_email, on_message_aborted, on_send_message, on_edit_message, forward
 version: 0.07
 ----
 
