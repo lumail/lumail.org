@@ -1,6 +1,6 @@
 title: send_email()
 brief: Sent an email programatically.
-seealso: editor, reply, compose, sendmail_path, on_message_aborted, on_send_message, on_edit_message
+seealso: editor, reply, compose, sendmail_path, on_message_aborted, on_send_message, on_edit_message, forward, bounce
 version: 0.09
 ----
 

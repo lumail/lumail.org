@@ -1,6 +1,6 @@
 title: forward()
 brief: Forward an email.
-seealso: editor, compose, sent_mail, sendmail_path, send_email, on_message_aborted, on_send_message, on_edit_message, reply
+seealso: editor, compose, sent_mail, sendmail_path, send_email, on_message_aborted, on_send_message, on_edit_message, reply, bounce
 version: 0.21
 ----
 
