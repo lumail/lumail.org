@@ -1,6 +1,6 @@
 title: index_offset()
 brief: Get the current offset into the message list.
-seealso: scroll_index_down, scroll_index_up, scroll_index_to, index_offset, jump_index_to
+seealso: scroll_index_down, scroll_index_up, scroll_index_to, jump_index_to
 version: 0.18
 ----
 
