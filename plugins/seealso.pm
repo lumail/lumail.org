@@ -48,6 +48,13 @@ sub expand_variables
         {
 
             #
+            #  The name of the current page.
+            #
+            my $name = File::Basename::basename($page->source());
+            $name =~ s/\.tmplr$//g;
+
+
+            #
             #  For each function we'll add it to the list.
             #
             my $data;
@@ -74,6 +81,11 @@ sub expand_variables
                 next unless ( length($func) );
 
                 $also{ $func } += 1;
+            }
+
+            if ( $also{$name} )
+            {
+                warn "Page links to itself: " . $page->source() . "\n";
             }
 
             #
