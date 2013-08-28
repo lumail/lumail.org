@@ -12,6 +12,7 @@ Title: Technical FAQ
   <li><a href="#faq_sort">Why is the sort-order of my messages wrong?</a></li>
   <li><a href="#faq_state">Many functions need to save/restore state, how can that be done?</a></li>
   <li><a href="#faq_msmtp">How can I use msmtp?</a></li>
+  <li><a href="#faq_utf8">The output looks wrong with foreign character sets.</a></li>
  </ul>
  <p>&nbsp;</p>
 </blockquote>
@@ -255,4 +256,19 @@ function on_send_message(filepath)
     f:close()
 end
 </pre>
+</blockquote>
+
+<p>&nbsp;</p>
+<h4 id="faq_utf8">The output looks wrong with foreign character sets.</h4>
+<blockquote>
+<p>The intention is that all output will be sent to your terminal/console in UTF-8.</p>
+<p>So the first step is to explicitly setup a locale, if you've not already done so:</p>
+<pre>
+$ export LC_ALL=en_US.UTF8
+</pre>
+<p>Once you've configured a suitable locale you can test it via this simple Perl script:</p>
+<pre>
+$ perl -Mcharnames=:full -CS -wle 'print "\N{EURO SIGN}"'
+</pre>
+<p>If that outputs the correct Euro symbol ("&euro;") then your terminal is configured correctly, and all Lumail output should be correct.  If not please report a bug.</p>
 </blockquote>
