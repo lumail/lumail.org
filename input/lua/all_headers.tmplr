@@ -1,0 +1,19 @@
+title: all_headers()
+brief: Return all heades associated with the current message.
+seealso: body, header
+version: 0.21
+----
+
+<p>This function will return a table containing all the headers from within the current message.</p>
+<p>It could be used to dump all headers like so:</p>
+<pre>
+ff = io.open( "/tmp/headers.log", "a")
+
+table = all_headers()
+
+for header,value in pairs( table ) do
+   ff:write( header .. ":" .. value .. "\n" )
+end
+
+ff:close()
+</pre>
