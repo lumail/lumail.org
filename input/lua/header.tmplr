@@ -1,6 +1,6 @@
 title: header()
 brief: Return the value of an email header.
-seealso: header, body
+seealso: header, body, all_headers
 version: 0.07
 ----
 

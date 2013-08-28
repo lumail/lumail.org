@@ -1,6 +1,6 @@
 title: body()
 brief: Return the value of the parsed message body.
-seealso: header, current_message
+seealso: all_headers, header, current_message
 version: 0.18
 ----
 
