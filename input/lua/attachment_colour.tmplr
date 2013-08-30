@@ -10,7 +10,7 @@ version: 0.12
 <li>The list of attachments, if any are present.</li>
 <li>The body of the message.</li>
 </ul>
-<p>In order to allow attachments to stand out they my be displayed in a different colour, and the <span class="tt">attachment_colour<span> primitive allows you to specify that colour.</p>
+<p>In order to allow attachments to stand out they my be displayed in a different colour, and the <span class="tt">attachment_colour</span> primitive allows you to specify that colour.</p>
 <p>Valid choices are  "blue", "cyan", "green", "magenta", "red", "white", &amp; "yellow".</p>
 <p>For example:</p>
 <pre>

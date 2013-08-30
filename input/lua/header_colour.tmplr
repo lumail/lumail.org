@@ -10,7 +10,7 @@ version: 0.12
 <li>The list of attachments, if any are present.</li>
 <li>The body of the message.</li>
 </ul>
-<p>The <span class="tt">header_colour<span> primitive allows you to specify the colour used to draw the message headers, and their values.</p>
+<p>The <span class="tt">header_colour</span> primitive allows you to specify the colour used to draw the message headers, and their values.</p>
 <p>Valid choices are  "blue", "cyan", "green", "magenta", "red", "white", &amp; "yellow".</p>
 <p>For example:</p>
 <pre>
