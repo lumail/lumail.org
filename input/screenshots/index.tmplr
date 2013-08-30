@@ -23,9 +23,11 @@ screen_page: 1
 
 <h2>message-mode</h2>
 <blockquote>
-<p><img src="message.png" alt="message-mode view" width="729" height="488" /></p>
+<p><img src="message.png" alt="message-mode view" width="782" height="502" /></p>
 <blockquote>
-<p>This is the view of a single message.  The colours are my own personal preference, but you can set the colour of <a href="/lua/header_colour.html">the header</a>, any <a href="/lua/attachment_colour.html">attachments</a>, and the <a href="/lua/body_colour.html">body</a> separately.  If unset things will default to white on black, as you would expect</p>
+<p>This is the view of a single message.</p>
+<p>The colours used here are my own personal preferences, they can be set via the existing primitives.  For example <a href="/lua/header_colour.html">the header</a>, any <a href="/lua/attachment_colour.html">attachments</a>, and the <a href="/lua/body_colour.html">body</a> are changed separately.</p>
+<p>This message is obviously unsolicated SPAM, but it demonstrates the correct display of UTF8 characters, so it makes a good sample regardless.</p>
 </blockquote>
 </blockquote>
 
