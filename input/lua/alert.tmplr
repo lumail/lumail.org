@@ -10,7 +10,7 @@ seealso: msg
 <ul>
 <li>Clear the screen.</li>
 <li>Show the specified message.</li>
-<li>Wait until either the user presses <span>Return</span> or the timeout period expires.
+<li>Wait until either the user presses <span class="tt">Return</span> or the timeout period expires.
 <ul>
  <li>If not specified the timeout period is 60 seconds.</li>
 </ul></li>
