@@ -1,6 +1,6 @@
 title: DEBUG
 brief: A boolean describing whether debug support was compiled in.
-seealso: get_variables, VERSION
+seealso: get_variables, VERSION, log_message, dump_stack
 version: 0.19
 ----
 

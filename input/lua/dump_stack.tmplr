@@ -1,6 +1,6 @@
 title: dump_stack()
 brief: Dump the Lua stack to the debug-file.
-seealso: log_message
+seealso: log_message, DEBUG
 version: 0.10
 ----
 
