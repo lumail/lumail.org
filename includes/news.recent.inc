@@ -2,7 +2,7 @@
     <dt>13th October 2013</dt>
     <dd>
     <p>This release contains only minor changes, but these changes improve the speed of handling large mailboxes, and large directories.</p>
-    <p>The only significant new functionality is the introduction of the "/lua/hostname.html">hostname()</a> primitive.</p></dd>
+    <p>The only significant new functionality is the introduction of the <a href="/lua/hostname.html">hostname()</a> primitive.</p></dd>
     <dt>9th September 2013</dt>
     <dd>
       <p>A new release has been made, version 0.22, which improves support for reading non-MIME messages with foreign character sets.</p>
