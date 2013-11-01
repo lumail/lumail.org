@@ -2,7 +2,7 @@ Title: html2text()
 example:1
 ----
 
-<p>The following code uses the <a href="/lua/on_get_body.html">on_get_body()</a> function to convert HTML mails to plain-text, using <span class="tt">lynx<tt>.</p>
+<p>The following code uses the <a href="/lua/on_get_body.html">on_get_body()</a> function to convert HTML mails to plain-text, using <span class="tt">lynx</span>.</p>
 <p>Although this conversion is basic it seems to work pretty well.</p>
 <pre>
 function on_get_body()
