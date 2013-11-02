@@ -279,7 +279,7 @@ $ perl -Mcharnames=:full -CS -wle 'print "\N{EURO SIGN}"'
 <h4 id="faq_gmime">I'm having issues with multi-part messages, what could be wrong?</h4>
 <blockquote>
 <p>Several reported bugs relating to MIME issues, and multi-part messages, have ultimately been found to be caused by older versions of the GMime library.</p>
-<p>For example <a href="https://github.com/skx/lumail/issues/159">issue #159</a> was reported on a system using GMime v2.6.7-1, but on a different system with gMime  2.6.19-1 there was no bug.</p>
+<p>For example <a href="https://github.com/skx/lumail/issues/159">issue #159</a> was reported on a system using GMime v2.6.7-1, but on a different system with GMime  2.6.19-1 there was no bug.</p>
 <p>If you suspect MIME issues it would be helpful to check against a newer library - <span class="tt">lumail</span> will report the GMime version it was built against via the <a href="/cmdline/"><span class="tt">--version</span> flag</a>:</p>
 <pre>
 ~ $ lumail -v
