@@ -1,7 +1,6 @@
 title: clear()
 brief: Clears the screen.
-seealso: refresh_display
 version: 0.07
 ----
 
-<p>This function will clear the screen.</p>
+<p>This function will clear the screen, triggering a refresh.</p>

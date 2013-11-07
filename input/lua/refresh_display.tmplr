@@ -1,7 +1,5 @@
-title: refresh_display()
-brief: Redraw the screen.
-seealso: clear
-version: 0.07
+title: This function was renamed.
+removed: 1
 ----
 
-<p>This function will clear and redraw the display, it is useful while there are still a couple of odd redraw-related glitches.</p>
+<p>This function was first implemented in v0.07, but was removed in release v0.24 because it was identical to the <a href="/lua/clear.html">clear()</a> function.</p>
