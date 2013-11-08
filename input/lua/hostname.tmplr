@@ -9,3 +9,14 @@ version: 0.23
 <pre>
 <a href="/lua/msg.html">msg</a>(hostname());
 </pre>
+<p><b>NOTE</b>: If you do not like the value returned by this function you can set the environmental variable <span class="tt">HOSTNAME</span>.</p>
+<p>For example:</p>
+<pre>
+$ ./lumail --rcfile ./lumail.lua --eval "abort(hostname()
+shelob.my.flat
+
+$ export HOSTNAME=my.host.name
+$ ./lumail --rcfile ./lumail.lua --eval "abort(hostname()
+my.host.name
+</pre>
+
