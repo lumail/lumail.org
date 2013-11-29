@@ -18,5 +18,5 @@ end
 <li>The subdirectories: cur, new, &amp; tmp</li>
 <li>The path specified itself.</li>
 </ul>
-<p>If any of those directories cannot be deleted, perhaps because they contain files, then the function will return false.</p>
+<p>If any of those directories cannot be deleted, perhaps because they contain files, then the function will return <span class="tt">false</span>.</p>
 <p><span class="tt">true</span> will be returned on success.</p>
