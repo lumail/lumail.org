@@ -1,6 +1,6 @@
 title: delete()
 brief: Delete a message.
-seealso: current_message, save, on_delete_message
+seealso: current_message, save, on_delete_message, delete_maildir
 version: 0.07
 ----
 
