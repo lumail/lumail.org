@@ -9,7 +9,7 @@ version: 0.24
 <pre>
 sent = os.getenv( "HOME" ) .. "/Maildir/.sent" ;
 
-if ( ! <a href="/lua/is_maildir.html">is_maildir</a>( sent ) ) then
+if ( <a href="/lua/is_maildir.html">is_maildir</a>( sent ) ) then
    delete_maildir( sent )
 end
 </pre>
