@@ -1,0 +1,22 @@
+title: delete_maildir()
+brief: Delete an empty Maildir.
+seealso: is_maildir, create_maildir
+version: 0.24
+----
+
+<p>This function will delete an existing Maildir folder, if it is empty.</p>
+<p>For example:</p>
+<pre>
+sent = os.getenv( "HOME" ) .. "/Maildir/.sent" ;
+
+if ( ! <a href="/lua/is_maildir.html">is_maildir</a>( sent ) ) then
+   delete_maildir( sent )
+end
+</pre>
+<p>Deleting a Maildir involves removing four directories:</p>
+<ul>
+<li>The subdirectories: cur, new, &amp; tmp</li>
+<li>The path specified itself.</li>
+</ul>
+<p>If any of those directories cannot be deleted, perhaps because they contain files, then the function will return false.</p>
+<p><span class="tt">true</span> will be returned on success.</p>
