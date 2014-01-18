@@ -1,4 +1,9 @@
   <dl>
+    <dt>18th Janaury 2014</dt>
+    <dd>
+    <p>This release contains several bug-fixes relating to handling oddly formed messages, and updates some of the primitives such as <a href="/lua/hostname.html">hostname()</a> which may now be overridden.</p>
+    <p>The command-line handling was improved, and the <a href="/lua/clear.html">clear()</a> primitive will now work correctly in all circumstances.</p>
+    </dd>
     <dt>13th October 2013</dt>
     <dd>
     <p>This release contains only minor changes, but these changes improve the speed of handling large mailboxes, and large directories.</p>
