@@ -7,7 +7,7 @@
 	@python /usr/share/pyshared/slimmer/slimmer.py $< css --output=$@
 
 
-output: clean input/css/new.in
+output: clean input/css/new.css
 	templer
 
 clean:
