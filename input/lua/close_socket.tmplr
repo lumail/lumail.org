@@ -1,0 +1,7 @@
+title: close_socket()
+brief: Stop listening for commands on a unix domain-socket.
+seealso: bind_socket
+version: 0.25
+----
+
+<p>This function will close any socket which has been opened via <a href="bind_socket.html">bind_socket()</a>, meaning that input will no longer be processed from it.</p>

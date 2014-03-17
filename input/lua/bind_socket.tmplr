@@ -1,0 +1,16 @@
+title: bind_socket()
+brief: Start listening for commands on a unix domain-socket.
+seealso: close_socket
+version: 0.25
+----
+
+<p>This function will open a unix domain-socket on the named path, and start listening for commands upon it.</p>
+<p>Commands are read once for each iteration around the main event-loop which means that while they will not be processed immediately they should be almost instant.</p>
+<pre>
+bind_socket( os.getenv( "HOME" ) .. "/.lumail.socket" );
+</pre>
+<p>The lumail distribution contains a helper command, <tt>lumailctl</tt>, but you may also send commands via <tt>socat</tt> as follows:</p>
+<pre>
+echo "exit();" | sockat - UNIX-CLIENT:~/.lumail.socket
+</pre>
+
