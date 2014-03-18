@@ -12,6 +12,6 @@ bind_socket( os.getenv( "HOME" ) .. "/.listening.socket" );
 <p>If no path is specified the default is used of "<tt>~/.lumail.sock</tt>".</p>
 <p>The lumail distribution contains a helper command, <tt>lumailctl</tt>, which is used to send commands to the listening socket - although you may also send input via <tt>socat</tt> as follows:</p>
 <pre>
-echo "exit();" | sockat - UNIX-CLIENT:~/.lumail.socket
+echo "exit();" | socat - UNIX-CLIENT:~/.lumail.sock
 </pre>
 
