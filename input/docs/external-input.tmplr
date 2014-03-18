@@ -1,0 +1,28 @@
+Title: Reading external input
+----
+
+<p>As of release <tt>v0.25</tt> lumail can read commands from an external
+source, a Unix domain socket, and will process them as they arrive.</p>
+<p>To enable this handling you must explicitly call "<tt>bind_socket</tt>" within your configuration file.</p>
+<pre>
+--
+-- Open a socket, from which lumail will regularly read input
+--
+<a href="/lua/bind_socket.html">bind_socket()</a>
+
+--
+-- If you wish to close the socket you can call <a href="/lua/close_socket.html">close_socket</a> at a later point.
+--
+</pre>
+<p><b>Any</b> valid Lua code read from the socket will be executed, so the next step is to send some input.  Within the Lumail distribution is a tool called <tt>lumailctl</tt> which can be used to send commands:</p>
+<pre>
+$ lumailctl "exit();"
+</pre>
+<p>If you explicitly setup a path in the call to <tt>bind_socket</tt> you will need to specify that, otherwise the default will be used:</p>
+<pre>
+$ lumailctl /tmp/my.socket "exit();"
+</pre>
+<p>If you wish you could use <tt>socat</tt> to send the input, bypassing the need for the Lumail-specific tool:</p>
+<pre>
+echo alert('ok'); | socat - UNIX-CLIENT:~/.lumail.sock
+</pre>
