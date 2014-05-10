@@ -1,5 +1,5 @@
 title: cwd()
-brief: Retrieve the current working directory
+brief: Retrieve the current working directory.
 seealso: cd
 version: 0.24
 ----

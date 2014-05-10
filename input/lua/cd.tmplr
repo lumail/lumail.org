@@ -1,5 +1,5 @@
 title: cd()
-brief: Change the current working directory
+brief: Change the current working directory.
 seealso: cwd
 version: 0.24
 ----
