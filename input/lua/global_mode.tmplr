@@ -4,7 +4,7 @@ seealso: keymap, on_mode_change
 version: 0.07
 ----
 
-<p>The <span class="tt">lumail</span> client is a modal mail-client which means you're always in one of three modes:</p>
+<p>The <span class="tt">lumail</span> client is a modal mail-client which means you're always in one of four modes:</p>
 <dl>
 <dt>maildir</dt>
 <dd><p>Viewing the list of Maildir folders.</p></dd>
@@ -12,6 +12,8 @@ version: 0.07
 <dd><p>Viewing the list of messages contained within your selected folder(s).</p></dd>
 <dt>message</dt>
 <dd><p>Viewing a single message.</p></dd>
+<dt>text</dt>
+<dd><p>Viewing some static text, whether set by <a href="/lua/show_text.html">show_text()</a>, or <a href="/lua/show_file_contents.html">show_file_contents()</a></p></dd>
 </dl>
 <p>The <span class="tt">global_mode</span> function will return the current mode, or allow you to change to a new one.</p>
 <p>For example:</p>
