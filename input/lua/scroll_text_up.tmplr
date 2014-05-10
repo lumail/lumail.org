@@ -1,6 +1,6 @@
 title: scroll_text_up()
 brief: Scroll the text being displayed up.
-seealso: scroll_text_down, show_file_contents, show_text
+seealso: scroll_text_down, show_file_contents, show_text, scroll_text_to
 version: 0.25
 ----
 
