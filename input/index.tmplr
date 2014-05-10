@@ -14,11 +14,12 @@ news: read_file( "./news.recent.inc" )
         <li>No support for POP3/IMAP.</li>
         <li>This reduces complexity, reduces coding, and gives the client focus.</li>
     </ul></li>
-    <li>It is a modal client- you're always in one of three modes:
+    <li>It is a modal client- you're always in one of four modes:
       <ul>
         <li>maildir-mode: Shows you the list of folders.</li>
         <li>index-mode: Shows you the list of messages.</li>
         <li>message-mode: Shows you a single message.</li>
+        <li>text-mode: Shows you some simple text.</li>
     </ul></li>
     <li>Built in scripting with a mature language.
       <ul>
