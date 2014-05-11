@@ -1,6 +1,6 @@
 title: jump_message_to()
 brief: Scroll the current message to the given line.
-seealso: scroll_message_up, scroll_message_down, jump_message_to
+seealso: scroll_message_up, scroll_message_down, scroll_message_to
 version: 0.16
 ----
 
