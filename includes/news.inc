@@ -1,4 +1,9 @@
   <dl>
+    <dt>14th May 2014</dt>
+    <dd>
+    <p>Lumail 0.25 has been released and <a href="/download/">is available for download</a>.  This release adds a new mode to the client, the ability to show text from a file (<a href="/lua/show_file_contents.html"><tt>show_file_contents()</tt></a>) or programatically (<a href="/lua/show_text.html"><tt>show_text()</tt></a>)</p>
+    <p>There were several bugfixes relating to TAB-completion, and new features relating to the current working-directory (<a href="/lua/cd.html"><tt>cd()</tt></a>, <a href="/lua/cwd.html"><tt>cwd()</tt></a>), along with support for reading arbitrary lua via <a href="/docs/external-input.html">a Unix domain-socket</a>.</p>
+    </dd>
     <dt>18th Janaury 2014</dt>
     <dd>
     <p>This release contains several bug-fixes relating to handling oddly formed messages, and updates some of the primitives such as <a href="/lua/hostname.html">hostname()</a> which may now be overridden.</p>
