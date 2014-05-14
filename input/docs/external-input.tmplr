@@ -8,7 +8,7 @@ source, a Unix domain socket, and will process them as they arrive.</p>
 --
 -- Open a socket, from which lumail will regularly read input
 --
-<a href="/lua/bind_socket.html">bind_socket( os.getenv( "HOME" ) .. "/.listening.socket" )</a>
+<a href="/lua/bind_socket.html">bind_socket</a>( os.getenv( "HOME" ) .. "/.listening.socket" )
 
 --
 -- If you wish to close the socket you can call <a href="/lua/close_socket.html">close_socket</a> at a later point.
