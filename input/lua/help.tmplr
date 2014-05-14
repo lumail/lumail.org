@@ -1,5 +1,5 @@
 title: help()
-brief: Show brief help information for a primitive.
+brief: Show help information to the user.
 version: 0.16
 ----
 
@@ -8,4 +8,8 @@ version: 0.16
 <pre>
 -- Show the clear primitive.
 help( "clear" );
+</pre>
+<p>If invoked with no arguments it will display the help-manual, which is still in the process of being completed:</p>
+<pre>
+help();
 </pre>
