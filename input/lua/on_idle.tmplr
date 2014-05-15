@@ -1,6 +1,6 @@
 title: on_idle()
 brief: Called when the client is idle.
-seealso: on_exit, on_key, on_read_message, on_complete
+seealso: on_exit, on_key, on_read_message, on_complete, sleep
 version: 0.07
 ----
 
