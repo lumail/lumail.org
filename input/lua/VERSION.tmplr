@@ -9,4 +9,4 @@ version: 0.19
 <pre>
 msg( "Lumail version: " .. VERSION .. " running on " .. _VERSION );
 </pre>
-<p><b>NOTE</b>: <span class="tt">_VERSION</a> will return a string such as <span class="tt">Lua 5.1</span>.</p>
+<p><b>NOTE</b>: <span class="tt">_VERSION</span> will return a string such as <span class="tt">Lua 5.1</span>, this comes from Lua itself.</p>
