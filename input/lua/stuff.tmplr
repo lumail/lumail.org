@@ -1,6 +1,7 @@
 title: stuff()
 brief: Insert keystrokes into the input buffer.
 version: 0.16
+seealso: prompt
 ----
 
 <p>The <span class="tt">stuff</span> function will insert keystrokes into the input-buffer, which will allow preset-keys to be typed via a function-call.</p>
