@@ -1,0 +1,23 @@
+title: on_error()
+brief: Called when a Lua error is encountered.
+version: 0.26
+----
+
+<p>If you define the function <span class="tt">on_idle</span> it will be called whenever there is an error encountered in Lua code.</p>
+<p>Error conditions typically occur when <a href="/lua/">one of the primitives</a> is called improperly - for example the <a href="/lua/scroll_maildir_to.html">scroll_maildir_to()</a> function expects a string argument, but you could call it like so:</p>
+<pre>
+scroll_maildir_to( false );
+</pre>
+<p>In that situation the argument type wouldn't match the expectations of the function, and an error should be raised.</p>
+<p>The standard configuration file contains a simple handler which will alert the user to errors when running in debug-mode only:</p>
+<pre>
+--
+-- Here we display the error to the user, but only in debug-builds.
+--
+--
+function on_error( text )
+   if ( <a href="/lua/DEBUG.html">DEBUG</a> == true ) then
+      <a href="/lua/msg.html">msg</a>( text )
+   end
+end
+</pre>
