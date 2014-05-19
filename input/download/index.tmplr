@@ -1,6 +1,7 @@
 Title: Download
 download_page: 1
-src: lumail-0.25.tar.gz
+hash: hash_file(lumail-0.25.tar.gz)
+
 ----
 
 <p>Luamil is under constant development, but versioned <a href="#source">source-snapshots</a> are released when things are judged to be stable.</p>
@@ -11,7 +12,11 @@ src: lumail-0.25.tar.gz
 <blockquote>
 <p>The most recent release is:</p>
 <ul>
-<li><a href="<!-- tmpl_var name='src' -->"><!-- tmpl_var name='src' --></a></li>
+<li><a href="<!-- tmpl_var name='hash_src' -->"><!-- tmpl_var name='hash_src' --></a>
+<ul>
+<li>SHA1 Hash <!-- tmpl_var name='hash_hash' --></li>
+<li><a href="<!-- tmpl_var name='hash_src' -->.gpg">GPG Signature</a> - Signed with <a href="https://keybase.io/skx/">my public key</a></li>
+</ul></li>
 </ul>
 <p>See <a href="#building">the notes on building</a> for requirements and instructions on building the release.</p>
 </blockquote>
