@@ -1,0 +1,31 @@
+title: show_attachments
+brief: Display the list of attachments beneath a message-header?
+seealso: headers, wrap_lines, display_filter
+version: 0.26
+----
+
+<p>When a message is displayed the user interface consists of:</p>
+<ul>
+<li>The header of the message.</li>
+<li>The list of attachments, if any are present.</li>
+<li>The body of the message.</li>
+</ul>
+<p>The <span class="tt">show_attachments</span> boolean allows you to disable/enable the display of attachment names in the output.</p>
+<p>This might be useful if you receive a message with numerous attachments.</p>
+<pre>
+--
+-- Should we show attachments when displaying a message?
+--
+function toggle_show_attachments ()
+   if show_attachments == nil then
+        show_attachments = false
+    elseif show_attachments == true then
+        show_attachments = false
+    elseif show_attachments == false then
+        show_attachments = true
+    end
+end
+
+-- Toggle the display of attachments in the message-display
+keymap['message']['A'] = 'toggle_show_attachments()'
+</pre>
