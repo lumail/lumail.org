@@ -22,3 +22,13 @@ maildir_prefix( os.getenv( "HOME" ) .. "/Maildir" );
 --
 <a href="sent_mail.html">sent_mail</a>( maildir_prefix() .. "/sent-mail" );
 </pre>
+
+
+<h3>Multiple Prefixes</h3>
+<blockquote>
+<p><b>NOTE</b>: From release 0.26 the prefix may contain multiple directories, separated by pipes:</p>
+<pre>
+maildir_prefix( "/home/skx/Maildir|/home/guest/Maildir|/home/skx/Imported-Mail/" );
+</pre>
+</blockquote>
+
