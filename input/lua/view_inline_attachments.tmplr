@@ -1,0 +1,13 @@
+title: view_inline_attachments
+brief: Should the attachment list contain "inline" parts?
+seealso: headers, wrap_lines, display_filter, show_attachments
+version: 0.26
+----
+
+<p>When a message is displayed the user interface consists of:</p>
+<ul>
+<li>The header of the message.</li>
+<li>The list of attachments, if any are present.</li>
+<li>The body of the message.</li>
+</ul>
+<p>The <span class="tt">show_attachments</span> boolean allows you to disable/enable the display of attachment names in the output.  The <span class="tt">view_inline_attachments</span> boolean allows you to control whether the list of attachments include inline-parts too.</p>
