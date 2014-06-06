@@ -1,0 +1,20 @@
+title: attachment()
+brief: Return the content of the specified attachment
+seealso: attachments, attachment_colour, count_attachments, save_attachment
+version: 0.26
+----
+
+
+<p>This function will return the content of the specified attachment.</p>
+<p>For example:</p>
+<pre>
+int count = <a href="/lua/count_attachments.html">count_attachments</a>();
+int i = 1
+
+while( i &lt;= count ) do
+  <a href="/lua/alert.html">alert</a>( i )
+  i = i + 1
+end
+</pre>
+
+
