@@ -1,6 +1,6 @@
 title: show_text()
 brief: Display some static text.
-seealso: alert, msg, scroll_text_down, scroll_text_up, show_file_contents, scroll_text_to
+seealso: alert, msg, scroll_text_down, scroll_text_up, show_file_contents, scroll_text_to, text_offset, jump_text_to
 version: 0.25
 ----
 

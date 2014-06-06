@@ -1,0 +1,8 @@
+title: text_offset()
+brief: Get the current offset into the text-mode display
+seealso: scroll_text_up, show_file_contents, scroll_text_to, scroll_text_down, text_offset, jump_text_to, show_text
+version: 0.25
+----
+
+<p>When in text-mode, set with <a href="global_mode.html">global_mode</a>, the user interface consists of some text set by either <a href="/lua/show_text.html">show_text()</a> or <a href="/lua/show_file_contents.html">show_file_contents()</a>.</p>
+<p>The <span class="tt">text_offset()</span> function returns the current position of the text being displayed.</p>
