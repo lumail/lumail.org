@@ -1,6 +1,6 @@
 title: maildir_limit()
 brief: Specify which maildir folders to show.
-seealso: index_limit, get_variables
+seealso: index_limit, get_variables, filter_maildirs, ignored_folders
 version: 0.07
 ----
 
@@ -50,3 +50,4 @@ end
 <a href="keymap.html">keymap</a>['maildir']['n'] = 'new_folders()'
 <a href="keymap.html">keymap</a>['maildir']['l'] = 'livejournal_folders()'
 </pre>
+<p>If this primitive isn't sufficient for your needs then you might wish to look at the <a href="/lua/filter_maildirs.html">filter_maildirs</a> hook.</p>
