@@ -1,6 +1,6 @@
 title: ignored_folders()
 brief: Exclude Maildirs from maildir-mode.
-seealso: global_mode
+seealso: global_mode, maildir_limit, filter_maildirs
 version: 0.13
 ----
 
