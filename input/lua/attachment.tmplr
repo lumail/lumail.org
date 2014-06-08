@@ -1,5 +1,5 @@
 title: attachment()
-brief: Return the content of the specified attachment
+brief: Return the content of the specified attachment.
 seealso: attachments, attachment_colour, count_attachments, save_attachment
 version: 0.26
 ----
