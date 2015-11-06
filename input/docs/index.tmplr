@@ -19,15 +19,6 @@ docs_page: 1
 <dd><p>The getting-started guide gives a basic overview of the client, and introduces you to using it.</p></dd>
 <dt><a href="/lua/">Lua primitives</a></dt>
 <dd><p>Each of the Lua primitives that <span class="tt">lumail</span> provides is documented, usually with an example.</p></dd>
-<dt>The <a href="/news/">news page</a></dt>
-<dd><p>The news page is mostly used to announce new releases.</p></dd>
-<dt>Frequently Asked Questions</dt>
-<dd><p>We have two frequently-asked-questions pages:</p>
-<ul class="invisible">
-<li>The <a href="/faq/">Lumail FAQ</a></li>
-<li>The <a href="/faq/technical/">Lumail Technical FAQ</a></li>
-</ul><p>&nbsp;</p>
-</dd>
 </dl>
 </blockquote>
 
