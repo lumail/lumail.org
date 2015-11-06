@@ -1,4 +1,7 @@
   <dl>
+    <dt>6th November 2015</dt>
+    <dd>
+    <p>Work is well underway upon a rewrite of Lumail.  The rewrite aims to have a much more unified approach to the Lua functions, as well as moving as much of the core from C++ into Lua.</p></dd>
     <dt>16th September 2014</dt>
     <dd>
     <p>Lumail 0.26 has been released and <a href="/download/">is available for download</a>.  This release adds multiple minor bugfixes, and features including the ability to support multiple Maildir prefixes, and the support for wrapping headers.</p></dd>
