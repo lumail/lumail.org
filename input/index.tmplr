@@ -47,7 +47,7 @@ news: read_file( "./news.recent.inc" )
 </blockquote>
 <script type="text/javascript">
 $("#hubInfo").hubInfo({
-    user: "skx",
-    repo: "lumail"
+    user: "lumail",
+    repo: "lumail2"
 });
 </script>
