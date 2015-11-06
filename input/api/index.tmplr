@@ -1,10 +1,7 @@
-Title: Documentation
+Title: Lua API
 api_page: 1
 format: markdown
 ----
-
-API
-===
 
 The core idea of lumail2, and the reason for writing it rather than continuing to extend
 the version one project, is that everything is an object.
