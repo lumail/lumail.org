@@ -6,12 +6,20 @@ contact_page: 1
 <ul class="invisible">
 <li><span class="tt">&quot;Steve Kemp&quot; &lt;steve@steve.org.uk&gt;</span></li>
 </ul>
-<p>If you have a bug report, feature suggestion, or patch to submit please use the issue-tracker on the github repository.</p>
-<p>This allows development to continue in a public manner:</p>
+<p>If you have a bug report, feature suggestion, or patch to submit please use the issue-tracker on the appropriate github repository, this allows development to continue in a public manner:</p>
+
 <ul class="invisible">
-<li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
-</ul>
-<p>If you spot a problem with this website (content, spelling, etc), please report it as an issue against the source repository:</p>
+<li>Lumail 2.x, the active project:
 <ul>
-<li><a href="<!-- tmpl_var name='repo_web' -->"><!-- tmpl_var name='repo_web' --></a></li>
+<li><a href="<!-- tmpl_var name='repo.active' -->"><!-- tmpl_var name='repo.active' --></a></li>
+</ul></li>
+<li>Lumail Legacy:
+<ul>
+<li><a href="<!-- tmpl_var name='repo.legacy' -->"><!-- tmpl_var name='repo.legacy' --></a></li>
+</ul></li>
+</ul>
+
+<p>If you spot a problem with <i>this</i> website (content, spelling, grammar, etc), then please consider reporting it as an issue against the source repository:</p>
+<ul>
+<li><a href="<!-- tmpl_var name='repo.web' -->"><!-- tmpl_var name='repo.web' --></a></li>
 </ul>

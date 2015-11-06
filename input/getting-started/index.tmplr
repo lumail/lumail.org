@@ -40,7 +40,7 @@ started_page: 1
 <h2>Initial Configuration</h2>
 <blockquote>
 <p>The initial configuration will consist of you telling lumail where to find your mail, setting your from address, and configuring the sending of new mail.</p>
-<p>The <a href="<!-- tmpl_var name='cfg' -->">sample configuration file</a> contains settings that you can adopt or adapt.</p>
+<p>The <a href="<!-- tmpl_var name='legacy.cfg' -->">sample configuration file</a> contains settings that you can adopt or adapt.</p>
 <p>Once you have these settings defined you'll be able to use the client, and consider looking at the <a href="/examples/">example functions</a> we've documented for further inspiration.</p>
 </blockquote>
 
