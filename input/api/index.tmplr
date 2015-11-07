@@ -37,17 +37,20 @@ We have a number of variables which are special, the most important ones are:
 * `global.mode`
     * This holds the name of the currently active display-mode
 
+These variables are accessed via `Config:get`, and updated via
+`Config:set`, which are documented later.
+
 For each mode that has a display there will be a `$mode.max` to store the
-count of the objects, as well as `$mode.current`.
+count the objects in the view, as well as `$mode.current`.
 
 So if the current mode is `maildir` then:
 
-* `maildir.limit` contains any constraint in-use `all|new|pattern`.
+* `maildir.limit` contains any constraint in-use `all|new`.
 * `maildir.max` contains the (integer) count of messages.
 * `maildir.current` contains the index of the currently selected maildir.
 
-The global `ARGS` table contains all arguments passed to the command-line,
-and can be used for your own purposes.
+On a related note the global `ARGS` table contains all arguments passed
+to the command-line, and can be used for your own purposes.
 
 
 
@@ -129,8 +132,14 @@ The following API methods are available to help you with this:
      * Retrieve the list of available maildirs.
 * `Global:current_maildir()`
      * Retrieve the currently-selected maildir.
+* `Global:select_maildir(index)`
+     * Select the specified maildir, by index.
+     * This _should_ accept a Maildir object, but does not yet do so.
 * `Global:current_message()`
      * Retrieve the currently-selected message.
+* `Global:select_message(index)`
+     * Select the specified message, by index.
+     * This _should_ accept a Message object, but does not yet do so.
 
 
 Maildir
