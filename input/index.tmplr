@@ -11,26 +11,19 @@ news: read_file( "./news.recent.inc" )
   <ul>
     <li>It operates exclusively on Maildir hierarchies:
       <ul>
-        <li>No support for POP3/IMAP.</li>
-        <li>This reduces complexity, reduces coding, and gives the client focus.</li>
-    </ul></li>
-    <li>It is a modal client- you're always in one of four modes:
+        <li>There is no support for POP3/IMAP.</li>
+      </ul></li>
+    <li>It is a modal-client so you're always in one particular mode:
       <ul>
         <li>maildir-mode: Shows you the list of folders.</li>
         <li>index-mode: Shows you the list of messages.</li>
         <li>message-mode: Shows you a single message.</li>
-        <li>text-mode: Shows you some simple text.</li>
+        <li>...</li>
     </ul></li>
     <li>Built in scripting with a mature language.
       <ul>
         <li>Lumail, as the name might suggest, uses <a href="http://www.lua.org/">lua</a>.</li>
-        <li>Lumail contains a number of <a href="/lua/">useful primitives</a> to allow you to control its behaviour and functionality.</li>
-        <li>There are <a href="/examples/">examples available</a> to give you a flavour of what you can do.</li>
-    </ul></li>
-    <li>Multi-folder operations.
-      <ul>
-        <li>Rather than opening a single folder you may open multiple folders at once.</li>
-        <li>The displayed messages are the combined set from all selected folders.</li>
+        <li>The <a href="/api/">Lua API</a> we present is simple and self-consistent.</li>
     </ul></li>
   </ul>
 </blockquote>
