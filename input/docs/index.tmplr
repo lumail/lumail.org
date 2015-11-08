@@ -13,7 +13,7 @@ docs_page: 1
 <h3 id="current" name="current">Lumail 2.x</h3>
 <blockquote>
 <p>Lumail 2.x is a ground-up rewrite of the previous application, and features a minimal and unified API for scripting the client.</p>
-<p>The scripting is still built around objects, but the object methods have been simplified and implemented as a cohesive set of modules, methods, and variables.</p>
+<p>The scripting is still Lua-based, but the object methods have been simplified and implemented as a cohesive set of modules, methods, and variables.</p>
 <dl>
 <dt>Read about the <a href="/api/">Lumail 2.x API</a></dt>
 <dd><p>The API-page describes all the objects that are supported and implemented in the 2.x API, along with links to sample code.</p></dd>
@@ -24,8 +24,11 @@ docs_page: 1
 
 <p>&nbsp;</p>
 
-<h3 id="legacy" name="legacy">Lumail Legacy</h3>
+<h3 id="legacy" name="legacy">Lumail-Legacy</h3>
 <blockquote>
+  <blockquote>
+   <p><b>NOTE</b>: Lumail-legacy receives no further updates, and has been superseded by lumail2.</p>
+  </blockquote>
 <dl>
 <dt><a href="/cmdline/">Command-line flags</a></dt>
 <dd><p>The <span class="tt">lumail</span> client accepts several command-line flags, which this page documents.</p></dd>
