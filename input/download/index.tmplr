@@ -1,7 +1,7 @@
 Title: Download
 download_page: 1
 legacy: hash_file(lumail-0.26.tar.gz)
-active: hash_file(lumail2-1.tar.gz)
+active: hash_file(lumail2.0.tar.gz)
 
 ----
 
