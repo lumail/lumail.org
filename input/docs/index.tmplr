@@ -15,6 +15,8 @@ docs_page: 1
 <p>Lumail 2.x is a ground-up rewrite of the previous application, and features a minimal and unified API for scripting the client.</p>
 <p>The scripting is still Lua-based, but the object methods have been simplified and implemented as a cohesive set of modules, methods, and variables.</p>
 <dl>
+<dt><a href="/cmdline/">Command-line flags</a></dt>
+<dd><p>The <span class="tt">lumail2</span> client accepts several command-line flags, which this page documents.</p></dd>
 <dt>Read about the <a href="/api/">Lumail 2.x API</a></dt>
 <dd><p>The API-page describes all the objects that are supported and implemented in the 2.x API, along with links to sample code.</p></dd>
 <dt>The <a href="<!-- tmpl_var name='lumail2.cfg' -->">default configuration file</a></dt>
