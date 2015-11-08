@@ -29,9 +29,8 @@ Title: Command-Line arguments
 
 <h3 id="legacy" name="legacy">Lumail-Legacy</h3>
 <blockquote>
-  <blockquote>
-   <p><b>NOTE</b>: Lumail-legacy receives no further updates, and has been superseded by lumail2.</p>
-  </blockquote>
+
+  <!-- tmpl_include name='legacy.inc' -->
 
   <dl>
 <dt><span class="tt">--debug</span></dt>

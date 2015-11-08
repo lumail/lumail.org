@@ -3,14 +3,13 @@ primitives: load_primitives();
 lua_page: 1
 ----
 
-<p>The <span class="tt">lumail</span> client is scripted and configured in 100% Lua, along with many lumail-specific functions.</p>
-<p>All the primitives provided are documented here, along with some <a href="/examples/">example Lua functions</a>.</p>
-<p>(The number after each function name is the release from which the primitive is available.)</p>
+<p>The <span class="tt">lumail</span> client is scripted and configured in 100% Lua.  The functions provided are documented here, above and beyond those you'd find in the Lua standard-library.</p>
 
+<!-- tmpl_include name='legacy.inc' -->
 
 <dl>
 <!-- tmpl_loop name='primitives' -->
-<dt><a href="<!-- tmpl_var name='name' -->.html"><!-- tmpl_var name='name' --></a> <!-- tmpl_if name='version' --><sup>v<!--tmpl_var name='version' -->+</sup><!-- /tmpl_if --><!-- tmpl_unless name='no-updated' --><!-- tmpl_if name='new' --><img src="/img/updated.gif" alt="Updated" width="60" height="15" /><!-- /tmpl_if --><!-- /tmpl_unless --></dt>
+<dt><a href="<!-- tmpl_var name='name' -->.html"><!-- tmpl_var name='name' --></a> <!-- tmpl_unless name='no-updated' --><!-- tmpl_if name='new' --><img src="/img/updated.gif" alt="Updated" width="60" height="15" /><!-- /tmpl_if --><!-- /tmpl_unless --></dt>
 <dd><p><!-- tmpl_var name='brief' --></p></dd>
 <!-- /tmpl_loop -->
 </dl>
