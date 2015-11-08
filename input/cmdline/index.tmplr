@@ -2,8 +2,38 @@ Title: Command-Line arguments
 ----
 
 <blockquote>
-<p>The <span class="tt">lumail</span> client accepts several command-line arguments:</p>
+<p>The client accepts several command-line arguments, the precise flags will depend upon the version of <span class="tt">lumail</span> you're running.</p>
+</blockquote>
+
+
+<h3 id="current" name="current">Lumail 2.x</h3>
+<blockquote>
+
 <dl>
+
+<dt><span class="tt">--load-file &quot;path/to/code.lua&quot;</span></dt>
+<dd><p>Load the specified configuration/Lua file, on-startup..</p></dd>
+
+<dt><span class="tt">--no-curses</span></dt>
+<dd><p>Disable the curses-output; this is mostly useful for loading sample configuration file-snippets to test them, as it will enable the Lua <span class="tt">print</span> function to work as expected.</p></dd>
+
+<dt><span class="tt">--folder &quot;path&quot;</span></dt>
+<dd><p>Open the given folder, and switch to index-mode on startup.</p></dd>
+
+<dt><span class="tt">--version</span></dt>
+<dd><p>Show the version number of your <span class="tt">lumail2</span> binary, then exit.</p></dd>
+
+</dl>
+</blockquote>
+
+
+<h3 id="legacy" name="legacy">Lumail-Legacy</h3>
+<blockquote>
+  <blockquote>
+   <p><b>NOTE</b>: Lumail-legacy receives no further updates, and has been superseded by lumail2.</p>
+  </blockquote>
+
+  <dl>
 <dt><span class="tt">--debug</span></dt>
 <dd><p>If lumail has been compiled in debug-mode this option will allow you to specify the path to the debug-logfile.  The logfile will contain "interesting events".</p><p>If you're running a debug-build and you don't specify a file then <span class="tt">~/lumail.log</span> will be used by default.</p></dd>
 <dt><span class="tt">--exit</span></dt>
@@ -13,7 +43,7 @@ Title: Command-Line arguments
 <dd><p>Evaluate the given Lua expression, or function.  It is assumed that the function to be executed will be one you've defined in your startup configuration file.</p></dd>
 <dt><span class="tt">--folder "path"</span></dt>
 <dd><p>Open the given folder, and switch to index-mode on startup.</p></dd>
-<dt><span class="tt">--rcfile "file"</span></dt>
+<dt><span class="tt">--rcfile &quot;file&quot;</span></dt>
 <dd><p>Open and parse the given Lua file, in addition to the standard configuration files that are examined.</p>
     <p>You may add multiple <span class="tt">--rcfile</span> arguments, if you wish to load multiple different files.</dd>
 <dt><span class="tt">--version</span></dt>
