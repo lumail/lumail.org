@@ -1,23 +1,29 @@
 Title: Download
 download_page: 1
-hash: hash_file(lumail-0.26.tar.gz)
+legacy: hash_file(lumail-0.26.tar.gz)
+active: hash_file(lumail2-1.tar.gz)
 
 ----
 
-<p>Luamil is under constant development, but versioned <a href="#source">source-snapshots</a> are released when things are judged to be stable.</p>
-<p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/faq/#bug">should be reported</a> as such.</p>
+<p>Versioned <a href="#source">source-snapshots</a> are released when things are judged to be stable, but the preferred method for downloading sources at the moment is directly via the Github repositories.</p>
+<p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/contact/">should be reported</a> as such.</p>
 
 
 <h2 id="source">Source Snapshots</h2>
 <blockquote>
-<p>The most recent release is:</p>
+<p>The most recent releases are:</p>
+
+<ul class="invisible">
+<li>Lumail 2.x, the active project:
 <ul>
-<li><a href="<!-- tmpl_var name='hash_src' -->"><!-- tmpl_var name='hash_src' --></a>
-<ul>
-<li>SHA1 Hash <!-- tmpl_var name='hash_hash' --></li>
-<li><a href="<!-- tmpl_var name='hash_src' -->.asc">GPG Signature</a> - Signed with <a href="https://keybase.io/skx/">my public key</a></li>
+<li><a href="<!-- tmpl_var name='active_src' -->"><!-- tmpl_var name='active_src' --></a>
+<li>SHA1 Hash <!-- tmpl_var name='active_hash' --></li>
 </ul></li>
-</ul>
+<li>Lumail Legacy:
+<ul>
+<li><a href="<!-- tmpl_var name='legacy_src' -->"><!-- tmpl_var name='legacy_src' --></a>
+<li>SHA1 Hash <!-- tmpl_var name='legacy_hash' --></li>
+</ul></li>
 <p>See <a href="#building">the notes on building</a> for requirements and instructions on building the release.</p>
 </blockquote>
 
@@ -25,31 +31,27 @@ hash: hash_file(lumail-0.26.tar.gz)
 <h2 id="git">Cutting Edge Git Repository</h2>
 <blockquote>
 <p>All development on <span class="tt">lumail</span> is carried out, in public, via a central git repository:</p>
-<ul>
-<li><a href="<!-- tmpl_var name='repo' -->"><!-- tmpl_var name='repo' --></a></li>
-</ul>
-<p>See <a href="#building">the notes on building</a> for requirements, and instructions on building the source.</p>
-</blockquote>
 
-<h2 id="debian">Debian GNU/Linux Packages</h2>
-<blockquote>
-<p>I host a repository containing binary packages for the Wheezy/stable release of Debian GNU/Linux.  You can find this repository, along with instructions for using it, here:</p>
+<ul class="invisible">
+<li>Lumail 2.x, the active project:
 <ul>
-<li><a href="http://packages.steve.org.uk/lumail/">http://packages.steve.org.uk/lumail/</a></li>
+<li><a href="<!-- tmpl_var name='repo.active' -->"><!-- tmpl_var name='repo.active' --></a></li>
+</ul></li>
+<li>Lumail Legacy:
+<ul>
+<li><a href="<!-- tmpl_var name='repo.legacy' -->"><!-- tmpl_var name='repo.legacy' --></a></li>
+</ul></li>
 </ul>
-<p>(The binaries are compiled for both i386 and AMD64.)</p>
 </blockquote>
-
 
 <h2 id="building">Building from source</h2>
 <blockquote>
 <p>Lumail is deliberately designed to only depend upon a small number of libraries, to ensure that it is possible to build it upon the widest range of systems.</p>
 <p>As of the current release the dependencies are as follows:</p>
 <ul class="invisible">
-<li>Lua 5.1
+<li>Lua 5.2
 <ul>
 <li>The scripting language.</li>
-<li>Lua 5.2 is also supported, but is not the default.</li>
 </ul></li>
 <li>ncursesw
 <ul>
@@ -60,30 +62,18 @@ hash: hash_file(lumail-0.26.tar.gz)
 <li>The MIME-library.</li>
 <li>Releases prior to <span class="tt">0.18</span> used the mimetic MIME library instead.</li>
 </ul></li>
-<li>glibmm-2.4
-<ul>
-<li>We use this library because it contains UTF-8-aware string class.</li>
-<li>This dependency was added in release <span class="tt">0.19</span>.</li>
-</ul></li>
-<li>pcre
-<ul>
-<li>The regular-expression library.</li>
-</ul></li>
 </ul>
-<blockquote>
-<p><b>Note</b>: Releases prior to <span class="tt">0.18</span> used mimetic for MIME parsing, anything from <span class="tt">0.18</a> onwards uses GMime 2.6.x.</p>
-</blockquote>
 <div style="padding-left:20px; border:1px solid silver">
  <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
  <pre>
- # apt-get install libncursesw5-dev liblua5.1-0-dev lua5.1 \
-    libgmime-2.6-dev libglibmm-2.4-dev libpcre3-dev</pre>
+ # apt-get install build-essential make pkg-config
+ # apt-get install liblua5.2-dev libgmime-2.6-dev libncursesw5-dev
 </div>
 
 <p>Providing you have the appropriate dependencies installed you can build the client via a single "<span class="tt">make</span>" command:</p>
 <pre>
 $ make
 </pre>
-<p>Once the compilation completes you'll find the executable <span class="tt">./lumail</span> generated, and you can now <a href="/getting-started/">get started</a>.</p>
+<p>Once the compilation completes you'll find the executable <span class="tt">./lumail2</span> generated, and you can now <a href="/getting-started/">get started</a>.</p>
 </blockquote>
 
