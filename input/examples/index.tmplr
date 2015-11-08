@@ -4,6 +4,7 @@ Title: Examples of Lua functions
 <p><span class="tt">lumail</span> has an embedded Lua interpreter which is used to configure keybindings, perform general configuration, &amp; etc.</p>
 <p>If you're new to Lua you might find the <a href="http://www.lua.org/">Lua website</a> and the <a href="http://www.luafaq.org/">Lua Unofficial FAQ</a> useful resources.</p>
 
+  <!-- tmpl_include name='legacy.inc' -->
 
 <h2>Writing useful functions</h2>
 <blockquote>
