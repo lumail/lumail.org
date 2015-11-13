@@ -3,9 +3,6 @@ api_page: 1
 format: markdown
 ----
 
-API
-===
-
 The core idea beind lumail2, and the reason for writing it rather than
 continuing to extend the legacy-project, is that all the items that are
 involved are Objects.
@@ -28,8 +25,8 @@ There is no need for a large number of global-functions, just a few
 types of objects and ways to create/access them.
 
 
-Callbacks
----------
+
+### Callbacks
 
 The mail-client is writting in C++ and generally defers to the Lua
 code to perform actions.
@@ -51,8 +48,7 @@ add code to handle such changes you can add it directly.
 
 
 
-Config
-------
+### Config
 
 The `Config` object allows you to get, set, and iterate over configuration values.
 
@@ -81,8 +77,7 @@ Sample code is available in [sample.lua/config.lua](https://github.com/lumail/lu
 
 
 
-Configuration Variables
------------------------
+### Configuration Variables
 
 We have a number of variables which are special, the most important ones are:
 
@@ -121,8 +116,7 @@ and can be used for your own purposes.
 
 
 
-Directories
------------
+### Directories
 
 The following (static) methods exist:
 
@@ -137,8 +131,7 @@ Sample code is available in [sample.lua/file.lua](https://github.com/lumail/luma
 
 
 
-Files
------
+### Files
 
 The following (static) methods exist:
 
@@ -153,8 +146,8 @@ The following (static) methods exist:
 Sample code is available in [sample.lua/file.lua](https://github.com/lumail/lumail2/blob/master/sample.lua/file.lua).
 
 
-Global State
-------------
+
+### Global State
 
 There are some things which are global, and these largely revolve around
 available maildirs, and messages.
@@ -180,8 +173,7 @@ The following API methods are available to help you with this:
 
 
 
-Maildir
--------
+### Maildir
 
 You can gain access to Maildir objects in several ways:
 
@@ -207,8 +199,7 @@ The Maildir object has the following methods:
 
 
 
-Message
--------
+### Message
 
 The Message object represents a single message, contained within a maildir.
 
@@ -248,7 +239,11 @@ Message methods:
 * `path()`
    * Return the path to the message, on-disk.
 
-MessagePart objects are returned from the `parts()` method.  The `MessagePart`
+
+
+#### Message Parts
+
+MessagePart objects refer to MIME parts/attachments which might be present in a message, and  are returned from the `parts()` method.  The `MessagePart`
 object contains the following methods:
 
 * `content()`
@@ -266,8 +261,7 @@ Sample code is available in `sample.lua/show_message.lua`.
 
 
 
-Networking
-----------
+### Networking
 
 There is only a single networking method:
 
@@ -277,8 +271,8 @@ There is only a single networking method:
 Sample code is available in [sample.lua/net.lua](https://github.com/lumail/lumail2/blob/master/sample.lua/net.lua).
 
 
-Screen
-------
+
+### Screen
 
 The Screen object is registered automatically and doesn't need to be constructed  The following (static) methods are available:
 
@@ -301,6 +295,10 @@ The Screen object is registered automatically and doesn't need to be constructed
 
 Sample code is available in [sample.lua/screen.lua](https://github.com/lumail/lumail2/blob/master/sample.lua/screen.lua).
 
+
+
+
+#### Screen Panel
 
 The screen has an associated status-panel, hereby referred to as "Panel".
 
@@ -333,8 +331,8 @@ The Panel object has the following (static) methods:
 Sample code is available in [sample.lua/panel.lua](https://github.com/lumail/lumail2/blob/master/sample.lua/panel.lua).
 
 
-Views
------
+
+### Views
 
 Each of the major modes is implemented in a combination of Lua and C++.
 
@@ -369,7 +367,6 @@ The lines may contain a prefix containing colour information.  For example:
 
 
 
-Utilities
----------
+## Utilities
 
 None, at this time.
