@@ -5,13 +5,22 @@ body {
     overflow-y: scroll;
 }
 
-h2, h3 {
+h2, h3  {
     font-family: 'Mako', sans-serif;
     font-weight: bold;
     letter-spacing: -1px;
     color: black;
     line-height: 1.2em;
     border-bottom: 2px solid #333;
+}
+
+h4  {
+    font-family: 'Mako', sans-serif;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: black;
+    line-height: 1.2em;
+    border-bottom: 2px dashed #333;
 }
 
 h2 {
