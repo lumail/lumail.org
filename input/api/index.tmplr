@@ -3,6 +3,9 @@ api_page: 1
 format: markdown
 ----
 
+API
+===
+
 The core idea beind lumail2, and the reason for writing it rather than
 continuing to extend the legacy-project, is that all the items that are
 involved are Objects.
@@ -16,6 +19,7 @@ with simple objects, such as:
 * Maildirs.
 * Messages.
 * Networking.
+* Regular Expressions.
 * The screen.
     * The status-panel, which is optionally displayed upon the screen.
 
@@ -23,7 +27,6 @@ By making all the basic things objects, and simplifying our API we've
 got a mail-client which is simple to script, and has a unified feel.
 There is no need for a large number of global-functions, just a few
 types of objects and ways to create/access them.
-
 
 
 ### Callbacks
@@ -73,7 +76,7 @@ If the function `Config:key_changed` is defined it will be invoked whenever
 the value of a key is changed.  The single argument being the name of the key
 which has been updated.
 
-Sample code is available in [sample.lua/config.lua](https://github.com/lumail/lumail2/blob/master/sample.lua/config.lua).
+Sample code is available in `sample.lua/config.lua`.
 
 
 
@@ -101,6 +104,8 @@ We have a number of variables which are special, the most important ones are:
     * The horizontal-offset used to implement left/right scrolling.
 * `global.mode`
     * This holds the name of the currently active display-mode
+* `global.sent-mail`
+    * This is the Maildir to which outgoing messages are saved.
 
 For each mode that has a display there will be a `$mode.max` to store the
 count of the objects, as well as `$mode.current`.
@@ -125,9 +130,11 @@ The following (static) methods exist:
 * `Directory:exists(path)`
    * Return `true` if the given directory exists.
    * Return `false` otherwise.
+* `Directory:is_maildir(path)`
+   * Return `true` if the given directory is a Maildir.
+   * Return `false` otherwise.
 
-Sample code is available in [sample.lua/file.lua](https://github.com/lumail/lumail2/blob/master/sample.lua/file.lua).
-
+Sample code is available in `sample.lua/file.lua`.
 
 
 
@@ -137,13 +144,15 @@ The following (static) methods exist:
 
 * `File:basename(path)`
    * Return the basename of the given path.
+* `File:copy(src,dest)`
+   * Copy the given source file to the specified destination.
 * `File:exists(path)`
    * Return a boolean based on whether the named file exists.
 * `File:stat(path)`
    * Return a table of information about the named target.
    * Returns `nil` on failure.
 
-Sample code is available in [sample.lua/file.lua](https://github.com/lumail/lumail2/blob/master/sample.lua/file.lua).
+Sample code is available in `sample.lua/file.lua`.
 
 
 
@@ -184,18 +193,22 @@ You can gain access to Maildir objects in several ways:
 
 The Maildir object has the following methods:
 
+
+* `generate_path( bool )`
+    * Generate the name of a file to save a message to within the maildir.
+    * Accepts a flag to determine if the filanem will be a new message, or a read one.
 * `path()`
     * Returns the path to the Maildir - what it was constructed with.
 * `messages()`
-	* Returns an array of Message-objects, one for each message in the maildir.
+    * Returns an array of Message-objects, one for each message in the maildir.
 * `mtime()`
     * Return the modified time of the given maildir, as seconds past the epoch.
 * `total_messages()`
-	* Returns the count of messages in the maildir.
+    * Returns the count of messages in the maildir.
 * `unread_messages()`
-	* Returns the count of unread/new messages in the maildir.
+    * Returns the count of unread/new messages in the maildir.
 * `exists`
-	* Returns `true` if the Maildir exists.
+    * Returns `true` if the Maildir exists.
 
 
 
@@ -240,18 +253,17 @@ Message methods:
    * Return the path to the message, on-disk.
 
 
+#### Message-Parts
 
-#### Message Parts
-
-MessagePart objects refer to MIME parts/attachments which might be present in a message, and  are returned from the `parts()` method.  The `MessagePart`
+MessagePart objects are returned from the `parts()` method.  The `MessagePart`
 object contains the following methods:
 
 * `content()`
-	* Returns the content of the part.
+    * Returns the content of the part.
 * `is_attachment()`
-	* Returns `true` if the part represents an attachment, false otherwise.
+    * Returns `true` if the part represents an attachment, false otherwise.
 * `filename()`
-	* Returns the name of the attachment, if `is_attachment` returned true.
+    * Returns the name of the attachment, if `is_attachment` returned true.
 * `size()`
     * Return the size of the content.
 * `type()`
@@ -268,7 +280,23 @@ There is only a single networking method:
 * `Net:hostname()`
      * Return the FQDN of the current system.
 
-Sample code is available in [sample.lua/net.lua](https://github.com/lumail/lumail2/blob/master/sample.lua/net.lua).
+Sample code is available in `sample.lua/net.lua`.
+
+
+
+### Regular Expressions
+
+There is a thin wrapper around PCRE for those who prefer this family of
+regular expressions.  The single method is:
+
+* `Regexp:match(pattern, string)`.
+
+The return value will vary depending on the regexp:
+
+* If the pattern contains no capture-groups then it will return `true`, or `false`.
+* If the pattern contains capture groups then it will return a table containing any matches.
+
+Sample code is available under `sample.code/regexp.lua`.
 
 
 
@@ -293,14 +321,11 @@ The Screen object is registered automatically and doesn't need to be constructed
 * `Screen:width()`
     * Return the width of the screen.
 
-Sample code is available in [sample.lua/screen.lua](https://github.com/lumail/lumail2/blob/master/sample.lua/screen.lua).
+Sample code is available in `sample.lua/screen.lua`.
 
+#### The Panel
 
-
-
-#### Screen Panel
-
-The screen has an associated status-panel, hereby referred to as "Panel".
+The screen has an associated status-panel, hereby referred to as the panel.
 
 The panel is designed to collect & contain output messages for the user.
 New entries may be appended to it at any time, and the most recent N entries
@@ -328,7 +353,7 @@ The Panel object has the following (static) methods:
 * `Panel:toggle()`
      * Toggle the visibility of the panel.
 
-Sample code is available in [sample.lua/panel.lua](https://github.com/lumail/lumail2/blob/master/sample.lua/panel.lua).
+Sample code is available in `sample.lua/panel.lua`.
 
 
 
@@ -365,8 +390,3 @@ The lines may contain a prefix containing colour information.  For example:
       return r
     end
 
-
-
-## Utilities
-
-None, at this time.
