@@ -60,7 +60,6 @@ active: hash_file(lumail-2.1.tar.gz)
 <li>gmime-2.6
 <ul>
 <li>The MIME-library.</li>
-<li>Releases prior to <span class="tt">0.18</span> used the mimetic MIME library instead.</li>
 </ul></li>
 <li>pcrecpp
 <ul>
