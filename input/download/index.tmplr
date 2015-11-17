@@ -62,12 +62,16 @@ active: hash_file(lumail-2.1.tar.gz)
 <li>The MIME-library.</li>
 <li>Releases prior to <span class="tt">0.18</span> used the mimetic MIME library instead.</li>
 </ul></li>
+<li>pcrecpp
+<ul>
+<li>The C++ wrapper around PCRE</li>
+</ul></li>
 </ul>
 <div style="padding-left:20px; border:1px solid silver">
  <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
  <pre>
  # apt-get install build-essential make pkg-config
- # apt-get install liblua5.2-dev libgmime-2.6-dev libncursesw5-dev
+ # apt-get install liblua5.2-dev libgmime-2.6-dev libncursesw5-dev libpcre3-dev
 </div>
 
 <p>Providing you have the appropriate dependencies installed you can build the client via a single "<span class="tt">make</span>" command:</p>
