@@ -53,6 +53,10 @@ active: hash_file(lumail-2.2.tar.gz)
 <ul>
 <li>The scripting language.</li>
 </ul></li>
+<li>magic
+<ul>
+<li>This library identifies the MIME-type of files/binaries via "magic" codes.</li>
+</ul></li>
 <li>ncursesw
 <ul>
 <li>The console-graphics library (wide-version).</li>
@@ -71,7 +75,7 @@ active: hash_file(lumail-2.2.tar.gz)
  <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
  <pre>
  # apt-get install build-essential make pkg-config
- # apt-get install liblua5.2-dev libgmime-2.6-dev libncursesw5-dev libpcre3-dev
+ # apt-get install liblua5.2-dev libgmime-2.6-dev libncursesw5-dev libpcre3-dev libmagic-dev
 </div>
 
 <p>Providing you have the appropriate dependencies installed you can build the client via a single "<span class="tt">make</span>" command:</p>
@@ -80,4 +84,3 @@ $ make
 </pre>
 <p>Once the compilation completes you'll find the executable <span class="tt">./lumail2</span> generated, and you can now <a href="/getting-started/">get started</a>.</p>
 </blockquote>
-
