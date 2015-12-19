@@ -3,8 +3,8 @@ api_page: 1
 format: markdown
 ----
 
-API
-===
+# Lua API
+
 
 The core idea beind lumail2, and the reason for writing it rather than
 continuing to extend the legacy-project, is that all the items that are
@@ -31,18 +31,22 @@ types of objects and ways to create/access them.
 
 ### Callbacks
 
-The mail-client is writting in C++ and generally defers to the Lua
+The mail-client is written in C++ and generally defers to the Lua
 code to perform actions.
 
-There are two cases where Lua is specifically invoked from the C++
-core:
+There are some cases though where Lua is specifically invoked from the C++
+core in the style of a traditionally callback:
 
-* `on_idle()`
-     * This function is called regularly from the main loop.
-     * You can perform background action here.
+* `on_error(msg)`
+     * This function is called when an error is encountered.
 * `on_complete(token)`
      * This is called when the user invokes TAB-completion upon a token.
      * It should return a table of matches, which are presented to the user.
+* `on_idle()`
+     * This function is called regularly from the main loop.
+     * You can perform background action here.
+* The various `_view()` functions.
+     * There is a Lua function for each of our modes, for example `attachment_view()`, `index_view()`, etc.
 
 Previously we had many more callbacks, for example a function that could be
 invoked when you opened a message, or changed the folder-selection. These
@@ -55,7 +59,7 @@ add code to handle such changes you can add it directly.
 
 The `Config` object allows you to get, set, and iterate over configuration values.
 
-A configuration variable will have both a name and a value.  Values may be:
+A configuration variable will have both a name and a value, and we support the use of several different types for the value:
 
 * an integer
 * a string
@@ -75,6 +79,12 @@ The following (static) methods are available:
 If the function `Config:key_changed` is defined it will be invoked whenever
 the value of a key is changed.  The single argument being the name of the key
 which has been updated.
+
+**NOTE**: We've defined a helper method in `lumail2.lua` which allows you to retrieve the value of a configuration-key and return a default value if the key is not set.
+
+      function Config.get_with_default(key,default)
+          ..
+      end
 
 Sample code is available in `sample.lua/config.lua`.
 
@@ -98,6 +108,8 @@ We have a number of variables which are special, the most important ones are:
     * The email address to send messages from.
 * `global.timeout`
     * The timeout period (milliseconds) in our event-loop.
+* `global.tmpdir`
+    * The directory to use for temporary files - defaults to "/tmp".
 * `global.history`
     * The name of the file to write input-history to.
 * `global.horizontal`
@@ -113,13 +125,23 @@ count of the objects, as well as `$mode.current`.
 So if the current mode is `maildir` then:
 
 * `maildir.limit` contains any constraint in-use `all|new|pattern`.
-* `maildir.max` contains the (integer) count of messages.
+* `maildir.max` contains the (integer) count of maildirs.
 * `maildir.current` contains the index of the currently selected maildir.
 
 The global `ARGS` table contains all arguments passed to the command-line,
 and can be used for your own purposes.
 
+For day to day usage some variables change the way that the client
+displays things, these are:
 
+* `message.all_parts`
+    * Alternate between showing some/all text-parts in message-mode.
+* `message.headers`
+    * Alternate between showing some/all headers in message-mode.
+* `message.prepend`
+    * Specifies whether additional MIME-parts should be appended/prepended to the display.
+* `maildir.truncate`
+    * Alternate between showing the full/truncated Maildir path in maildir-mode.
 
 ### Directories
 
@@ -182,6 +204,22 @@ The following API methods are available to help you with this:
 
 
 
+### Logfile Usage
+
+There is a simple primitive for writing messages to a logfile, which
+can be useful for debugging.
+
+By default log-entries are not written, to enable them you must set
+a filename like so:
+
+     Config:set( "global.logfile" , "/path/to/log" )
+
+Once a filename has been set logs may be added via:
+
+     Log:append( os.date() .. " Hello!" )
+     Log:append( os.date() .. " Goodbye!" )
+
+
 ### Maildir
 
 You can gain access to Maildir objects in several ways:
@@ -196,19 +234,19 @@ The Maildir object has the following methods:
 
 * `generate_path( bool )`
     * Generate the name of a file to save a message to within the maildir.
-    * Accepts a flag to determine if the filanem will be a new message, or a read one.
+    * Accepts a flag to determine if the filename will be a new message, or a read one.
 * `path()`
     * Returns the path to the Maildir - what it was constructed with.
 * `messages()`
-    * Returns an array of Message-objects, one for each message in the maildir.
+	* Returns an array of Message-objects, one for each message in the maildir.
 * `mtime()`
     * Return the modified time of the given maildir, as seconds past the epoch.
 * `total_messages()`
-    * Returns the count of messages in the maildir.
+	* Returns the count of messages in the maildir.
 * `unread_messages()`
-    * Returns the count of unread/new messages in the maildir.
+	* Returns the count of unread/new messages in the maildir.
 * `exists`
-    * Returns `true` if the Maildir exists.
+	* Returns `true` if the Maildir exists.
 
 
 
@@ -230,6 +268,10 @@ You can get access to message objects in several ways:
 
 Message methods:
 
+* `add_attachments(table)`
+   * This method allows attachments to be added to a _vanilla_ email.
+   * **NOTE**: Adding attachments to a message already containing attachment-parts will result in corruption.  This is designed solely for use when composing outgoing messages.
+   * Sample code is available in `sample.lua/add_attachment.lua`.
 * `flags()`
    * Get the flags for the message.
 * `flags(new_flags)`
@@ -258,18 +300,33 @@ Message methods:
 MessagePart objects are returned from the `parts()` method.  The `MessagePart`
 object contains the following methods:
 
+* `children()`
+    * Returns any MessagePart children this part might have.
 * `content()`
-    * Returns the content of the part.
+	* Returns the content of the part.
 * `is_attachment()`
-    * Returns `true` if the part represents an attachment, false otherwise.
+	* Returns `true` if the part represents an attachment, false otherwise.
 * `filename()`
-    * Returns the name of the attachment, if `is_attachment` returned true.
+	* Returns the name of the attachment, if `is_attachment` returned true.
 * `size()`
     * Return the size of the content.
 * `type()`
     * Returns the content-type of the MIME-part.
 
 Sample code is available in `sample.lua/show_message.lua`.
+
+
+
+### MIME-Type
+
+There is a simple helper-object allowing you to retrieve the MIME-type
+of files, based upon their containts.   This lookup is achieved via
+`libmagic`.
+
+* `MIME:type(file)`
+     * Return the MIME-type of the specified file.
+
+Sample code is available in `sample.lua/mime_type.lua`.
 
 
 
@@ -318,6 +375,9 @@ The Screen object is registered automatically and doesn't need to be constructed
     * Accept input from a small list of characters, used for showing menus, etc.
 * `Screen:sleep(N)`
     * Sleep for N-seconds.
+* `Screen:stuff(txt)`
+    * Add text to the pending input-queue, to fake user-input.
+    * For example: `Screen:stuff( ":Panel:append('ok');\n" )`
 * `Screen:width()`
     * Return the width of the screen.
 
@@ -390,3 +450,5 @@ The lines may contain a prefix containing colour information.  For example:
       return r
     end
 
+The function `lua_view` generates the output used in Lua-mode, one of
+the many available modal view-modes.
