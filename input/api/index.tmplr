@@ -3,9 +3,6 @@ api_page: 1
 format: markdown
 ----
 
-# Lua API
-
-
 The core idea beind lumail2, and the reason for writing it rather than
 continuing to extend the legacy-project, is that all the items that are
 involved are Objects.
