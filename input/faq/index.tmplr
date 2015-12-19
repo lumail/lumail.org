@@ -17,8 +17,13 @@ faq_page: 1
 
     <dt>How does outgoing mail get sent?</dt>
     <dd>
-      <p>Outgoing mail is sent by executing the command you specify via the <a href="/lua/sendmail_path.html">sendmail_path()</a> primitive.</p>
-      <p>There is no integrated SMTP support in <span class="tt">lumail</span>.</p>
+      <p>Outgoing mail is sent by executing the command you specify in
+    your configuration file.</p>
+    <table border="1">
+    <tr><th>Lumail Version</th><th>Configuration Setting</th></tr>
+    <tr><td>Lumail 2.x</td><td><tt>Config:set( "global.mailer", "/usr/lib/sendmail -t" )</td></td></tr>
+    <tr><td>Lumail Legacy</td><td><a href="/lua/sendmail_path.html">sendmail_path()</a></td></tr>
+    </table>
       <p>&nbsp;</p>
     </dd>
 
@@ -41,7 +46,6 @@ faq_page: 1
       <ul>
         <li><span class="tt">lumail</span> is a modal client.  That is almost unique.</li>
         <li><span class="tt">lumail</span> has a real embedded language for scripting, Lua.</li>
-        <li><span class="tt">lumail</span> allows you to open <i>multiple</i> folders.</li>
       </ul>
       <p>Other differences are, sadly, negative:</p>
       <ul>
@@ -72,9 +76,9 @@ faq_page: 1
 
     <dt>What can I do with Lua?</dt>
     <dd>
-      <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/lua/">primitives</a> made available to it.</p>
+      <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/api/">primitives</a> made available to it.</p>
       <p>Using Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
-      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do; and if you find yourself missing a function/primitive you can report that as a bug against the <a href="<!-- tmpl_var name='repo' -->">github repository</a>.</p>
+      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do; and if you find yourself missing a function/primitive you can report that as a bug against the <a href="<!-- tmpl_var name='repo.active' -->">github repository</a>.</p>
       <p>&nbsp;</p>
     </dd>
 
@@ -88,7 +92,7 @@ faq_page: 1
     <dt id="bug">I found a bug, what do I do?</dt>
     <dd>
       <p>First of all thank you for trying the client.</p>
-      <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/skx/lumail/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
+      <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/lumail/lumail2/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
       <p>&nbsp;</p>
     </dd>
 
