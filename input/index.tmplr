@@ -9,10 +9,6 @@ news: read_file( "./news.recent.inc" )
   <p>There are many graphical clients for email, but comparatively few designed solely for console use.  With the exception of GNU Emacs none of the console clients I examined had any built in support for scripting with a <i>real</i> language.</p>
   <p>Lumail is a new entrant into the world of email clients, with the following differences from existing projects:</p>
   <ul>
-    <li>It operates exclusively on Maildir hierarchies:
-      <ul>
-        <li>There is no support for POP3/IMAP.</li>
-      </ul></li>
     <li>It is a modal-client so you're always in one particular mode:
       <ul>
         <li>maildir-mode: Shows you the list of folders.</li>
@@ -20,7 +16,7 @@ news: read_file( "./news.recent.inc" )
         <li>message-mode: Shows you a single message.</li>
         <li>...</li>
     </ul></li>
-    <li>Built in scripting with a mature language.
+    <li>Scripting is supported with a mature language.
       <ul>
         <li>Lumail, as the name might suggest, uses <a href="http://www.lua.org/">lua</a>.</li>
         <li>The <a href="/api/">Lua API</a> we present is simple, reliable, and self-consistent.</li>
