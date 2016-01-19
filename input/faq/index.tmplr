@@ -7,11 +7,22 @@ faq_page: 1
 
 <blockquote>
   <dl>
-    <dt>Why no IMAP/POP3?</dt>
+    <dt>IMAP is new, how does it work?</dt>
     <dd>
-      <p>I login to my mailserver and read mail directly as it is delivered via <span class="tt">procmail</span>, so I have no need for it.</p>
-      <p>Avoiding the use of POP3 or IMAP coding also greatly simplifies the client.</p>
-      <p>If you have to use IMAP/POP3 to fetch your mail I'd suggest the use of <span class="tt">imapsync</span>, <span class="tt">offlineimap</span>, <span class="tt">fetchmail</span>, or similar.</p>
+      <p>Because integrating with existing libraries was seen as a
+  large task I've implemented IMAP support by shelling out to perl.
+  This isn't as crazy as it sounds - we only shell out at very
+  specific times:</p>
+  <ul>
+  <li>On connection to read the list of folders.</li>
+  <li>When a new folder is selected we read all the messages.</li>
+  <li>When marking a message as new/unread/deleted.</li>
+  </ul>
+  <p>Yes there is overhead, but in practice it is fast enough.  If you
+  struggle you might prefer to use <span class="tt">imapsync</span>,
+  <span class="tt">offlineimap</span>, <span
+  class="tt">fetchmail</span>, or similar to sync your mail locally
+  then read it that way.</p>
       <p>&nbsp;</p>
     </dd>
 
@@ -50,7 +61,7 @@ faq_page: 1
       <p>Other differences are, sadly, negative:</p>
       <ul>
         <li>You'll only ever operate on a single message.  There is nothing like mutt's tag-prefix command.</li>
-        <li>There is no IMAP/POP3/SMTP support.</li>
+        <li>There is no POP3/SMTP support.</li>
         <li>There is no support for MH-H/Mail folders.  Just Maildirs.</li>
       </ul>
       <p>&nbsp;</p>
