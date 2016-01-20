@@ -4,11 +4,13 @@ docs_page: 1
 
 
 <blockquote>
+<blockquote>
 <p>Due to the recent reworking, which lead to lumail v2.x, the documentation has been split into two parts:</p>
 <ul>
 <li><a href="#current">Lumail 2.x</a></li>
-<li><a href="#legacy">Luamil Legacy</a></li></blockquote>
+<li><a href="#legacy">Luamil Legacy</a></li>
 </ul>
+</blockquote>
 
 <h3 id="current" name="current">Lumail 2.x</h3>
 <blockquote>
@@ -32,6 +34,7 @@ notes on dependencies, and a sample configuration snippet to use.</p>
 
 <h3 id="legacy" name="legacy">Lumail-Legacy</h3>
 
+<blockquote>
  <!-- tmpl_include name='legacy.inc' -->
 
 <dl>

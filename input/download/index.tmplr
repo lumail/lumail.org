@@ -5,8 +5,10 @@ active: hash_file(lumail-2.4.tar.gz)
 
 ----
 
+<blockquote>
 <p>Versioned <a href="#source">source-snapshots</a> are released when things are judged to be stable, but the preferred method for downloading sources at the moment is directly via the Github repositories.</p>
 <p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/contact/">should be reported</a> as such.</p>
+</blockquote>
 
 
 <h2 id="source">Source Snapshots</h2>

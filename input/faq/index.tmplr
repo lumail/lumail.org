@@ -2,6 +2,7 @@ Title: Frequently Asked Questions
 faq_page: 1
 ----
 
+<blockquote>
 <p>This page lists questions &amp; answers relating to the project as a whole.</p>
 <p>There is a separate <a href="/faq/technical/">technical FAQ</a>.</p>
 
@@ -115,4 +116,5 @@ faq_page: 1
     <p>Finally if you just want to <a href="http://www.amazon.co.uk/gp/registry/2LTKRAY9O22LI/">buy me presents</a> that's always nice; though an email saying "This is cool" is just as rewarding.</p>
     </dd>
   </dl>
+</blockquote>
 </blockquote>
