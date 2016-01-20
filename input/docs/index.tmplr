@@ -17,6 +17,10 @@ docs_page: 1
 <dl>
 <dt><a href="/cmdline/">Command-line flags</a></dt>
 <dd><p>The <span class="tt">lumail2</span> client accepts several command-line flags, which this page documents.</p></dd>
+<dt>Read the <a href="/imap/">IMAP overview</a></dt>
+<dd><p>This describes the history behind the IMAP implementation, has
+notes on dependencies, and a sample configuration snippet to use.</p>
+</dd>
 <dt>Read about the <a href="/api/">Lumail 2.x API</a></dt>
 <dd><p>The API-page describes all the objects that are supported and implemented in the 2.x API, along with links to sample code.</p></dd>
 <dt>The <a href="<!-- tmpl_var name='lumail2.cfg' -->">default configuration file</a></dt>
@@ -46,4 +50,3 @@ docs_page: 1
 </dl>
 </blockquote>
 </blockquote>
-
