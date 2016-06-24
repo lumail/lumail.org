@@ -6,28 +6,38 @@ screen_page: 1
 
 <h2>maildir-mode</h2>
 <blockquote>
-<p><img src="maildir.gif" alt="maildir-mode view" width="671" height="488"/></p>
+<p>The following shot demonstrates a view of a list of folders.</p>
 <blockquote>
-<p>Here we show scrolling down the list of of available Maildirs.</p>
-<p>The display can be altered via the <a href="/lua/maildir_format.html">maildir_format</a> primitive.  (For example you might prefer to display <span class="tt">Amazon.com</span>, rather than <span class="tt">/home/skx/Maildir/Amazon.com</span>.)</p>
+<p><img src="1.maildir.gif" alt="maildir-mode view" width="775" height="473"/></p>
 </blockquote>
+
+<p>The inverse-line represents the currently selected folder, which could be opened by pressing <span class="tt">return</span>.  The colours are configured according to my preferences, and can be changed:</p>
+<ul>
+<li>I colour folders matching the pattern "Automated*" in Yellow.</li>
+<li>Folders containing unread messages Red.</li>
+<li>Folders matching the pattern "lists-*" in Green.</li>
+</ul>
 </blockquote>
+
 
 <h2>index-mode</h2>
 <blockquote>
-<p><img src="index.png" alt="index-mode view" width="714" height="523"/></p>
+<p>This is a default view of a folder, with no changes made:</p>
 <blockquote>
-<p>The display can be altered via the <a href="/lua/index_format.html">index_format</a> primitive.  (For example you might wish to see the date the mail was received in the summary.)</p>
+<p><img src="1.index.png" alt="index-mode view" width="775" height="473"/></p>
 </blockquote>
+<p>The selected-line is red because that mail is unread, as is also indicated by the <span class="tt">N</span> flag.</p>
 </blockquote>
 
 <h2>message-mode</h2>
 <blockquote>
-<p><img src="message.png" alt="message-mode view" width="782" height="502" /></p>
+<p>The following two screenshots demonstrate the display of a single message, including the default highlighting:</p>
 <blockquote>
-<p>This is the view of a single message.</p>
-<p>The colours used here are my own personal preferences, they can be set via the existing primitives.  For example <a href="/lua/header_colour.html">the header</a>, any <a href="/lua/attachment_colour.html">attachments</a>, and the <a href="/lua/body_colour.html">body</a> are changed separately.</p>
-<p>This message is obviously unsolicated SPAM, but it demonstrates the correct display of UTF8 characters, so it makes a good sample regardless.</p>
+<p><img src="1.message.png" alt="message-mode view" width="775" height="473" /></p>
 </blockquote>
+<p>This message is obviously unsolicated SPAM, but it demonstrates the correct display of UTF8 characters, so it makes a good sample message.</p>
+<blockquote>
+<p><img src="2.message.png" alt="message-mode view" width="775" height="473" /></p>
 </blockquote>
-
+<p>The colours used here are my own personal preferences, and can be updated as you prefer.</p>
+</blockquote>
