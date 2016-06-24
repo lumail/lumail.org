@@ -84,4 +84,8 @@ active: hash_file(lumail-2.6.tar.gz)
 $ make
 </pre>
 <p>Once the compilation completes you'll find the executable <span class="tt">./lumail2</span> generated, and you can now <a href="/getting-started/">get started</a>.</p>
+<p>As of release 2.6 the generated binary also includes a simple test-suite to validate the internal implementation, you can execute that via:</p>
+<pre>
+$ ./lumail2 --test
+</pre>
 </blockquote>
