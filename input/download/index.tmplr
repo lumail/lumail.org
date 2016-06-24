@@ -1,7 +1,9 @@
 Title: Download
 download_page: 1
 legacy: hash_file(lumail-0.26.tar.gz)
+legacy_date: filedate(lumail-0.26.tar.gz)
 active: hash_file(lumail-2.6.tar.gz)
+active_date: filedate(lumail-2.6.tar.gz)
 
 ----
 
@@ -19,11 +21,13 @@ active: hash_file(lumail-2.6.tar.gz)
 <li>Lumail 2.x, the active project:
 <ul>
 <li><a href="<!-- tmpl_var name='active_src' -->"><!-- tmpl_var name='active_src' --></a>
+<li>Released on <!-- tmpl_var name='active_date' --></li>
 <li>SHA1 Hash <!-- tmpl_var name='active_hash' --></li>
 </ul></li>
 <li>Lumail Legacy:
 <ul>
 <li><a href="<!-- tmpl_var name='legacy_src' -->"><!-- tmpl_var name='legacy_src' --></a>
+<li>Released on <!-- tmpl_var name='legacy_date' --></li>
 <li>SHA1 Hash <!-- tmpl_var name='legacy_hash' --></li>
 </ul></li>
 <p>See <a href="#building">the notes on building</a> for requirements and instructions on building the release.</p>
