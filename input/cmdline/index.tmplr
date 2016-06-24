@@ -20,6 +20,9 @@ Title: Command-Line arguments
 <dt><span class="tt">--no-curses</span></dt>
 <dd><p>Disable the curses-output; this is mostly useful for loading sample configuration file-snippets to test them, as it will enable the Lua <span class="tt">print</span> function to work as expected.</p></dd>
 
+<dt><span class="tt">--test</span></dt>
+<dd><p>Execute the internal test-suite, which is included in both release and debug builds.</p></dd>
+
 <dt><span class="tt">--version</span></dt>
 <dd><p>Show the version number of your <span class="tt">lumail2</span> binary, then exit.</p></dd>
 
@@ -49,4 +52,3 @@ Title: Command-Line arguments
 <dd><p>Show the version number of your <span class="tt">lumail</span> binary, then exit.</p></dd>
 </dl>
 </blockquote>
-
