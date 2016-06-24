@@ -20,7 +20,7 @@ active_date: filedate(lumail-2.6.tar.gz)
 <ul class="invisible">
 <li>Lumail 2.x, the active project:
 <ul>
-<li><a href="<!-- tmpl_var name='active_src' -->"><!-- tmpl_var name='active_src' --></a>
+<li><a href="<!-- tmpl_var name='active_src' -->"><!-- tmpl_var name='active_src' --></a> (<a href="<!-- tmpl_var name='active_src' -->.asc">signature</a> from <a href="https://www.steve.org.uk/contact/">my GPG-key</a>)
 <li>Released on <!-- tmpl_var name='active_date' -->.</li>
 <li>SHA1 Hash <code><!-- tmpl_var name='active_hash' --></code></li>
 </ul></li>
@@ -30,6 +30,7 @@ active_date: filedate(lumail-2.6.tar.gz)
 <li>Released on <!-- tmpl_var name='legacy_date' -->.</li>
 <li>SHA1 Hash <code><!-- tmpl_var name='legacy_hash' --></code></li>
 </ul></li>
+</ul>
 <p>See <a href="#building">the notes on building</a> for requirements and instructions on building the release.</p>
 </blockquote>
 
@@ -81,6 +82,7 @@ active_date: filedate(lumail-2.6.tar.gz)
  <pre>
  # apt-get install build-essential make pkg-config
  # apt-get install liblua5.2-dev libgmime-2.6-dev libncursesw5-dev libpcre3-dev libmagic-dev
+ </pre>
 </div>
 
 <p>Providing you have the appropriate dependencies installed you can build the client via a single "<span class="tt">make</span>" command:</p>
