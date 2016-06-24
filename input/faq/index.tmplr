@@ -3,15 +3,14 @@ faq_page: 1
 ----
 
 <blockquote>
-<p>This page lists questions &amp; answers relating to the project as a whole.</p>
-<p>There is a separate <a href="/faq/technical/">technical FAQ</a>.</p>
+<p>This page lists questions &amp; answers relating to the project as a whole.  There is also a separate <a href="/faq/technical/">technical FAQ</a> available.</p>
 
 <blockquote>
   <dl>
     <dt>IMAP is new, how does it work?</dt>
     <dd>
       <p>Because integrating with existing libraries was seen as a
-  large task I've implemented IMAP support by shelling out to perl.
+  large task I've implemented IMAP support by shelling out to <span class="tt">perl</span>.
   This isn't as crazy as it sounds - we only shell out at very
   specific times:</p>
   <ul>
