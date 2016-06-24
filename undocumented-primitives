@@ -27,9 +27,9 @@ my $home = $ENV{ 'HOME' };
 #
 # Ensure lumail is present.
 #
-if ( !-d "$home/git/lumail" )
+if ( !-d "$home/Repos/personal/lumail" )
 {
-    print "~/git/lumail is not present.  Aborting.\n";
+    print "~/Repos/personal/lumail is not present.  Aborting.\n";
     exit 1;
 }
 
@@ -37,7 +37,7 @@ if ( !-d "$home/git/lumail" )
 #
 #  Open the binding-file
 #
-open( my $handle, "<", $home . "/git/lumail/src/lua.cc" ) or
+open( my $handle, "<", $home . "/Repos/personal/lumail/src/lua.cc" ) or
   die "Failed to open binding file - $!";
 
 #
