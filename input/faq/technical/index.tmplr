@@ -4,37 +4,14 @@ Title: Technical FAQ
 
 <blockquote>
  <ul class="invisible">
-  <li><a href="#faq_bodies">How can I modify message bodies?</a></li>
   <li><a href="#faq_rfc2047">Parsing of headers is broken (to/from/subject)?</a></li>
   <li><a href="#faq_tab">How does TAB-completion, and character input work?</a></li>
-  <li><a href="#faq_gpg">How can I handle GPG?</a></li>
   <li><a href="#faq_iterate">How can I iterate over messages?</a></li>
-  <li><a href="#faq_sort">Why is the sort-order of my messages wrong?</a></li>
   <li><a href="#faq_state">Many functions need to save/restore state, how can that be done?</a></li>
-  <li><a href="#faq_msmtp">How can I use msmtp?</a></li>
   <li><a href="#faq_utf8">The output looks wrong with foreign character sets.</a></li>
-  <li><a href="#faq_gmime">I'm having issues with multi-part messages, what could be wrong?</a></li>
+
  </ul>
  <p>&nbsp;</p>
-</blockquote>
-
-
-<p>&nbsp;</p>
-
-<h4 id="faq_bodies">How can I modify message bodies?</h4>
-<blockquote>
-<p>There are times when it is necessary to modify a message prior to display.  Lumail provides two ways in which you can modify the message:</p>
-<ol>
-<li><a href="/lua/on_get_body.html">on_get_body()</a></li>
-<li><a href="/lua/mail_filter.html">mail_filter()</a></li>
-</ol>
-<p>The <span class="tt">on_get_body()</span> function is called initially when a message is to be displayed.  If that returns a non-empty string then the output will be used as the body to display.  This allows you to juggle MIME-parts, convert HTML to text, etc.</p>
-<p>If you don't use the <span class="tt">on_get_body()</span> function then the contents of the message will be read from the disk, piped through the system command defined with <span class="tt">mail_filter()</span>, and then piped through the command which is defined in the <span class="tt">display_filter()</span> function..</p>
-<p>This means you have two ways of filtering a command, both via the shell:</p>
-<ul>
-<li><span class="tt">display_filter</span> - Will filter just the text which is displayed upon the screen.</li>
-<li><span class="tt">mail_filter</span> - Will filter just the whole message (headers, attachments, and all).</li>
-</ul>
 </blockquote>
 
 
@@ -92,15 +69,6 @@ ignore_case = true
 ignore_case = false
 </pre>
 <p>When ambiguity is present for completion you'll be presented with a list of possible matches.  Press TAB repeatedly to select the completion you prefer, or press Esc to cancel and complete manually.</p>
-</blockquote>
-
-
-<p>&nbsp;</p>
-
-
-<h4 id="faq_gpg">How can I handle GPG?</h4>
-<blockquote>
-<p>TODO:  <a href="https://github.com/skx/lumail/issues/87#issuecomment-22605624">https://github.com/skx/lumail/issues/87#issuecomment-22605624</a></p>
 </blockquote>
 
 
@@ -165,101 +133,8 @@ end
 </pre>
 </blockquote>
 
-
 <p>&nbsp;</p>
 
-<h4 id="faq_sort">Why is the sort-order of my messages wrong?</h4>
-<blockquote>
-<p>Lumail has several different sorting methods that can be applied to folders, which are set with the <a href="/lua/sort.html">sort()</a> method.</p>
-<p>Because it is the fastest we default to sorting messages by the modification time of the files which messages are stored in.  This only requires the use of <span class="tt">stat()</span>, rather than parsing the Date: headers of each message.</p>
-<p>If you're using offlineimap, or some other tool, which manipulates the <span class="tt">mtime</span> of message-files on-disk then you should use :</p>
-<pre>
--- slower, but more accurate sorting method
-sort( "header-asc" );
-</pre>
-</blockquote>
-
-
-<p>&nbsp;</p>
-
-<h4 id="faq_state">Many functions need to save/restore state, how can that be done?</a></li></h4>
-<blockquote>
-<p>Many operations involve changing the global-mode, or limits, programatically.  If these limits aren't saved/restored then the user will be surprised by user-interface changes.</p>
-<p>To avoid this a common idiom is to save/restore state.  This can be as basic as:</p>
-<pre>
--- save mode / limits
-old_mode   = global_mode()
-old_ilimit = index_limit()
-old_mlimit = maildir_limit()
-
---
--- ...
---
-
--- restore
-global_mode( old_mode )
-index_limit( old_ilimit )
-maildir_limit( old_mlimit)
-</pre>
-<p>However this doesn't take into account selected folders, or message offsets.  It is perhaps more useful to wrap the save/restore steps into distinct functions.  That is what the <a href="/examples/state.html">save_state() &amp; load_state()</a> functions do.</p>
-</blockquote>
-
-<p>&nbsp;</p>
-
-<h4 id="faq_msmtp">How can I use msmtp?</h4>
-<blockquote>
-<p><a href="http://msmtp.sourceforge.net/">msmtp</a> is a simple mail client which works as a relay for sending outgoing mail.  In general you can use any command-line client for sending mail, so long as:</p>
-<ul>
-<li>The client can accept submissions on STDIN.</li>
-<li>The client has a consistent set of command-line  arguments.</li>
-</ul>
-<p>You'd set the path to the binary to use via <a href="/lua/sendmail_path.html">sendmail_path()</a> and all would be well.  Unfortunately <span class="tt">msmtp</span> requires the recipient to be specified upon the command-line, which makes using it a little more involved.</p>
-<p>The following example shows how to handle using it:</p>
-<pre>
---
--- msmtp needs to know which account you are using to send the mail and also
--- to whom the mail should be sent.
---
--- The account name will be saved in a global variable 'cur_acc' and the
--- recipient's email address can be parsed from the outgoing message via
--- the <a href="/lua/on_send_message.html">on_send_message()</a> hook.
---
--- In short we're updating the command-line to use, to include the recipient
--- every time we're sending a message.  A similar result could be achieved
--- by setting <a href="/lua/sendmail_path.html">sendmail_path()</a> to a
--- shell-script which parsed the message, and invoked mstpd.
---
-
---
--- Path to binary
-msmtp_path = '/usr/bin/msmtp'
-
--- The account that is used, as specified in the msmtprc file
-cur_acc = 'gmail'
-
---
--- Update the path to the mail-program to include the recipient address
--- in the arguments.
---
-function on_send_message(filepath)
-    local f = assert(io.open(filepath, 'r'))
-    while true do
-        local line = f:read('*line')
-        if ( string.find( line, "To:", 1, true )  ) then
-
-             -- the first 3 characters are "To:"
-            to = string.sub(line, 4)
-
-            sendmail_path(msmtp_path .. ' -a ' .. cur_acc .. ' ' .. to)
-            break
-        end
-    end
-    f:close()
-end
-</pre>
-</blockquote>
-
-<p>&nbsp;</p>
 <h4 id="faq_utf8">The output looks wrong with foreign character sets.</h4>
 <blockquote>
 <p>The intention is that all output will be sent to your terminal/console in UTF-8.</p>
@@ -273,18 +148,3 @@ $ perl -Mcharnames=:full -CS -wle 'print "\N{EURO SIGN}"'
 </pre>
 <p>If that outputs the correct Euro symbol ("&euro;") then your terminal is configured correctly, and all Lumail output should be correct.  If not please report a bug.</p>
 </blockquote>
-
-
-<p>&nbsp;</p>
-<h4 id="faq_gmime">I'm having issues with multi-part messages, what could be wrong?</h4>
-<blockquote>
-<p>Several reported bugs relating to MIME issues, and multi-part messages, have ultimately been found to be caused by older versions of the GMime library.</p>
-<p>For example <a href="https://github.com/skx/lumail/issues/159">issue #159</a> was reported on a system using GMime v2.6.7-1, but on a different system with GMime  2.6.19-1 there was no bug.</p>
-<p>If you suspect MIME issues it would be helpful to check against a newer library - <span class="tt">lumail</span> will report the GMime version it was built against via the <a href="/cmdline/"><span class="tt">--version</span> flag</a>:</p>
-<pre>
-~ $ lumail -v
-lumail v0.23
-Built against Lua 5.1 and GMime 2.6.10
-</pre>
-</blockquote>
-
