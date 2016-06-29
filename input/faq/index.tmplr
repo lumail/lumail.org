@@ -62,7 +62,10 @@ faq_page: 1
       <ul>
         <li>You'll only ever operate on a single message.  There is nothing like mutt's tag-prefix command.</li>
         <li>There is no POP3/SMTP support.</li>
-        <li>There is no support for MH-H/Mail folders.  Just Maildirs.</li>
+        <li>There is no support for MH-H/Mail folders.  Just Maildirs.
+           <ul>
+           <li>Although IMAP is supported.</li>
+           </ul></li>
       </ul>
       <p>&nbsp;</p>
     </dd>
@@ -89,7 +92,8 @@ faq_page: 1
     <dd>
       <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/api/">primitives</a> made available to it.</p>
       <p>Using Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
-      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do; and if you find yourself missing a function/primitive you can report that as a bug against the <a href="<!-- tmpl_var name='repo.active' -->">github repository</a>.</p>
+      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do, as well as <a href="https://raw.github.com/skx/lumail/master/lumail.lua">samples contained within the source repository</a>.</p>
+      <p>If you find yourself missing a specific function/primitive/binding you may report that as a bug against the <a href="<!-- tmpl_var name='repo.active' -->">github repository</a>.</p>
       <p>&nbsp;</p>
     </dd>
 
