@@ -8,6 +8,7 @@ Title: Technical FAQ
     <li><a href="#faq_slow">How can I improve the speed of lumail?</a></li>
     <li><a href="#faq_rfc2047">Parsing of headers is broken (to/from/subject)?</a ></li>
     <li><a href="#faq_utf8">The output looks wrong with foreign character sets.</a></li>
+    <li><a href="#faq_easter">Is there an easter-egg?</a></li>
   </ul>
   <p>&nbsp;</p>
 </blockquote>
@@ -56,4 +57,12 @@ $ export LC_ALL=en_US.UTF8
 $ perl -Mcharnames=:full -CS -wle 'print "\N{EURO SIGN}"'
 </pre>
 <p>If that outputs the correct Euro symbol ("&euro;") then your terminal is configured correctly, and all Lumail output should be correct.  If not please report a bug.</p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<h4 id="faq_easter">Is there an easter-egg?</h4>
+<blockquote>
+  <p>That would be a shocking waste of programmer resources!</p>
+  <p>Don't press <tt>ctrl-l</tt> to see the results of that squandered time!</p>
 </blockquote>
