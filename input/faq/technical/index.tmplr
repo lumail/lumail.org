@@ -3,17 +3,34 @@ Title: Technical FAQ
 
 
 <blockquote>
- <ul class="invisible">
-  <li><a href="#faq_rfc2047">Parsing of headers is broken (to/from/subject)?</a></li>
-  <li><a href="#faq_utf8">The output looks wrong with foreign character sets.</a></li>
-
- </ul>
- <p>&nbsp;</p>
+  <ul class="invisible">
+    <li><a href="#faq_gpg">How does GPG support work?</a></li>
+    <li><a href="#faq_slow">How can I improve the speed of lumail?</a></li>
+    <li><a href="#faq_rfc2047">Parsing of headers is broken (to/from/subject)?</a ></li>
+    <li><a href="#faq_utf8">The output looks wrong with foreign character sets.</a></li>
+  </ul>
+  <p>&nbsp;</p>
 </blockquote>
 
+<h4 id="faq_gpg">How does GPG support work?</h4>
+<blockquote>
+  <p>Signing, or encrypting outgoing messages is pretty simple, and only involves piping the message through the <tt>mimegpg</tt> binary, which will handle the GPG operation.</p>
+  <p>For validating and decrypting incoming messages things are more complex, and involves the use of a Lua filter-function <tt>message_replace()</tt>.</p>
+  <p>The <tt>message_replace</tt> function will be invoked with the path to the message on-disk, and will either return "" or an updated path.  If an updated path is returned then <i>that</i> will be treated as the incoming-message-path - allowing transformations to be made.</p>
+  <p><tt>mimegpg</tt> has options to both decrypt and validate a message passed through it, so we use those options to replace the body of each incoming message with a decrypted/validated copy of itself - which has the net result that the process is seamless.</p>
+  <p>Further details are explained in <a href="<!-- tmpl_var name='gpg.md' -->">the GPG documentation</a>  in the repository.</p>
+</blockquote>
 
 <p>&nbsp;</p>
 
+<h4 id="faq_slow">How can I improve the speed of lumail?</h4>
+<blockquote>
+  <p>Opening large lists of messages can be slow, to improve that there is a caching system which will cache the formatted version of messages.</p>
+  <p>It is expected that the first time you open a large folder the cache will be built, and after that things will be snappy and fast.</p>
+  <p>The cache is automatically written to disk when you exit lumail via "<span class="">Q</span>", or as a background action every two minutes.</p>
+</blockquote>
+
+<p>&nbsp;</p>
 
 <h4 id="faq_rfc2047">Parsing of headers is broken (to/from/subject)?</h4>
 <blockquote>
