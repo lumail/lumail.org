@@ -5,11 +5,11 @@ news: read_file( "./news.recent.inc" )
 ----
 
 <blockquote>
-  <p>Lumail is a modern console-based email client developed for GNU/Linux, supporting operations upon local Maildir hierarchies and remote IMAP mail-servers.</p>
+  <p>Lumail is a modern console-based email client developed for GNU/Linux, supporting operations upon local Maildir hierarchies and remote IMAP mail-servers.  The <a href="/screenshots/">screenshots</a> demonstrate what it looks like by default.</p>
   <p>There are many graphical clients for email, but comparatively few designed solely for console use.  With the exception of GNU Emacs none of the console clients I examined had any built in support for scripting with a <i>real</i> language.</p>
   <p>Lumail has differences from existing projects such as <tt>mutt</tt>, <tt>notmuch</tt> and similar alternatives:</p>
   <ul>
-    <li>It is a modal-client so you're always in one particular mode:
+    <li>It is a modal-client so you're always in a particular mode:
       <ul>
         <li>maildir-mode: Shows you the list of folders.</li>
         <li>index-mode: Shows you the list of messages.</li>
@@ -22,6 +22,22 @@ news: read_file( "./news.recent.inc" )
         <li>The <a href="/api/">Lua API</a> we present is simple, reliable, and self-consistent.</li>
     </ul></li>
   </ul>
+</blockquote>
+
+<h2>Installagion & Usage</h2>
+<blockquote>
+<p>To get started you'll want to :</p>
+<ul>
+<li><a href="/download/">Download and install</a>.</li>
+<li>Then read the <a href=".getting-started/">getting started guide</a>.</li>
+</ul>
+<p>Once you've got the basics setup you might then wish to consult the additional documentation:</p>
+<ul>
+<li><a href="/gpg/">Using GPG</a>.</li>
+<li><a href="/imap/">Using IMAP</a>.</li>
+</ul>
+<p>Finally if you have questions perhaps the <a href="/faq/">general FAQ</a>, or the <a href="/faq/technical/">technical FAQ</a> will answer them.  If not please <a href="/contact/">ask for help</a>.</p>
+
 </blockquote>
 
 <h2>Recent News</h2>
