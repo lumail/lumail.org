@@ -1,95 +1,56 @@
 Title: Getting Started
 started_page: 1
+format: markdown
 ----
 
+Running `make install` will install the binary, the libraries that we bundle, and the perl-utilities which are required for IMAP-operation.
 
-<blockquote>
-<p>This page briefly describes how you would get started using <span class="tt">lumail</span>.</p>
-<p>It only covers the bare essentials and documents the behaviour of the client with the
- default settings.  (You can configure the client significantly using the <a href="/lua/">available lua primitives</a>.)</p>
-<p>Before proceeding you'll need to <a href="/download/">install the client</a>.</p>
-</blockquote>
+If you wish to install manually copy:
 
-<h2>Configuration Files</h2>
-<blockquote>
-<p><span class="tt">lumail</span> is configured by a pair of Lua configuration files, which are loaded at startup-time:</p>
-<p>If present the following configuration files are read and executed:</p>
-<ul class="invisible">
-<li><span class="tt">/etc/lumail.lua</span>
-<ul>
-<li>This system-wide configuration file will affect all users.</li>
-</ul></li>
-<li><span class="tt">/etc/lumail.d/*.lua</span>
-<ul>
-<li>Any file matching this pattern is read.</li>
-</ul></li>
-<li><span class="tt">~/.lumail/config.lua</span>
-<ul>
-<li>This is a per-user file for your own changes.</li>
-</ul></li>
-</ul>
-<p>You may specify an additional file via the <span class="tt">--rcfile</span> <a href="/cmdline/">command-line argument</a>:</p>
-<pre>
-~$ lumail --rcfile ~/conf/lumail.lua
-</pre>
-<blockquote>
- <p><b>Note</b>: The default configuration file uses the <a href="/lua/load_directory.html">load_directory()</a> function to execute all files matching the pattern <span class="tt">~/.lumail.d/*.lua</span>.  This is optional behaviour which you can remove or modify.</p>
-</blockquote>
-</blockquote>
+* The contents of `lib/` to `/etc/lumail2/lib`.
+* The contents of `perl.d` to `/etc/lumail2/perl.d`.
 
-<h2>Initial Configuration</h2>
-<blockquote>
-<p>The initial configuration will consist of you telling lumail where to find your mail, setting your from address, and configuring the sending of new mail.</p>
-<p>The <a href="<!-- tmpl_var name='legacy.cfg' -->">sample configuration file</a> contains settings that you can adopt or adapt.</p>
-<p>Once you have these settings defined you'll be able to use the client, and consider looking at the <a href="/examples/">example functions</a> we've documented for further inspiration.</p>
-</blockquote>
+Once installed you'll then want to create your own personal configuration file.
 
-<h2>Basic Usage</h2>
-<blockquote>
-<p><span class="tt">lumail</span> is a modal mail client, which means you're always in one of three modes (see <a href="/lua/global_mode.html">global_mode()</a> for documentation):</p>
-<ul>
-<li>maildir-mode
-<ul>
-<li>This mode allows you to view a list of Maildir folders.</li>
-</ul></li>
-<li>index-mode
-<ul>
-<li>This mode allows you to view lists of messages.</li>
-</ul></li>
-<li>message-mode
-<ul>
-<li>This mode allows you to view a single message.</li>
-</ul></ul>
-</ul>
-<p>If you launch <span class="tt">lumail</span> you'll start in "maildir" mode, which consists of a
-scrollable list of folder-names.  You can page up/down with `j/k`, or search with `/`.</p>
-<blockquote>
-<p><b>Note</b>: The keybindings listed here are the defaults.</p>
-</blockquote>
-<p>Each folder-name has a small <span class="tt">[ ]</span> next to it.  This indicates whether the folder is
-selected or not.  Unlike other mail-clients you can open multiple folders with <span class="tt">lumail</span>,
-by selecting several folders and then opening the result, which will show you the messages
-in all the selected folders.</p>
-<p>To open the single folder which is highlighted, press RETURN.  Otherwise you may toggle
-the folders selected state with "SPACE".  Once you've selected as many folders as you
-wish you can press "I" to view the index-mode.</p>
-<p>index-mode is navigated the same way as maildir-mode; use `j + k + /` to move around,
-then press "SPACE"/"RETURN" to view an individual message.</P>
-<p>That's the rough introduction to using the client.</p>
-</blockquote>
+To allow smooth upgrades it is __recommended__ you do not edit the global configuration file `/etc/lumail2/lumail2.lua`.  Instead you should copy the sample user-configuration file into place:
 
-<h2>Advanced Usage</h2>
-<blockquote>
-<p>Because lumail has a built-in Lua interpreter you can configure it to do many interesting things.  The supplied <span class="tt"><a href="<!-- tmpl_var name='cfg' -->">lumail.lua</a></span> file shows examples of limiting the display, or opening several folders via a single-keystroke.</p>
-<p>As well as the sample configuration file there are <a href="/examples/">sample functions</a> available to give you inspiration.</p>
-<p>At any time you can evaluation/call Lua functions via the prompt, you're not limited to binding them to keys.  In <b>any</b> mode pressing "<span class="tt">:</span>" will prompt for input, and evaluate it.  For example you might press "<span class="tt">:</span>" then enter:</p>
-<pre>
-<a href="/lua/msg.html">msg</a>( "Lua rocks!" );
-</pre>
-<p>This uses just one of the <a href="/lua/">lua primitives</a> available to you, (<span class="tt">msg</span> outputs a message to the status area).</p>
-<p>Combining primitives works exactly as you'd expect:</p>
-<pre>
-<a href="/lua/msg.html">msg</a>( "You are called : " .. <a href="/lua/prompt.html">prompt</a>( "Enter your name:" ) );
-</pre>
-<p>(This prompts for your name, then displays it.  In Lua "<span class="tt">..</span>" is used for string concatenation.)</p>
-</blockquote>
+      $ mkdir ~/.lumail2/
+      $ cp lumail2.user.lua ~/.lumail2/lumail2.lua
+
+If you prefer you can name your configuration file after the hostname of the local system - this is useful if you store your dotfiles under revision control, and share them:
+
+      $ mkdir ~/.lumail2/
+      $ cp lumail2.user.lua ~/.lumail2/$(hostname --fqdn).lua
+
+The defaults in <a href="<!-- tmpl_var name='lumail2.user.cfg' -->">the per-user configuration file</a> should be adequately documented, but in-brief you'll want to ensure you set at least the following:
+
+     -- Set the location of your Maildir folders, and your sent-folder
+     Config:set( "maildir.prefix", os.getenv( "HOME" ) .. "/Maildir/" );
+     Config:set( "global.sent-mail", os.getenv( "HOME" ) .. "/Maildir/sent/" )
+
+     -- Set your outgoing mail-handler, and email-address:
+     Config:set( "global.mailer", "/usr/lib/sendmail -t" )
+     Config:set( "global.sender", "Some User <steve@example.com>" )
+
+     -- Set your preferred editor
+     Config:set( "global.editor", "vim  +/^$ ++1 '+set tw=72'" )
+
+Other options are possible, and you'll find if you wish to [use IMAP](IMAP.md) you need some more options.  If you wish to use encryption you should also read the [GPG notes](GPG.md).
+
+
+Using Lumail2
+-------------
+
+By default you'll be in the `maildir`-mode, and you can navigate with `j`/`k`, and select items with `ENTER`.
+
+For a quick-start you can use the following bindings:
+
+* `TAB` - Toggle the display of the status-panel.
+   * The panel displays brief messages when "things" happen.
+   * `P` - Toggle the size of the panel.
+   * `ctrl-p` enters you into a mode were you can view/scroll through past messages.
+* `H` - Shows the keybindings which are configured.
+* `M` - See your list of folders.
+* `q` - Always takes you out of the current mode and into the previous one.
+   * Stopping at the folder-list (`maildir`-mode).
+* `Q` - Exit.
