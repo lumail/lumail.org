@@ -29,7 +29,7 @@ news: read_file( "./news.recent.inc" )
 <p>To get started you'll want to :</p>
 <ul>
 <li><a href="/download/">Download and install</a>.</li>
-<li>Then read the <a href=".getting-started/">getting started guide</a>.</li>
+<li>Then read the <a href="/getting-started/">getting started guide</a>.</li>
 </ul>
 <p>Once you've got the basics setup you might then wish to consult the additional documentation:</p>
 <ul>
