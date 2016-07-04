@@ -4,6 +4,7 @@ Title: Technical FAQ
 
 <blockquote>
   <ul class="invisible">
+    <li><a href="#faq_headers">How can I see all message headers?</a></li>
     <li><a href="#faq_gpg">How does GPG support work?</a></li>
     <li><a href="#faq_slow">How can I improve the speed of lumail?</a></li>
     <li><a href="#faq_rfc2047">Parsing of headers is broken (to/from/subject)?</a ></li>
@@ -13,7 +14,21 @@ Title: Technical FAQ
   <p>&nbsp;</p>
 </blockquote>
 
-<h4 id="faq_gpg">How does GPG support work?</h4>
+<h3 id="faq_headers">How can I see all message headers?</h4>
+<blockquote>
+<p>By default when reading a message only a small set of headers are displayed, if you wish to view all headers you should update your user configuration file to include:</p>
+<pre>
+Config:set( "message.headers", 1 );
+</pre>
+<p>You could also bind this to a key, to allow toggling at run-time:</p>
+<pre>
+keymap['message']['i'] = 'Config.toggle("message.headers")'
+</pre>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<h3 id="faq_gpg">How does GPG support work?</h4>
 <blockquote>
   <p>Signing, or encrypting outgoing messages is pretty simple, and only involves piping the message through the <tt>mimegpg</tt> binary, which will handle the GPG operation.</p>
   <p>For validating and decrypting incoming messages things are more complex, and involves the use of a Lua filter-function <tt>message_replace()</tt>.</p>
@@ -24,7 +39,7 @@ Title: Technical FAQ
 
 <p>&nbsp;</p>
 
-<h4 id="faq_slow">How can I improve the speed of lumail?</h4>
+<h3 id="faq_slow">How can I improve the speed of lumail?</h4>
 <blockquote>
   <p>Opening large lists of messages can be slow, to improve that there is a caching system which will cache the formatted version of messages.</p>
   <p>It is expected that the first time you open a large folder the cache will be built, and after that things will be snappy and fast.</p>
@@ -33,7 +48,7 @@ Title: Technical FAQ
 
 <p>&nbsp;</p>
 
-<h4 id="faq_rfc2047">Parsing of headers is broken (to/from/subject)?</h4>
+<h3 id="faq_rfc2047">Parsing of headers is broken (to/from/subject)?</h4>
 <blockquote>
 <p>We use <a href="http://spruce.sourceforge.net/gmime/">GMime</a> for parsing headers, message-bodies, and attachments.</p>
 <p>By default GMime is pretty strict, but it has a looser mode which can be enabled via custom flags.  If you're seeing some oddities with decoding of headers in particular please set the environmental variable <span class="tt">RFC2047</span> to a non-empty value.</p>
@@ -45,7 +60,7 @@ RFC2047=1 lumail [...args...]
 
 <p>&nbsp;</p>
 
-<h4 id="faq_utf8">The output looks wrong with foreign character sets.</h4>
+<h3 id="faq_utf8">The output looks wrong with foreign character sets.</h4>
 <blockquote>
 <p>The intention is that all output will be sent to your terminal/console in UTF-8.</p>
 <p>So the first step is to explicitly setup a locale, if you've not already done so:</p>
@@ -61,7 +76,7 @@ $ perl -Mcharnames=:full -CS -wle 'print "\N{EURO SIGN}"'
 
 <p>&nbsp;</p>
 
-<h4 id="faq_easter">Is there an easter-egg?</h4>
+<h3 id="faq_easter">Is there an easter-egg?</h4>
 <blockquote>
   <p>That would be a shocking waste of programmer resources!</p>
   <p>Don't press <tt>ctrl-l</tt> to see the results of that squandered time!</p>
