@@ -17,7 +17,7 @@ To allow smooth upgrades it is __recommended__ you do not edit the global config
       $ mkdir ~/.lumail2/
       $ cp lumail2.user.lua ~/.lumail2/lumail2.lua
 
-If you prefer you can name your configuration file after the hostname of the local system - this is useful if you store your dotfiles under revision control, and share them:
+If you prefer you can name your configuration file after the hostname of the local system (which use useful if you store your "dotfiles" under revision control, and have the same configuration files stored on multiple hosts):
 
       $ mkdir ~/.lumail2/
       $ cp lumail2.user.lua ~/.lumail2/$(hostname --fqdn).lua
