@@ -24,7 +24,7 @@ news: read_file( "./news.recent.inc" )
   </ul>
 </blockquote>
 
-<h2>Installagion & Usage</h2>
+<h2>Installation &amp; Usage</h2>
 <blockquote>
 <p>To get started you'll want to :</p>
 <ul>
