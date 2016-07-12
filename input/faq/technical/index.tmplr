@@ -5,6 +5,7 @@ Title: Technical FAQ
 <blockquote>
   <ul class="invisible">
     <li><a href="#faq_headers">How can I see all message headers?</a></li>
+    <li><a href="#faq_html">How can I read a HTML message?</a></li>
     <li><a href="#faq_gpg">How does GPG support work?</a></li>
     <li><a href="#faq_iter">How can I apply a function to all messages?</a></li>
     <li><a href="#faq_slow">How can I improve the speed of lumail?</a></li>
@@ -25,6 +26,15 @@ Config:set( "message.headers", 1 );
 <pre>
 keymap['message']['i'] = 'Config.toggle("message.headers")'
 </pre>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<h3 id="faq_html">How can I read a HTML message?</h4>
+<blockquote>
+<p>By default lumail will present the <code>text/plain</code> view of a message if available.  It will do this even for messages which contain both <code>text/plain</code> and <code>text/html</code> parts.</p>
+<p>To view all available MIME-parts you may press "<code>A</code>" to move into attachment-mode.  From there you can highlight any part and press "<code>return</code>", or "<code>space</code>" to view them as text.</p>
+<p>If you wish to use a browser you can press "<code>l</code>" to open the currently-highlighted <code>text/html</code> part in <code>(l)ynx</code>, or <code>w</code> to view in <code>(w)3m</code>.</p>
 </blockquote>
 
 <p>&nbsp;</p>
