@@ -6,6 +6,7 @@ Title: Technical FAQ
   <ul class="invisible">
     <li><a href="#faq_headers">How can I see all message headers?</a></li>
     <li><a href="#faq_gpg">How does GPG support work?</a></li>
+    <li><a href="#faq_iter">How can I apply a function to all messages?</a></li>
     <li><a href="#faq_slow">How can I improve the speed of lumail?</a></li>
     <li><a href="#faq_rfc2047">Parsing of headers is broken (to/from/subject)?</a ></li>
     <li><a href="#faq_utf8">The output looks wrong with foreign character sets.</a></li>
@@ -35,6 +36,44 @@ keymap['message']['i'] = 'Config.toggle("message.headers")'
   <p>The <tt>message_replace</tt> function will be invoked with the path to the message on-disk, and will either return "" or an updated path.  If an updated path is returned then <i>that</i> will be treated as the incoming-message-path - allowing transformations to be made.</p>
   <p><tt>mimegpg</tt> has options to both decrypt and validate a message passed through it, so we use those options to replace the body of each incoming message with a decrypted/validated copy of itself - which has the net result that the process is seamless.</p>
   <p>Further details are explained in <a href="<!-- tmpl_var name='gpg.md' -->">the GPG documentation</a>  in the repository.</p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<h3 id="faq_iter">How can I apply a function to all messages?</h3>
+<blockquote>
+<p>To get access to all the messages you can use the <code>get_messages()</code> function, this will return all messages which are currently available (respecting the value of <code>index.limit</code> variable).</p>
+<p>Once you have the list you can then iterate as you would in Lua:</p>
+<pre>
+local msgs = get_messages()
+
+for index,object in ipairs(msgs) do
+    -- Do something with object here...
+end
+</pre>
+<p>That said there is a simpler way, via the functional-programming module which is included you can invoke a method on every message in one step.  The following example marks all messages as being read:</p>
+<pre>
+function mark_all_read()
+   local msgs = get_messages()
+   if ( msgs and #msgs > 0 ) then
+      Fun.object_map( 'mark_read', msgs )
+   else
+      Panel:append( "There are no messages" )
+   end
+end
+</pre>
+<p>Similarly this method will delete all currently visible messages:</p>
+<pre>
+function delete_all()
+   local msgs = get_messages()
+   if ( msgs and #msgs > 0 ) then
+      Fun.map( Message.delete, msgs )
+   else
+      Panel:append( "There are no messages" )
+   end
+end
+</pre>
+<p>Please see <code>lib/functional.lua</code> for details of the difference between <code>Fun.map</code> and <code>Fun.object_map</code>.</p>
 </blockquote>
 
 <p>&nbsp;</p>
