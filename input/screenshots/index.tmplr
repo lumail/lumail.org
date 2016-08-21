@@ -2,7 +2,12 @@ Title: lumail screenshots
 screen_page: 1
 ----
 
-<p>Because <span class="tt">lumail</span> is a modal client there are three distinct states you'll be in.  Here we show each of them:</p>
+<p>This page contains some simple screenshots of the mail-client in operation, if you prefer you can watch a short video, which gives a more natural flavour of things:</p>
+<ul>
+<li><a href="https://asciinema.org/a/chdqz6tb4vt9p3ifp32g4musa">https://asciinema.org/a/chdqz6tb4vt9p3ifp32g4musa</a></li>
+</ul>
+
+<p><span class="tt">lumail</span> is a modal client, which contains a number of distinct modes.  This page shows screenshots of the major display-modes:</p>
 
 <h2>maildir-mode</h2>
 <blockquote>
