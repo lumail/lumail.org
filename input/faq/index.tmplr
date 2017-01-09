@@ -60,7 +60,11 @@ faq_page: 1
       </ul>
       <p>Other differences are, sadly, negative:</p>
       <ul>
-        <li>You'll only ever operate on a single message.  There is nothing like mutt's tag-prefix command.</li>
+        <li>You'll only ever operate on a single message.  There is nothing like mutt's tag-prefix command.
+          <ul>
+            <li>But when coding you <i>can</i> easily write functions that apply to all visible messages, or some subset of them.</li>
+          </ul>
+        </li>
         <li>There is no POP3/SMTP support.</li>
         <li>There is no support for MH-H/Mail folders.  Just Maildirs.
            <ul>
@@ -92,7 +96,7 @@ faq_page: 1
     <dd>
       <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/api/">primitives</a> made available to it.</p>
       <p>Using Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
-      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do, as well as <a href="https://raw.github.com/skx/lumail/master/lumail.lua">samples contained within the source repository</a>.</p>
+      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do.  There are also collections of sample code in <a href="the <!-- tmpl_var name='repo.active' -->">source repository</a> - look beneath <a href="https://github.com/lumail/lumail2/tree/master/lib/"><code>lib/</code></a> and <a href="https://github.com/lumail/lumail2/tree/master/sample.lua"><code>sample.lua/</code></a> to see those.</p>
       <p>If you find yourself missing a specific function/primitive/binding you may report that as a bug against the <a href="<!-- tmpl_var name='repo.active' -->">github repository</a>.</p>
       <p>&nbsp;</p>
     </dd>
