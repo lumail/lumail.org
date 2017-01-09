@@ -18,14 +18,7 @@ Title: Technical FAQ
 
 <h3 id="faq_headers">How can I see all message headers?</h4>
 <blockquote>
-<p>By default when reading a message only a small set of headers are displayed, if you wish to view all headers you should update your user configuration file to include:</p>
-<pre>
-Config:set( "message.headers", 1 );
-</pre>
-<p>You could also bind this to a key, to allow toggling at run-time:</p>
-<pre>
-keymap['message']['i'] = 'Config.toggle("message.headers")'
-</pre>
+<p>By default when viewing a message only a small set of headers are displayed, but you can press "<code>G</code>" to toggle between viewing some or all of them.  (This is configured in the default <code>keymap.lua</code> file.)</p>
 </blockquote>
 
 <p>&nbsp;</p>
