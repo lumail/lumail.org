@@ -44,15 +44,24 @@ core in the style of a traditionally callback:
      * It should return a table of matches, which are presented to the user.
 * `on_idle()`
      * This function is called regularly from the main loop.
-     * You can perform background action here.
+     * See the later note on timers for more details of what this does.
 * The various `_view()` functions.
      * There is a Lua function for each of our modes, for example `attachment_view()`, `index_view()`, etc.
 
-Previously we had many more callbacks, for example a function that could be
-invoked when you opened a message, or changed the folder-selection. These
-days a lot of that code is already implemented in Lua, so if you wish to
-add code to handle such changes you can add it directly.
+The default lua configuration file will also invoke call-backup functions
+when some actions take place:
 
+* `on_exit()`
+     * Called when the client is terminating.
+* `on_folder_changed( folder )`
+     * This is called when a new folder is opened.
+* `on_cleanup_name(name)`
+     * If the `index.format` variable is used to display the name of a messages' sender, rather than the contents of the `From:` header, then this function can cleanup that name.
+     * For example to remove `(via Twitter)` or similar strings from that name.
+* `on_message_changed( msg )`
+     * This is called when a new message is opened.
+
+These functions may be defined by the user, and will be invoked if present.
 
 
 ### Config
@@ -100,11 +109,17 @@ We have a number of variables which are special, the most important ones are:
 * `maildir.prefix`
     * This holds the prefix to the maildir hierarchy.
     * Maildirs are (recursively) found from here.
+* `maildir.format`
+    * Controls how maildirs are drawn on the screen.  This defaults to showing the unread & total message-counts, along with the path:
+        * `"[${05|unread}/${05|total}] - ${path}"`
 * `index.fast`
     * If this is set to 1 we'll only format messages which are _visible_ when opening folders.
     * This is a speed optimization for large Maildirs, or when using IMAP.
+* `index.format`
+    * This controls how messages are listed in the index-view, and defaults to including the message flags, sender details, and subject:
+       * "`[${4|flags}] ${2|message_flags} - ${20|sender} - ${indent}${subject}`"
 * `index.sort`
-    * The method to sort messages by: `date`, `file`, `from`, `none`, or `subject` at this time.
+    * The method to sort messages by: `date`, `file`, `from`, `none`, `subject` or `threads` at this time.
     * Sorting is documented below.
 * `global.editor`
     * The user's editor.
@@ -122,8 +137,8 @@ We have a number of variables which are special, the most important ones are:
     * This holds the name of the currently active display-mode
 * `global.sent-mail`
     * This is the Maildir to which outgoing messages are saved.
-* `global.over-draw`
-    * If this is set to `1` then an extra line will be drawn at the bottom of the screen to mask any misdraw-artifacts.
+* `global.trash-mail`
+    * This is the Maildir to which deleted messages are saved.
 
 For each mode that has a display there will be a `$mode.max` to store the
 count of the objects, as well as `$mode.current`.
@@ -148,31 +163,6 @@ displays things, these are:
     * Specifies whether additional MIME-parts should be appended/prepended to the display.
 * `maildir.truncate`
     * Alternate between showing the full/truncated Maildir path in maildir-mode.
-
-
-### Sorting Messages
-
-The sorting of messages is implemented in C++, but uses the Lua
-functionality to ensure the user can influence the behaviour.
-
-The sorting method is stored in the variable `index.sort`, which
-will select the appropriate Lua callback function to perform the sorting.
-
-For example:
-
-* If `index.sort` is set to `date`.
-    * Sorting calls `compare_by_date`.
-* If `index.sort` is set to `from`.
-    * Sorting calls `compare_by_from`.
-
-(i.e. "compare_by_XXX" is invoked when `index.sort` is `XXX`.)
-
-To define your local sorting solution you should:
-
-* Set `index.sort` to `local`.
-* Implement `function compare_by_local()`.
-
-
 
 
 
@@ -225,6 +215,8 @@ The following API methods are available to help you with this:
 
 * `Global:maildirs()`
      * Retrieve the list of available maildirs.
+* `Global:modes()`
+     * Retrieve the list of all available modes.
 * `Global:current_maildir()`
      * Retrieve the currently-selected maildir.
 * `Global:select_maildir(mdir)`
@@ -248,12 +240,17 @@ can be useful for debugging.
 By default log-entries are not written, to enable them you must set
 a filename like so:
 
-     Config:set( "global.logfile" , "/path/to/log" )
+     Config:set( "log.path" , "/path/to/log" )
+     Config:set( "log.level" , "lua|startup|debug" )
+
+To log all messages, which will be noisy:
+
+     Config:set( "log.level", "all");
 
 Once a filename has been set logs may be added via:
 
-     Log:append( os.date() .. " Hello!" )
-     Log:append( os.date() .. " Goodbye!" )
+     Log:log( "debug", "This is a debug message" )
+     Log:log( "lua",  "This is a lua message" )
 
 
 ### Maildir
@@ -274,17 +271,17 @@ The Maildir object has the following methods:
 * `path()`
     * Returns the path to the Maildir - what it was constructed with.
 * `messages()`
-	* Returns an array of Message-objects, one for each message in the maildir.
+    * Returns an array of Message-objects, one for each message in the maildir.
 * `mtime()`
     * Return the modified time of the given maildir, as seconds past the epoch.
 * `save_message(msg)`
     * Save the specified message to this maildir.
 * `total_messages()`
-	* Returns the count of messages in the maildir.
+    * Returns the count of messages in the maildir.
 * `unread_messages()`
-	* Returns the count of unread/new messages in the maildir.
+    * Returns the count of unread/new messages in the maildir.
 * `exists`
-	* Returns `true` if the Maildir exists.
+    * Returns `true` if the Maildir exists.
 
 
 
@@ -310,6 +307,9 @@ Message methods:
    * This method allows attachments to be added to a _vanilla_ email.
    * **NOTE**: Adding attachments to a message already containing attachment-parts will result in corruption.  This is designed solely for use when composing outgoing messages.
    * Sample code is available in `sample.lua/add_attachment.lua`.
+* `ctime()`
+   * Return the creation time of the message, as seconds past the epoch.
+   * THis is based upon the `Delivery-Date` / `Date` header inside the message.
 * `flags()`
    * Get the flags for the message.
 * `flags(new_flags)`
@@ -341,11 +341,11 @@ object contains the following methods:
 * `children()`
     * Returns any MessagePart children this part might have.
 * `content()`
-	* Returns the content of the part.
+    * Returns the content of the part.
 * `is_attachment()`
-	* Returns `true` if the part represents an attachment, false otherwise.
+    * Returns `true` if the part represents an attachment, false otherwise.
 * `filename()`
-	* Returns the name of the attachment, if `is_attachment` returned true.
+    * Returns the name of the attachment, if `is_attachment` returned true.
 * `parent()`
     * Returns the parent of the specified message-part, if any.
     * This returns `nil` if the part is not a child.
@@ -418,6 +418,8 @@ The Screen object is registered automatically and doesn't need to be constructed
     * Return the height of the screen.
 * `Screen:prompt("Text", "chars" )`
     * Accept input from a small list of characters, used for showing menus, etc.
+* `Screen:redraw()`
+    * Redraw the screen, via the currently-active mode.
 * `Screen:sleep(N)`
     * Sleep for N-seconds.
 * `Screen:stuff(txt)`
@@ -427,6 +429,34 @@ The Screen object is registered automatically and doesn't need to be constructed
     * Return the width of the screen.
 
 Sample code is available in `sample.lua/screen.lua`.
+
+
+
+### Sorting Messages
+
+The sorting of messages is implemented in C++, but uses the Lua
+functionality to ensure the user can influence the behaviour.
+
+The sorting method is stored in the variable `index.sort`, which
+will select the appropriate Lua callback function to perform the sorting.
+
+For example:
+
+* If `index.sort` is set to `date`.
+    * Sorting calls `compare_by_date`.
+* If `index.sort` is set to `from`.
+    * Sorting calls `compare_by_from`.
+
+(i.e. "compare_by_XXX" is invoked when `index.sort` is `XXX`.)
+
+To define your local sorting solution you should:
+
+* Set `index.sort` to `local`.
+* Implement `function compare_by_local()`.
+
+The `threads` sorting method groups the messages into threads before running
+the callback function defined in the config value `threads.sort`.
+
 
 #### The Panel
 
@@ -459,6 +489,29 @@ The Panel object has the following (static) methods:
      * Toggle the visibility of the panel.
 
 Sample code is available in `sample.lua/panel.lua`.
+
+
+#### Timers
+
+The core of the application invokes the lua function `on_idle()`
+once per second, when the system is idle.  The default implementation
+of this `on_idle` function will invoke any defined user timers, which are
+regular Lua functions which have a particular naming scheme.
+
+In your configuration file define an ordinary function with a name
+matching the pattern `on_XX` - where XX is an integer.
+
+For example:
+
+* `function on_1()  end`
+   * This will be invoked every second.
+* `function on_2() ... end`
+   * This will be invoked every two seconds.
+* `function on_10() ... end`
+   * This will be invoked every ten seconds.
+* ...
+* `function on_3600() ... end`
+   * This will be invoked once per hour.
 
 
 
