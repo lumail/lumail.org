@@ -33,8 +33,8 @@ screen_page: 1
 </blockquote>
 <p>The selected-line is red because that mail is unread, as is also indicated by the <span class="tt">N</span> flag.</p>
 <p>The following screenshot demonstrates the use of our threaded display of email:</p>
-<p><img src="2.index.jpg" alt="index-mode threaded-view" width="543" height="401"
-/></p>
+<blockquote>
+<p><img src="2.index.jpg" alt="index-mode threaded-view" width="543" height="401"/></p>
 </blockquote>
 </blockquote>
 
