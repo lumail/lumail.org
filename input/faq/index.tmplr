@@ -96,7 +96,7 @@ faq_page: 1
     <dd>
       <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/api/">primitives</a> made available to it.</p>
       <p>Using Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
-      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do.  There are also collections of sample code in <a href="the <!-- tmpl_var name='repo.active' -->">source repository</a> - look beneath <a href="https://github.com/lumail/lumail2/tree/master/lib/"><code>lib/</code></a> and <a href="https://github.com/lumail/lumail2/tree/master/sample.lua"><code>sample.lua/</code></a> to see those.</p>
+      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do.  There are also collections of sample code in <a href="the <!-- tmpl_var name='repo.active' -->">source repository</a> - look beneath <a href="https://github.com/lumail/lumail/tree/master/lib"><code>lib/</code></a> and <a href="https://github.com/lumail/lumail/tree/master/sample.lua"><code>sample.lua/</code></a> to see those.</p>
       <p>If you find yourself missing a specific function/primitive/binding you may report that as a bug against the <a href="<!-- tmpl_var name='repo.active' -->">github repository</a>.</p>
       <p>&nbsp;</p>
     </dd>
@@ -111,7 +111,7 @@ faq_page: 1
     <dt id="bug">I found a bug, what do I do?</dt>
     <dd>
       <p>First of all thank you for trying the client.</p>
-      <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/lumail/lumail2/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
+      <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/lumail/lumail/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
       <p>&nbsp;</p>
     </dd>
 
