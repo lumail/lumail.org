@@ -12,16 +12,12 @@ contact_page: 1
 </ul>
 
 
-<p>If you have a bug report, feature suggestion, or patch to submit please use the issue-tracker on the appropriate github repository, this allows development to continue in a public manner:</p>
+<p>If you have a bug report, feature suggestion, or patch to submit please use the issue-tracker:</p>
 
 <ul class="invisible">
-<li>Lumail 2.x, the active project:
+<li>The github issue-tracker:
 <ul>
-<li><a href="<!-- tmpl_var name='repo.active' -->"><!-- tmpl_var name='repo.active' --></a></li>
-</ul></li>
-<li>Lumail Legacy:
-<ul>
-<li><a href="<!-- tmpl_var name='repo.legacy' -->"><!-- tmpl_var name='repo.legacy' --></a></li>
+<li><a href="<!-- tmpl_var name='repo.issues' -->"><!-- tmpl_var name='repo.issues' --></a></li>
 </ul></li>
 </ul>
 

@@ -29,19 +29,26 @@ faq_page: 1
     <dt>How does outgoing mail get sent?</dt>
     <dd>
       <p>Outgoing mail is sent by executing the command you specify in
-    your configuration file.</p>
-    <table border="1">
-    <tr><th>Lumail Version</th><th>Configuration Setting</th></tr>
-    <tr><td>Lumail 2.x</td><td><tt>Config:set( "global.mailer", "/usr/lib/sendmail -t" )</td></td></tr>
-    <tr><td>Lumail Legacy</td><td><a href="/lua/sendmail_path.html">sendmail_path()</a></td></tr>
-    </table>
+    your configuration file:</p>
+    <pre>
+     -- Specify the command to send an outgoing mail.
+     Config:set( "global.mailer", "/usr/lib/sendmail -t" ) </pre>
       <p>&nbsp;</p>
     </dd>
 
     <dt id="schedule">How do I schedule mail-fetching?</dt>
     <dd>
-     <p>The <a href="/lua/on_idle.html">on_idle</a>() documentation has been updated to provide an example of calling your external command to sync mail on a regular schedule.</p>
-     <p>If mail is delivered directly, via <span class="tt">procmail</span> or similar, no such action is required.</p>
+     <p>You need to define a function which will be invoked regularly
+     and execute your fetch.</p>
+     <p>The most common way to fetch mail is by executing <code>imapsync</code>, or a similar tool.  The following example will be invoked every two minutes:</p>
+     <pre>
+     -- This function will be invoked every 120 seconds
+     function on_120()
+       -- Fetch mail
+       os.execute( "imapsync" )
+     end
+     </pre>
+     <p>See the documentation for "timers" in our <a href="/api/">API</a> for more details.</p>
       <p>&nbsp;</p>
     </dd>
 
@@ -96,7 +103,7 @@ faq_page: 1
     <dd>
       <p>The configuration file(s) that you load are 100% pure Lua, which has many <a href="/api/">primitives</a> made available to it.</p>
       <p>Using Lua scripting you can define functions, react to events, and write a configuration file that works upon numerous unrelated hosts.</p>
-      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do.  There are also collections of sample code in <a href="the <!-- tmpl_var name='repo.active' -->">source repository</a> - look beneath <a href="https://github.com/lumail/lumail/tree/master/lib"><code>lib/</code></a> and <a href="https://github.com/lumail/lumail/tree/master/sample.lua"><code>sample.lua/</code></a> to see those.</p>
+      <p>There is a brief <a href="/examples/">Lua examples</a> page showing some of the things that you might wish to do.  There are also collections of sample code in the <a href="<!-- tmpl_var name='repo.active' -->">source repository</a> - look beneath <a href="https://github.com/lumail/lumail/tree/master/lib"><code>lib/</code></a> and <a href="https://github.com/lumail/lumail/tree/master/sample.lua"><code>sample.lua/</code></a> to see those.</p>
       <p>If you find yourself missing a specific function/primitive/binding you may report that as a bug against the <a href="<!-- tmpl_var name='repo.active' -->">github repository</a>.</p>
       <p>&nbsp;</p>
     </dd>
@@ -111,7 +118,7 @@ faq_page: 1
     <dt id="bug">I found a bug, what do I do?</dt>
     <dd>
       <p>First of all thank you for trying the client.</p>
-      <p>If you've found a bug ideally it should be reported against the <a href="https://github.com/lumail/lumail/issues">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
+      <p>If you've found a bug ideally it should be reported against the <a href="<!-- tmpl_var name='repo.issues' -->">issue-tracker on github</a>.  If you don't have a github account, or wish to report it privately <a href="/contact/">please get in touch</a>.</p>
       <p>&nbsp;</p>
     </dd>
 
