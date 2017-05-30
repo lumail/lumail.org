@@ -38,8 +38,8 @@ The defaults in <a href="<!-- tmpl_var name='lumail2.user.cfg' -->">the per-user
 Other options are possible, and you'll find if you wish to [use IMAP](IMAP.md) you need some more options.  If you wish to use encryption you should also read the [GPG notes](GPG.md).
 
 
-Using Lumail2
--------------
+Using Lumail
+------------
 
 By default you'll be in the `maildir`-mode, and you can navigate with `j`/`k`, and select items with `ENTER`.
 

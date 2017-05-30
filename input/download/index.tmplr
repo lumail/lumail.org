@@ -6,7 +6,7 @@ active_date: filedate(lumail-3.0.tar.gz)
 ----
 
 <blockquote>
-<p>Versioned <a href="#source">source-snapshots</a> are released when things are judged to be stable, but the preferred method for downloading sources at the moment is directly via the Github repositories.</p>
+<p>Versioned <a href="#source">releases</a> are released when things are judged to be stable, but the preferred method for downloading sources at the moment is directly via the Github repositories.</p>
 <p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/contact/">should be reported</a> as such.</p>
 </blockquote>
 
@@ -32,14 +32,7 @@ active_date: filedate(lumail-3.0.tar.gz)
 <p>All development on <span class="tt">lumail</span> is carried out, in public, via a central git repository:</p>
 
 <ul class="invisible">
-<li>Lumail 2.x, the active project:
-<ul>
 <li><a href="<!-- tmpl_var name='repo.active' -->"><!-- tmpl_var name='repo.active' --></a></li>
-</ul></li>
-<li>Lumail Legacy:
-<ul>
-<li><a href="<!-- tmpl_var name='repo.legacy' -->"><!-- tmpl_var name='repo.legacy' --></a></li>
-</ul></li>
 </ul>
 </blockquote>
 
