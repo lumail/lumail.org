@@ -35,7 +35,7 @@ The defaults in <a href="<!-- tmpl_var name='lumail2.user.cfg' -->">the per-user
      -- Set your preferred editor
      Config:set( "global.editor", "vim  +/^$ ++1 '+set tw=72'" )
 
-Other options are possible, and you'll find if you wish to [use IMAP](IMAP.md) you need some more options.  If you wish to use encryption you should also read the [GPG notes](GPG.md).
+Other options are possible, and you'll find if you wish to [use IMAP](/imap/) you need some more options.  If you wish to use encryption you should also read the [GPG notes](/gpg/).
 
 
 Using Lumail
