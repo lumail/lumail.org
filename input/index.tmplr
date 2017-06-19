@@ -28,8 +28,9 @@ news: read_file( "./news.recent.inc" )
 <blockquote>
 <p>To get started you'll want to :</p>
 <ul>
-<li><a href="/download/">Download and install</a>.</li>
-<li>Then read the <a href="/getting-started/">getting started guide</a>.</li>
+<li><a href="/download/">Download a stable release</a>, or checkout code <a href="<!-- tmpl_var name='repo.active' -->">from the git repository</a>.</li>
+<li><a href="/install/">Build and install</a>.</li>
+<li>Read the <a href="/getting-started/">getting started guide</a>.</li>
 </ul>
 <p>Once you've got the basics setup you might then wish to consult the additional documentation:</p>
 <ul>
