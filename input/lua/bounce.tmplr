@@ -1,8 +1,0 @@
-title: bounce()
-brief: Bounce an email.
-seealso: editor, compose, sent_mail, bounce_path, reply, forward
-version: 0.21
-----
-
-<p>This function will prompt for a recipient, then bounce the current message to that email address, using the command defined in <a href="/lua/bounce_path.html">bounce_path()</a>.</p>
-<p>Unlike using <a href="/lua/forward.html">forward()</a> there is no opportunity to edit the message prior to sending.  Similarly there are no hooks invoked prior to carrying out the bounce operation.</p>

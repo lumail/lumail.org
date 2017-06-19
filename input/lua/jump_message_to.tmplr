@@ -1,9 +1,0 @@
-title: jump_message_to()
-brief: Scroll the current message to the given line.
-seealso: scroll_message_up, scroll_message_down, scroll_message_to
-version: 0.16
-----
-
-<p>When in message-mode, set with <a href="global_mode.html">global_mode</a>, the user interface allows you to view a single message.</p>
-<p>The <span class="tt">jump_message_to()</span> function allows you to scroll the current message to the given offset - in lines.</p>
-<p><b>NOTE</b>:  The offset should be in the range 0-<a href="count_lines.html">count_lines()</a> (inclusive).</p>

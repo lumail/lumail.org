@@ -1,8 +1,0 @@
-title: history_file()
-brief: Set a persistent history.
-seealso: prompt
-version: 0.18
-----
-
-<p>If you configure a file with <span class="tt">history_file</span> then any input you make to the <a href="/lua/prompt.html">prompt()</a> function will persist across sessions.</p>
-<p>The history file is not currently capped at any particular size, but this might change in the future.</p>

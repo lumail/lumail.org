@@ -1,9 +1,0 @@
-title: scroll_message_to()
-brief: Scroll the current message to next line matching the given pattern.
-seealso: scroll_message_up, scroll_message_down, jump_message_to
-version: 0.16
-----
-
-<p>When in message-mode, set with <a href="global_mode.html">global_mode</a>, the user interface allows you to view a single message.</p>
-<p>The <span class="tt">scroll_message_to()</span> function allows you to scroll the current message to the next line matching the given regular expression.</p>
-<p><b>NOTE</b>: This function has changed in release 0.25 - previously this function used to jump to the specified line-number, but was renamed to be more consistent with the other jump_* functions.</p>

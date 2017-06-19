@@ -1,5 +1,0 @@
-title: This function was renamed.
-removed: 1
-----
-
-<p>This function was first implemented in v0.07, but was renamed <a href="/lua/mark_unread.html">mark_unread()</a> in release v0.18.</p>

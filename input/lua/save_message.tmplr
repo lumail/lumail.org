@@ -1,5 +1,0 @@
-title: This function was renamed.
-removed: 1
-----
-
-<p>The function <span class="tt">save_message()</span> was renamed to <a href="save.html">save()</a>, for consistency with other primitives.</p>

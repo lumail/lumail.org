@@ -1,5 +1,0 @@
-title: This function was renamed.
-removed: 1
-----
-
-<p>The <span class="tt">msg_filter()</span> function was renamed to <a href="/lua/mail_filter.html">mail_filter()</a> as of release 0.18.</p>
