@@ -2,12 +2,8 @@ Title: Command-Line arguments
 ----
 
 <blockquote>
-<p>The client accepts several command-line arguments, the precise flags will depend upon the version of <span class="tt">lumail</span> you're running.</p>
-</blockquote>
 
-
-<h3 id="current" name="current">Lumail 2.x</h3>
-<blockquote>
+<p>The following command-line flags are accepted &amp; understood:</p>
 
 <dl>
 
@@ -24,31 +20,7 @@ Title: Command-Line arguments
 <dd><p>Execute the internal test-suite, which is included in both release and debug builds.</p></dd>
 
 <dt><span class="tt">--version</span></dt>
-<dd><p>Show the version number of your <span class="tt">lumail2</span> binary, then exit.</p></dd>
+<dd><p>Show the version number of the client, then exit.</p></dd>
 
-</dl>
-</blockquote>
-
-
-<h3 id="legacy" name="legacy">Lumail-Legacy</h3>
-<blockquote>
-
-  <!-- tmpl_include name='legacy.inc' -->
-
-  <dl>
-<dt><span class="tt">--debug</span></dt>
-<dd><p>If lumail has been compiled in debug-mode this option will allow you to specify the path to the debug-logfile.  The logfile will contain "interesting events".</p><p>If you're running a debug-build and you don't specify a file then <span class="tt">~/lumail.log</span> will be used by default.</p></dd>
-<dt><span class="tt">--exit</span></dt>
-<dd><p>Exit the application.</p>
-<p>This is present so that you may exit after evaluating an expression with the <span class="tt">--eval</span> flag.</p></dd>
-<dt><span class="tt">--eval "string"</span></dt>
-<dd><p>Evaluate the given Lua expression, or function.  It is assumed that the function to be executed will be one you've defined in your startup configuration file.</p></dd>
-<dt><span class="tt">--folder "path"</span></dt>
-<dd><p>Open the given folder, and switch to index-mode on startup.</p></dd>
-<dt><span class="tt">--rcfile &quot;file&quot;</span></dt>
-<dd><p>Open and parse the given Lua file, in addition to the standard configuration files that are examined.</p>
-    <p>You may add multiple <span class="tt">--rcfile</span> arguments, if you wish to load multiple different files.</dd>
-<dt><span class="tt">--version</span></dt>
-<dd><p>Show the version number of your <span class="tt">lumail</span> binary, then exit.</p></dd>
 </dl>
 </blockquote>
