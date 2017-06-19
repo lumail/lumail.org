@@ -6,7 +6,7 @@ active_date: filedate(lumail-3.0.tar.gz)
 ----
 
 <blockquote>
-<p>Versioned <a href="#source">releases</a> are released when things are judged to be stable, but the preferred method for downloading sources at the moment is directly via the Github repositories.</p>
+<p>Versioned <a href="#source">releases</a> are released when things are judged to be stable, but the preferred method for downloading sources at the moment is directly via <a href="<!-- tmpl_var name='repo.active' -->">the Github repository</a>.</p>
 <p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/contact/">should be reported</a> as such.</p>
 </blockquote>
 
@@ -38,45 +38,5 @@ active_date: filedate(lumail-3.0.tar.gz)
 
 <h2 id="building">Building from source</h2>
 <blockquote>
-<p>Lumail is deliberately designed to only depend upon a small number of libraries, to ensure that it is possible to build it upon the widest range of systems.</p>
-<p>As of the current release the dependencies are as follows:</p>
-<ul class="invisible">
-<li>Lua 5.2
-<ul>
-<li>The scripting language.</li>
-</ul></li>
-<li>magic
-<ul>
-<li>This library identifies the MIME-type of files/binaries via "magic" codes.</li>
-</ul></li>
-<li>ncursesw
-<ul>
-<li>The console-graphics library (wide-version).</li>
-</ul></li>
-<li>gmime-2.6
-<ul>
-<li>The MIME-library.</li>
-</ul></li>
-<li>pcrecpp
-<ul>
-<li>The C++ wrapper around PCRE</li>
-</ul></li>
-</ul>
-<div style="padding-left:20px; border:1px solid silver">
- <p>Upon a Debian GNU/Linux system you may install the dependencies with:</p>
- <pre>
- # apt-get install build-essential make pkg-config
- # apt-get install liblua5.2-dev libgmime-2.6-dev libncursesw5-dev libpcre3-dev libmagic-dev
- </pre>
-</div>
-
-<p>Providing you have the appropriate dependencies installed you can build the client via a single "<span class="tt">make</span>" command:</p>
-<pre>
-$ make
-</pre>
-<p>Once the compilation completes you'll find the executable <span class="tt">./lumail2</span> generated, and you can now <a href="/getting-started/">get started</a>.</p>
-<p>As of release 2.6 the generated binary also includes a simple test-suite to validate the internal implementation, you can execute that via:</p>
-<pre>
-$ ./lumail2 --test
-</pre>
+<p>Regardless of your source you'll want to build the code once you have downloaded it, please <a href="/install/">read the installation guide here</a>.</p>
 </blockquote>
