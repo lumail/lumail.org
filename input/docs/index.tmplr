@@ -5,21 +5,11 @@ docs_page: 1
 
 <blockquote>
 <blockquote>
-<p>Due to the recent reworking, which lead to lumail v2.x, the documentation has been split into two parts:</p>
-<ul>
-<li><a href="#current">Lumail 2.x</a></li>
-<li><a href="#legacy">Luamil Legacy</a></li>
-</ul>
-</blockquote>
-
-<h3 id="current" name="current">Lumail 2.x</h3>
-<blockquote>
-<p>Lumail 2.x is a ground-up rewrite of the previous application, and features a minimal and unified API for scripting the client.</p>
-<p>The scripting is still Lua-based, but the object methods have been simplified and implemented as a cohesive set of modules, methods, and variables.</p>
 <p>Our <a href="/getting-started/">getting started guide</a> provides a simple introduction to installing, and configuring lumail.</p>
+<p>After that you might prefer to look at the following simple pieces of documentation:</p>
 <dl>
 <dt><a href="/cmdline/">Command-line flags</a></dt>
-<dd><p>The <span class="tt">lumail2</span> client accepts several command-line flags, which this page documents.</p></dd>
+<dd><p>The client accepts several command-line flags, which this page documents.</p></dd>
 <dt>Read the <a href="/gpg/">GPG overview</a></dt>
 <dd><p>This section describes the GPG support in Lumail.</p>
 </dd>
@@ -28,32 +18,10 @@ docs_page: 1
 notes on dependencies, and a sample configuration snippet to use.</p>
 </dd>
 <dt>Read about the <a href="/api/">Lumail 2.x API</a></dt>
-<dd><p>The API-page describes all the objects that are supported and implemented in the 2.x API, along with links to sample code.</p></dd>
+<dd><p>The API-index describes all the objects, and their associated methods which are implemented in the client core.</p></dd>
 <dt>The <a href="<!-- tmpl_var name='lumail2.cfg' -->">default configuration file</a></dt>
 <dd><p>The default configuration file is a great example of the configuration you might enjoy.</p></dd>
 </dl>
 </blockquote>
 
-<p>&nbsp;</p>
-
-<h3 id="legacy" name="legacy">Lumail-Legacy</h3>
-
-<blockquote>
- <!-- tmpl_include name='legacy.inc' -->
-
-<dl>
-<dt><a href="/cmdline/">Command-line flags</a></dt>
-<dd><p>The <span class="tt">lumail</span> client accepts several command-line flags, which this page documents.</p></dd>
-<dt>The <a href="<!-- tmpl_var name='legacy.cfg' -->">default configuration file</a></dt>
-<dd><p>The default configuration file gives a flavour of how the software can be configured.  It also documents the default keybindings.</p></dd>
-<dt>The <a href="/examples/">examples page</a></dt>
-<dd><p>The example page includes several functions you could add to your own configuration file, to do interesting things with your mail.</p></dd>
-<dt><a href="external-input.html">External input processing.</a></dt>
-<dd>As of v0.25 <tt>lumail</tt> can read input from a Unix domain socket, and this page shows how.</p></dd>
-<dt>The <a href="/getting-started/">getting started</a> guide</dt>
-<dd><p>The getting-started guide gives a basic overview of the client, and introduces you to using it.</p></dd>
-<dt><a href="/lua/">Lua primitives</a></dt>
-<dd><p>Each of the Lua primitives that <span class="tt">lumail</span> provides is documented, usually with an example.</p></dd>
-</dl>
-</blockquote>
 </blockquote>
