@@ -3,14 +3,7 @@ started_page: 1
 format: markdown
 ----
 
-Running `make install` will install the binary, the libraries that we bundle, and the perl-utilities which are required for IMAP-operation.
-
-If you wish to install manually copy:
-
-* The contents of `lib/` to `/etc/lumail2/lib`.
-* The contents of `perl.d` to `/etc/lumail2/perl.d`.
-
-Once installed you'll then want to create your own personal configuration file.
+Once you've [downloaded](/download) and [installed](/install) the client you'll  want to create your own personal configuration file.
 
 To allow smooth upgrades it is __recommended__ you do not edit the global configuration file `/etc/lumail2/lumail2.lua`.  Instead you should copy the sample user-configuration file into place:
 
