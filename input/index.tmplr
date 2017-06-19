@@ -53,6 +53,6 @@ news: read_file( "./news.recent.inc" )
 <script type="text/javascript">
 $("#hubInfo").hubInfo({
     user: "lumail",
-    repo: "lumail2"
+    repo: "lumail"
 });
 </script>
