@@ -1,85 +1,22 @@
 Title: Examples of Lua functions
+examples_page: 1
 ----
 
 <p><span class="tt">lumail</span> has an embedded Lua interpreter which is used to configure keybindings, perform general configuration, &amp; etc.</p>
 <p>If you're new to Lua you might find the <a href="http://www.lua.org/">Lua website</a> and the <a href="http://www.luafaq.org/">Lua Unofficial FAQ</a> useful resources.</p>
 
-  <!-- tmpl_include name='legacy.inc' -->
 
-<h2>Writing useful functions</h2>
+<h3>Testing Example Code</h3>
 <blockquote>
-  <p>Using the <a href="/lua/">supplied primitives</a> you can write many interesting functions to interact with your messages/maildirs.</p>
-  <p>Here we show several examples of the kind of things that <span class="tt">lumail</span> allows:</p>
-  <dl>
-    <dt><a href="address-book.html">address-book</a> - TAB-completion</dt>
-    <dd><p>This example shows how you can add address-books to your TAB-completion set, so that when you're composing a mail you can easily enter recipient addresses.</p></dd>
-    <dt><a href="conditional_maildirs.html">Apply actions only if particular maildirs exist</a></dt>
-    <dd><p>If you wish to have the same lumail configuration files across a number of hosts you might find it useful to define code that executes only if particular Maildirs exist.</p><p>This brief example shows how that can be done.</p></dd>
-
-    <dt><a href="daily.html">daily()</a></dt>
-    <dd>
-      <p>Every morning I receive a bunch of messages which are filed away automatically, and there are some folders which I just ignore.  This function will iterate over a small number of folders, matching a pattern, and mark each messages as read within them.</p>
-    </dd>
-    <dt><a href="dump_unread.html">dump_unread()</a></dt>
-    <dd>
-      <p>This example shows how to dump a list of unread-messages to disk.  The dump includes  unread mail from <b>all</b> Maildirs.</p>
-    </dd>
-    <dt><a href="dump_vars.html">dump_vars()</a></dt>
-    <dd>
-      <p>Internally lumail keeps a collection of variables which are made available to Lua.  This function dumps them to a temporary file on-disk.</p>
-    </dd>
-    <dt><a href="get_signature.html">get_signature()</a></dt>
-    <dd>
-    <p>The <a href="/lua/get_signature.html">get_signature()</a> function is called prior to a mail being opened in your editor for composition.</p>
-    <p>This example shows how you can usefully and dynamically select the appropriate <span class="tt">.signature</span> file for the mail.</p>
-    </dd>
-    <dt><a href="global_unread.html">global_unread()</a></dt>
-    <dd>
-      <p>Lumail allows multiple folders to be opened at once, and via the <a href="/lua/index_limit.html">index_limit()</a> primitive you can cause the list of messages to show those which are new.  Together these two things allow you to write the <span class="tt">global_unread()</span> method.</p>
-      <p>This function shows all currently unread messages, regardless of their folder.</p>
-    </dd>
-    <dt><a href="html2text.html">HTML email handling</a></dt>
-    <dd><p>This function shows how to convert HTML-emails to plain text, via &quot;<span class="tt">lynx -dump</span>&quot;.</p></dd>
-    <dt><a href="state.html">load_state() &amp; save_state()</a></dt>
-    <dd><p>You'll notice that many operations require saving state before completing them, and restoring that state afterward.  These two helper functions save all useful state, and later allow it to be restored.</p></dd>
-    <dt><a href="mark_read_by_pattern.html">mark_read_by_pattern()</a></dt>
-    <dd><p>This is related to the <span class="tt">daily()</span> example listed above.  Instead of blindly marking all messages as read it marks messages as read, in folders, if they match a given pattern.</p></dd>
-    <dt><a href="mark_all_read.html">mark_all_read()</a></dt>
-    <dd>
-      <p>This function will mark all messages in the currently open maildir, or series of maildirs, as being read.</p>
-    </dd>
-    <dt><a href="spam.html">spam()</a></dt>
-    <dd>
-      <p>This function reads X-Remote-IP header form a message, which I've configured my mailserver to populate with the IP address of the mail-server which sent me a mail.</p>
-      <p>Once the remote IP address has been found it is appended to a local blacklist.</p>
-    </dd>
-    <dt><a href="trash.html">Trash() handling</a></dt>
-    <dd><p>This example shows how to save messages to a Trash folder, instead of deleting them entirely.</p></dd>
-    <dt><a href="view_attachments.html">view_attachments()</a></dt>
-    <dd><p>This example demonstrates a simple menu to automatically open the attachments associated with a message with the correct application.</p></dd>
-</dl>
-<p>Remember you can invoke any function you've defined by pressing <span class="tt">:</span> and entering it in the prompt.  (For example you could press "<span class="tt">:</span>" then enter "<span class="tt">mark_all_read()</span>".) </p>
-</blockquote>
-
-<h2>Binding keypresses to functions</h2>
-<blockquote>
-<p>All keybindings are configured by making entries in the global <a href="/lua/keymap.html">keymap</a>.  There are four entries in the keymap:</p>
-<ul>
-<li>Entries that apply in all modes.</li>
-<li>Entries that apply in maildir-mode.</li>
-<li>Entries that apply in index-mode.</li>
-<li>Entries that apply in message-mode.</li>
-</ul>
-<p>With the previous <span class="tt">mark_all_read</span> function you would probably prefer to make it execute only in index-mode:</p>
+<p>To test a new function it is often useful to do that in isolation, rather than from within the client.  The simplest way to do that is to launch an example from the command-line like so:</p>
 <pre>
-keymap['index']['R'] = 'mark_all_read();'
+$ lumail2 --load-file ./test.lua --no-curses
 </pre>
-<p>This will invoke the function if you press "<span class="tt">R</span>" in the index-view only; in all other modes the keypress "<span class="tt">R</span>" will do nothing.</p>
+<p>Here we've supplied the <code>--no-curses</code> <a href="/cmdline">command-line flag</a>, such that the main graphical loop doesn't occur.  This means that once the loaded file is executed the application will terminate.</p>
+<p><b>NOTE</b>: This assumes you've installed the client, such that the standard initialization functions are present.</p>
 </blockquote>
 
-<h2>Responding to events</h2>
+<h2>Sample Code</h2>
 <blockquote>
-<p><span class="tt">lumail</span> has several defined callbacks which are listed in the <a href="/lua/">primitive list</a>, each one is named "on_XXXX".</p>
-<p>For example when reading a message the function <span class="tt">on_read_message()</span> is called <b>if</b> you define it.</p>
-<p>If you're missing a handler that you think would be useful please <a href="<!-- tmpl_var name='repo' -->">report a bug</a>.</p>
+<p>Here we'll include some examples ..</p>
 </blockquote>
