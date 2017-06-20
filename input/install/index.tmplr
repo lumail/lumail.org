@@ -49,12 +49,19 @@ $ make
 <p>Running <code>make install</code> will install the binary, the libraries that we bundle, and the perl-utilities which are required for IMAP-operation.</p>
 <p>If you wish to install manually copy:</p>
 <ul>
-<li>The contents of <code>lib/</code> to <code>/etc/lumail2/lib</code>.</li>
-<li>The contents of <code>perl.d</code> to <code>/etc/lumail2/perl.d</code>.</li>
+<li>The contents of <code>lib/</code> to <code>/usr/lib/lumail</code>.</li>
+<li>The contents of <code>perl.d</code> to <code>/usr/share/lumail</code>.</li>
 </ul>
 <p>At this point you should continue to the <a href="/getting-started/">get started</a> guide.</p>
-</blockquote>
 
+<div style="background-color:#fefefe !important">
+<h3 id="upgrade">Changed Locations</h3>
+<blockquote>
+<p>In the past our Lua support-code, and libraries were deployed beneath <code>/etc/lumail2/lib</code> - This is now obsolete, as is <code>/etc/lumail2/perl.d/</code>.</p>
+<p>If you've not made changes to those files you are safe to remove them, which will prevent a warning on-startup.</p>
+</blockquote>
+</blockquote>
+</div>
 <h3>Executing the Test Suite</h3>
 <blockquote>
 <p>Once installed you should be able to execute the included test-suite, by running:</p>
