@@ -1,0 +1,44 @@
+Title: Changing outgoing email-address
+----
+
+<p>Although lumail doesn't have the notion of profiles it does allow you to tweak settings via various callback hooks.</p>
+<p>The function <code>on_folder_changed</code>, documented in <a href="/api/">our API</a>, is invoked every time a new folder is opened and can change your outgoing email address, or apply other tweaks.</p>
+
+
+<h3>Per-Folder Sender-Address</h3>
+<blockquote>
+<pre>
+--
+--  Change outgoing email-address if specific
+-- folders are selected.
+--
+--  NOTE: We use lua regular expressions here
+--
+function on_folder_changed(fld)
+
+   local path = fld:path()
+
+   --
+   -- Default to use if no match.
+   --
+   local def_mail = "&lt;default@example.fi&gt;"
+
+   local from = {
+      ['example.com'] = "&lt;steve@example.com&gt;",
+      ['example.org'] = "&lt;steve@example.org&gt;",
+      ['people%-']    = "&lt;steve@example.fi&gt;",
+   }
+
+   for pattern,email in pairs(from) do
+      if ( string.find( path, pattern ) )then
+         Config:set("global.sender", email )
+         Panel:append("Changed outgoing email-address to " .. email )
+         return
+      end
+   end
+
+   -- No match - use the default.
+   Config:set( "global.sender", def_mail )
+end
+</pre>
+</blockquote>

@@ -2,8 +2,7 @@ Title: Examples of Lua functions
 examples_page: 1
 ----
 
-<p><span class="tt">lumail</span> has an embedded Lua interpreter which is used to configure keybindings, perform general configuration, &amp; etc.</p>
-<p>If you're new to Lua you might find the <a href="http://www.lua.org/">Lua website</a> and the <a href="http://www.luafaq.org/">Lua Unofficial FAQ</a> useful resources.</p>
+<p><span class="tt">lumail</span> has an embedded Lua interpreter which is used to configure keybindings, perform general configuration, &amp; etc.  If you're new to Lua you might find the <a href="http://www.lua.org/">Lua website</a> and the <a href="http://www.luafaq.org/">Lua Unofficial FAQ</a> useful resources.</p>
 
 
 <h3>Testing Example Code</h3>
@@ -18,5 +17,10 @@ $ lumail2 --load-file ./test.lua --no-curses
 
 <h2>Sample Code</h2>
 <blockquote>
-<p>Here we'll include some examples ..</p>
+<dl>
+<dt><a href="changing-email">Changing outgoing email-address</a></dt>
+<dd><p>This example shows how to change the outgoing email-address, on a per-folder basis.</p></dd>
+<dt><a href="spam-training/">Spam training</a></dt>
+<dd><p>Here we show two different approaches to training SPAM messages.</p></dd>
+</dl>
 </blockquote>
