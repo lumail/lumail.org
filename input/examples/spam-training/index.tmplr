@@ -9,7 +9,7 @@ Title: Training Spam Messages
 <li><a href="#saving">Save a message to a specific folder</a>.</li>
 </ul>
 
-<h3 name="piping">Training via piping</h3>
+<h3 id="piping">Training via piping</h3>
 <blockquote>
 <p>Here we execute the command "<code>~/bin/train-spam</code>" with the path to the message we're viewing, or under the point.</p>
 <pre>
@@ -33,7 +33,7 @@ keymap['message']['X'] = "train_spam()"
 </pre>
 </blockquote>
 
-<h3 name="saving">Training via message-saving</h3>
+<h3 id="saving">Training via message-saving</h3>
 <blockquote>
 <p>Here we take the current message, or the one under the mark in index-mode, and save it to <code>~/Maildir/train-spam/</code>.</p>
 <pre>
