@@ -6,15 +6,13 @@ active_date: filedate(lumail-3.0.tar.gz)
 ----
 
 <blockquote>
-<p>Versioned <a href="#source">releases</a> are released when things are judged to be stable, but the preferred method for downloading sources at the moment is directly via <a href="<!-- tmpl_var name='repo.active' -->">the Github repository</a>.</p>
-<p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/contact/">should be reported</a> as such.</p>
+<p><a href="#source">Stable releases</a> are made available when the current <a href="<!-- tmpl_var name='repo.active' -->">git repository</a> is in a good shape, with no obvious bugs.</p>
 </blockquote>
 
 
 <h2 id="source">Releases</h2>
 <blockquote>
-<p>The most recent release is:</p>
-
+<p>The most recent stable release is:</p>
 <ul class="invisible">
 <ul>
 <li><a href="<!-- tmpl_var name='active_src' -->"><!-- tmpl_var name='active_src' --></a> (<a href="<!-- tmpl_var name='active_src' -->.asc">signature</a> from <a href="https://steve.kemp.fi/">my GPG-key</a>)
@@ -30,13 +28,16 @@ active_date: filedate(lumail-3.0.tar.gz)
 <h2 id="git">Cutting Edge Git Repository</h2>
 <blockquote>
 <p>All development on <span class="tt">lumail</span> is carried out, in public, via a central git repository:</p>
-
 <ul class="invisible">
 <li><a href="<!-- tmpl_var name='repo.active' -->"><!-- tmpl_var name='repo.active' --></a></li>
 </ul>
+<p>If you wish to actively contribute to the code-base, watch developments, or test bugfixes then please do consider using the git-repository directly.</p>
 </blockquote>
 
 <h2 id="building">Building from source</h2>
 <blockquote>
-<p>Regardless of your source you'll want to build the code once you have downloaded it, please <a href="/install/">read the installation guide here</a>.</p>
+<p>Regardless of your source you'll want to build the code once you have downloaded it:</p>
+<ul class="invisible">
+<li><a href="/install/">Read the installation guide here</a>.</li>
+</ul>
 </blockquote>
