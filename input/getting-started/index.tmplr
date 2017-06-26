@@ -9,15 +9,20 @@ To allow smooth upgrades it is __recommended__ you do not edit the global config
 
 On startup `lumail` will attempt to read from each of the following locations:
 
-* `$HOME/.config/lumail/lumail.lua`
-* `$HOME/.config/lumail/config.lua`
-* `$HOME/.config/lumail/$(hostname --fqdn).lua`
-* `$HOME/.lumail/lumail/lumail.lua`
-* `$HOME/.lumail/lumail/config.lua`
-* `$HOME/.lumail/lumail/$(hostname --fqdn).lua`
-* `$XDG_CONFIG_HOME/lumail/config.lua`
-* `$XDG_CONFIG_HOME/lumail/lumail.lua`
-* `$XDG_CONFIG_HOME/lumail/$(hostname --fqdn).lua`
+* `~/.config`:
+  * `$HOME/.config/lumail/lumail.lua`
+  * `$HOME/.config/lumail/config.lua`
+  * `$HOME/.config/lumail/$(hostname --fqdn).lua`
+
+* `~/.lumail`:
+  * `$HOME/.lumail/lumail/lumail.lua`
+  * `$HOME/.lumail/lumail/config.lua`
+  * `$HOME/.lumail/lumail/$(hostname --fqdn).lua`
+
+* `$XDG_CONFIG_HOME`:
+  * `$XDG_CONFIG_HOME/lumail/config.lua`
+  * `$XDG_CONFIG_HOME/lumail/lumail.lua`
+  * `$XDG_CONFIG_HOME/lumail/$(hostname --fqdn).lua`
 
 If you're not sure which location to use then this is simple, portable,
 and reliable:
@@ -30,7 +35,7 @@ If you're running `lumail` on multiple hosts then  naming your configuration fil
       $ mkdir ~/.lumail/
       $ cp user.config.lua ~/.lumail/$(hostname --fqdn).lua
 
-The defaults in <a href="<!-- tmpl_var name='lumail2.user.cfg' -->">the per-user configuration file</a> should be adequately documented, but in-brief you'll want to ensure you set at least the following:
+The defaults in that per-user configuration-file should be adequate, but in-brief you'll want to ensure you set at least the following:
 
      -- Set the location of your Maildir folders, and your sent-folder
      Config:set( "maildir.prefix", os.getenv( "HOME" ) .. "/Maildir/" );
@@ -43,7 +48,7 @@ The defaults in <a href="<!-- tmpl_var name='lumail2.user.cfg' -->">the per-user
      -- Set your preferred editor
      Config:set( "global.editor", "vim  +/^$ ++1 '+set tw=72'" )
 
-Other options are possible, and you'll find if you wish to [use IMAP](/imap/) you need some more options.  If you wish to use encryption you should also read the [GPG notes](/gpg/).
+Other options are possible, and you'll find if you wish to [use IMAP](/imap/) you need to specify some aditional options, similarly if you wish to use encryption you should also read the [GPG notes](/gpg/).
 
 
 Using Lumail
@@ -62,3 +67,7 @@ For a quick-start you can use the following bindings:
 * `q` - Always takes you out of the current mode and into the previous one.
    * Stopping at the folder-list (`maildir`-mode).
 * `Q` - Exit.
+
+Once you've gotten started you'll want to consult the available [Lua API](/api/) to understand how the main configuration file operates, and what kind of things you can add to your own configuration file.
+
+There is a small, but growing, list of [example Lua](/examples/) available upon this website too.

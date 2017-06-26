@@ -21,7 +21,7 @@ active_date: filedate(lumail-3.0.tar.gz)
 <li>SHA1 Hash <code><!-- tmpl_var name='active_hash' --></code></li>
 </ul></li>
 </ul>
-<p>See <a href="#building">the notes on building</a> for requirements and instructions on compling and installing the release.</p>
+<p>See <a href="/install/">the installation guide</a> for a list of dependencies, and instructions on compiling/installing the release.</p>
 </blockquote>
 
 
@@ -31,13 +31,5 @@ active_date: filedate(lumail-3.0.tar.gz)
 <ul class="invisible">
 <li><a href="<!-- tmpl_var name='repo.active' -->"><!-- tmpl_var name='repo.active' --></a></li>
 </ul>
-<p>If you wish to actively contribute to the code-base, watch developments, or test bugfixes then please do consider using the git-repository directly.</p>
-</blockquote>
-
-<h2 id="building">Building from source</h2>
-<blockquote>
-<p>Regardless of your source you'll want to build the code once you have downloaded it:</p>
-<ul class="invisible">
-<li><a href="/install/">Read the installation guide here</a>.</li>
-</ul>
+<p>If you wish to actively contribute to the code-base, watch developments, or test bugfixes then please do consider using the git-repository directly, again the <a href="/install/">installation guide</a> contains notes on dependencies and the process of compilation &amp; installation.</p>
 </blockquote>

@@ -3,6 +3,7 @@ Title: Installation
 
 <blockquote>
 <p>Lumail is deliberately designed to only depend upon a small number of libraries, to ensure that it is possible to build it upon the widest range of systems.</p>
+<p>The code has only been tested by the authors upon GNU/Linux, but if it fails to build upon OpenBSD, FreeBSD, or any other similar modern Unix flavour this is a bug and <a href="/contact/">should be reported</a> as such.</p>
 
 <h3>Dependencies</h3>
 <blockquote>
@@ -46,7 +47,7 @@ Title: Installation
 <pre>
 $ make
 </pre>
-<p>Running <code>make install</code> will install the binary, the libraries that we bundle, and the perl-utilities which are required for IMAP-operation.</p>
+<p>Running <code>make install</code> will install the binary, the libraries that we bundle, and the IMAP-proxy which is required for accesing IMAP accounts.</p>
 <p>If you wish to install manually copy:</p>
 <ul>
 <li>The contents of <code>lib/</code> to <code>/usr/lib/lumail</code>.</li>
