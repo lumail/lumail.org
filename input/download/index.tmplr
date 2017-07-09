@@ -1,7 +1,7 @@
 Title: Download
 download_page: 1
-active: hash_file(lumail-3.0.tar.gz)
-active_date: filedate(lumail-3.0.tar.gz)
+active: hash_file(lumail-3.1.tar.gz)
+active_date: filedate(lumail-3.1.tar.gz)
 
 ----
 
