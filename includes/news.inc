@@ -27,7 +27,7 @@
   </dd>
   <dt>19th January 2016</dt>
   <dd><p>A new release of Lumail 2 is available upon our <a href="/download/">download page</a>.</p>
-    <p>This release adds a significant feature - you can now <b>access remote mail <a href="/imap/">via IMAP</a></b>!</p></p>
+    <p>This release adds a significant feature - you can now <b>access remote mail <a href="/imap/">via IMAP</a></b>!</p>
 </dd>
 <dt>19th December 2015</dt>
 <dd><p>A new release of Lumail 2 is available upon our <a href="/download/">download page</a>.</p>
