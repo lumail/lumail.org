@@ -1,8 +1,6 @@
 Title: Lua API
 api_page: 1
 format: markdown
-----
-
 
 
 The core idea behind lumail2, and the reason for writing it rather than
@@ -55,11 +53,21 @@ when some actions take place:
      * Called when the client is terminating.
 * `on_folder_changed( folder )`
      * This is called when a new folder is opened.
-* `on_cleanup_name(name)`
+* `on_clean_name(name)`
      * If the `index.format` variable is used to display the name of a messages' sender, rather than the contents of the `From:` header, then this function can cleanup that name.
      * For example to remove `(via Twitter)` or similar strings from that name.
+* `on_clean_subject(subject)`
+     * Allow the user to remove "Re:", "[SPAM]", etc from the subject pre-reply.
+* `on_get_recipient(recipient,msg)`.
+     * Allow the destination of replies to be changed on a per-mail basis.
 * `on_message_changed( msg )`
      * This is called when a new message is opened.
+* `on_message_send(path)`
+     * This is called __immediately__ before an outgoing message is sent, via the compose, reply, or forward operations.  It receives the path to the message to be sent as its sole argument.
+     * Useful if you're using the `msmtp` binary for sending your mail.
+* `on_message_sent(path)`
+     * This is called __immediately__ after an outgoing message is sent, via the compose, reply, or forward operations.  It receives the path to the message which was sent as its sole argument.
+
 
 These functions may be defined by the user, and will be invoked if present.
 
@@ -86,10 +94,12 @@ The following (static) methods are available:
     * The value might be an integer, a string or an array (table of strings with integer indexes).
 
 If the function `Config:key_changed` is defined it will be invoked whenever
-the value of a key is changed.  The single argument being the name of the key
-which has been updated.
+the value of a key is changed.  The function will be given two arguments:
 
-**NOTE**: We've defined a helper method in `lumail2.lua` which allows you to retrieve the value of a configuration-key and return a default value if the key is not set.
+* The name of the key which has changed-value.
+* The previous value of that key, if any.
+
+**NOTE**: We've defined a helper method in `global.config.lua` which allows you to retrieve the value of a configuration-key and return a default value if the key is not set.
 
       function Config.get_with_default(key,default)
           ..
@@ -137,6 +147,8 @@ We have a number of variables which are special, the most important ones are:
     * This holds the name of the currently active display-mode
 * `global.sent-mail`
     * This is the Maildir to which outgoing messages are saved.
+* `global.tab`
+    * This is the width to use for any `TAB` characters.
 * `global.trash-mail`
     * This is the Maildir to which deleted messages are saved.
 
@@ -164,6 +176,10 @@ displays things, these are:
 * `maildir.truncate`
     * Alternate between showing the full/truncated Maildir path in maildir-mode.
 
+The default behaviour of the `gpg` support can be configured with:
+
+* `gpg.mode`
+    * For further information see `GPG.md`.
 
 
 ### Directories
@@ -195,6 +211,8 @@ The following (static) methods exist:
    * Copy the given source file to the specified destination.
 * `File:exists(path)`
    * Return a boolean based on whether the named file exists.
+* `File:expand(path)`
+   * Expand a path, in the same way a Unix shell would do.
 * `File:stat(path)`
    * Return a table of information about the named target.
    * Returns `nil` on failure.
@@ -309,7 +327,7 @@ Message methods:
    * Sample code is available in `sample.lua/add_attachment.lua`.
 * `ctime()`
    * Return the creation time of the message, as seconds past the epoch.
-   * THis is based upon the `Delivery-Date` / `Date` header inside the message.
+   * This is based upon the `Delivery-Date` / `Date` header inside the message.
 * `flags()`
    * Get the flags for the message.
 * `flags(new_flags)`
