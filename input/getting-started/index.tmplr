@@ -15,9 +15,9 @@ On startup `lumail` will attempt to read from each of the following locations:
   * `$HOME/.config/lumail/$(hostname --fqdn).lua`
 
 * `~/.lumail`:
-  * `$HOME/.lumail/lumail/lumail.lua`
-  * `$HOME/.lumail/lumail/config.lua`
-  * `$HOME/.lumail/lumail/$(hostname --fqdn).lua`
+  * `$HOME/.lumail/lumail.lua`
+  * `$HOME/.lumail/config.lua`
+  * `$HOME/.lumail/$(hostname --fqdn).lua`
 
 * `$XDG_CONFIG_HOME`:
   * `$XDG_CONFIG_HOME/lumail/config.lua`
@@ -30,7 +30,7 @@ and reliable:
       $ mkdir ~/.lumail/
       $ cp user.config.lua ~/.lumail/lumail.lua
 
-If you're running `lumail` on multiple hosts then  naming your configuration file after the hostname is perhaps a saner choice:
+If you're running `lumail` on multiple hosts then naming your configuration file after the hostname is perhaps a saner choice:
 
       $ mkdir ~/.lumail/
       $ cp user.config.lua ~/.lumail/$(hostname --fqdn).lua
