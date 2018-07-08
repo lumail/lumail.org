@@ -3,8 +3,8 @@
 # A rule for generating the CSS
 #
 %.css : %.in
-	@test -e /usr/share/pyshared/slimmer/slimmer.py || echo "apt-get install python-slimmer"
-	@python /usr/share/pyshared/slimmer/slimmer.py $< css --output=$@
+	@test -e /usr/lib/python2.7/dist-packages/slimmer/slimmer.py || echo "apt-get install python-slimmer"
+	@python /usr/lib/python2.7/dist-packages/slimmer/slimmer.py $< css --output=$@
 
 
 output: clean input/css/new.css
