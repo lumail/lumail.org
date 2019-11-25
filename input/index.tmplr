@@ -5,7 +5,7 @@ news: read_file( "./news.recent.inc" )
 ----
 
 <blockquote>
-  <p>Lumail is a modern console-based email client developed for GNU/Linux, supporting operations upon local Maildir hierarchies and remote IMAP mail-servers.  The <a href="/screenshots/">screenshots</a> demonstrate what it looks like by default, and for a more interactive view you can <a href="https://asciinema.org/a/chdqz6tb4vt9p3ifp32g4musa">watch this short ASCII-video</a>.</p>
+  <p>Lumail is a modern console-based email client developed for GNU/Linux, supporting operations upon local Maildir hierarchies and remote IMAP mail-servers.  The <a href="/screenshots/">screenshots</a> demonstrate what it looks like by default, and for a more interactive view you can <a href="https://web.archive.org/web/20181021214024/https://asciinema.org/a/chdqz6tb4vt9p3ifp32g4musa">watch this short ASCII-video</a>.</p>
   <p>There are many graphical clients for email, but comparatively few designed solely for console use.  With the exception of GNU Emacs none of the console clients I examined had any built in support for scripting with a <i>real</i> language.</p>
   <p>Lumail has differences from existing projects such as <tt>mutt</tt>, <tt>notmuch</tt> and similar alternatives:</p>
   <ul>
